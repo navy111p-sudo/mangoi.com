@@ -1,0 +1,10 @@
+#canvas{position:absolute; display:block; top:0; bottom:0; left:0; right:0; z-index:10; height:100vh;}
+#canvas_2{position:absolute; display:block; top:0; bottom:0; left:0; right:0; z-index:10; height:100vh;}
+@media all and (min-width:1280px){
+#canvas{height:950px;}
+#canvas_2{height:950px;}
+}
+@media all and (min-width:1024px) and (max-width:1279px){
+#canvas{height:840px;}	
+#canvas_2{height:840px;}	
+}

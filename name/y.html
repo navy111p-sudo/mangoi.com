@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>주저없는 선택 망고아이</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" id="viewport">
+<link href="css/eng_name.css" rel="stylesheet" type="text/css"/>
+<script src="../js/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+	<div class="tab_eng_fix">
+        <ul class="tab_eng_name">
+            <li class="active">남자 이름</li>
+            <li>여자 이름</li>
+            <li>남자 또는 여자 이름</li>
+        </ul>
+    </div>
+    
+    <div class="table_area">
+    	<div class="div_eng_name" style="display:block;">
+            <table class="table_eng_name">
+            	<tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td>YAMAL</td><td>쌍둥이 중의 하나</td><td>힌디어</td></tr>
+	<tr><td>YANNIS</td><td>신의 선물</td><td>히브리어</td></tr>
+	<tr><td>YARDAN</td><td>왕</td><td>아라비아어</td></tr>
+	<tr><td>YARON</td><td>노래하는</td><td>히브리어</td></tr>
+	<tr><td>YO</td><td>경작 하고 있는</td><td>일본어</td></tr>
+	<tr><td>YONAH</td><td>JONAH의 이름에서</td><td>히브리어</td></tr>
+	<tr><td>YORK</td><td>주목의 나무에서</td><td>라틴어</td></tr>
+	<tr><td>YOSEF</td><td>JOSEPH에서</td><td>히브리어</td></tr>
+	<tr><td>YUL</td><td>수평선 건너</td><td>중국어</td></tr>
+	<tr><td>YUMA</td><td>지배자의 아들</td><td>영어(미국)</td></tr>
+	<tr><td>YUVAL</td><td>개울</td><td>히브리어</td></tr>
+	<tr><td>YVON</td><td>YVONNE에서</td><td>프랑스어</td></tr>
+            </table>
+        </div>
+        <div class="div_eng_name">
+            <table class="table_eng_name">
+                <tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td>YAMA</td><td>산</td><td>일본어</td></tr>
+	<tr><td>YAN</td><td>귀여운 색/제비</td><td>중국어</td></tr>
+	<tr><td>YANA</td><td>그는 대답 한다</td><td>히브리어</td></tr>
+	<tr><td>YELENA</td><td>빛</td><td>포르투갈어</td></tr>
+	<tr><td>YOKO</td><td>적극적인 아이</td><td>일본어</td></tr>
+	<tr><td>YOLAND</td><td>제비꽃</td><td>프랑스어</td></tr>
+	<tr><td>YOLANDA</td><td>제비꽃</td><td>그리스어</td></tr>
+	<tr><td>YORUBA</td><td>나이지리아 사람</td><td>아프리카</td></tr>
+	<tr><td>YOSHIKO</td><td>착한 아이</td><td>일본어</td></tr>
+	<tr><td>YOVELA</td><td>기쁨으로 가득 찬</td><td>히브리어</td></tr>
+            </table>
+        </div>
+        <div class="div_eng_name">
+            <table class="table_eng_name">
+                <tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td>YAEL</td><td>신의 힘</td><td>히브리어</td></tr>
+	<tr><td>YANK</td><td>YANCY 이름에서</td><td>영어(미국)</td></tr>
+	<tr><td>YERIEL</td><td>신에 의해 시작된</td><td>히브리어</td></tr>
+	<tr><td>YOHANCE</td><td>신의 선물</td><td>아프리카</td></tr>
+	<tr><td>YUKI</td><td>눈 또는 행운의</td><td>일본어</td></tr>
+            </table>
+        </div>
+    </div>
+ 
+ 
+<script>
+$(document).ready(function () {
+    $('.tab_eng_name > li').click(function () {
+        $('.tab_eng_name > li').removeClass('active')
+        $(this).addClass('active');
+        var k = $(this).index();
+        $('.table_area > .div_eng_name').css('display', 'none');
+        $('.table_area > .div_eng_name').eq(k).fadeIn(300);
+    });
+});
+</script>   
+</body>
+</html>
+
+

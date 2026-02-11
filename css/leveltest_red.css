@@ -1,0 +1,21 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/************** 3. 학업성취도 레드 **************/
+.t_bg{background:url(../images/r_bg_red.jpg); background-size:cover;}
+.t_title{background:#ff6064;}
+.t_btn{border-color:#ff6064;}
+.t_btn:hover{background:#ff6064; color:#fff;}
+.choose a{border-color:#ff6064;}
+.choose a:hover{background:#ff6064; color:#fff;}
+.choose a.active{background:#ff6064; color:#fff;}
+
+.choose_0{padding:20px 5px 0 5px;}
+.choose_0 li{position:relative; padding:7px 0 20px 40px; line-height:1.4;}
+.choose_0 span{border-color:#FE6267; position:absolute; left:0; top:0;}
+.choose_0 a:hover span{background:#FEA5A7; color:#fff;}
+.choose_0 a.active span{background:#FE6267; color:#fff;}
+
+.t_number span{background:#ff6064;}
+.t_number_0 span{background:#ff6064;}
+.page .color{color:#ff6064;}
+.radio_box input[type="radio"]:checked + label span {background:url(../images/radio_red.png) no-repeat;  background-size:100%;}

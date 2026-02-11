@@ -1,0 +1,3292 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Indra</title>
+
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="bower_components/swipebox/src/css/swipebox.css">
+    <link rel="stylesheet" href="bower_components/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="bower_components/owl-carousel/owl-carousel/owl.theme.css">   
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.css">
+    <!--link rel="stylesheet" href="assets/themes/style.css" id="theme-style"-->
+</head>
+<body onload="hidePreloader()" class="fix_bottom" style="background-color:#f5f5f5;">
+
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+    
+<!-- 좌측 네비게이션 -->
+<div class="panel panel-left panel-reveal">
+    <div class="left_bg_yellow">
+        <div class="left_profile_wrap">
+            <div class="left_photo" style="background-image:url(images/sample_photo_my.jpg);">
+                <img src="images/btn_camera_black.png" class="left_photo_add_btn" alt="사진변경">
+            </div>
+            <div class="left_name_wrap">
+                <h3 class="left_name"><b>남궁민아</b>님</h3>
+                <div class="left_id">masoosung4327</div>
+                <div class="left_join_day">2019년 5월 15일부터 특별한<br>망고아이와 함께 하고 있습니다.</div>
+            </div>
+        </div>
+        <div class="left_point_wrap">
+            <img src="images/icon_point_black.png" alt="나의 포인트" class="left_point_icon">
+            나의 포인트 <b>24,981P</b>
+            <a href="#" class="item-link item-content btn btn_orange_black_round_border open-popup" data-popup=".popup-point-list">내역보기</a>
+        </div>
+        <ul class="left_login">
+            <li><a href="#" class="btn btn_black_yellow_round open-popup item-link item-content" data-popup=".popup-login">로그인</a></li>
+            <li><a href="#" class="btn btn_black_yellow_round open-popup item-link item-content" data-popup=".popup-member-agree">회원가입</a></li>
+        </ul>
+        <ul class="left_login" style="display:none;">
+            <li><a href="#" class="btn btn_black_yellow_round">로그아웃</a></li>
+            <li><a href="#" class="btn btn_black_yellow_round">마이페이지</a></li>
+        </ul>
+    </div>
+
+    <div class="left_round_yellow"><div class="left_round_black"></div></div>
+
+    <ul class="left_navi">
+        <li><a href="review_list.html" class="item-link close-panel item-content"><img src="images/icon_navi_1.png" class="img" alt="레벨테스트">레벨테스트 신청</a></li>
+        <li><a href="#" class="item-link item-content open-popup" data-popup=".popup-payment-list"><img src="images/icon_navi_2.png" class="img" alt="결제내역">결제내역</a></li>
+        <li><a href="#" class="item-link item-content open-popup" data-popup=".popup-point-list"><img src="images/icon_navi_3.png" class="img" alt="포인트내역">포인트내역</a></li>
+        <li><a href="class_register_guide.html" class="item-link close-panel item-content"><img src="images/icon_navi_4.png" class="img" alt="수강안내">수강안내</a></li>
+        <li><a href="#" class="item-link close-panel item-content"><img src="images/icon_navi_5.png" class="img" alt="환경설정">환경설정</a></li>
+    </ul>
+    <footer class="copyright">
+        SINCE 2009 BY EDUVISION Corp.<br>
+        COPYRIGHT C 2013 EDUVISION.<br>
+        ALL RIGHTS RESERVED.
+    </footer>   
+</div>
+<!-- 좌측 네비게이션 -->
+
+<!-- 컨텐츠 영역 -->
+<div class="views">
+    <div class="view view-main">
+        
+        
+
+        <!-- 퀵메뉴 -->
+        <ul class="quick_menu" style="display:none;">
+            <li><a href="#" class=""><img src="images/btn_quick_dictionary.png" alt="단어장" class="quick"></a></li>
+            <li><a href="#" class=""><img src="images/btn_quick_books.png" alt="도서관" class="quick"></a></li>
+            <!--li><a href="#" class=""><img src="images/btn_quick_mode.png" alt="모드변경" class="quick"></a></li>            
+            <li><a href="#" class=""><img src="images/btn_mangoi_call.png" alt="call" class="quick"></a></li-->
+        </ul>
+
+        <!-- 하단 네비게이션 -->
+        <div class="bottom_wrap">
+            <div class="bottom_left_area">
+                <ul class="bottom_left">
+                    <li><a href="#" class="open-panel"><img src="images/icon_mango_01.png" class="img" alt="전체메뉴"><div class="break">전체메뉴</div></a></li>
+                    <li><a href="alarm_list.html" class="item-link item-content"><img src="images/icon_mango_02.png" class="img" alt="알림장"><div class="break">알림장</div></a></li>
+                    <li><a href="review_list.html" class="item-link item-content"><img src="images/icon_mango_03.png" class="img" alt="평가보고서"><div class="break">평가보고서</div></a></li>
+                </ul>
+            </div>
+            
+            
+            <!-- 11/03 수정 -->
+            <!--
+			<div class="bottom_my"><a href="javascript:OpenFavoriteMenu();" class="item-link item-content" ><img src="images/btn_mypage_bottom.gif" class="img" alt="MY"><img src="images/bg_navi_mobile.png" class="bg_bottom_circle"></a></div>
+			-->
+			<div class="bottom_my"><a href="#" class="open-popup item-link item-content" data-popup=".popup-menu"><img src="images/btn_mypage_bottom.gif" class="img" alt="MY"><img src="images/bg_navi_mobile.png" class="bg_bottom_circle"></a></div>
+            <!-- 11/03 수정 -->
+            
+            
+            <div class="bottom_right_area">
+                <ul class="bottom_right">
+                    <li><a href="chat_list.html" class="item-link item-content"><img src="images/icon_mango_04.png" class="img" alt="1:1상담"><div class="break">망고톡</div></a></li>
+                    <li><a href="class_register_intro.html" class="item-link item-content"><img src="images/icon_mango_05.png" class="img" alt="수강신청"><div class="break">수강신청</div></a></li>
+                    <li><a href="#" class="item-link item-content open-popup" data-popup=".popup-review"><img src="images/icon_mango_06.png" class="img" alt="공지사항"><div class="break">공지사항</div></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 하단 네비게이션 -->
+
+        <div class="navbar navbar-clear anim-navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only open-panel">
+                        <!--span class="kkicon icon-menu"></span-->
+                    </a>
+                </div>
+                <div class="center sliding">
+                    <span class="anim-logo-small" style="opacity: 0">망고아이</span>
+                </div>
+                <div class="right">
+                    <a href="alarm_list.html" class="link icon-only" data-panel="right">
+                        <span class="badge badge-secondary">18</span>
+                        <span class="kkicon icon-alarm"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pages navbar-fixed toolbar-fixed">
+            <div data-page="index" class="page">
+                <div class="page-content navbar-fix">
+                    
+                    <!-- 버블메뉴 -->
+                    <nav class="menu" style="display:none;">
+                        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+                        <label class="menu-open-button" for="menu-open">
+                            <span class="hamburger hamburger-1"></span>
+                            <span class="hamburger hamburger-2"></span>
+                            <span class="hamburger hamburger-3"></span>
+                        </label>
+
+                        <a href="#" class="menu-item" style="background-color:#6edce5;">단어장</a>
+                        <a href="#" class="menu-item" style="background-color:#8ac14e;">도서관</a>
+                        <a href="#" class="menu-item" style="background-color:#ff899d;">자료실</a>
+                        <a href="#" class="menu-item" style="background-color:#89daf5; line-height:1.1; padding:9px 0 0 0;">모드<br>변경</a>
+                    </nav>
+
+                    <!-- 메인 비주얼 
+                    <iframe src="main_visual.html" class="main_visual_iframe"></iframe>
+                    -->
+                    
+                    
+                    <!-- 11/03 수정 -->
+                    <a href="mypage.html" class="dot_wrap item-link item-content">
+                        <!--div class="swiper-pagination"></div-->
+                    </a>
+                    <!-- 11/03 수정 -->
+                    
+                    
+                    
+                    
+                    <div class="main_visual_wrap">
+                        
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide first">
+                                    <div class="main_visual_text_1">
+                                        <div class="main_text_1">망고아이 리뉴얼</div>
+                                        <div class="main_text_2">OPEN</div>
+                                        <div class="main_text_3">망고아이 오픈기념<br>회원가입 시<br>1개월 체험권 지급</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide second">
+                                    <div class="main_visual_text_2">
+                                        <div class="main_text_1">즐거운 화상영어</div>
+                                        <div class="main_text_2">망고아이</div>
+                                        <div class="main_text_3">망고아이는 비교할 수 없는<br>특별함을 선물합니다. </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide third">
+                                    <div class="main_visual_text_3">
+                                        <div class="main_text_1">특별한 화상영어</div>
+                                        <div class="main_text_2">망고아이</div>
+                                        <div class="main_text_3">자연스러운 반복 학습의 효과</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main_content_wrap">
+                        <!-- 오늘의 수업 일정 
+                        <div class="main_class_today_wrap">
+                            <div class="main_class_today_area">
+                                <h3 class="main_class_today_title">오늘의 수업일정</h3>
+                                <div class="main_class_today_box">
+                                    <iframe src="js/swiper_today/280-autoplay.html" class="main_class_today_iframe" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- 오늘의 명언 -->
+                        <div class="main_famous_wrap">
+                            <h3 class="main_famous_title">오늘의 명언</h3>
+                            <div class="main_famous_text">
+                                <iframe src="iframe_famous.html" class="main_famous_iframe" frameborder="0" scrolling="no"></iframe>
+                            </div>                            
+                        </div>
+
+                        <!--
+                            우리의 지식은 세상을 변화시킬 수 있다		- 스티븐 호킹 -
+                            신념은 단순이 갖고 있는 것만이 아닌 실천하는 무엇이다		- 버락 오바마 -
+                            교육은 노후를 위한 최상의 양식이다	- 아리스토텔레스 -
+                            끊임없이 꿈을 향해 나아가라		- 오프라 윈프리 -
+                            항상 갈구하라, 바보짓을 두려워 말라	- 스티브 잡스 -
+                        -->
+
+                        <!-- 배너형 네비 -->
+                        <ul class="main_banner_navi_wrap">
+                            <li><a href="mangoi_intro.html" class="item-link item-content"><img src="images/navi_main_1.gif" class="img" alt="화상영어란"></a></li>
+                            <li><a href="mangoi_feather.html" class="item-link item-content"><img src="images/navi_main_2.gif" class="img" alt="망고아이 특장점"></a></li>
+                            <li><a href="company_intro.html" class="item-link item-content"><img src="images/navi_main_3.gif" class="img" alt="회사소개"></a></li>
+                            <li><a href="course_level.html" class="item-link item-content"><img src="images/navi_main_4.gif" class="img" alt="교육과정"></a></li>
+                            <li><a href="teacher_intro.html" class="item-link item-content"><img src="images/navi_main_5.gif" class="img" alt="강사소개"></a></li>
+                            <li><a href="book_list.html" class="item-link item-content"><img src="images/navi_main_6.gif" class="img" alt="교재안내"></a></li>
+                        </ul>
+                        
+                        <!-- 나의 포인트 -->
+                        <div class="main_my_point_wrap">
+                            <ul class="main_my_point_list">
+                                <li>
+                                    <div class="main_my_point_caption">나의 포인트</div>
+                                    <b class="main_my_point_num color_sea">12,736</b>
+                                </li>
+                                <li>
+                                    <div class="main_my_point_caption">주간 순위</div>
+                                    <b class="main_my_point_num color_pink">32위</b>
+                                </li>
+                                <li>
+                                    <div class="main_my_point_caption">월간 순위</div>
+                                    <b class="main_my_point_num color_pink">5위</b>
+                                </li>
+                                <li>
+                                    <div class="main_my_point_caption">전체 순위</div>
+                                    <b class="main_my_point_num color_pink">11위</b>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 망고아이 포인트 순위 -->
+                        <div class="">
+                            <h3 class="caption_left point">망고아이 포인트 순위</h3>
+                            <div class="buttons-row point">
+                                <a href="#tab1" class="tab-link active button">주간포인트</a>
+                                <a href="#tab2" class="tab-link button">월간포인트</a>
+                                <a href="#tab3" class="tab-link button">전체포인트</a>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <div id="tab1" class="tab active point_rank_box">
+                                <table class="point_rank_table">
+                                    <col width="12%">
+                                    <col width="30%">
+                                    <col width="">
+                                    <tr>
+                                        <td><span class="point_rank_number">1</span></td>
+                                        <td>
+                                            <small class="point_rank_academy">동백섬 최고의 국내유일의 바다학원</small>
+                                            남궁은수
+                                        </td>
+                                        <td>
+                                            <span class="point_rank_score">22,460</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:100%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="point_rank_number">2</span></td>
+                                        <td>
+                                            <small class="point_rank_academy">동백섬 최고의 국내유일의 바다학원</small>
+                                            김지은
+                                        </td>
+                                        <td>
+                                            <span class="point_rank_score">20,000</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:75%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="point_rank_number">3</span></td>
+                                        <td>
+                                            <small class="point_rank_academy">동백섬 최고의 국내유일의 바다학원</small>
+                                            성준
+                                        </td>
+                                        <td>
+                                            <span class="point_rank_score">10,000</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:40%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="tab2" class="tab point_rank_box">
+                                <table class="point_rank_table">
+                                    <col width="12%">
+                                    <col width="30%">
+                                    <col width="">
+                                    <tr>
+                                        <td><span class="point_rank_number">1</span></td>
+                                        <td>남궁은수</td>
+                                        <td>
+                                            <span class="point_rank_score">22,460</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:100%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="point_rank_number">2</span></td>
+                                        <td>김지은</td>
+                                        <td>
+                                            <span class="point_rank_score">20,000</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:60%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="point_rank_number">3</span></td>
+                                        <td>성준</td>
+                                        <td>
+                                            <span class="point_rank_score">10,000</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:30%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="tab3" class="tab point_rank_box">
+                                <table class="point_rank_table">
+                                    <col width="12%">
+                                    <col width="30%">
+                                    <col width="">
+                                    <tr>
+                                        <td><span class="point_rank_number">1</span></td>
+                                        <td>남궁은수</td>
+                                        <td>
+                                            <span class="point_rank_score">22,460</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:100%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="point_rank_number">2</span></td>
+                                        <td>김지은</td>
+                                        <td>
+                                            <span class="point_rank_score">20,000</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:80%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="point_rank_number">3</span></td>
+                                        <td>성준</td>
+                                        <td>
+                                            <span class="point_rank_score">10,000</span>
+                                            <div class="bar_back">
+                                                <div class="bar_front" style="width:66%;"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 망고아이 포인트 순위 -->
+
+                        <!-- 망고아이 이벤트 
+                        <h3 class="caption_left event">망고아이 이벤트<a href="event_list.html" class="item-link item-content main_event_link"><img src="images/btn_more_black.png" alt="MORE" class="icon">MORE</a></h3>
+                        <ul class="main_event_list">
+                            <li><a href="#" class="item-link item-content open-popup" data-popup=".popup-event" style="background-image:url(images/main_event_1.jpg)"></a></li>
+                            <li><a href="#" class="item-link item-content open-popup" data-popup=".popup-event" style="background-image:url(images/main_event_2.jpg)"></a></li>
+                        </ul>
+                        -->
+                    </div>
+
+                    <!-- 메인 비주얼 덮개 -->
+                    <div class="main_bg_cover"></div> 
+                    <div class="main_bottom_margin"></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--div class="popup popup-splash">
+    <div class="content-block">
+        <a href="#" class="close-popup">
+            skip
+        </a>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide text-center">
+                    <div class="slide-content">
+                        <h2>Responsive</h2>
+
+                        <h3>flexible layout</h3>
+                        <img src="assets/img/tmp/slide1.png" alt=""/>
+                    </div>
+                </div>
+                <div class="swiper-slide text-center">
+                    <div class="slide-content">
+                        <h2>Very Detailed</h2>
+
+                        <h3>20+ page templates</h3>
+                        <img src="assets/img/tmp/slide2.png" alt=""/>
+                    </div>
+                </div>
+                <div class="swiper-slide text-center">
+                    <div class="slide-content clearfix">
+                        <h2>Call<br>Us Now</h2>
+
+                        <h3>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
+                            Maecenas malesuada elit lectus felis, malesuada ultricies.</h3>
+                        <a href="#" class="button mt-50 mb-20">Click to call!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-color"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</div-->
+
+    
+<!-- 망고아이 즐겨찾기 05/23 수정 -->    
+<div class="popup popup-menu popup_menu_wrap">
+    <div class="content-block">
+        <!--a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a-->
+        <section class="popup_menu_area">
+            <img src="images/intro_character_black.png" alt="로고" class="popup_menu_logo">
+            <div class="popup_menu_text">즐거운 화상영어 망고아이</div>
+            
+            <ul class="popup_menu_btns" style="display:none;">
+                <li><a href="#" class="popup_menu_btn" style="background-color:#fdb15c;">자료실<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn" style="background-color:#975add;">도서관<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn" style="background-color:#f88e6e;">단어사전<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn" style="background-color:#b952be;">레슨비디오<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn" style="background-color:#f15d85;">리뷰퀴즈<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn" style="background-color:#d74ba5;">교재열람<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn" style="background-color:#ee488f;">비디오안내<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn" style="background-color:#f3667f;">리뷰퀴즈<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+            </ul> 
+            
+            <ul class="popup_menu_btns">
+                <li><a href="#" class="popup_menu_btn_2">자료실<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn_2">도서관<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn_2">단어사전<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn_2">레슨비디오<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn_2">리뷰퀴즈<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn_2">교재열람<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn_2">비디오안내<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+                <li><a href="#" class="popup_menu_btn_2">리뷰퀴즈<img src="images/btn_favorite_add.png" class="btn_favorite_add"></a></li>
+            </ul> 
+             
+            <div class="socialCircle-container">
+              <div class="socialCircle-item" style="background-image:url(images/bubble_red.png);">수업<br>입장</div>
+              <div class="socialCircle-item" style="background-image:url(images/bubble_orange.png);">레슨<br>비디오</div>
+              <div class="socialCircle-item" style="background-image:url(images/bubble_green.png);">리뷰<br>퀴즈</div>
+              <div class="socialCircle-item" style="background-image:url(images/bubble_blue.png);">성적표<br>보기</div>
+              <div class="socialCircle-item" style="background-image:url(images/bubble_indigo.png);">교재<br>주문</div>
+              <div class="socialCircle-item" style="background-image:url(images/bubble_yellow.png); color:#3b1c1c;">카톡<br>문의</div>
+              <div class="socialCircle-item" style="background-image:url(images/bubble_purple.png);">도서관</div>
+              <div class="socialCircle-item" style="background-image:url(images/bubble_red.png);">단어장</div>
+              <div class="socialCircle-center closed close-popup" id="socialCircleBtn"></div>
+            </div>
+        </section>
+    </div> 
+</div>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">    
+<link href="js/bubble/bubble.css" rel="stylesheet" type="text/css">   
+<script src="js/bubble/bubble.js"></script> 
+<script type="text/javascript">
+
+if($(window).width()>=760) {
+     $( ".socialCircle-center" ).socialCircle({
+        rotate: 180,
+        radius:190,
+        circleSize:2,
+        speed:200
+    });       
+}else{
+    $( ".socialCircle-center" ).socialCircle({
+        rotate: 180,
+        radius:152,
+        circleSize:2,
+        speed:200
+    });
+}
+  
+$("document").ready(function() {
+  setTimeout(function() {
+	$('#socialCircleBtn').trigger('click');
+  },500);
+});
+</script>   
+<!-- 11/03 수정 -->    
+    
+    
+    
+<!-- 평가 팝업 -->
+<div class="popup popup-review review_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="review_area">
+            <img src="images/logo_mangi_text.png" alt="로고" class="review_logo">
+            <div class="review_text">앱을 평가해주세요!</div>
+            <ul class="review_btns">
+                <li><span class="review_emoticon" style="background-image:url(images/emoticon_1.png);"></span><a href="#" class="review_btn">매우 좋아요</a></li>
+                <li><span class="review_emoticon" style="background-image:url(images/emoticon_2.png);"></span><a href="#" class="review_btn">조금 좋아요</a></li>
+                <li><span class="review_emoticon" style="background-image:url(images/emoticon_3.png);"></span><a href="#" class="review_btn">보통이네요</a></li>
+                <li><span class="review_emoticon" style="background-image:url(images/emoticon_4.png);"></span><a href="#" class="review_btn">조금 실망이예요</a></li>
+                <li><span class="review_emoticon" style="background-image:url(images/emoticon_5.png);"></span><a href="#" class="review_btn">매우 실망이예요</a></li>
+            </ul>
+            <a href="#" class="review_close_btn">CLOSE</a>
+        </section>
+    </div>
+</div>
+
+<!-- 로그인 팝업 -->
+<div class="popup popup-login login_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="login_area">
+            <img src="images/logo_mangi_text.png" alt="로고" class="login_logo">
+            <div class="login_text">
+                Please use your credentials to login.<br>
+                If you are not a member, please register.
+            </div>
+            <input type="email" placeholder="아이디" class="login_id">
+            <input type="password" placeholder="비밀번호" class="login_pw">
+            <div class="login_box">
+                <div class="check_wrap login_keep">
+                    <input type="checkbox" class="input_check" id="login" checked><label class="label" for="login"><span class="bullet_check"></span>로그인 유지</label>
+                </div>
+                <ul class="login_search">
+                    <li><a href="#" class="open-popup" data-popup=".popup-search-idpw">아이디/비밀번호 찾기</a></li>
+                </ul>
+            </div>
+            <a href="#" class="login_btn">LOGIN</a>
+            <a href="#" class="login_sns" style="background-image:url(images/btn_google.png);"></a>
+            <a href="#" class="login_sns" style="background-image:url(images/btn_kakao.png);"></a>            
+            <!--a href="#" class="login_sns" style="background-image:url(images/btn_kakao_link.png);"></a-->
+            
+            <div class="login_join_area">
+                <div class="login_join_text">특별한 화상영어를 만나보세요!</div>
+                <a href="#" class="login_join_btn open-popup item-link item-content" data-popup=".popup-member-agree">회원가입</a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 아이디/비번 찾기 팝업 -->
+<div class="popup popup-search-idpw idpw_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="idpw_area">
+            <h3 class="idpw_caption">아이디/비밀번호 찾기</h3>
+            <div class="idpw_text">회원가입시 등록한 이메일로 아이디/비밀번호를 전송해 드립니다. 정보입력 후 실행해 주시기 바랍니다.</div>
+            <input type="radio" class="input_search_id" id="id_search" name="idpw" checked>
+            <input type="radio" class="input_search_pw" id="pw_search" name="idpw">
+            <div class="radio_wrap">
+                <label class="label one" for="id_search"><span class="bullet_radio"></span>아이디 찾기</label>
+                <label class="label two" for="pw_search"><span class="bullet_radio"></span>비밀번호 찾기</label>
+            </div>
+            <div class="id_search_box">
+                <input type="text" placeholder="성명" class="search_name">
+                <input type="email" placeholder="이메일" class="search_email">
+            </div>
+            <div class="pw_search_box">
+                <input type="text" placeholder="성명" class="search_name">
+                <input type="email" placeholder="아이디" class="search_id">
+                <input type="email" placeholder="이메일" class="search_email">
+            </div>
+            <a href="#" class="login_btn">확인</a>
+        </section>
+    </div>
+</div>
+
+<!-- 회원약관 팝업 -->
+<div class="popup popup-member-agree member_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="popup_overflow">
+            <div class="member_area">
+                <h3 class="member_agree_caption">회원약관<span>* 반드시 회원약관을 읽은 후 동의 여부를 결정해 주세요.</span></h3>
+                <iframe src="../agree_content_1.php" class="member_iframe"></iframe>
+                <div class="check_wrap member_agree"><input type="checkbox" id="agree_1" class="input_check" checked name=""><label class="label" for="agree_1"><span class="bullet_check"></span>약관의 내용에 동의합니다.</label></div>
+
+                <h3 class="member_agree_caption">개인정보 취급방침<span>* 반드시 개인정보 취급방침을 읽은 후 동의 여부를 결정해 주세요.</span></h3>
+                <iframe src="../agree_content_1.php" class="member_iframe"></iframe>
+                <div class="check_wrap member_agree"><input type="checkbox" id="agree_2" class="input_check" checked name=""><label class="label" for="agree_2"><span class="bullet_check"></span>개인정보 취급방침의 내용에 동의합니다.</label></div>
+
+                <div class="button_wrap flex_justify member">
+                    <a href="#" class="btn_yellow_black open-popup" data-popup=".popup-member">회원가입</a>
+                    <a href="#" class="btn_br_black mantoman close-popup">취소하기</a>
+                </div>
+
+                <!--div class="fix_bottom_button"></div-->
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 회원가입 팝업 -->
+<div class="popup popup-member member_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="member_area popup_overflow">
+            <h3 class="member_join_caption">기본정보<span><b class="member_red">★</b> 표시는 필수 입력사항입니다.</span></h3>
+            <table class="member_table">
+                <tr>
+                    <th>아이디 <b class="member_red">★</b></th>
+                    <td>
+                        <input type="email" class="member_id"><a href="#" class="member_btn_confirm_1">중복확인</a>
+                        <div class="member_idpw_text">영문, 숫자, _만 가능, 3글자 이상</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호 <b class="member_red">★</b></th>
+                    <td>
+                        <input type="password" class="member_common">
+                        <div class="member_idpw_text">4 ~ 12자의 영문 또는 숫자만 가능합니다.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인 <b class="member_red">★</b></th>
+                    <td><input type="password" class="member_common"></td>
+                </tr>
+            </table>
+
+            <h3 class="member_join_caption">학생정보 입력<span><b class="member_red">★</b> 표시는 필수 입력사항입니다.</span></h3>
+            <table class="member_table">
+                <tr>
+                    <th>한글성명</th>
+                    <td><input type="text" class="member_common"></td>
+                </tr>
+                <tr>
+                    <th>영문표기이름 <b class="member_red">★</b></th>
+                    <td>
+                        <input type="email" class="member_common">
+                        <div class="member_idpw_text">예) 홍길동  ▷  Hong Gil Dong</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>생년월일 <b class="member_red">★</b></th>
+                    <td></td>
+                </tr>
+                <!--tr>
+            <th>전화번호 <b class="member_red">★</b></th>
+            <td>
+                <select class="member_select_1">
+                    <option>010</option>
+                    <option>011</option>
+                </select>
+                <span class="member_space">-</span>
+                <input type="text" class="member_input_small">
+                <span class="member_space">-</span>
+                <input type="text" class="member_input_small">
+                <div class="member_idpw_text">집전화를 정확히 입력 바랍니다. 학생이 수업에 늦을 경우 담당 교사가 전화를 드립니다.</div>
+            </td>
+        </tr-->
+                <tr>
+                    <th>휴대폰 <b class="member_red">★</b></th>
+                    <td>
+                        <select class="member_select_1">
+                            <option>010</option>
+                            <option>011</option>
+                        </select>
+                        <span class="member_space">-</span>
+                        <input type="text" class="member_input_small">
+                        <span class="member_space">-</span>
+                        <input type="text" class="member_input_small">
+                        <div class="member_idpw_text check_wrap agree"><input type="checkbox" id="sms" class="input_check" checked name=""><label class="label" for="sms"><span class="bullet_check"></span>SMS 수신동의</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일 <b class="member_red">★</b></th>
+                    <td>
+                        <input type="text" name="MemberEmail_1" id="MemberEmail_1" class="member_input_mid" value="" onkeyup="EnNewEmail()">
+                        <span class="member_space">@</span>
+                        <input type="text" name="MemberEmail_2" id="MemberEmail_2" class="member_input_mid" value="" onkeyup="EnNewEmail()">
+                        <div class="member_pad"></div>
+                        <select class="member_select_2">
+                            <option>직접입력</option>
+                            <option>naver.com</option>
+                        </select>
+                        <a href="javascript:CheckEmail()" class="member_btn_confirm_2" id="BtnCheckID2" style="display:">중복확인</a>
+                        <div class="member_idpw_text check_wrap agree"><input type="checkbox" id="email" class="input_check" checked name=""><label class="label" for="email"><span class="bullet_check"></span>이메일 수신동의</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소 <b class="member_red">★</b></th>
+                    <td>
+                        <input type="text" class="member_input_zip">
+                        <a href="#" class="member_btn_confirm_2">우편번호</a>
+                        <input type="text" class="member_common mameber_margin">
+                        <input type="text" class="member_common">
+                    </td>
+                </tr>
+                <tr>
+                    <th>단체명 <b class="member_red">★</b></th>
+                    <td>
+                        <select class="member_select_3">
+                            <option>단체명을 선택해주세요.</option>
+                            <option>안산</option>
+                        </select>
+                        <input type="text" class="member_common" placeholder="사전에 받으신 쿠폰이 있는 경우 입력해 주세요.">
+                    </td>
+                </tr>
+            </table>
+
+            <!--h3 class="member_join_caption">수업정보, 상담정보, 기타 부가정보</h3>
+    <table class="member_table">
+        <tr>
+            <th>수업 전 알림</th>
+            <td>
+                <select class="member_select_2 parent">
+                    <option>선택하세요</option>
+                    <option>30분전</option>
+                    <option>1시간전</option>
+                </select>
+                <div class="radio_wrap alram">
+                    <input type="radio" id="alram_1" class="input_radio" checked name="alram"><label class="label" for="alram_1"><span class="bullet_radio"></span>수신</label>
+                    <input type="radio" id="alram_2" class="input_radio" name="alram"><label class="label" for="alram_2"><span class="bullet_radio"></span>거부</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>강사 대체 정책</th>
+            <td class="radio_wrap teacher">
+                <input type="radio" id="teacher_1" class="input_radio" checked name="teacher"><label class="label" for="teacher_1"><span class="bullet_radio"></span>다른 강사로 대체</label>
+                <input type="radio" id="teacher_2" class="input_radio" name="teacher"><label class="label" for="teacher_2"><span class="bullet_radio"></span>강사 대체없이 수업 취소</label>
+            </td>
+        </tr>
+        <tr>
+            <th>자동등록방지 <b class="member_red">★</b></th>
+            <td>
+                <i class="member_auto_prevention">fd7d</i>
+                <input type="text" class="member_input_auto">
+                <div class="member_idpw_text">자동등록방지 코드를 입력하세요.</div>
+            </td>
+        </tr>
+    </table-->
+
+            <h3 class="member_join_caption">보호자 정보사항<span>성인의 경우 입력하지 않으셔도 됩니다.</span></h3>
+            <table class="member_table">
+                <tr>
+                    <th>보호자 성명 <b class="member_red">★</b></th>
+                    <td>
+                        <input type="email" class="member_common">
+                        <div class="member_idpw_text">무통장 입금 시 입금자명</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td>
+                        <select class="member_select_1">
+                            <option>010</option>
+                            <option>011</option>
+                        </select>
+                        <span class="member_space">-</span>
+                        <input type="text" class="member_input_small">
+                        <span class="member_space">-</span>
+                        <input type="text" class="member_input_small">
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td>
+                        <input type="text" class="member_input_mid parent">
+                        <span class="member_space">@</span>
+                        <select class="member_select_2 parent">
+                            <option>직접입력</option>
+                            <option>naver.com</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="button_wrap flex_justify member">
+                <a href="#" class="btn_yellow_black">회원가입</a>
+                <a href="#" class="btn_br_black mantoman close-popup">취소하기</a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 평가보고서 팝업 -->
+<div class="popup popup-report report_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="popup_overflow">
+            <h1 class="report_month_caption">2019.06</h1>
+            <div class="report_studen_name">Student : <b>박민아 (test01)</b></div>
+
+            <h3 class="report_caption_left">Attendance</h3>
+            <div class="overflow_table">
+                <table class="report_table">
+                    <col width="">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="16%">
+                    <tr>
+                        <th class="report_bg_gray"></th>
+                        <th class="report_bg_gray">Percentage</th>
+                        <th class="report_bg_gray">Times</th>
+                        <th class="report_bg_gray">Minutes</th>
+                        <th class="report_bg_gray">Result</th>
+                    </tr>
+                    <tr>
+                        <td>Real-time Phone & Video Class</td>
+                        <td><b>50%</b></td>
+                        <td><b>1/2</b></td>
+                        <td><b>10min</b></td>
+                        <td><b>Fail</b></td>
+                    </tr>
+                </table>
+            </div>
+            <h3 class="report_caption_left">Progress</h3>
+            <div class="overflow_table">
+                <table class="report_table">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                    <tr>
+                        <th>Total Score</th>
+                        <th>Percentile Score</th>
+                        <th>Level</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td class="report_bg_gray"><b>5 / 450</b></td>
+                        <td class="report_bg_gray"><b>1.11%</b></td>
+                        <td class="report_bg_gray"><b>0</b></td>
+                        <td class="report_bg_gray"><b>Novice</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text_left">
+                            현지 법인은 필리핀 증권거래소 인텔리전트 빌딩에 콜센터를 구축하여, 안정적인 전기공급, 인터넷 전용선, 전용 화상솔루션등으로
+                            안정적인 수업 환경을 구축하였습니다.
+                            Mangoi 미국 선생님들이 Mangoi 전용 커리큘럼을 개발하였으며, Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                            학생들의 스피킹 실력 향상을 월평가에 표에 의하여 확인 할 수있습니다.
+                        </td>
+                    </tr>
+                </table>
+                <table class="report_table">
+                    <col width="20%">
+                    <col width="15%">
+                    <col width="">
+                    <tr>
+                        <th>Criteria</th>
+                        <th class="report_bg_gray">Evaluation</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>Pronunciation</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Mangoi 전용 커리큘럼을 개발하였으며, Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Intonation & Stress</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Mangoi 전용 커리큘럼을 개발하였으며, Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Grammar</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vocabulary</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fluency of Delivery</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="report_chart_wrap">
+                <div class="report_chart_1"><img src="images/sample_chart_1.png" alt="차트" class="img"></div>
+                <div class="report_chart_2"><img src="images/sample_chart_2.png" alt="차트" class="img"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 평가보고서 팝업 -->
+<div class="popup popup-report-level report_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="popup_overflow">
+            <h1 class="report_month_caption">2019.06</h1>
+            <div class="report_studen_name">Student : <b>박민아 (test01)</b></div>
+
+            <h3 class="report_caption_left">Attendance</h3>
+            <div class="overflow_table">
+                <table class="report_table">
+                    <col width="">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="16%">
+                    <col width="16%">
+                    <tr>
+                        <th class="report_bg_gray"></th>
+                        <th class="report_bg_gray">Percentage</th>
+                        <th class="report_bg_gray">Times</th>
+                        <th class="report_bg_gray">Minutes</th>
+                        <th class="report_bg_gray">Result</th>
+                    </tr>
+                    <tr>
+                        <td>Real-time Phone & Video Class</td>
+                        <td><b>50%</b></td>
+                        <td><b>1/2</b></td>
+                        <td><b>10min</b></td>
+                        <td><b>Fail</b></td>
+                    </tr>
+                </table>
+            </div>
+            <h3 class="report_caption_left">Progress</h3>
+            <div class="overflow_table">
+                <table class="report_table">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                    <tr>
+                        <th>Total Score</th>
+                        <th>Percentile Score</th>
+                        <th>Level</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td class="report_bg_gray"><b>5 / 450</b></td>
+                        <td class="report_bg_gray"><b>1.11%</b></td>
+                        <td class="report_bg_gray"><b>0</b></td>
+                        <td class="report_bg_gray"><b>Novice</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text_left">
+                            현지 법인은 필리핀 증권거래소 인텔리전트 빌딩에 콜센터를 구축하여, 안정적인 전기공급, 인터넷 전용선, 전용 화상솔루션등으로
+                            안정적인 수업 환경을 구축하였습니다.
+                            Mangoi 미국 선생님들이 Mangoi 전용 커리큘럼을 개발하였으며, Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                            학생들의 스피킹 실력 향상을 월평가에 표에 의하여 확인 할 수있습니다.
+                        </td>
+                    </tr>
+                </table>
+                <table class="report_table">
+                    <col width="20%">
+                    <col width="15%">
+                    <col width="">
+                    <tr>
+                        <th>Criteria</th>
+                        <th class="report_bg_gray">Evaluation</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>Pronunciation</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Mangoi 전용 커리큘럼을 개발하였으며, Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Intonation & Stress</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Mangoi 전용 커리큘럼을 개발하였으며, Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Grammar</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vocabulary</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fluency of Delivery</td>
+                        <td class="report_bg_gray"><b>0/5</b></td>
+                        <td class="text_left">
+                            Level1 부터 8까지 학생의 수준에 맞게 디자인하였습니다.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="report_chart_wrap">
+                <div class="report_chart_1"><img src="images/sample_chart_1.png" alt="차트" class="img"></div>
+                <div class="report_chart_2"><img src="images/sample_chart_2.png" alt="차트" class="img"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 교재소개 팝업 -->
+<div class="popup popup-book">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="book_intro_wrap popup_overflow">
+            <img src="images/sample_book_1.jpg" class="book_intro_img">
+            <div class="book_intro_bottom">
+                <h3 class="book_intro_name">The Alphabet</h3>
+                <ul class="book_intro_text">
+                    <li>알파벳의 구성에 중점을 두고 각 알파벳의 대소문자와 그 쓰는 밥법을 학습한 후, 다양한 관련 기초 어휘를 이용하여 복습할 수 있도록 구성된 교재입니다.</li>
+                    <li>4~6개 레슨마다 학습 내용을 되짚어 볼 수 있는 Review파트와 모든 알파벳 학습이 끝난 뒤 자모음 학습 및 전체 학습내용을 복습할 수 있는 레슨도 마련되어 있습니다.</li>
+                    <li>해당 교재는 온라인 웹북으로만 제공됩니다. 필요시 출력하여 준비하실 수 있습니다.</li>
+                    <li>영어 입문자들을 위한 교재이므로 가급적 전화영어보다는 화상영어를 추천드립니다.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 포인트내역 팝업 -->
+<div class="popup popup-point-list mypage_point_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="popup_overflow">
+            <div class="mypage_point_text">포인트는 <b>1,000점 이상일 경우 현금</b>처럼 사용할 수 있습니다.</div>
+            <table class="mypage_point_table">
+                <col width="21%">
+                <col width="">
+                <col width="21%">
+                <col width="21%">
+                <tr>
+                    <th>날짜</th>
+                    <th>포인트내역</th>
+                    <th>적립포인트</th>
+                    <th>누적포인트</th>
+                </tr>
+                <tr>
+                    <td>2019.07.28</td>
+                    <td>주5회 결제(300,000)</td>
+                    <td>3,000P</td>
+                    <td>3,000P</td>
+                </tr>
+                <tr>
+                    <td>2019.06.28</td>
+                    <td>주5회 결제(300,000)</td>
+                    <td class="point_minus">- 3,000P</td>
+                    <td>0P</td>
+                </tr>
+                <tr>
+                    <td>2019.05.28</td>
+                    <td>주5회 결제(300,000)</td>
+                    <td>3,000P</td>
+                    <td>3,000P</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</div>
+
+<!-- 결제내역 팝업 -->
+<div class="popup popup-payment-list mypage_point_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="popup_overflow">
+            <table class="mypage_point_table">
+                <col width="">
+                <col width="21%">
+                <col width="21%">
+                <col width="21%">
+                <tr>
+                    <th>구매일자</th>
+                    <th>금액</th>
+                    <th rowspan="2">상태</th>
+                    <th rowspan="2">영수증</th>
+                </tr>
+                <tr>
+                    <th>이용권명</th>
+                    <th>수량</th>
+                </tr>
+                <tr>
+                    <td>2019.06.02</td>
+                    <td>100,000원</td>
+                    <td rowspan="2">결제완료</td>
+                    <td rowspan="2"><a href="#" class="btn_br_gray open-popup" data-popup=".popup-payment">영수증</a></td>
+                </tr>
+                <tr>
+                    <td>프리미엄 서비스</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2019.05.02</td>
+                    <td>100,000원</td>
+                    <td rowspan="2">결제완료</td>
+                    <td rowspan="2"><a href="#" class="btn_br_gray open-popup" data-popup=".popup-payment">영수증</a></td>
+                </tr>
+                <tr>
+                    <td>망고아이 연간 회원권</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</div>
+
+<!-- 레벨테스트 신청 팝업 -->
+<div class="popup popup-leveltest level_application_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="level_application_area popup_overflow">
+            <div class="level_application_text_box">
+                ※ 강사선택 버튼을 클릭하신 후 레벨테스트를 예약하세요.
+            </div>
+
+            <ul class="level_teacher_select_list accordion-list">
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_jada.jpg" alt="jada" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Jada</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Industrial Engineering</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_yra.jpg" alt="yra" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve" >레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Yra</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Computer Engineering 计算机工程科学学士</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_jp.jpg" alt="jp" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>JP</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Business Administration Major in Marketing 企业管理科学 学士学位，主修市场营销</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_jed.jpg" alt="jed" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Jed (Asotigue, Ariel Jr. V.)</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Arts Major in English 文学学士，主修英语</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_cyrelle.jpg" alt="cyrelle" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Cyrelle</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b></td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Elementary Education Major in English 初等教育学士，主修英语</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_maj.jpg" alt="maj" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Maj</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Elementary Education Major in English 初等教育科学学士，主修英语</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_rebecca.jpg" alt="rebecca" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Rebecca</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Business Administration Major in Economics Around a year of Experience in Teaching English 工商管理学士 主修经济学，有1年的英语教学经验</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_farrah.jpg" alt="farrah" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Farrah</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Hotel and Restaurant Management 酒店管理学士学位</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_junessa.jpg" alt="junessa" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Junessa (Amar, Junessa D.)</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Arts and Sciences Major in Social Science at Tagoloan Community College 文理学院 主修社会科学</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_lloyd.jpg" alt="lloyd" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Lloyd</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Technology Communication Management 技术交流管理科学学士</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_ghee.jpg" alt="ghee" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Ghee</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Architecture 建筑学学士</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_kin.jpg" alt="kin" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Kin</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>I finished my degree in Bachelor of Science Major in Nursing in Liceo de Cagayan University 理科学位 主修护理</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_francis.jpg" alt="francis" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Francis</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor in Elementary Education – Major in Special Education (Graduated from Xavier University – Ateneo de Cagayan) 初等教育学士学位，主修特殊教育</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_donna.jpg" alt="donna" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Donna</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Elementary Education 初等教育科学学士</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_ralph.jpg" alt="Ralph" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Ralph</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Industrial Engineering 工业工程科学学士</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+                <!-- 강사 한명 -->
+                <li>
+                    <div class="level_teacher_photo_wrap">
+                        <img src="images/photo_teacher_marianne.jpg" alt="Marianne" class="level_teacher_photo">
+                        <a href="#" class="level_teacher_select_btn accordion-item-toggle">강사선택</a>
+                    </div>
+                    <div class="level_teacher_time_wrap accordion-item-content">
+                        <div class="level_teacher_time_caption">
+                            <h3 class="level_month_caption"><a href="#"><img src="images/btn_prev_black.png" class="level_month_prev"></a> 2019.07 <a href="#"><img src="images/btn_next_black.png" class="level_month_next"></a></h3>
+                            <table class="level_month_table">
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="active">8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <span class="level_teacher_time_line"></span>
+                        <table class="level_teacher_time_table">
+                            <tr>
+                                <th>2019.07.08 (월요일)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="level_teacher_time">12:30</span>
+                                    <span class="level_teacher_time">14:30</span>
+                                    <span class="level_teacher_time active">15:30</span>
+                                    <span class="level_teacher_time">16:30</span>
+                                    <span class="level_teacher_time">17:30</span>
+                                    <span class="level_teacher_time">18:30</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <a href="#" class="level_teacher_select_submit open-popup" data-popup=".popup-leveltest-reserve">레벨테스트 예약</a>
+                    </div>
+                    <div class="level_teacher_profile_wrap">
+                        <a href="#" class="level_teacher_greeting_btn">인사영상</a>
+                        <table class="level_teacher_profile_table">
+                            <tr>
+                                <th>Name</th>
+                                <td><b>Marianne</b></td>
+                            </tr>
+                            <tr>
+                                <th>Grade</th>
+                                <td>왕초보, 초급, 중급, 고급</td>
+                            </tr>
+                            <tr>
+                                <th>Subject</th>
+                                <td><b>레벨테스트</b>, 파닉스, 일반회화, 작문, 문법, 주제별 토론, 비즈니스 영어, 인터뷰 영어</td>
+                            </tr>
+                            <tr>
+                                <th>Education</th>
+                                <td>Bachelor of Science in Information Technology</td>
+                            </tr>
+                        </table>
+                        <div class="level_teacher_select_chart"><img src="images/sample_teacher_chart_1.png"></div>
+                    </div>
+                </li>
+            </ul>
+            <!--div class="bbs_page">
+                <span class="arrow_left_2"><img src="images/arrow_bbs_left_2.png"></span>
+                <span class="arrow_left_1"><img src="images/arrow_bbs_left_1.png"></span>
+                <span class="active">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="arrow_right_1"><img src="images/arrow_bbs_right_1.png"></a>
+                <a href="#" class="arrow_right_2"><img src="images/arrow_bbs_right_2.png"></a>
+            </div-->
+
+        </section>
+    </div>
+</div>
+
+<!-- 레벨테스트 예약 확인 팝업 -->
+<div class="popup popup-leveltest-reserve mantoman_write_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="mantoman_write_area popup_overflow">
+            <h3 class="caption_underline">레벨테스트 예약하기</h3>
+            <table class="level_reserve_table">
+                <tr>
+                    <th>신청자</th>
+                    <td>남궁영우</td>
+                </tr>
+                <tr>
+                    <th>과목명</th>
+                    <td>레벨테스트</td>
+                </tr>
+                <tr>
+                    <th>강사</th>
+                    <td>Rebecca</td>
+                </tr>
+                <tr>
+                    <th>일자</th>
+                    <td>2019년 7월 9일 (월요일) PM 03:30</td>
+                </tr>
+            </table>
+            <div class="button_wrap flex_justify">
+                <a href="#" class="btn_orange_white mantoman">신청하기</a>
+                <a href="#" class="btn_br_black mantoman close-popup">취소하기</a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 1:1문의 팝업 -->
+<div class="popup popup-mtm mantoman_write_wrap">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="mantoman_write_area popup_overflow">
+            <h3 class="caption_underline">1:1 친절상담 문의하기</h3>
+            <ul class="mantoman_write_list">
+                <li>서비스, 홈페이지, 학습방법 등 여러분의 여러 궁금증을 1:1로 상담하여 드립니다. </li>
+                <li>이곳에 문의하신 내용은 100% 비밀이 보장됩니다. </li>
+                <li>상담가능시간 : 평일 AM 10:00 ~ PM 9:00</li>
+            </ul>
+            <table class="mantoman_write_table">
+                <tr>
+                    <th>분류</th>
+                    <td>
+                        <select class="mantoman_select">
+                            <option>선택하세요</option>
+                            <option>수강신청관련</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>제목</th>
+                    <td><input type="text" class="mantoman_input"></td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td><textarea class="mantoman_textarea"></textarea></td>
+                </tr>
+                <tr>
+                    <th>파일</th>
+                    <td><input type="file" class="mantoman_file"></td>
+                </tr>
+            </table>
+            <div class="button_wrap flex_justify">
+                <a href="#" class="btn_orange_white mantoman">신청하기</a>
+                <a href="#" class="btn_br_black mantoman close-popup">취소하기</a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 이벤트 팝업 -->
+<div class="popup popup-event">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="event_content_wrap popup_overflow">
+            <div class="event_content_top">
+                <img src="images/sample_event_big_img.jpg" class="event_content_img">
+                <span class="event_status ing">진행중</span>
+                <!--span class="event_status">종료</span-->
+            </div>
+            <div class="event_content_area">
+                <h3 class="event_content_caption ellipsis">망고아이 홈페이지 리뉴얼 오픈 기념</h3>
+
+                안녕하세요. 망고지기 입니다.<br>
+                추가 수강료는 반 값이다!!<br>
+                평소에 학교와 학원으로 바쁜 아이들.<br>
+                원어민 선생님과 수업 시간을 늘리고, Speaking 실력도 UP 되는
+                여름방학이 되길 기원하며, 시원한 이벤트를 마련 했습니다.<br><br>
+
+                - 혜택 : 망고아이 회원가입 시 1개월 체험권 지급<br>
+                - 기간 : 2019.06.30 ~ 2019.08.30
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 수강신청 팝업 -->
+<div class="popup popup-class-payment">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="payment_wrap popup_overflow">
+            <h1 class="payment_caption">수강신청</h1>
+            <table class="payment_table_1">
+                <tr>
+                    <th>형태</th>
+                    <td class="radio_wrap type">
+                        <input type="radio" id="type" class="input_radio" checked name="" value="1" checked><label class="label" for="type"><span class="bullet_radio"></span>화상영어</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>횟수</th>
+                    <td class="radio_wrap time">
+                        <input type="radio" id="time_1" class="input_radio" name="time" value="1" checked><label class="label" for="time_1"><span class="bullet_radio"></span>주 5회</label>
+                        <input type="radio" id="time_2" class="input_radio" name="time" value="2"><label class="label" for="time_2"><span class="bullet_radio"></span>주 4회</label>
+                        <input type="radio" id="time_3" class="input_radio" name="time" value="3"><label class="label" for="time_3"><span class="bullet_radio"></span>주 3회</label>
+                        <input type="radio" id="time_4" class="input_radio" name="time" value="4"><label class="label" for="time_4"><span class="bullet_radio"></span>주 2회</label>
+                        <input type="radio" id="time_5" class="input_radio" name="time" value="5"><label class="label" for="time_5"><span class="bullet_radio"></span>주 1회</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>시수</th>
+                    <td class="radio_wrap minute">
+                        <input type="radio" id="minute_1" class="input_radio" name="minute" value="1" checked><label class="label" for="minute_1"><span class="bullet_radio"></span>20분(기본수업)</label>
+                        <input type="radio" id="minute_2" class="input_radio" name="minute" value="2"><label class="label" for="minute_2"><span class="bullet_radio"></span>40분(연강수업)</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>기간</th>
+                    <td class="radio_wrap duration">
+                        <input type="radio" id="duration_1" class="input_radio" name="duration" value="1" checked><label class="label" for="duration_1"><span class="bullet_radio"></span>1개월</label>
+                        <input type="radio" id="duration_2" class="input_radio" name="duration" value="2"><label class="label" for="duration_2"><span class="bullet_radio"></span>2개월</label>
+                        <input type="radio" id="duration_3" class="input_radio" name="duration" value="3"><label class="label" for="duration_3"><span class="bullet_radio"></span>3개월<span class="orange">(5% DC)</span></label>
+                        <input type="radio" id="duration_4" class="input_radio" name="duration" value="4"><label class="label" for="duration_4"><span class="bullet_radio"></span>6개월<span class="orange">(10% DC)</span></label>
+                    </td>
+                </tr>
+            </table>
+            <table class="payment_table_2">
+                <tr>
+                    <th>수강료</th>
+                    <td>
+                        <b class="price_bold">180,000</b>원 (결제시 포인트 1,800P 제공)
+                    </td>
+                </tr>
+                <tr>
+                    <th>포인트 사용</th>
+                    <td>
+                        3,000P 중에서
+                        <input type="text" class="input_point">P 사용
+                        <div class="point_text">(1,000 단위로 사용 가능)</div>
+                    </td>
+                </tr>
+            </table>
+            <div class="payment_table_wrap">
+                <div class="payment_table_left">
+                    <h3 class="payment_left_caption"><b>추가</b> 수강료</h3>
+                    <table class="payment_table_3">
+                        <tr>
+                            <th>
+                                <span class="bullet"></span>교육과정<br>
+                                <span class="bullet"></span>핸드폰<br>
+                                <span class="bullet"></span>강사비<br>
+                            </th>
+                            <td>
+                                60,000원<br>
+                                10,000원<br>
+                                100,000원<br>
+                            </td>
+                    </table>
+                </div>
+                <div class="payment_table_right">
+                    <h3 class="payment_left_caption"><b>최종 결제</b> 정보</h3>
+                    <table class="payment_table_4">
+                        <tr>
+                            <th>
+                                <span class="bullet"></span>기본수강료 + 추가수강료<br>
+                                <span class="bullet"></span>할인액
+                            </th>
+                            <td>
+                                180,000원
+                                <div class="orange">-1,000원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span class="bullet"></span>최종 결제 금액</th>
+                            <td>169,000원</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <a href="#" class="btn_orange_white payment">결제하기</a>
+
+            <table class="payment_table_5">
+                <tr>
+                    <th>교육과정</th>
+                    <td class="line_height">[Standard] [성인테마과정] iSpeak 101 일반회화 과정</td>
+                </tr>
+                <tr>
+                    <th>수업형태</th>
+                    <td><strong>화상영어</strong></td>
+                </tr>
+                <tr>
+                    <th>예약방식</th>
+                    <td><strong class="orange">고정예약</strong></td>
+                <tr>
+                    <th>횟수</th>
+                    <td>주 <strong>3</strong> 회</td>
+                </tr>
+                <tr>
+                    <th>시간</th>
+                    <td><strong>20</strong>분 </td>
+                </tr>
+                <tr>
+                    <th>기간</th>
+                    <td><strong>1</strong> 개월</td>
+                </tr>
+                <tr>
+                    <th>이벤트</th>
+                    <td></td>
+                </tr>
+            </table>
+            <ul class="payment_attention_list">
+                <li>1개월은 4주로 간주되며, 주 5회 1개월 수강은 총 20회, 주 3회 1개월 수강은 총 12회, 주 2회 1개월 수강은 총 8회로 진행됩니다.</li>
+                <li>모든 종류의 할인은 기본수강료를 기준으로 적용되며, 중복할인이 되지 않습니다.</li>
+                <li>추가 수강료란 핸드폰 수강자를 위한 추가 통신료, 과정별로 제공되는 예복습 프로그램이나 이북컨텐츠 등의 제공을 위한 과정별 추가비용을 말하며, 순수한 비용이므로 할인율이 적용되지 않습니다.</li>
+                <li>화상 수업으로 수강하기 위해서는 화상캠과 헤드셋이 필요합니다.</li>
+                <li>이벤트 상품의 경우, 특별할인(장기간 수강 할인 등)이 적용되지 않습니다.</li>
+            </ul>
+
+        </section>
+    </div>
+</div>
+
+<!-- 영수증 팝업 -->
+<div class="popup popup-payment">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="popup_overflow">
+
+        </section>
+    </div>
+</div>
+    
+<!-- 채팅방 팝업 -->
+<div class="popup popup-chating">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="popup_overflow">
+            <div class="toolbar messagebar" style="position:fixed; bottom:0;">
+                <div class="toolbar-inner">
+                    <textarea placeholder="Message" class=""></textarea><a class="link" href="#">SEND</a>
+                </div>
+            </div>
+            <div class="page-content messages-content">
+                <div class="messages">
+                    <div class="messages-date">Sunday, Feb 9 <span>12:58</span></div>
+                    <div class="message message-sent" style="margin:0 0 10px 0;">
+                        <div class="message-text">Hello! Good Morning.</div>
+                    </div>
+                    <div class="message message-sent message-last" style="margin:0 0 10px 0;">
+                        <div class="message-text">How are you?</div>
+                    </div>
+                    <div class="message message-sent message-last">
+                        <div class="message-text">How are you?</div>
+                    </div>
+                    <div class="message message-with-avatar message-last message-received">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text"><img src="images/sample_event_list_1.jpg"></div>
+                        <div style="background-image:url(images/sample_teacher_photo_1.jpg)" class="message-avatar"></div>
+                    </div>
+                    <div class="messages-date">Sunday, Feb 3 <span>11:58</span></div>
+                    <div class="message message-sent">
+                        <div class="message-text">Nice photo?</div>
+                    </div>
+                    <div class="message message-sent message-pic">
+                        <div class="message-text"><img src="images/sample_event_list_3.jpg"></div>
+                        <div class="message-label">Delivered</div>
+                    </div>
+                    <div class="message message-with-avatar message-last message-received">
+                        <div class="message-name">Kate</div>
+                        <div class="message-text">Wow, awesome!</div>
+                        <div style="background-image:url(images/sample_teacher_photo_1.jpg)" class="message-avatar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 학생계정 전환 팝업 -->
+<div class="popup popup-mode-login">
+    <div class="content-block">
+        <a href="#" class="close-popup"><img src="images/btn_close_black.png" class="close_popup_btn"></a>
+        <section class="mode_login_wrap">
+            <h3 class="mode_login_caption"><b>학생계정</b> 전환</h3>
+            <div class="mode_login_search">
+                <input type="text" placeholder="학생명" class="mode_login_input"><a href="#" class="mode_login_search_btn">검색</a>
+            </div>
+            <table class="mode_login_table">
+                <col width="45%">
+                <tr>
+                    <th>No</th>
+                    <th>학생명</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#" class="mode_login_name_btn">노사연</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#" class="mode_login_name_btn">남궁은지</a></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</div>
+
+<!-- Picker 베스트 강사 -->
+<div class="picker-modal picker_best_teacher" style="background-color:rgba(255,216,63,0.95);">
+    <div class="toolbar">
+        <div class="toolbar-inner">
+            <div class="left"></div>
+            <div class="right"><a href="#" class="close-picker"><img src="images/btn_close_black.png" class="picker_close"></a></div>
+        </div>
+    </div>
+    <div class="picker-modal-inner">
+        <div class="content-block mt-15 mb-10">
+            <div class="picker_best_caption">Lucky!</div>
+            <div class="picker_best_score">26,845점</div>
+        </div>
+    </div>
+</div>
+
+
+<!--div class="page page-bg full-page-video page-preloader full-page-image">
+    <div class="logo">
+        <img src="assets/img/logo-login.png" alt="">
+    </div>
+
+    <div class="text-center splash">
+        <div class="splash-welcome text-center">
+            <h4>Welcome!</h4>
+            <p>Start building your app or website<br> with Indra template.</p>
+        </div>
+
+        <div class="la-ball-rotate mt-30">
+            <div></div>
+        </div>
+    </div>
+</div-->
+
+
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
+<script type="text/javascript" src="bower_components/framework7/dist/js/framework7.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+<script type="text/javascript" src="bower_components/Tweetie/tweetie.min.js"></script>
+<script type="text/javascript" src="bower_components/chartjs/Chart.js"></script>
+<script type="text/javascript" src="bower_components/scrollAnimate/jquery.scrollAnimate.js"></script>
+<script type="text/javascript" src="bower_components/owl-carousel/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="bower_components/vide/dist/jquery.vide.min.js"></script>
+<script type="text/javascript" src="assets/js/jflickrfeed.min.js"></script>
+<script type="text/javascript" src="assets/js/min/app.js"></script>
+<script type="text/javascript" src="assets/js/animations.js"></script>
+<script type="text/javascript" src="js/swiper.js"></script>
+
+
+</body>
+</html>
+
+<!-- 2020-05-03 추가 시작 -->
+<script>
+var OpenFeatureChoose=0;
+function OpenFeatureChooseShow(){
+    if(OpenFeatureChoose==0){
+        $('.feature_video_choose').stop().fadeIn(200);
+        OpenFeatureChoose=1;
+    }else{
+        $('.feature_video_choose').stop().fadeOut(200);
+        OpenFeatureChoose=0;
+    }
+    
+}
+</script>
+<!-- 2020-05-03 추가 시작 -->
+
+
+
+

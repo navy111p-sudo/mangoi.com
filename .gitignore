@@ -1,0 +1,17 @@
+# IDE
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Gemini
+.gemini/
+
+# LFS 문제 파일 제외
+*.mp4
+*.ogv
+*.log
+kcp_batch_mobile/bin/log/
+kcp_batch_pc/bin/log/

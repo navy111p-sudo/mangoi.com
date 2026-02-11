@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="수업료 계산기 - 평가 점수를 입력하면 10분당 수업료를 자동으로 계산합니다."
+    />
+    <title>수업료 계산기 | Mangoi</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Noto Sans KR", "sans-serif"],
+            },
+            colors: {
+              primary: {
+                50: "#f0f7ff",
+                100: "#e0effe",
+                200: "#b9dffc",
+                300: "#7cc5fa",
+                400: "#36a9f5",
+                500: "#0c8ee6",
+                600: "#0070c4",
+                700: "#01599f",
+                800: "#064c83",
+                900: "#0b406d",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/salary-calculator.css" />
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 font-sans flex items-center justify-center p-4"
+  >
+    <!-- 계산기 카드 -->
+    <main class="calculator" id="calculator">
+      <!-- 헤더 영역 -->
+      <div class="calculator__header">
+        <div class="calculator__header-top">
+          <!-- 교사 이름 입력 (드롭다운 포함) -->
+          <div class="calculator__teacher">
+            <label class="calculator__teacher-label" for="teacherName"
+              >교사 이름 (Teacher Name)</label
+            >
+            <div class="calculator__teacher-wrapper" id="teacherWrapper">
+              <input
+                class="calculator__teacher-input"
+                type="text"
+                id="teacherName"
+                name="teacherName"
+                placeholder="이름 입력 (Enter name)"
+                autocomplete="off"
+              />
+              <button
+                class="calculator__teacher-toggle"
+                type="button"
+                id="teacherToggle"
+                aria-label="교사 목록 열기"
+              >
+                &#9660;
+              </button>
+              <!-- 드롭다운 리스트 -->
+              <ul class="calculator__teacher-list hidden" id="teacherList">
+                <!-- JS에서 동적으로 추가됨 -->
+              </ul>
+            </div>
+          </div>
+          <!-- 제목 -->
+          <div class="calculator__header-title">
+            <h1 class="calculator__title">수업료 계산기 (Salary Calculator)</h1>
+          </div>
+        </div>
+        <p class="calculator__subtitle">
+          평가 점수를 입력하면 10분당 수업료를 계산해 드립니다 (Enter scores to
+          calculate the rate per 10 minutes)
+        </p>
+      </div>
+
+      <!-- 입력 폼 영역 -->
+      <form
+        class="calculator__form"
+        id="salaryForm"
+        onsubmit="
+          event.preventDefault();
+          calculateSalary();
+        "
+      >
+        <!-- 근태 점수 -->
+        <div class="calculator__field">
+          <label class="calculator__label" for="attendance">
+            근태 점수 (Attendance)
+            <span class="calculator__label-hint">(0 ~ 5)</span>
+          </label>
+          <input
+            class="calculator__input"
+            type="number"
+            id="attendance"
+            name="attendance"
+            min="0"
+            max="5"
+            step="0.1"
+            placeholder="0.0 ~ 5.0"
+            required
+          />
+        </div>
+
+        <!-- 학생 평가 -->
+        <div class="calculator__field">
+          <label class="calculator__label" for="student">
+            학생 평가 (Student Evaluation)
+            <span class="calculator__label-hint">(0 ~ 5)</span>
+          </label>
+          <input
+            class="calculator__input"
+            type="number"
+            id="student"
+            name="student"
+            min="0"
+            max="5"
+            step="0.1"
+            placeholder="0.0 ~ 5.0"
+            required
+          />
+        </div>
+
+        <!-- 상사 평가 -->
+        <div class="calculator__field">
+          <label class="calculator__label" for="boss">
+            상사 평가 (Boss Evaluation)
+            <span class="calculator__label-hint">(0 ~ 5)</span>
+          </label>
+          <input
+            class="calculator__input"
+            type="number"
+            id="boss"
+            name="boss"
+            min="0"
+            max="5"
+            step="0.1"
+            placeholder="0.0 ~ 5.0"
+            required
+          />
+        </div>
+
+        <!-- 출석률 점수 -->
+        <div class="calculator__field">
+          <label class="calculator__label" for="yearly">
+            출석률 점수 (Yearly Attendance Rate)
+            <span class="calculator__label-hint">(0 ~ 5)</span>
+          </label>
+          <input
+            class="calculator__input"
+            type="number"
+            id="yearly"
+            name="yearly"
+            min="0"
+            max="5"
+            step="0.1"
+            placeholder="0.0 ~ 5.0"
+            required
+          />
+        </div>
+
+        <!-- 계산하기 버튼 -->
+        <button class="calculator__button" type="submit" id="calculateBtn">
+          계산하기 (Calculate)
+        </button>
+      </form>
+
+      <!-- 결과 표시 영역 -->
+      <div class="calculator__result" id="resultArea">
+        <!-- 기본 안내 문구 (계산 전) -->
+        <p class="calculator__result-placeholder" id="resultPlaceholder">
+          점수를 입력하고 계산하기 버튼을 눌러주세요 (Please enter scores and
+          click Calculate)
+        </p>
+        <!-- 계산 결과 (계산 후) -->
+        <div class="calculator__result-content hidden" id="resultContent">
+          <div class="calculator__result-row">
+            <span class="calculator__result-label"
+              >평균 점수 (Average Score)</span
+            >
+            <span class="calculator__result-value" id="avgScore">-</span>
+          </div>
+          <div class="calculator__result-divider"></div>
+          <div class="calculator__result-row">
+            <span class="calculator__result-label">등급 (Grade)</span>
+            <span
+              class="calculator__result-value calculator__result-value--grade"
+              id="gradeText"
+              >-</span
+            >
+          </div>
+          <div class="calculator__result-divider"></div>
+          <div class="calculator__result-row calculator__result-row--highlight">
+            <span class="calculator__result-label"
+              >10분당 수업료 (Rate per 10 min)</span
+            >
+            <span
+              class="calculator__result-value calculator__result-value--salary"
+              id="salaryRate"
+              >-</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- 수업료 기준표 -->
+      <details class="calculator__table-wrapper">
+        <summary class="calculator__table-toggle">
+          수업료 기준표 보기 (View Rate Table)
+        </summary>
+        <table class="calculator__table">
+          <thead>
+            <tr>
+              <th>평균 점수 (Avg. Score)</th>
+              <th>등급 (Grade)</th>
+              <th>10분당 수업료 (Rate)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4.0 이상 (4.0+)</td>
+              <td>
+                <span class="calculator__badge calculator__badge--excellent"
+                  >우수 (Excellent)</span
+                >
+              </td>
+              <td><strong>150 페소 (Peso)</strong></td>
+            </tr>
+            <tr>
+              <td>3.0 ~ 3.9</td>
+              <td>
+                <span class="calculator__badge calculator__badge--good"
+                  >양호 (Good)</span
+                >
+              </td>
+              <td><strong>140 페소 (Peso)</strong></td>
+            </tr>
+            <tr>
+              <td>2.0 ~ 2.9</td>
+              <td>
+                <span class="calculator__badge calculator__badge--normal"
+                  >보통 (Normal)</span
+                >
+              </td>
+              <td><strong>120 페소 (Peso)</strong></td>
+            </tr>
+            <tr>
+              <td>2.0 미만 (Below 2.0)</td>
+              <td>
+                <span class="calculator__badge calculator__badge--low"
+                  >미달 (Low)</span
+                >
+              </td>
+              <td><strong>100 페소 (Peso)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/salary-calculator.js"></script>
+  </body>
+</html>

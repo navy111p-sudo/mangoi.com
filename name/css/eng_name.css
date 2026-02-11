@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{margin:0; padding:0; box-sizing:border-box;}
+ul, ol, li{list-style:none;}
+
+body{font-family:'Noto Sans KR', sans-serif; line-height:1; color:#606060; padding:50px 3% 0 3%;}
+
+.tab_eng_fix{position:fixed; left:0; right:0; background-color:#fff; top:0; height:48px; width:100%;}
+.tab_eng_name{text-align:center; margin:0 0 15px 0;}
+.tab_eng_name li{width:31%; display:inline-block; font-size:12px; border:1px solid #e3e3e3; height:38px; line-height:36px; color:#333; cursor:pointer; font-weight:500;}
+.tab_eng_name li:hover{font-weight:600;}
+.tab_eng_name li.active{border:2px solid #333; line-height:34px;}
+
+.div_eng_name{display:none;}
+.table_eng_name{font-size:12px; width:100%; text-align:center; border-collapse:0; border-spacing:0;}
+.table_eng_name th{background-color:#954979; color:#fff; height:30px; border-right:1px solid #e3e3e3;}
+.table_eng_name tr th:last-child{border-right:0;}
+.table_eng_name td{height:30px; border-right:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3;}
+.table_eng_name tr td:last-child{border-right:0;}
+
+@media all and (min-width:600px) and (max-width:719px){	
+body{padding:52px 0 0 0;}
+.tab_eng_fix{height:50px;}
+.tab_eng_name li{font-size:13px; height:40px; line-height:38px;}
+.tab_eng_name li.active{line-height:36px;}
+.table_eng_name{font-size:13px;}
+.table_eng_name th, .table_eng_name td{height:32px;}
+}
+@media all and (min-width:720px) and (max-width:959px){	
+body{padding:64px 0 0 0;}
+.tab_eng_fix{height:62px;}
+.tab_eng_name li{font-size:14px; height:42px; line-height:40px;}
+.tab_eng_name li.active{line-height:38px;}
+.table_eng_name{font-size:14px;}
+.table_eng_name th, .table_eng_name td{height:34px;}
+}
+@media all and (min-width:960px) and (max-width:1009px){	
+body{padding:72px 0 0 0;}
+.tab_eng_fix{height:70px;}
+.tab_eng_name li{font-size:14px; height:44px; line-height:42px; width:240px;}
+.tab_eng_name li.active{line-height:40px;}
+.table_eng_name{font-size:14px;}
+.table_eng_name th, .table_eng_name td{height:36px;}
+}
+@media all and (min-width:1010px){	
+body{padding:78px 0 0 0;}
+.tab_eng_fix{height:76px;}
+.tab_eng_name li{font-size:14px; height:46px; line-height:44px; width:250px;}
+.tab_eng_name li.active{line-height:42px;}
+.table_eng_name{font-size:14px;}
+.table_eng_name th, .table_eng_name td{height:38px;}
+}

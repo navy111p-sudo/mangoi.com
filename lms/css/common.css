@@ -1,0 +1,87 @@
+/* 게시판 리스트 추가 css */
+.uk-table{border-collapse:collapse;}
+.uk-table th, .uk-table td{border:1px solid #ccc;}
+.uk-table th {background-color:#f1f1f1; text-align:center;}
+.uk-table-td-center {text-align:center;}
+.uk-table-td-right {text-align:right;}
+/* 게시판 리스트 추가 css */
+
+/* 리스트 추가 css */
+.ListState_0{color:#ff0000;}
+.ListState_1{color:#000000;}
+.ListState_2{color:#cccccc;}
+.ListState_3{color:#cccccc;}
+/* 리스트 추가 css */
+
+.uk-form-row.btns{overflow:hidden; padding:20px 0 0 0;}
+.uk-form-row.btns .md-btn-primary{display:block; margin:0 auto 10px auto;}
+@media all and (min-width:640px){
+	.uk-form-row.btns .md-btn-primary{display:inline-block; margin:0;}
+	.uk-form-row.btns md-btn-primary.one{float:left;}
+	.uk-form-row-right{float:right;}
+}
+
+/** 버튼 관련 **/
+
+.button_3 a{width:30%; padding-left:0; padding-right:0; max-width:120px;}
+
+.button_gray_white_small{background-color:#666; color:#fff; width:50px; height:26px; line-height:26px; border:0; border-radius:4px;}
+.button_gray_white_big{background-color:#666; color:#fff; width:150px; height:40px; line-height:40px; border:0; border-radius:4px;}
+
+/** 폼 관련 **/
+.textarea{border:1px solid #eee; padding:10px; width:100%; height:100px; box-sizing:border-box; display:block;}
+.input_text{border:1px solid #eee; padding-left:10px; width:100%; height:30px;}
+
+/** 라디오 박스 **/
+.radio_input{display:none;}
+.radio_label{cursor:pointer; display:flex; align-items:center; flex-wrap:wrap;}
+.radio_label .radio_bullet{width:18px; height:18px; border:2px solid #757575; border-radius:50%; margin:0 6px 0 0;}
+.radio_input:checked + .radio_label .radio_bullet{background-image:url(../images/input_radio_green.png); background-size:100%; border:2px solid #009688;}
+
+/** 체크 박스 **/
+.check_input{display:none;}
+.check_label{cursor:pointer; display:flex; align-items:center; flex-wrap:wrap;}
+.check_label .check_bullet{width:18px; height:18px; border:2px solid #757575; border-radius:2px; margin:0 6px 0 0;}
+.check_input:checked + .check_label .check_bullet{background-image:url(../images/input_check_green.png); background-size:100%; border:2px solid #009688;}
+
+/** 밑줄 박스 **/
+.underline_box{padding:10px 0; border-bottom:1px solid #eee; color:#666;}
+.border_box{padding:10px; border:1px solid #eee; color:#666;}
+
+/** 게시판 관련 테이블 **/
+.table_bbs_1{width:100%; border-collapse:collapse; margin:10px 0;}
+.table_bbs_1 th{color:#333; font-weight:400;}
+.table_bbs_1 td{color:#666; padding:10px;}
+.table_underline{border-bottom:1px solid #eee;}
+.table_bg_gray{background-color:#f9f9f9;}
+.text_left{text-align:justify;}
+.button_gray_white_big.reply{height:100px; line-height:100px;}
+
+/** 기안서 **/
+.draft_top{display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; flex-direction:row; justify-content:space-between; margin-bottom:20px; min-width:640px;}
+.draft_title{font-size:24px; padding-top:40px;}
+.draft_approval{border-collapse:collapse; width:400px;}
+.draft_approval select{width:90%;}
+.draft_approval th, .draft_approval td{border:1px solid #ddd; text-align:center; padding:3px 0;}
+
+.draft_table_1{border-collapse:collapse; width:100%; margin-bottom:10px; min-width:640px;}
+.draft_table_1 th, .draft_table_1 td{border:1px solid #ddd; text-align:center; padding:6px 10px;}
+th.draft_cell_green{background-color:#c7f0ea;}
+th.draft_cell_yellow{background-color:#ffe36e;}
+.draft_input{border:0; display:block; width:100%; height:30px; background-color:#f2f2f2; border-radius:4px; padding-left:10px; box-sizing:border-box;}
+.draft_textarea{border:0; display:block; width:100%; height:30px; background-color:#f2f2f2; border-radius:4px; padding:10px; box-sizing:border-box; height:140px;}
+
+.draft_table_2{border-collapse:collapse; width:100%; margin-bottom:10px; min-width:640px;}
+.draft_table_2 th, .draft_table_2 td{border:1px solid #ddd; text-align:center; padding:6px 10px;}
+th.draft_table_caption{background-color:#f2f2f2; padding:10px 0;}
+th.draft_cell_green.total{height:30px;}
+
+.draft_table_3{border-collapse:collapse; width:100%; min-width:640px;}
+.draft_table_3 th{border:1px solid #ddd; text-align:left; padding:6px 10px 6px 20px;}
+.draft_table_3 td{border:1px solid #ddd; padding:6px 10px;}
+
+.draft_bottom{text-align:center; padding:20px 0 25px 0; line-height:2.5; min-width:640px;}
+.draft_sign_wrap{text-align:right;}
+.draft_sign{display:inline-block; padding:0 20px;}
+
+.draft_wrap{overflow:auto; padding:20px 0;}

@@ -1,0 +1,58 @@
+.tree li a {
+    text-decoration: none;
+    line-height: 20pt;
+    text-transform: uppercase;
+}
+
+.tree li a:hover {
+    background-color: #009EFF;
+    color: #fff;
+}
+
+.tree li .active {
+    background-color: #009EFF;
+    color: white;
+}
+
+.tree li .active a {
+    color: #fff;
+}
+.tree li{position: relative;}
+.tree li a{padding: 10px 20px;width: 100%;box-sizing: border-box;}
+.tree li a.active:hover {
+    background-color: #009EFF;
+}
+
+.toggler {
+	position:absolute;top:8px;right:0px;
+	width:1em;
+    display: inline-block;
+    cursor: default;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0.1em;
+    margin-right: 0.6em;
+    border: 0.1em solid transparent;
+    font-size: 20px;line-height: 1;
+    border-radius: 50%;
+}
+
+li.tree-opened > .toggler:hover,
+li.tree-closed > .toggler:hover {
+    border-color: #aaa;
+    cursor: pointer;
+}
+
+
+li.tree-closed > span.toggler:before { content: "+"; }
+li.tree-opened > span.toggler:before { content: "\2212"; }
+li.tree-empty > .toggler { }
+li.tree-empty > span.toggler:before { content: "";}
+
+.level1 > li{background: #00243E;border-bottom: 1px solid #ddd;color: #fff;}
+
+.level2 > li{background: #ebe9ea;border-top: 1px solid #ddd;color: #000;}
+.level2 > li a{padding-left: 30px;}
+
+.level3 > li{background: #fff;border-top: 1px solid #ddd;}
+.level3 > li a{padding:5px 0 5px 40px;}

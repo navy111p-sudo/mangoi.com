@@ -1,0 +1,40 @@
+﻿웹 녹음 녹화 ==============
+https://www.webrtc-experiment.com/RecordRTC/ \
+https://simpl.info/getusermedia/sources/ \
+https://www.html5rocks.com/en/tutorials/getusermedia/intro/ \
+https://mido22.github.io/MediaRecorder-sample/ \
+https://addpipe.com/blog/the-new-video-recording-prompt-for-media-capture-in-ios9/
+https://zhirzh.github.io/2017/09/02/mediarecorder/
+https://github.com/imalhasaranga/VideoRecorderJs
+https://webaudiodemos.appspot.com/AudioRecorder/index.html
+https://h5p.org/audio-recorder
+https://addpipe.com/about
+https://stackoverflow.com/questions/14976460/html5-video-recording-and-upload
+
+--sun
+https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
+https://github.com/nchutchind/cordova-plugin-streaming-media //녹화아님
+일단 웹으로 녹화업로드가 되는지 !
+녹화가되는지?
+업로드 잘되는지?
+
+https://github.com/EddyVerbruggen/VideoCapturePlus-PhoneGap-Plugin
+
+2019.06.10
+-WebRTC Video Replay 
+
+https://webrtc.github.io/samples/src/content/getusermedia/record/
+
+https://www.webrtc-experiment.com/RecordRTC/
+
+-HTML5 Video tag
+
+https://m.blog.naver.com/PostView.nhn?blogId=kira4195&logNo=221249440427&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+
+-Recorder.js git, demo
+https://blog.addpipe.com/author/octavn/
+https://github.com/addpipe/simple-recorderjs-demo
+https://addpipe.com/simple-recorderjs-demo/
+https://janus.conf.meetecho.com/echotest.html(demo)
+

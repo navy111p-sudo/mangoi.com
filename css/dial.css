@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+html,body{height:100%;}
+body{font-family:"나눔고딕";}
+.DialWrap{height:100%; background: #383838;}
+a{text-decoration:none;}
+li{list-style:none;}
+
+.Btn_Close{position:absolute; left:15px; top:15px;}
+.Btn_Close img{width:20px;}
+
+.DialHeader{text-align:center; padding:75px 0 35px 0; background:#fff;}
+.DialHeader h3{color:#222; padding-bottom:25px; font-size:24px; font-weight:normal;}
+.DialHeader .In{border:0; width:65px; height:65px; text-align:center; font-size:36px; color:#333; margin:0 5px; background:#fcfcfc;; border-radius:2px; border:1px solid #ddd;}
+.DialNumber{width:330px; margin:0 auto; padding-top:45px;}
+.DialNumber li{float:left; width:110px; height:110px; text-align:center;}
+.DialNumber li a{display:inline-block; width:80px; height:80px; line-height:80px; color:#fff; font-size:30px; border:3px solid #fff; border-radius:50%;}
+.DialNumber li a:hover{background:#fff; color:#111;}
+.DialNumber li a:active{background:#fff; color:#111;}
+.DialNumber li a.Del{font-size:24px; color:#fff;}
+.DialNumber li a.Del:hover{background:#fff; color:#111;}
+.DialNumber li a.Del:active{background:#fff; color:#111;}
+.DialNumber li a.Back{font-size:32px; background:url(../images/Btn_Back_Off.png) no-repeat 44% 50%; background-size:30%;}
+.DialNumber li a.Back:hover{background:url(../images/Btn_Back_On.png) no-repeat 44% 50%; background-color:#fff; background-size:30%;}
+.DialNumber li a.Back:active{background:url(../images/Btn_Back_On.png) no-repeat 44% 50%; background-color:#fff; background-size:30%;}
+
+/********* 팝업 ***********/
+.DialPop{margin:20px;padding:30px 20px; width:360px; border:3px solid #666; box-sizing:border-box; border-radius:6px; color:#333;}
+/********* 학생이름 선택 ***********/
+.NameChoose{text-align:center; height:160px;}
+.NameChoose a{display:inline-block; width:200px; height:40px; line-height:40px; background:#383838; color:#fff; margin-bottom:12px; border-radius:20px; font-size:18px; border:2px solid #383838;}
+.NameChoose a:hover{background:#fff; color:#383838;}
+.NameChoose a:active{background:#fff; color:#383838;}
+.NameChoose a:last-child{margin-bottom:0;}
+
+/********* 등원 선택 ***********/
+.AttendBox{width:240px; margin:0 auto;}
+.Date{overflow:hidden; margin-bottom:15px;}
+.Date img{float:left; width:65px; display:none;}
+.Date h4{float:none; width:100%; line-height:1.5; padding-top:7px; text-align:center;}
+
+.StudentName{background:#7ec4e4; text-align:center; color:#fff; line-height:44px; border-radius:22px;}
+.BtnCenter{text-align:center; padding-top:20px;}
+.BtnG{display:inline-block; width:110px; height:36px; line-height:36px; text-align:center; background:#444; border:2px solid #444; color:#fff;}
+.BtnW{display:inline-block; width:110px; height:36px; line-height:36px; text-align:center; background:#fff; border:2px solid #444; color:#444;}
+
+.Getoff{text-align:center; margin-top:20px;}
+
+@media all and (max-width:480px){
+.DialHeader{text-align:center; padding:60px 0 20px 0;}
+.DialHeader .In{width:50px; height:50px; font-size:32px; margin:0 4px;}
+.DialHeader h3{color:#222; padding-bottom:20px; font-size:20px; font-weight:normal;}
+.DialNumber{width:270px; margin:0 auto; padding-top:30px;}
+.DialNumber li{float:left; width:90px; height:90px; text-align:center;}
+.DialNumber li a{width:64px; height:64px; line-height:64px; font-size:28px;}	
+.DialNumber li a.Del{font-size:22px; color:#fff;}
+.DialNumber li a.Back{font-size:28px; color:#fff;}
+
+/********* 팝업 ***********/
+.DialPop{padding:25px 15px; width:300px; border:2px solid #666;}
+.AttendBox{width:220px;}
+.Date img{width:60px;}
+.Date h4{width:100%; line-height:1.5; padding-top:5px;}
+.BtnG{width:102px;}
+.BtnW{width:102px;}
+.NameChoose a{font-size:16px;}
+.StudentName{font-size:16px;}
+}
+

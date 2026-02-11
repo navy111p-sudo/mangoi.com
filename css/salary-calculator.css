@@ -1,0 +1,446 @@
+/* =============================================
+   수업료 계산기 스타일
+   BEM 방법론 적용: Block__Element--Modifier
+   ============================================= */
+
+/* ---------- 유틸리티 ---------- */
+.hidden {
+  display: none !important;
+}
+
+/* ---------- 계산기 카드 (Block) ---------- */
+.calculator {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  transition: box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- 헤더 ---------- */
+.calculator__header {
+  margin-bottom: 28px;
+}
+
+.calculator__header-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+/* 교사 이름 입력 */
+.calculator__teacher {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.calculator__teacher-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* 드롭다운 wrapper (input + 삼각표 + 리스트를 감싸는 부모) */
+.calculator__teacher-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.calculator__teacher-input {
+  width: 130px;
+  padding: 8px 30px 8px 12px; /* 오른쪽에 삼각표 공간 확보 */
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #1f2937;
+  background: #f9fafb;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.calculator__teacher-input:focus {
+  outline: none;
+  border-color: #0c8ee6;
+  box-shadow: 0 0 0 3px rgba(12, 142, 230, 0.15);
+  background: #ffffff;
+}
+
+.calculator__teacher-input::placeholder {
+  color: #c4c9d2;
+  font-size: 0.75rem;
+}
+
+/* 삼각표(토글) 버튼 */
+.calculator__teacher-toggle {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 0.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.calculator__teacher-toggle:hover {
+  color: #0c8ee6;
+  background: #f0f7ff;
+}
+
+/* 토글 버튼 활성 상태 (리스트 열림) */
+.calculator__teacher-toggle--active {
+  color: #0c8ee6;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* 드롭다운 리스트 */
+.calculator__teacher-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  max-height: 160px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  z-index: 100;
+}
+
+/* 리스트 아이템 */
+.calculator__teacher-item {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.calculator__teacher-item:hover {
+  background: #f0f7ff;
+  color: #0c8ee6;
+}
+
+/* 리스트가 비었을 때 안내 */
+.calculator__teacher-empty {
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* 헤더 제목 영역 */
+.calculator__header-title {
+  flex: 1;
+  text-align: center;
+}
+
+.calculator__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0;
+}
+
+.calculator__subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* ---------- 폼 ---------- */
+.calculator__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---------- 입력 필드 ---------- */
+.calculator__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.calculator__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.calculator__label-hint {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #9ca3af;
+  margin-left: 4px;
+}
+
+.calculator__input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #1f2937;
+  background: #f9fafb;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.calculator__input:focus {
+  outline: none;
+  border-color: #0c8ee6;
+  box-shadow: 0 0 0 3px rgba(12, 142, 230, 0.15);
+  background: #ffffff;
+}
+
+.calculator__input::placeholder {
+  color: #c4c9d2;
+}
+
+/* ---------- 버튼 ---------- */
+.calculator__button {
+  margin-top: 8px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0c8ee6, #0070c4);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.calculator__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(12, 142, 230, 0.35);
+}
+
+.calculator__button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---------- 결과 영역 ---------- */
+.calculator__result {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f0f7ff;
+  border: 1.5px solid #e0effe;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.calculator__result--active {
+  background: #e0effe;
+  border-color: #7cc5fa;
+  animation: resultPop 0.35s ease;
+}
+
+@keyframes resultPop {
+  0% {
+    transform: scale(0.97);
+    opacity: 0.6;
+  }
+  60% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.calculator__result-placeholder {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.calculator__result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calculator__result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator__result-row--highlight {
+  padding-top: 4px;
+}
+
+.calculator__result-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.calculator__result-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.calculator__result-value--salary {
+  font-size: 1.25rem;
+  color: #0c8ee6;
+  font-weight: 700;
+}
+
+.calculator__result-divider {
+  height: 1px;
+  background: #d1e4f5;
+}
+
+/* ---------- 등급 색상 ---------- */
+.grade--excellent {
+  color: #059669;
+} /* 초록 - 우수 */
+.grade--good {
+  color: #0c8ee6;
+} /* 파랑 - 양호 */
+.grade--normal {
+  color: #d97706;
+} /* 주황 - 보통 */
+.grade--low {
+  color: #dc2626;
+} /* 빨강 - 미달 */
+
+/* ---------- 기준표 (details/summary) ---------- */
+.calculator__table-wrapper {
+  margin-top: 20px;
+}
+
+.calculator__table-toggle {
+  font-size: 0.8rem;
+  color: #6b7280;
+  cursor: pointer;
+  text-align: center;
+  list-style: none;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+.calculator__table-toggle:hover {
+  color: #0c8ee6;
+}
+
+.calculator__table-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.calculator__table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+  font-size: 0.825rem;
+}
+
+.calculator__table th,
+.calculator__table td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.calculator__table th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.calculator__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- 뱃지 ---------- */
+.calculator__badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.calculator__badge--excellent {
+  background: #d1fae5;
+  color: #059669;
+}
+.calculator__badge--good {
+  background: #dbeafe;
+  color: #2563eb;
+}
+.calculator__badge--normal {
+  background: #fef3c7;
+  color: #d97706;
+}
+.calculator__badge--low {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ---------- 반응형 (모바일) ---------- */
+@media (max-width: 480px) {
+  .calculator {
+    padding: 24px 18px;
+    border-radius: 12px;
+  }
+
+  .calculator__header-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .calculator__teacher-input {
+    width: 100%;
+  }
+
+  .calculator__header-title {
+    text-align: center;
+  }
+
+  .calculator__title {
+    font-size: 1.5rem;
+  }
+}

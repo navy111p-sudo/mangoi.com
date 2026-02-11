@@ -1,0 +1,21 @@
+﻿#container{height:48px; border-bottom:1px solid rgb(230, 230, 230);}
+#container .inner{margin: 0px auto; max-width:1200px;}
+#container .inner ul {}
+#container .inner ul li {color: rgb(136, 136, 136); line-height:40px;}
+#container .inner ul li.divider {margin:0px 5px;}
+#container .inner ul li.current {color:rgb(51, 51, 51);}
+#container > .inner {margin:0 auto; padding: 0px; border-right:1px solid rgb(230, 230, 230); border-left:1px solid rgb(230, 230, 230); max-width:1200px;}
+#container > .inner::after {clear:both; display:block; content:"";}
+#nav {height:48px; border-bottom:1px solid rgb(230, 230, 230); z-index:999;}
+#nav .inner {margin:0px auto; padding: 0px; max-width: 1200px;}
+#nav .title {background:#333; width:50px; height:48px; float:left;}
+#nav .title > a{width:100%; text-align:center; line-height:48px; display:block; background:url(../../images/icon_home.png) no-repeat; background-size:100%;}
+#nav .dropdown {margin-left: -1px; float:left; position:relative; z-index:1000; min-width:130px;}
+#nav .dropdown > a {padding: 0px 0px 0px 25px; width:150px; color:#333; line-height:48px; height:48px; font-size:14px; border-right:1px solid rgb(230, 230, 230); display:block; position:relative;}
+#nav .dropdown > a::before {border-width: 4px; border-style: solid; border-color: rgb(51, 51, 51) transparent transparent; top: 50%; width:0px; height:0px; right:15px; margin-top:-2px; position: absolute; content:"";}
+#nav .open.dropdown > a::before {margin-top: -6px; border-top-color: transparent; border-bottom-color: rgb(51, 51, 51);}
+#nav .dropdown > ul.mnuList{background:#fff; border:1px solid rgb(230, 230, 230); border-image: none; left: 0px; top: 47px; width:150px; display: none; position: absolute; font-size:13px;}
+#nav .dropdown > ul.mnuList li {border-top:1px solid rgb(230, 230, 230);}
+#nav .dropdown > ul.mnuList li:first-child {border-top-color:currentColor; border-top-width:medium; border-top-style:none;}
+#nav .dropdown > ul.mnuList li a{display: block; color:#3c3c3c; padding-left:20px;}
+#nav .dropdown > ul.mnuList li a:hover{background:#3c3c3c; color:#fff;}

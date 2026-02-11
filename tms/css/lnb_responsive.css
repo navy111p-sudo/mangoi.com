@@ -1,0 +1,128 @@
+@media screen and (max-width: 1200px) {/*작은웹, 아이패드 프로 0 ~ 1200*/
+    
+}
+@media screen and (max-width: 1024px) {/*아이패드 프로 0 ~ 1024*/
+
+}
+
+
+/*공통*/
+
+.mobileView {display: none;}
+.webView {display: block;}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {/*모바일 기본 0 ~ 768*/
+    
+    .mobileView {display: block;}
+    .webView {display: none;}
+    
+    .container {margin-top: 50px;}
+    .subPWrapper {margin: 50px 0;}
+    .subPcontWrap {padding-left: 0; padding: 0 15px;}
+    .bigTT {font-size: 27px;}
+    .big2TT {font-size: 20px;}
+    .normalTT {padding-top: 0px; font-size: 14px;}
+    
+    .mobyLogo-m a {padding: 8px 0;}
+    .mobyLogo-m img {width: 120px; margin-top:8px;}
+    .mbSlideImg {padding-bottom:60%;}
+    .mbSliderBox .bx-controls-direction {height:25px;}
+    .mbSliderBox .bx-wrapper .bx-prev {left:5px;}
+    .mbSliderBox .bx-wrapper .bx-next {right:5px;}
+    .mbSliderBox .bx-wrapper .bx-prev:after {font-size: 25px;}
+    .mbSliderBox .bx-wrapper .bx-next:after {font-size: 25px;}
+    .mbSlideText {width:100%; text-align: center;}
+    .colorBox {position: static; transform: translateX(0);}
+    .colorBox li {width: 33.33333%; margin-right: 0;}
+    .colorBox li a {padding: 10px 0;}
+    .sectionBoxWrap {margin-top:0;}
+    .sectionBox li {width: 100%; padding: 70px 30px; text-align: center;}
+    .sectionBox .normalTT {padding-bottom: 13px; padding-top: 13px;}
+    .sectionBox li:first-child {border: none;}
+    .sectionBox li:nth-child(2) {border-bottom: none;}
+    .sectionBox li:last-child {border-bottom:none;}
+
+    .callBoxWrap {margin-top:0;}
+    .collBox {border: none;}
+    .collBox li {text-align: center; color:#fff; padding:60px 10px;}
+    .collBox li:first-child {border:none; background:#6CAEC3;}
+    .collBox li:last-child {border:none; background:#5E85C1;}
+    .callBox-bg {padding: 30px 10px;}
+    
+    .mbFooter {padding: 50px 10px; margin-top: 0;}
+    .footLogo {float: none; width: auto; padding-bottom: 10px;}
+    .footContent {float: none; width: auto;}
+    
+    /*서브 페이지*/
+    .subTobImg {padding-bottom: 53%;}
+    .subPcontText {padding-top:15px;}
+    .subPcontTitle {padding-bottom: 10px;}
+    .subWrap {padding: 0;}
+    .subPcontWrap .normalTT {padding: 20px 0 10px;}
+    /*서브 페이지 4*/
+    .table1 th {padding: 10px 0;}
+    .positAb1, .positAb2, .positAb3 {font-size: 14px;}
+    .positAb1 {width: 30%; padding: 13px;}
+    .positAb2 {left: 60px;}
+    .positAb3 {right: 60px;}
+    .positRe {background-position: center; background-position-y: 117px; background-size: 100%;
+              margin-top: 50px;}
+    .colorTitle {font-size: 14px; padding: 10px;}
+    .ul4-2 {background-size: 100%; background-repeat: no-repeat; padding-top: 43px;}
+    .ul4-2> li {width: 31.33333%; margin-right: 3%;}
+    .table2 {margin-top: 50px;}
+    .table2 th {font-size: 14px; padding: 10px 0;}
+    .table2 td {padding: 10px 5px;}
+    .table2 td img {height: 25px;}
+}/*모바일 기본*/
+
+
+@media screen and (max-width: 1023px) {/*휴대폰,태블릿 통합 전체 0 ~ 1023*/
+
+}
+
+
+/*반응형입니다*/
+@media screen and (max-width: 767px) {/*휴대폰만 0 ~ 767*/
+    
+}
+
+@media screen and (min-width: 0px) and (max-width: 374px) {/*휴대폰 iphone 5 - 0 ~ 374*/
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 413px) {/*휴대폰 iphone 6 - 375 ~ 413*/
+
+}
+
+@media screen and (min-width: 414px) and (max-width: 767px) {/*휴대폰 iphone 6+ plus - 414 ~ 767*/
+
+
+}
+
+/*가로(landscape)반응형입니다.*/
+ 
+@media all and (min-device-width:0px) and (max-device-width:1200px) and (orientation:landscape) { /*가로 기본 0~1200*/
+
+}
+@media all and (min-device-width:0px) and (max-device-width:800px) and (orientation:landscape) { /*가로 핸드폰 0~800*/
+    
+} 
+@media all and (min-device-width:0px) and (max-device-width:600px) and (orientation:landscape) { /*아이폰5 가로 0~600*/
+     
+ }
+ 
+ @media all and (min-device-width:601px) and (max-device-width:700px) and (orientation:landscape) { /*아이폰6 가로 601~700*/
+     
+ }
+ 
+ @media all and (min-device-width:701px) and (max-device-width:800px) and (orientation:landscape) { /*아이폰6+ 가로701~800*/
+     
+ }
+ 
+ @media all and (min-device-width:801px) and (max-device-width:1200px) and (orientation:landscape) { /*태블릿 가로801~1200*/
+
+ }
+
+
+

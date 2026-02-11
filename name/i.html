@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>주저없는 선택 망고아이</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" id="viewport">
+<link href="css/eng_name.css" rel="stylesheet" type="text/css"/>
+<script src="../js/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+	<div class="tab_eng_fix">
+        <ul class="tab_eng_name">
+            <li class="active">남자 이름</li>
+            <li>여자 이름</li>
+            <li>남자 또는 여자 이름</li>
+        </ul>
+    </div>
+    
+    <div class="table_area">
+    	<div class="div_eng_name" style="display:block;">
+            <table class="table_eng_name">
+            	<tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td>IAGO</td><td>남의 자리를 빼앗는 자</td><td>라틴어</td></tr>
+	<tr><td>IAN</td><td>신은 관대한</td><td>켈트어/게일어</td></tr>
+	<tr><td>IGNATIUS</td><td>불의 사람</td><td>영어</td></tr>
+	<tr><td>ILLIAS</td><td>여호와는 나의 신</td><td>그리스어</td></tr>
+	<tr><td>ILO</td><td>빛</td><td>아프리카</td></tr>
+	<tr><td>ILYA</td><td>Elijah에서</td><td>러시아어</td></tr>
+	<tr><td>IMARAN</td><td>강한</td><td>힌디어</td></tr>
+	<tr><td>INDIVAR</td><td>푸른 열매</td><td>힌디어</td></tr>
+	<tr><td>ION</td><td>신은 좋으신 분</td><td>켈트어/게일어</td></tr>
+	<tr><td>ISAAC</td><td>그가 웃을 것이다</td><td>히브리어</td></tr>
+	<tr><td>ISAIAH</td><td>신의 구제</td><td>히브리어</td></tr>
+	<tr><td>ISHMAEL</td><td>신은 들을 것이다</td><td>히브리어</td></tr>
+	<tr><td>ISMAEL</td><td>신은 들을 것이다</td><td>히브리어</td></tr>
+	<tr><td>ISRAEL</td><td>신의 왕자</td><td>히브리어</td></tr>
+	<tr><td>IVAN</td><td>신은 좋으신 분</td><td>슬라브어</td></tr>
+            </table>
+        </div>
+        <div class="div_eng_name">
+            <table class="table_eng_name">
+                <tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td>IANNA</td><td>IAN에서</td><td>켈트어/게일어</td></tr>
+	<tr><td>IDOLA</td><td>통찰력</td><td>그리스어</td></tr>
+	<tr><td>IDRA</td><td>무화과 나무</td><td>히브리어</td></tr>
+	<tr><td>INA</td><td>순수한</td><td>그리스어</td></tr>
+	<tr><td>INARI</td><td>성공한 사람</td><td>일본어</td></tr>
+	<tr><td>INOCENCIA</td><td>순결한</td><td>스페인어</td></tr>
+	<tr><td>IOLA</td><td>새벽의 보랏빛</td><td>웨일즈 어</td></tr>
+	<tr><td>IONA</td><td>자줏빛 보석</td><td>그리스어</td></tr>
+	<tr><td>IREN</td><td>평화</td><td>그리스어</td></tr>
+	<tr><td>IRIS</td><td>색채가 풍부한, 무지개</td><td>그리스어</td></tr>
+	<tr><td>IRMA</td><td>완전한 사람</td><td>독일어</td></tr>
+	<tr><td>ISABEL</td><td>신에게 전렴 하는</td><td>스페인어</td></tr>
+	<tr><td>ISABELLA</td><td>신에게 전렴 하는</td><td>이탈리아어</td></tr>
+	<tr><td>ISABELLE</td><td>신에게 전렴 하는</td><td>프랑스어</td></tr>
+	<tr><td>ISADORA</td><td>Isis의 선물</td><td>라틴어</td></tr>
+	<tr><td>ISHA</td><td>여성</td><td>히브리어</td></tr>
+	<tr><td>ISTAS</td><td>눈(SNOW)</td><td>영어(미국)</td></tr>
+	<tr><td>ITALIA</td><td>이탈리아</td><td>이탈리아어</td></tr>
+	<tr><td>IVI</td><td>담쟁이덩굴 나무</td><td>영어</td></tr>
+	<tr><td>IVORY</td><td>코끼리 엄니 같이 하얀</td><td>라틴어</td></tr>
+	<tr><td>IVY</td><td>포도나무</td><td>영어</td></tr>
+            </table>
+        </div>
+        <div class="div_eng_name">
+            <table class="table_eng_name">
+                <tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td>IDEN</td><td>번창하는</td><td>영어</td></tr>
+	<tr><td>INFINITY</td><td>영원한</td><td>영어(미국)</td></tr>
+	<tr><td>IRISH</td><td>Ireland 출신</td><td>영어(미국)</td></tr>
+	<tr><td>ISRA</td><td>자유</td><td>터키어</td></tr>
+            </table>
+        </div>
+    </div>
+ 
+ 
+<script>
+$(document).ready(function () {
+    $('.tab_eng_name > li').click(function () {
+        $('.tab_eng_name > li').removeClass('active')
+        $(this).addClass('active');
+        var k = $(this).index();
+        $('.table_area > .div_eng_name').css('display', 'none');
+        $('.table_area > .div_eng_name').eq(k).fadeIn(300);
+    });
+});
+</script>   
+</body>
+</html>
+
+

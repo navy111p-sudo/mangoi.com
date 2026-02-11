@@ -1,0 +1,209 @@
+<?
+include_once('../includes/dbopen.php');
+include_once('../includes/common.php');
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mangoi</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" id="viewport" />
+</head>
+<body> 
+
+<?php
+$userid = isset($_REQUEST["userid"]) ? $_REQUEST["userid"] : "";
+$username = isset($_REQUEST["username"]) ? $_REQUEST["username"] : "";
+$usertype = isset($_REQUEST["usertype"]) ? $_REQUEST["usertype"] : "";
+$confcode = isset($_REQUEST["confcode"]) ? $_REQUEST["confcode"] : "";
+$version = isset($_REQUEST["version"]) ? $_REQUEST["version"] : "";
+
+
+//================= 언어설정 =====================
+$Sql = "
+		select 
+				A.*
+		from Members A 
+		where A.MemberLoginID=:MemberLoginID";
+$Stmt = $DbConn->prepare($Sql);
+$Stmt->bindParam(':MemberLoginID', $userid);
+$Stmt->execute();
+$Stmt->setFetchMode(PDO::FETCH_ASSOC);
+$Row = $Stmt->fetch();
+$Stmt = null;
+$MemberLanguageID = $Row["MemberLanguageID"];
+
+
+
+
+$ShLanguage = "ko";
+if ($MemberLanguageID){
+	if ($MemberLanguageID!=0){
+		$ShLanguage = "en";
+	}
+}
+//================= 언어설정 =====================
+
+
+if ($version=="" || $version=="null"){
+	$version = 2;
+}
+
+// 학생, 선생 코드 변경
+/*
+$joinUserType = 11;
+if($usertype==0) {
+	$joinUserType = 12;
+} else if($usertype==1) {
+	$joinUserType = 11;
+}
+*/
+$joinUserType = 21;
+if($usertype==0) {
+	$joinUserType = 22;
+} else {
+	$joinUserType = 21;
+}
+
+?>
+
+<script src="/assets/js/jquery.bundle.js?ver=150"></script>
+<!--<script src="/js/mvapi.js"></script>-->
+<script src="/js/mvapi.min.js"></script>
+
+<div style="display:none;">
+	
+	<? if ($version==1) {?>
+	<section>
+		<form id="openJoinForm" data-mv-api="openJoin">
+		<article>
+			<div class="body">
+				<div class="input-section">
+					<input type="text" name="roomCode" value="<?=$confcode?>"> <!-- 멀티룸 코드 -->
+					<input type="text" name="template" value="1"> <!-- 템플릿 번호 -->
+					<input type="text" name="title" value="망고아이 <?=$confcode?>"> <!-- 멀티룸 제목 -->
+					<input type="text" name="openOption" value="0">
+					<input type="text" name="joinUserType" value="<?=$joinUserType?>"> <!-- 입장 사용자 타입 -->
+					<input type="text" name="userId" value="<?=$userid?>"> <!-- 사용자 아이디 -->
+					<input type="text" name="userName" value="<?=$username?>"> <!-- 사용자 이름 -->
+					<input type="text" name="roomOption" value=""> <!-- 멀티룸 옵션 -->
+					<input type="text" name="extraMsg" value=""> <!-- 확장 메시지 -->
+				</div>
+			</div>
+		</article>
+		</form>
+	</section>
+	<?}else{?>
+    <!-- <form name="ShClassForm" id="ShClassForm" action="http://180.150.230.195/sso/type1.do" method="POST"> -->
+    <form name="ShClassForm" id="ShClassForm" action="https://www.mangoiclass.co.kr/sso/type1.do" method="POST">
+        <input type="text" name="userid" value="<?=$userid?>" />
+        <input type="text" name="username" value="<?=$username?>" />
+        <input type="text" name="usertype" value="<?=$usertype?>" />
+        <input type="text" name="remote" value="1" />
+        <input type="text" name="confcode" value="<?=$confcode?>" />
+        <input type="text" name="conftype" value="2" />
+    </form>
+	<?}?>
+</div>
+
+<script>
+<? if ($version==2) {?>
+	window.onload = function() {
+		document.ShClassForm.submit();
+	}
+<?} else if($version==1) {?>
+
+	window.onload = function() {
+
+		MvApi.defaultSettings({
+			debug: false,
+			tcps: {key: 'MTgwLjE1MC4yMzAuMTk1OjcwMDE'},
+			installPagePopup: "popup",
+			company: {code: 2, authKey: '1577840400'},
+			//web: {url: 'http://180.150.230.195:8080'},
+			web: {url: 'https://www.mangoiclass.co.kr:8080'},
+			
+			// 클라이언트 설정 정보
+			client: {
+				// 암호화 사용 여부 - 유효성 검사를 수행하지 않는다.
+				encrypt: false,
+				// Windows Client 설정
+				windows: {
+					// 프로그램 이름
+					product: 'BODA'
+				}, 
+				// Mobile Client 설정
+				mobile: {
+					// 스토어 배포 방식. true: Store 배포, false: 사설 배포
+					store: true, 
+					// 스킴 이름
+					scheme: 'cloudboda',
+					// 패키지 이름
+					packagename: 'zone.cloudboda',
+				},
+				// Mac Client 설정 - V7.3.0
+				mac: {
+					// 스토어 배포 방식. true: Store 배포, false: 사설 배포 - V7.3.1
+					store: false, 
+					// 스킴 이름
+					scheme: 'mangoi',
+					// 패키지 이름
+					packagename: 'zone.mangoi',
+				},
+				// 사용언어 - 없으면 한국어
+				language: '<?=$ShLanguage?>',
+				// 테마 - 클라이언트의 테마 코드 값 - v7.1.3
+				theme: 3,
+				// 버튼 타입 - 버튼을 표시하는 방식 - v7.1.3
+				btnType: 1,
+				// 어플리케이션 모드 - 회의,교육 등 동작 모드 설정 - v7.1.4
+				appMode: 2
+			},
+			
+
+		});
+
+
+		// 기능 실행 버큰 클릭 시 처리
+		$('form[data-mv-api]').submit(function(){
+			var $this = $(this);
+			var api = $this.data('mvApi');
+			
+			// 요청 메시지 정보 설정
+			var requestMsg = {};
+			var parameters = $this.serializeArray();
+			$.each(parameters, function(index, parameter){
+				requestMsg[parameter.name] = parameter.value;
+			})
+					
+			// API 호출
+			MvApi[api](
+					// 요청메시지
+					requestMsg,
+					// 성공 callback
+					function(){
+						console.log('success.');
+					},
+					// 오류 callback
+					function(errorCode, reason){
+						//console.error('error.', errorCode, reason);
+						//alert('error :' + errorCode +" / "+ reason);
+					}
+			);
+			return false;
+		});
+
+		$('form[data-mv-api]').submit();
+	}
+
+<?}?>
+
+
+
+</script>
+
+</body>
+</html>
+<?
+include_once('../includes/dbclose.php');
+?>

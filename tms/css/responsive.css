@@ -1,0 +1,1168 @@
+/*뚜아후아 반응형 체크*/
+/*공통*/
+.bp-header,.action--open,.m_footer{
+    /*모바일메뉴 안보이게*/
+    display: none;
+}
+
+.mobileView{
+    /*모바일 안보이게*/
+    display: none !important;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 768px) {/*모바일 기본 0 ~ 768*/
+    /*공통*/
+    .payBtnWrap .btn1, .payBtnWrap .btn2{height: 35px;min-width: 90px;line-height: 33px;min-height: auto;}
+    .m_tcen{text-align: center;}
+    .overlay-holder     {z-index: 999;}
+    .bp-header,.action--open,.m_footer{
+        /*모바일메뉴 보이게*/
+        display: block;
+    }
+    .header,.footer{
+        /*웹메뉴 안보이게*/
+        display: none;
+    }
+    .logo{top:0;}
+    .logo a {
+        width: 150px;
+    }
+    .mobileView{
+        /*모바일 보이게*/
+        display: block !important; 
+    }
+    .dwellShare li.mobileView {display: inline-block !important;}
+    .dwellShare li{margin: 0 10px;}
+    .webView{
+        /*웹 안보이게*/
+        display: none !important;
+    }
+    
+    .container{margin: 50px auto;}
+        /*모바일 푸터*/
+    .chDiv {
+        float: left;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    div.m_mbnone{/*마이페이지 - 모바일에서 마진바텀 없애기*/
+        margin-bottom: 0;padding-bottom: 0;
+    }
+    .change{position: static;}
+    .cosTitle{
+    position:relative;margin-top:10px;
+    margin-bottom: 10px;padding: 0 10px;box-sizing: border-box;}
+    .cosWrap, .conP {padding:0px;overflow: hidden;}    
+    .mContain       {padding: 0 5px;}
+    .mContain10       {padding-left: 10px !important;padding-right: 10px !important;}
+    .subBtnWrap.mContain       {padding: 0 10px;}
+    .bigTit{font-size: 3.5em;}
+    
+    /*푸터*/
+    .m_footer .mContain       {padding: 0 10px;}
+    .mypage_footer .copyRight{padding: 20px 10px;}
+    
+    /* 로그인 */
+    .loginBox           {padding: 50px 10px;}
+    
+    /*회원가입*/
+    .payTb th, .payTb td{padding: 10px;}
+    .joinBox            {padding: 50px 10px;}    
+    
+    /*메인*/
+    .fullContain .halfA .tt3{top:50%;}
+    .main               {width: 100vw;overflow: hidden;}
+    .footsection        {padding-top: 50px;}
+    .fullContain        {padding-top: 50px;}
+    .fullContain.mobile {height: auto;/*4번째 섹션 모바일에서 길게하기*/}
+    .aMain3             {
+        background-image: url(../img/main/main3_1.jpg);
+    }
+    .fullContain .halfA           {width: 100%;height: 50%;}
+    .fullContain .halfA:last-child{}
+    .cosMain4                     {max-width: calc( 100% - 20px );padding: 0 10px;}
+    .fullHalf li                  {width: 100%;}
+    
+    /*18 리조트 컬렉션 180604*/
+    .resortMain .ttBox{width:100%;padding: 100px 20px 20px;}
+    .resortImgUl{padding: 10px; margin-bottom:-60px;}
+    .resortImgUl li.reLi1, .resortImgUl li.reLi2,
+    .resortImgUl li.reLi3, .resortImgUl li.reLi4,
+    .resortImgUl li.reLi5, .resortImgUl li.reLi6,
+    .resortImgUl li.reLi7, .resortImgUl li.reLi8
+    {padding: 10px;margin: 0;width:100%;}
+    .resortImgUl li.reLi1{}
+    .resortImgUl li.reLi2{padding-left: 80px;}
+    .resortImgUl li.reLi3{padding-right: 80px;}
+    .resortImgUl li.reLi4{}
+    .resortImgUl li.reLi8{padding-left: 80px;}
+    .resortImgUl .bigTitle {
+	    text-align: center;
+	    padding: 50px 0;color:#000;
+	    font-size: 2rem;margin-top: -70px;
+	}
+    .resortImgUl li.reLi2 img{margin-bottom: 10%;}
+    .resortImgUl li.reLi2 .colorBox{width: 54%;
+    height: 33vh;
+    top: 25%;
+    right: 30px;}
+    .resortImgUl li.reLi3 img{margin-top: 10%;}
+    .resortImgUl li.reLi3 .colorBox{width: 50%;
+    height: 33vh;
+    top: 0;
+    left: 30px;}
+    .resortImgUl li.reLi8 img{margin-bottom: 10%;}
+    .resortImgUl li.reLi8 .colorBox{width: 54%;
+    height: 33vh;
+    top: 25%;
+    right: 30px;}
+    /*18 리조트 컬렉션 180608*/ 
+    .fullimgBox  {padding:0 20px;}
+    .ul33.resort {padding:0 15px;}
+    .ul50.resort {padding:0 15px;}
+    .ul50.resort li:first-child {margin-bottom:20px;}
+    .pCenter     {position: static; top: auto; transform: none;}
+    .pointText .resortLtext {font-size:16px; padding-top:0;}
+    .resort.marginT60 {margin-top:0;}
+    .joinText {position: static; margin-top:50px;
+               color: #000; transform: none;}
+    .joinText h1 {font-size: 35px;}
+    .paradiseBox {padding:0 20px;}
+    .halfimgBox {width:100%; float:none;}
+    .paradiseBox.reverse .halfimgBox {float:none;}
+    .halftextBox {width: 100%; float: none;
+                  padding-bottom: 0; margin-top:50px;}
+    .centerBox   {position: static; transform: none; padding: 0;}
+    .halftextBox p {padding:0;}
+    .resortWtext {font-size: 2rem; padding: 0 15px; word-break: keep-all;}
+    .resortWtext span, .nameThin {font-size:1.5rem;line-height: 1.5;display: block;margin-top: 20px;}
+    .ulCustom.resort .li60 {width:100%;}
+    .ulCustom.resort .li40 {width:100%;}
+    .fullimgBox.mobileView {background-size:100%;}
+    .resortImgUl li.reLi5 {margin-bottom:-80px;}
+    .resortImgUl li.reLi5 img {padding-top:60px;}
+    
+    /*18 리조트 컬렉션 바닥 페이지*/
+    .heightBg {margin-top:30px;}
+    .heightBgImg {padding: 70px 50px 90px 50px;}
+    .heightWrap .abTitle {bottom: 66px;}
+    .pointNmText {font-size: 30px;}
+    .pointBigText {font-size: 58px; bottom: -23px;}
+    .fourW40 {width:100%; position:static;}
+    .fourW30 {width:100%; position:static;}
+    .fourImg3 {padding-bottom:60px;}
+    .fourImg6 {padding-bottom:60px;}
+    .rsFourDiv {padding-bottom:0; margin: 0 -10px; padding: 70px 20px 0;}
+    .fourText {position:static; text-align:center; 
+               margin-top: -19px; padding-bottom: 50px;}
+    .fourText.fourText3, .fourText.fourText4 {margin-top:-26px;}
+    .heightBgImg.devide {padding: 70px 50px;}
+    .heightBgImg.devide.dwell {padding: 70px 50px; margin-bottom: -50px;}
+    .heightBgImg.devide .tcenBox {padding:20px 0; bottom:75px;}
+    .resortText {line-height: 1.2; font-size: 16px;}
+    .fourWrap .ul33Bg {margin-top: 70px; background:#fff; margin:70px -10px 0;}
+    .fourWrap .ul33Div {width: 80%; height: 100%; margin: 0 -10px;}
+    .fourWrap .birdsT {position:static; padding-left: 10px; padding-bottom:70px;}
+    .fourWrap .dwelltinyT.birdsT {margin-top:20px; line-height:1.3;}
+    .fourWrap .tiffRText {    text-align: left; width: 80%;
+    padding: 0 20px 50px; box-sizing: border-box;}
+    .rsFourDiv.ThreeDiv {padding-bottom:0;}
+    
+    /*18리조트 바닥 180627 pub3*/
+    .resortTitle{margin: 50px auto;}
+    .resortTitle h1{font-size: 35px;}
+    .resortTitle p{font-size: 15px;}
+    .shortUlWrap{margin:0 0 -50px;}
+    .shortUlWrap ul{margin: 50px auto;}
+    .shortUlWrap li{display: block;}
+    .shortUlWrap li.small{width:100%;}
+    .shortUlWrap li.big{width:100%;}
+    .shortTextWrap .fourText{text-align: left;margin: 0;padding: 0;}
+    .rightText .shortTextWrap .fourText{text-align: right;}
+    .shortUlWrap li.small.leftText{margin-bottom: 50px;}
+    .shortUlWrap li.small.rightText{margin-top: 50px;}
+    .rightText .shortTextWrap, .leftText .shortTextWrap {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    }
+    .dwellFontbox.resort18 .relbxslider a {width:80%;}
+    .tcenBox.dwell {margin-top:-28px;}
+    /*18리조트 바닥 02번 180628 pub2*/
+    .resortPicture{}
+    .resortTopCon li{display: block;width:100%;}
+    .resortTopCon .text{text-align: center;margin: -27px auto 50px;}
+    .resortTopCon .text .nameThin{margin-top: 0;}
+    .resortTopCon .bigTitle{font-size: 35px;text-align: center;}
+    .rbCon1{margin: 0 auto;}
+    .rbCon1 .img1{width: 100%;max-width: 100%;}
+    .rbCon1 .text{position: static;}
+    
+    
+    
+    
+    /*리스트*/
+    .count                        { padding: 10px 5px;
+    }
+    .count>span                   {line-height: 30px;letter-spacing: 0px;}
+    .count .clicka                {margin: 0;}
+    .bbList li                    {width: 50%;padding: 0 5px 20px;display: inline-block;vertical-align: top;float: none;}
+    
+    
+    /* 리스트 모바일 필터 */
+    .mmFilter               {position:fixed;top:0;left:0; width: 100%;height: 100vh;background: white;z-index: 1000;overflow-y: scroll;}
+    .mmFilter .cosTitle     {text-align: center;padding: 20px 10px;}
+    .mmFilter .cosTitle a   {float: right;font-size: 15px;line-height: 22px;}
+    .mmFilter .accordion    {margin: 50px auto;max-width: 400px;}
+    .mmFilter .accordion dt {padding: 20px 10px;font-size: 1.1em;}
+    .mmFilter .accordion dt .up-down  {top: 25px;right:10px;}
+    .mmFilter .accordion dd {margin: 0 10px;}
+    .mmFilter .filSelec li  {width: 50%;}
+    .mmFilter .checkOption  {display:inline-block;margin-left:30px; font-size: 0.8em;width: 70%;vertical-align: top;line-height: 1.9;}
+    
+    /* 바닥페이지 */
+    .des100,.mainLeft,.mainRight {
+        position: static;
+        top: auto;
+        left: auto;
+        width: auto;
+        height: auto;
+        min-width: auto;
+        min-height: auto;
+        max-width:100vw;
+        box-sizing: border-box;padding-bottom: 0;
+    }
+    .des100{margin: 50px 0;}
+    .mainLeft{width:100%; padding:0px;box-sizing: border-box;overflow: hidden;}
+    .mainRight{float:none; padding:0px;}
+
+    
+    
+    .accordion dt{padding: 10px;box-sizing: border-box;}
+    .accordion dd{padding: 0 10px;box-sizing: border-box;}
+    .accordion dt .up-down{right:10px;top:14px;}
+    .selec li{padding-left: 15px;}
+    .opText{padding: 20px 10px}
+    .linkSet{padding: 10px;}
+    .linkSet .clickA{margin-right: 30px;}
+    .bx100 .bx-controls-direction{display: none;width: 0;}
+    .subBtnWrap a button{margin: 5px 0;}
+    .relbxslider a .smallTitle {
+        visibility: visible;font-size: 0.8em;
+    }
+    .relPro {
+        margin-bottom: 50px;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+    .bx-wrapper .relbxslider a{padding: 5px;}
+    .relPro h2.smallTitle{margin: 30px;}
+    ul.tabRel{margin-bottom: 10px;}
+    .price .star{margin-right: 10px;}
+    .accordion{box-sizing: border-box;}
+    .contactWrap .accordion{margin: 10px 0;}
+    .infoBox,.subBslide div.infoBox{position: static;width: 100vw;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);max-width: 100%; }
+    .selecOption>li{padding: 20px 10px;box-sizing: border-box;}
+    .bx-wrapper .bx-controls-direction a{display: none;}
+    
+    /*서브b 2*/
+    .subBslide div.mainRight {padding: 0;width: 100%;}
+    main.subBslide .bx-wrapper .bx-pager{text-align: center;padding:0;    bottom: 30px;}
+    .subBslide.bx100 .slide  {padding-bottom: 160%;height: 0; background-position: 21%;}
+
+    
+    
+    
+    /* 월드 */
+    .worldHalf>li{margin-bottom: 50px;}
+    .worldHalf>li:first-child{border: none;}
+    .bigNews{padding: 0 0px 50px;}
+    .world1{padding-top: 30px;padding-bottom: 50px;}
+    .world2, .world3, .world4, .world5, .world6,.subscribe {
+        padding: 50px 0px;
+    }
+    ul.tabRel.worldMenu {padding-top: 20px;}
+    ul.tabRel>li{margin: 0 5px;}
+    .worldTitle.tcen{padding-bottom: 50px;}
+    
+    /*addbag_장바구니*/
+    
+    .rightMap ul > li       {margin:0 20px;}
+    .rightMap ul > li:after {width:80px;right: -62px;z-index: 1;}
+    .mPayBox                {border-top:1px solid #d6d3d3;}
+    .mb50                   {margin-bottom:30px;}
+    .shoplistH2             {border-bottom:1px solid #f5f5f7;text-align:center;padding:20px 0;}
+    .shoplistTb             {margin:15px 0;width:100%;}
+    .shoplistTb th          {text-align:left;line-height:20px;line-height:25px;}
+    .shoplistTb td          {text-align:right;}
+    .paySiteMap {
+        overflow: hidden;
+        margin: 0px 0 10px;
+        padding-top: 30px;
+    }
+    .rightMap ul > li span {
+        margin-top: 3px;
+    }
+        
+    /*pay*/
+    .mobileView.payTb, .mobileView .payTb{display: table !important;}
+    .mobiletl      {text-align:left;}
+    .mobiletr      {text-align:right;}
+    .highphoneli   {line-height:32px;}
+    .mopaym        {
+    padding: 0 10px 10px 10px;
+    display: inline-block;
+    
+    }
+    .payTb input[type=checkbox]{vertical-align: middle;}
+    .numberBox{text-align: left;margin: 0 10px;}
+    .clicka, .orderSear input[type=date]{margin: 0;}
+    
+    /*paycom*/
+    .pay_complete ul.opm {margin: 5px 0 5px;}
+    .ordernumber   {padding:0;font-size: 20px;}
+    .normalMbox    {padding:5px; background:#171716; color:#fff;}
+    .paycomMsp     {margin-left:10px;}
+    .noticemob p   {line-height:22px; }    
+    .checkmoney    {text-align:right;}
+    .checkbggray   {background:#f5f5f7;}
+    .pay_complete  {padding: 10px 20px 40px;margin-bottom: 65px;}
+
+    
+    /*결제완료 180511*/
+    .payComTb{margin-bottom: 25px;border-left: none;border-right: none;}
+    .payComTb td {height:auto;}
+    .payComTb th, .payComTb td{border-left:none;border-right: none;padding: 20px 10px;font-size: 14px;}
+    .pay_complete .bigT{font-size: 30px;}
+    .cosTitle.payCom{font-size: 18px;max-width: 600px;margin: 10px auto;}
+    .totalPriceP{font-size: 16px;}
+    .totalPriceP .priceRight{font-size: 24px;}
+
+    
+    
+    /*contact_us*/
+    .contactWrap .accordion dt {padding: 20px 30px 20px 10px;}
+    .contactWrap .accordion dt .up-down {top:26px;}
+    .accordion dd   {margin:15px 0;}
+    
+    /*마이 페이지*/
+    .maPmenu{display: none;}
+    .maPcontent {
+        width: 100%;
+        padding-left: 0px;
+        min-height: calc(100vh - 145px);
+        padding-top:10px;
+        box-sizing: border-box;margin-bottom: 0px;
+    }
+    .payContent{padding-top:0;margin-top: 0;padding-bottom: 30px;
+    max-width: 600px;margin: 0 auto;}
+    .payContent.contactWrap{padding-top: 0;}
+    .desP{margin: 10px 0;padding: 0 10px;}
+    .mOrderBox{position:relative; background: #f5f5f7;border-bottom:1px solid #f0f0f1;}
+    .mOrderBox:after{position: absolute;content: "\e903";top:50%;right:10px;margin-top:-6px;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+    .mOrderBox a{width:100%;height:100%;   padding: 8px 12px;box-sizing: border-box;}
+    .mProduct{border-top:1px solid #f5f5f7;margin-top: 5px;padding-top: 5px;padding-bottom: 5px;}
+    .mProduct .clicka{margin-right: 10px;}
+    .mOrderPro{background: #f5f5f7;padding: 5px 10px;text-align: center;}
+    
+    .mOrderWrap{border-bottom: 1px solid #d6d3d3;}
+    .mOrderWrap .mPayBox{
+        border-bottom: none;
+    }
+    
+    .maPbdBox{background: #f5f5f7;margin: 0;}
+    .maPbdBox p{}
+    .maPbdBox .cosTitle{padding: 0 0 10px 0;}
+    
+    
+    .mRightBox{
+    text-align: center;
+    padding: 0 0 10px 0;
+    }
+    .mTotalBox{position: relative;
+    background: #f5f5f7;
+    border-top: 1px solid #f0f0f1;
+    padding: 10px;
+    }
+    .mTotalBox .right{float:right;}
+    
+    
+    /*마이페이지 오더 디테일*/
+    .payProcess li{
+    width:100%;
+    padding: 5px 0;
+    }
+    
+    /*마이페이지 주문취소 교환 반품*/
+    .mt10          {margin-top: 10px;}
+    
+    /*마이페이지 전용계좌 관리*/
+    .accountdiv    {float:left;width:100%;}
+    .accountdiv2   {float:right;width:100%;}
+    .accountBox .smallTitle    {padding:10px 10px 0px;}
+    
+    /*마이페이지 배송지 관리*/
+    .inputBox input.long {
+        width: 80%;
+    }
+    
+    
+    
+    /*마이페이지 개인정보프로필 수정*/
+    .m_epW100      {width:100px;}
+    .m_epW70       {width:70px;}
+    
+    /*위시리스트*/
+    .WishList_Table th{padding: 10px;}
+    .WishList_Table td{padding: 0px;}
+    
+    .wishSear      {padding: 10px; }
+    .m_wishList    {padding: 5px;overflow: hidden;width: 100%;}
+    .m_wishList>li {padding: 5px;width: 50%;float: left;box-sizing: border-box;}
+    .wishLiWrap    {border: 1px solid #d6d3d3;}
+    .pd10          {padding: 10px;box-sizing: border-box;}
+    .wishLiWrap .pd10 a        {width: 100%;}
+    .m_wishList>li .imgBox>img {width:100%;}
+    
+    /*recepit*/
+    .MrecepitBox               {text-align:center;padding: 10px 0 0 0;}
+        
+    /*마이페이지 회원정보관리*/
+    .inputBox input.editEmail     {width: 45% !important;max-width: 130px;}
+    
+    /* 마이페이지 1:1 문의하기 글쓰기*/
+    .MQcentp{text-align: center;}
+    .inputBox select.quesWidth{width:100%;}
+    .qwTh{width: 58px;}
+    
+    /*푸터 이용약관*/
+    .scrollUse{padding: 0 10px;margin: 0 10px;max-height: 90vh;}
+    /*푸터 사이트맵*/
+    .map_list li{width: 50%;height: 300px;}
+    .map_list li.long{height: 400px;}
+    /*store 매장찾기*/
+    .store_select{position: static;width: 100%;padding: 0 10px;box-sizing: border-box;}
+    .store_list{padding: 0;}
+    .storeTitle{    font-size: 1.2em;padding:20px 0;
+    font-weight: normal;}
+    .store_list .list_con{padding-top: 30px;    height: auto;}
+    .store_list li{display: block;padding: 0 10px;}
+    .store_list li.s_area{padding: 0 10px;}
+    .store_list li.s_tel{padding: 0 10px;}
+    .store_list li.btn_map a{padding: 0px;}
+    .store_select h3{text-align: center;font-size: 1.2em;}
+    .store_select .sh_info{text-align: center;font-size: 1em;}
+    
+    /*월드 바닥페이지*/
+    .dwell-con    {padding: 50px 10px 0;}
+    .dwellH1      {font-size: 1.5em;}
+    .dwellH3      {font-size: 1.5em;}
+    .dwellconText {font-size: 1.2em;margin-top: 30px;}
+    .dwellCon-Box {margin-top: 0px;}
+    .dwellsmallImg{margin: 50px 0 10px;}
+    .dwellDetail{padding: 50px 0;}
+    
+    .dwellBtext{font-size: 1.2em;margin: 40px 0;}
+    .dwelltinyT{margin: 30px 0 0;}
+    .dwelltinyT.dwelltextup{margin: 0;}
+    .smallH2-text {
+        font-size: 1.8em;
+        margin-top: 50px;
+        letter-spacing: 1px;
+    }
+    .photoBY{margin: 10px 0 30px;}
+    .dwellShare{padding: 0px 0 50px;}
+    .followBox-2{padding: 50px 0px;}
+    .follwPic{width:100%; text-align: center;}
+    .followTextw{width:100%;text-align: center;padding-left: 0;margin-bottom: 30px;}
+    .followBtn2{width:100%;}
+    .boxPic-2{float: none;margin: 0 auto 30px;width:80px;}
+
+    .partEH3{font-size: 1.5em;}    
+    
+
+    
+    /*킨포크 바닥*/
+    .Honews{box-sizing: border-box;}
+    .Honews li{padding: 0 5px 50px;}
+    .Honews li a.worldOver{display: block;
+    overflow: hidden;
+    box-sizing: border-box;}
+    
+    .Honews .cateWrap {
+        margin: 15px 0px 0 10px;display: block;padding: 0;
+    }
+    .Honews .sTit{padding: 0;margin: 15px 10px 0;}
+    .Honews .sNewsP{padding: 0;}
+    .bringPage-dwell{margin: 50px 0;}
+    .dwDetail{margin-bottom: 50px;}
+    
+    
+    
+    
+    .worldTitle{padding: 0 10px;box-sizing: border-box;}
+
+    /*월드*/
+    .world1       {display: block;width: 100%;padding-top: 50px;}
+    .world2,.world3,.world4,.world5,.world6  {display: block;width: 100%;}
+    div.worldHalf{    display: block;
+    width: 100%;
+    float: left;}
+    .look80{margin-top: 50px;}
+    .troisView .sTit,.wdNewsList .sTit{margin-bottom: 0px;}
+    .m80{margin: 50px auto;}
+    .worldV{margin-top: 50px;}
+    .world3ul .cateWrap{margin-left: 16px;}
+    .world4ul{margin-bottom: -50px;padding: 0;}
+    .world4ul li{width: 100%;padding: 0;margin-bottom: 50px;}
+    div.projectVideoWrap .bx-wrapper .bx-pager {bottom: 20px;}
+    div.projectVideoWrap .bx-wrapper .bx-prev:before{padding: 0 10px;}
+    div.projectVideoWrap .bx-wrapper .bx-next:before{padding: 0 50px;}
+    .world3ul    {margin-bottom: -50px;margin-top: 50px;}
+    .world3ul li {width:100%; padding:0;margin-bottom:50px;}
+
+    .Honews ul,.wdNewsList{padding: 0;}
+    .instaphoto  {margin-top:50px;padding: 0 5px;}
+    .instaphoto li {width:33.3333%;padding:5px;}
+    .world3ul .bigTit {
+        font-size: 2.5em;
+        line-height: 0.9;
+    }
+    .fullContain a .ttBox.right,.fullContain a .ttBox.left {
+        width: 100%;
+        right: auto;
+        left: auto;
+        text-align: center;
+        top: 50%;
+    }
+    
+    .worldTop .bigTit{margin: 30px auto;}
+    /*더보기*/
+    .addMore .en{display: none;}
+    .addMore .kr{display: inline;}
+
+    /*영상 페이지*/
+    .videoWrap {padding: 20vh 10px 0;box-sizing: border-box;}
+
+    
+    /*회사소개 페이지*/
+    .com1Wrap .right,.com1Wrap .left{width:100%;display: block;text-align: center;}
+    .com1Wrap .right table          {margin: 0 auto;text-align: left;}
+    .com1Wrap .left img             {width: 80%;}
+
+    /*포토 바닥 페이지*/
+    .bx100.photoSlide .slide {background-size: 100% !important;}
+    /*포토-2 바닥페이지*/
+    .slidePhotoBox-2 .bx-wrapper .bx-controls-direction .bx-prev:before {left:25px;} 
+    .slidePhotoBox-2 .bx-wrapper .bx-controls-direction .bx-next:before {right:25px;} 
+    .photo2cap              {bottom: 65px;}
+    .photoSlide-2 .icon-x   {left: 25px;}
+    .photoSlide .bx-controls{display: none;}
+    #photo-pager a          {height: 25px;margin: 0 5px;}
+    div.bpSlideWrap .bx-wrapper .bx-prev{left:-22px;}
+    div.bpSlideWrap .bx-wrapper .bx-next{right:-22px;}
+
+    /*뉴스 페이지*/
+    .newsPage            {margin-top: -20px;}
+    .newsPage .sTit      {margin: 15px 0 10px;}
+    .news .worldTitle{margin-bottom: 30px;}
+    .candyContent{margin:0 0 50px;}
+    .candyContent:last-child{margin:0px;}
+    
+    /*마이페이지*/
+    .bigRed:after{top: 7px;left: 39px;}
+    /*팝업 띠*/
+    .popSale{font-size: 1.5em;}
+    
+    /*18ss 컬렉션 도그파이트 메인*/
+    .vtHeader .headUp{height:50px;}
+    .bigTitle .logob{margin: 10px auto -30px;
+    width: auto;
+    height: 30px;}
+    .bigTitle{font-size:35px;}
+    .vtLogo {line-height: 53px;font-size: 20px;}
+    .vtLogo .pageTitle{top: 16px;
+    left: auto;
+    right: 10px;
+    margin-left: 0;
+    max-width: 35%;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-height: 23px;}
+    
+    .logo, .logMenu a {line-height: 50px;padding: 0 10px;box-sizing: border-box;}
+    .contentWrap{padding: 0;margin-bottom: 50px;}
+    .ul50,.ul33{padding: 0 5px;margin-bottom: -50px;}
+    .ul50>li,.ul33>li{padding: 0 5px;width: 100%;margin-bottom: 50px;}
+    
+    .tyLayout,.tyLayout li{margin-bottom: 0;}
+    .tyLayout .pointText {padding: 30px 0 0;text-align: center;}
+    .vTitle{font-size: 2rem;line-height: 1.2;}
+    
+    
+    .li60,.li40{width: 100%;}
+    .ulCustom{margin: 0 10px;}
+    .pointText{padding: 30px 0;}
+    .miniVertical .vImage{padding-right: 10px;}
+    .miniVertical .vTitle {font-size: 1.5rem;margin-top: 0px;}
+    .vContents{font-size: 1.1rem;}
+    .li40 .ul50,.li40 .ul50>li{padding: 0;}
+    
+    .miniLayout .vImage img{height:auto;width:40%;margin-left: 10px;}
+    .miniLayout .vText{width: 50%;right: 0;}
+    .pointText .vTitle,.pointText .bigTitle{font-size: 5rem;letter-spacing: -3px;line-height: 1.1;margin-bottom: 40px;}
+    .pointText p{font-size: 2rem;}
+    .vtBtn,.ul50 a.vtBtn2 {margin: 30px auto 20px;}
+    .miniLayout.horizontal{margin: 0 10px; border-top: 1px solid #d6d3d3;}
+    .miniLayout>li,.miniLayout.horizontal > li{width: 50%;float: left;padding: 10px 0;margin: 0;border-top:none;}
+    .miniLayout.horizontal > li:nth-child(5){display: none;}
+    .ulCustom .ul50 .one .category{display: inline-block;width: 20%;}
+    .ulCustom .ul50 .one .vTitle{display: inline-block;width: 79%;}
+    
+    .main18ssVideo {padding-bottom: 56.25%;}
+    
+    /*18resort 메인 수정 180622 pub2*/
+    
+    #playVideo_m{opacity: 0;-webkit-transition:0.5s;transition:0.5s;}
+    .resortFix.ul50>li{padding: 0 15px;}
+    .resortFix .pointText.resort .vTitle{text-align: center;
+    position: relative;margin-top: -65px;
+    left: 0;}
+    .resortFix .pointText .resortLtext{text-align: center;}
+    .resortFix .pointText.resort{padding-bottom: 0;}
+    .ul33Bg{padding: 0;margin: 0;}
+    .ul33Div{width: 80%;height: 100%;}
+    .ul33.resort.fix{margin: 0;padding: 50px 0 0;}
+    .ul33.resort.fix li{padding: 0 20px;}
+    .fullBg{margin: 0;}
+    .fullContText .resortBigT{font-size: 35px;}
+    .fullTwo{padding:70px 50px;}
+    .mcenterKeep{    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);}
+    .resortImgUl.fix li.reLi3 img{margin: 0 auto 100px;}
+    .resortImgUl.fix li.reLi3 .colorBox{top:0;}
+    .fix .halfimgBox{width:100%;}
+    .fix .halftextBox{width:100%;padding: 0;
+    margin: -22px 0 0;}
+    .fix .halftextBox .resortWtext,.reverse.fix .halftextBox .resortWtext{margin: 0;text-align: center;}
+    .resortImgUl.fix li.reLi5 .colorBox{top:0;}
+    .resortImgUl.fix li.reLi5 img{padding-bottom: 100px;}
+
+
+
+
+
+
+
+    /*18ss 컬렉션 바닥*/
+    .stickContent{padding: 0;}
+    .stickContent .stick1{width: 100%;margin: 0;padding: 0 10px 0px;box-sizing: border-box;}
+    .stickContent .stick2{width: 100%;margin: 0;padding: 0 10px 50px;box-sizing: border-box;}
+    .kinboxRight,.kinboxLeft{max-width: 100%;padding: 0;}
+    .kintextLeft .cateWrap{margin-top: 10px;}
+    .kintextLeft{margin-top: 30px;}
+    
+    /*킨포크 바닥*/
+    .Honews{padding: 0 10px;}
+    .Honews li{padding: 0 10px 50px;}
+    .Honews li a.worldOver{display: block;
+    padding-bottom: 66.6666%;
+    overflow: hidden;
+    box-sizing: border-box;}
+    .Honews li img{position: absolute;}
+    
+    .worldShare {
+        margin-top: 70px;
+    }
+    .subBimgBox {padding: 0 20px;}
+    table.worldHalf td.worldsub--2{padding-right: 10px;padding-left: 10px;}
+    
+    .worldsubE{padding: 0 10px;}
+    .worldsubE li{margin-bottom: 50px;}
+    .worldsubE li.img1,.worldsubE li.img2>div{padding: 0 10px;}
+
+
+
+    /*베오플레이 바닥페이지*/
+    .mmb0{margin-bottom: 0;}/*모바일만 마진바텀 없애기*/
+    
+    .div1-1 .left,.div1-1 .right{width: 100%;padding: 5px 0 10px;}
+    
+    .beoSlide .bx-wrapper img{height: 200px;}
+    #beo-pager img{height: 50px;}
+    #beo-pager{padding: 15px;}
+    .beo50{width:100%;}
+
+    h1.worldsubH1{margin: 30px auto;padding: 10px;}
+    
+    .mb10{margin-bottom: 5px;}
+    .mb20{margin-bottom: 10px;}
+    .mb30{margin-bottom: 15px;}
+    .mb40{margin-bottom: 20px;}
+    .mb50{margin-bottom: 25px;}
+    .mb60{margin-bottom: 30px;}
+    .mb70{margin-bottom: 35px;}
+    .mb80{margin-bottom: 40px;}
+    .mb90{margin-bottom: 45px;}
+    .mb100{margin-bottom: 50px;}
+    .mt10{margin-top: 5px;}
+    .mt20{margin-top: 10px;}
+    .mt30{margin-top: 15px;}
+    .mt40{margin-top: 20px;}
+    .mt50{margin-top: 25px;}
+    .mt60{margin-top: 30px;}
+    .mt70{margin-top: 35px;}
+    .mt80{margin-top: 40px;}
+    .mt90{margin-top: 45px;}
+    .mt100{margin-top: 50px;}
+    
+    .con1280{padding:20px 10px 0;}
+    .blogHeader{font-size: 20px;}
+    .beoBigTit{font-size: 30px;}
+    
+    .sqs400,.sqs50,.sqs66{font-size: 1.2rem;}
+    .div33 , .div66{width:100%; float: none;}
+    .div1-2 .div66{padding-left: 0;margin-bottom: 20px;}
+    
+    .beoMtitle{margin-bottom: 40px;font-size: 25px;}
+    .beoMtitle.jstyle {margin-top: 40px;padding: 0;}
+    .beoImg100,.beoImg50{width: 100%;padding-bottom: 66.6666%;}
+    .pageControl .prev{padding-left: 10px;}
+    .pageControl .next{padding-right: 10px;}
+    .pageControl h1{font-size: 16px;}
+
+    .sns{padding: 50px 0;}
+    .dwelltinyT.birdsT{margin-top: 7px;line-height: 1;}
+    /*베오 c*/
+    div.review  .div33.left{padding: 0 0 30px;text-align: center;}
+    div.review  .div33.cen{padding: 0 0 30px;}
+    div.review  .div33.cen .dwellcredit{margin-bottom: 0;}
+    div.review  .div1-1-1 .div33.right{padding: 0;}
+    
+    .div2-1 .div66{margin-bottom: 30px;}
+    .div2-1 .div33{padding: 0;}
+    .beo4Table td{padding: 20px 5px;}
+    
+    .beoPlayProfile{max-width: 200px;}
+    
+    .div1-1-1 .div33.left {padding:0 0px 20px;text-align: left;}
+    .div1-1-1 .div33.cen  {padding: 0 0px 20px;}
+    .div1-1-1 .div33.right{padding:0px 0 0;}
+    
+    .beoPageFoot{padding: 0 20px;box-sizing: border-box;}
+    
+    .kinboxLeft  {padding-left:0;}
+    .subnital{margin-top: 50px;}
+    
+    /*베오플레이 바닥페이지*/
+    .sqs400,.sqs50,.sqs66{width: 100%;max-width: 100%;}
+    .beo4Table td        {padding: 20px 0px;display: block;}
+    .div58-42 .left      {padding:0;width:100%;}
+    .div58-42 .right     {padding:15px 0 10px;width:100%;}
+    
+    /*배송조회*/
+    .epostTable          {font-size: 14px;}
+    .epostTable td       { width: auto;padding: 10px;}
+    .epostTable p:after  {font-size: 14px;top: 4px;right: -14px;}
+    input.epostInput     {margin: 0;}
+    
+    
+    
+    
+}/*모바일 기본*/
+
+
+@media screen and (max-width: 1023px) {/*휴대폰,태블릿 통합 전체 0 ~ 1023*/
+    /*world*/
+    .worldHalf {width:100%;}
+    /*메인*/
+    .aaMain17holi{background-image: url("../img/main/main171213_m.jpg");}
+    .aaMain17holi.fullContain a .ttBox{top:79%;}
+    
+}
+
+
+
+
+@media screen and (max-width: 767px) {/*휴대폰만 전체 0 ~ 767*/
+    /*공통 글씨 크기*/
+    .tt3{font-size: 0.9em;}
+    .title{font-size: 0.9em;}
+    .opm,.opb,.sizeBox{font-size: 1em;}
+    .smallTitle{font-size: 1.1em;}
+    .clickA{font-size:0.9em;}
+    .sTit{font-size: 1.2em;}
+    .desP{font-size:0.93em;}
+    ul.tabRel>li{font-size: 0.9em;}
+    
+    /*푸터*/
+    .copyRight{text-align: center;}
+    
+    /*메인*/
+    
+    .cosMain4 {
+        max-width: 100%;
+        position: static;
+        top: auto;
+        left: auto;
+        -webkit-transform: translateX(0%) translateY(0%);
+        -ms-transform: translateX(0%) translateY(0%);
+        transform: translateX(0%) translateY(0%);
+        padding-top: 0px;
+        box-sizing: border-box;
+    }
+    .aaMain1{background-position: 33%;}
+    .aaMain2{background-position: 69%;}
+    .aaMain3{background-position: 33%;}
+    .aaMain17holi.fullContain a .ttBox{top:77%;}
+    
+    
+    /*회원가입*/
+    .mBlock{display: block;}
+    
+    
+    
+    /*world*/
+    .bigTit {font-size:3.1875rem;margin: 30px auto 0;}
+    .worldHalf>li {width: 100%;height:auto;}
+    a.worldOver  {width:100%;display: block;}
+    .worldHalf>li {border-left:none;padding:0;margin-bottom: 0;}
+
+    .look80 {margin:50px auto 0;width:100%;}
+    .Honews li  {width:100%; padding: 0px 0 50px;}
+    .Honews li:last-child {padding-bottom: 0;}
+    .width66    {width:100%;padding: 0 5px;box-sizing: border-box;font-size: 0;}
+    .width66 img {padding:0px 5px;}
+    .newsletter {margin-top:40px;}
+    .newsletter input {width:155px;}
+    .bgWorld {background-position:center;}
+    .cateWrap,.sTit,.sNewsP,.bigTit{padding: 0 10px;}
+    .dwell-con .cateWrap{padding: 0;}
+    .worldSlideWrap2 .bx-wrapper .bx-pager{display: none;}
+    .wdNewsList li{width: 100%;margin-top: 50px;}
+    .wdNewsList .worldOver{width: 100%;}
+    .wdNewsList .textBox{width: 100%;padding: 0;}
+    .wdNewsList .textBox .cateWrap{margin-top: 20px;}
+    
+    .troisView td {
+        padding-right: 0;
+        vertical-align: top;
+        display: block;
+        text-align: center;
+    }
+    .smallNews .cateWrap {
+        margin-top: 20px;margin-left: 16px;
+    }
+    .newsOne,.newsOne.mb{margin-bottom:50px;}
+    .newsOne.last{margin-bottom: 0;}
+
+    /*뉴스 페이지 이전글 다음글*/
+    .newsNav .left   {width: 100%;padding: 10px 0;}
+    .newsNav .right  {width: 100%;float: left;text-align: left;padding: 10px 0;}
+    .newsNav .right .th{float: left;margin-left: 0px;margin-right: 20px;}
+    .newsPage .newsUpDate{padding: 0 10px;}
+    .newsSearch{position: static;margin-top: 30px;}
+    
+    /*뉴스 리스트*/
+    .candyDiv21 .img, .candyDiv21 .video{width: 100%;}
+    .candyDiv21 .text{width: 100%;}
+    .candyDiv21 .pb66{padding-bottom: 0;}
+    .candyDiv21 .textBox{position: static;width: 100%;    -webkit-transform: translateX(0%) translateY(0%);
+    -ms-transform: translateX(0%) translateY(0%);
+    transform: translateX(0%) translateY(0%);}
+
+    .candyContent .sTit{margin: 15px 0 5px;}
+    
+}/*휴대폰만*/
+
+
+@media screen and (min-width: 0px) and (max-width: 374px) {/*휴대폰 iphone 5 - 0 ~ 374*/
+    /*addbag*/
+    .rightMap ul > li {margin:0 15px;}
+    .rightMap ul > li:after {width: 57px;right: -46px;}
+    /* 인풋사이즈*/
+    .inputBox input[type=text], .inputBox input[type=email], .inputBox input[type=password], .inputBox input[type=number] {
+        width: 100px;
+    }
+    .inputBox input.long {
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 413px) {/*휴대폰 iphone 6 - 375 ~ 413*/
+
+    
+}
+@media screen and (min-width: 0px) and (max-width: 413px) {/*휴대폰 iphone 6 이하 - 0 ~ 413*/
+
+}
+
+@media screen and (min-width: 414px) and (max-width: 767px) {/*휴대폰 iphone 6+ plus - 414 ~ 767*/
+    .bigTit {margin:20px auto 0;}
+    .aaMain17holi.fullContain a .ttBox{top:79%;}
+    
+    
+    
+
+}
+
+/*태블릿만*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {/*태블릿 768 ~ 1199*/
+    /*푸터*/
+    .m_footer{text-align: center;}                                                          
+    .footInput input{max-width: 300px;}
+    .footInput {
+        margin: 20px 0;
+    }
+    /*메인*/
+    .fullContain.mobile{
+        height:100vh;/*4번째 섹션 탭에서 돌려놓기*/
+    }
+    .fullHalf li {
+        width: 50%;
+    }
+    .cosMain4 {
+        padding-top:50px;
+        
+    }
+    .aaMain1{    background-position: 34%;}
+    .aaMain2{    background-position: 69%;}
+    .aaMain3{    background-position: 30%;}
+
+    /*바닥*/
+    .subBtnWrap a {
+    width: calc(50% - 5px);
+    }
+    .subBslide.bx100 .slide {
+    background-position: 10%;
+    padding-bottom: 100%;height: auto;
+    }
+
+    /*월드 */
+    .worldHalf>li  {height: 900px;}
+    .Honews        {padding: 5px;}
+    .Honews li     {width:33%;box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;float: none;}
+    .Honews li:nth-child(4),.Honews li:nth-child(5),.Honews li:nth-child(6) {margin-top:40px;}
+    .instaphoto li {width:16.6666%;}
+    .wdNewsList li {width: 100%;margin-top: 50px;padding-left: 10px;}
+    .world3ul      {padding: 5px;}
+    .world3ul li   {width: 33.3333%;padding: 5px;}
+    .smallNews,.troisView td{padding: 5px;}
+    .newsOne.mb    {margin-bottom:50px;}
+    div.worldHalf.bigNews       {float: none;margin: 0 auto;max-width: 85%;}
+
+    /*1:1 문의하기*/
+    .qwTh     {width: 20%;}
+
+}/*태블릿만*/
+ 
+
+
+/*가로(landscape)반응형입니다.*/
+ 
+@media all and (min-device-width:0px) and (max-device-width:1200px) and (orientation:landscape) { /*가로 기본 0~1200*/
+    /*메인*/
+    .fullContain .halfA .tt3{bottom:5%;
+    top:auto;}
+    .aMain3 {
+        background-image: url(../img/main/main3.png);
+    }
+    .fullContain .halfA {
+        width: 50%;
+        height: 100%;
+    }
+    .fullContain .halfA:last-child {
+        display: block;
+    }
+    .fullContain a .ttBox, .fullContain .pr .ttBox{display: block;}
+    /*리스트*/
+    .bbList li {
+        width: 20%;
+    }
+
+    /*위시리스트*/
+    .m_wishList>li{width: 25%;}
+    
+    /*영상페이지*/
+    .videoWrap {max-width: 60%;}
+}
+@media all and (min-device-width:0px) and (max-device-width:800px) and (orientation:landscape) { /*가로 핸드폰 0~800*/
+    /*메인*/
+    .fullHalf li{width: 50%;}
+    .cosMain4{max-width: 80%;}
+    /*회원가입*/
+    .mBlock{display:inline-block;}
+    
+    /*영상페이지*/
+    .ssText {padding: 25px;}
+    
+} 
+@media all and (min-device-width:0px) and (max-device-width:600px) and (orientation:landscape) { /*아이폰5 가로 0~600*/
+    /*푸터 셀렉트*/
+    .change select {
+        width: 140px;
+        margin: 2px;
+    }
+         
+ }
+ 
+ @media all and (min-device-width:601px) and (max-device-width:700px) and (orientation:landscape) { /*아이폰6 가로 601~700*/
+     
+ }
+ 
+ @media all and (min-device-width:701px) and (max-device-width:800px) and (orientation:landscape) { /*아이폰6+ 가로701~800*/
+
+ }
+ 
+ @media all and (min-device-width:801px) and (max-device-width:1200px) and (orientation:landscape) { /*태블릿 가로801~1200*/
+    /*메인*/
+    .cosMain4 {
+        max-width: 70%;
+    }
+    /*world*/
+    .ipadlandsc  {padding:8% 0; box-sizing:content-box; }
+    .bigTit {font-size:3.5em;}
+    .world3ul .bigTit {font-size:3em;}
+    .wdNewsList li{width: 50%;margin-top: 50px;padding-left: 20px;box-sizing: border-box;}
+
+    .subBslide.bx100 .slide {
+        background-position: 38%;
+    }
+    
+ }
+
+/* 아이패드 (가로 및 세로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1400px) {
+    /* 아이패드 프로 */
+    .headerWrap{display: none;}
+    .bp-header, .action--open{display: block;}
+    .container {margin: 60px auto 0;}
+    .bbFilter,.bbFilter.nav-up{top:50px;}
+    .topMenu.myPage{padding: 10px;}
+    .topMenu.myPage .right{TOP:12PX;}
+    
+    /*결제완료*/
+    .payBtnWrap    {margin: 0px auto 50px;}
+    /*18리조트 메인 180622 pub2*/
+    .resortFix .pointText.resort .vTitle {margin-top:-73px;}
+    
+    
+    
+}
+/* 아이패드 프로만 (가로 및 세로) ----------- */
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+    /*180629 패드 프로만 수정*/
+    .bp-header__main .logo {margin-top:-14px;}
+    .art1{left: 11%;
+    font-size: 15px;}
+    .art3{right:6%;}
+    .art2 .bigTitle{    font-size: 3.5rem;
+    line-height: 1.5;}
+    .resortFix .pointText .resortLtext{font-size: 14px;}
+	.resortFix .pointText.resort .vTitle {
+	    margin-top: 0px;font-size: 4rem;
+	}
+	.resortImgUl .bigTitle,.resortWtext{font-size: 2.5rem;}
+    .nameThin,.resortWtext span{font-size: 1.5rem;}
+    .fullContText .resortBigT {font-size: 4rem;}
+    .miniLayout .vImage img {height: 100px;}
+    
+    
+    
+    
+    
+
+}
+
+
+
+/* 아이패드 (가로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* 사용자 코드 */
+
+}
+
+/* 아이패드 (세로) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* 사용자 코드 */
+
+}
+
+
+
+/*웹 반응형입니다.*/
+@media screen and (min-width: 960px) {/*웹 960 ~ 끝*/
+
+}
+@media screen and (min-width: 1200px) {/*웹 1200 ~ 끝*/
+.copyRight{padding-left: 20px;
+    padding-right: 20px;}
+}
+@media screen and (min-width: 1500px) {/*웹 1500 ~ 끝*/
+
+}
+@media screen and (min-width: 1920px) {/*웹 1920 ~ 끝*/
+
+}
+@media screen and (min-width: 2560px) {/*웹 2560 ~ 끝*/
+    /*푸터*/
+    .subscribe{padding: 100px 0px;}
+    .bigTit   {font-size: 3em;}
+}
+
+
+
+/* 웹 구간 반응형 */
+@media screen and (min-width: 960px) and (max-width: 1199px) {/*웹 960 ~ 1199*/
+    /*world*/
+    .Honews li:nth-child(4),.Honews li:nth-child(5),.Honews li:nth-child(6) {margin-top:50px;}
+    .instaphoto li {width:33%;}
+    .instaphoto li:nth-child(4),.instaphoto li:nth-child(5),.instaphoto li:nth-child(6) {display:none;} 
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {/*웹 1024 ~ 1199*/
+    /*world*/
+    .worldHalf>li  {width:50%;}
+    .worldHalf>li:last-child{display: none;}
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1499px) {/*웹 1200 ~ 1499*/
+
+    
+}
+@media screen and (min-width: 1500px) and (max-width: 1919px) {/*웹 1500 ~ 1919*/
+
+}
+@media screen and (min-width: 1920px) and (max-width: 2559px) {/*웹 1920 ~ 2559*/
+    
+    
+}
+
+

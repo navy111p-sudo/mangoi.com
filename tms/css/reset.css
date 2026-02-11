@@ -1,0 +1,169 @@
+@charset "utf-8";
+html, body, div, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, input {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size:inherit;
+background: transparent;
+color:inherit;
+font-family: inherit;
+box-sizing:content-box;
+-webkit-tap-highlight-color:transparent;/*폰에서 클릭시 영역 안나옴*/
+}
+*{margin:0; padding:0;}
+body {
+ position:relative;
+ line-height: 1.5;
+ color:#000;
+ font-size:15px;
+ letter-spacing:0px;
+ font-family: 'Noto Sans Korean', 'Nanum Barun Gothic', sans-serif;
+ -webkit-text-size-adjust:none;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+/* remember to define focus styles! */
+:focus {
+ outline: 0;
+}
+/* remember to highlight inserts somehow! */
+ins {
+ text-decoration: none;
+}
+del {
+ text-decoration: line-through;
+}
+table {
+ border-collapse:collapse;
+ border-spacing: 0;
+ font-family: 'Noto Sans Korean', sans-serif;
+}
+a{display:inline-block; color:inherit; cursor:pointer;text-decoration:none;}
+a:hover,i:hover{}
+button{padding:0; border:none; cursor:pointer; color:inherit; font-family:inherit; background:none;} 
+::selection {
+    background: rgba(0,0,0,.2);
+}
+
+/*파이어폭스만 적용*/
+@-moz-document url-prefix(){select{background-image: none;}}
+.inputBox select{width:150px;margin: 2px;}
+.change select{width: 150px;margin: 2px;}
+
+
+
+
+
+/**/
+@media screen and (max-width: 767px) {/*휴대폰*/}
+@media screen and (min-width: 768px) and (max-width: 959px) {/*태블릿*/}
+@media screen and (min-width: 960px) {/*웹*/}
+
+
+
+
+/*플레이스홀더 색깔*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #b2b2b2;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #b2b2b2;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #b2b2b2;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #b2b2b2;
+}
+:placeholder-shown { /* Standard */
+  color:    #b2b2b2;
+}
+
+
+
+/*기본 아이콘 폰트*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../font/icomoon.eot?b3s3fp');
+  src:  url('../font/icomoon.eot?b3s3fp#iefix') format('embedded-opentype'),
+    url('../font/icomoon.ttf?b3s3fp') format('truetype'),
+    url('../font/icomoon.woff?b3s3fp') format('woff'),
+    url('../font/icomoon.svg?b3s3fp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrowBottom:before,.icon-arrowbottom:before {
+  content: "\e900";
+}
+.icon-arrowBottom2:before,.icon-arrowbottom2:before {
+  content: "\e901";
+}
+.icon-arrowLeft:before,.icon-arrowleft:before {
+  content: "\e902";
+}
+.icon-arrowLeft2:before,.icon-arrowleft2:before {
+  content: "\e903";
+}
+.icon-arrowRight:before,.icon-arrowright:before {
+  content: "\e904";
+}
+.icon-arrowRight2:before,.icon-arrowright2:before {
+  content: "\e905";
+}
+.icon-arrowTop:before,.icon-arrowtop:before {
+  content: "\e906";
+}
+.icon-arrowTop2:before,.icon-arrowtop2:before {
+  content: "\e907";
+}
+.icon-minus:before {
+  content: "\e908";
+}
+.icon-plus:before {
+  content: "\e909";
+}
+.icon-re:before {
+  content: "\e90a";
+}
+.icon-x:before {
+  content: "\e90b";
+}
+.icon-menu1:before {
+  content: "\e90c";
+}
+.icon-menu2:before {
+  content: "\e90d";
+}
+.icon-menu3:before {
+  content: "\e90e";
+}

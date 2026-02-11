@@ -1,0 +1,11 @@
+{
+    "require": {
+        "google/apiclient": "^2.11",
+        "phpoffice/phpspreadsheet": "1.13.0"
+    },
+    "config": {
+
+        "platform-check": false
+    }
+
+}

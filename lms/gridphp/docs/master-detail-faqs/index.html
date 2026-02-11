@@ -1,0 +1,1525 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Grid 4 PHP Framework Documentation - Datagrid Made Easy">
+      
+      
+        <link rel="canonical" href="https://www.gridphp.com/docs/master-detail-faqs/">
+      
+      
+        <meta name="author" content="Abu Ghufran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s]+">
+      
+      <link rel="shortcut icon" href="../css/favicon.gif">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Master Detail FAQs - Grid 4 PHP Framework Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../extra/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#master-detail-faqs" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+    <nav class="md-header-nav md-grid">
+      <div class="md-flex">
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        </div>
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <a href="https://www.gridphp.com/docs" title="Grid 4 PHP Framework Docs" class="md-header-nav__button md-logo">
+            <img src="https://www.gridphp.com/wp-content/uploads/logo-gridphp-small.png" alt="PHP Grid Framework Docs">
+          </a>
+        </div>
+  
+        <div class="md-flex__cell md-flex__cell--stretch visit-main-site">
+          <a href="/">Visit Main Site &raquo;</a>
+        </div>
+      </div>
+    </nav>
+    <div class="title-and-search-bar">
+      <div class="md-grid">
+        <div class="md-flex">
+        <div class="md-flex__cell md-flex__cell--stretch">
+            <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+              
+              
+              <span class="md-header-nav__topic">
+                Grid 4 PHP Framework Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Master Detail FAQs
+              </span>
+              
+              
+            </div>
+          </div>
+          <div class="md-flex__cell md-flex__cell--shrink">
+            
+            
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!-- Main navigation -->
+<nav class="md-nav md-nav--primary" data-md-level="0">
+
+  <!-- Site title -->
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    Sections
+  </label>
+
+  <!-- Repository containing source -->
+  
+
+  <!-- Render item list -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setup/" title="Setup" class="md-nav__link">
+      Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating-first-grid/" title="Creating First Grid" class="md-nav__link">
+      Creating First Grid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Customization
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Customization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../selecting-columns/" title="Selecting Columns" class="md-nav__link">
+      Selecting Columns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../column-options/" title="Column Options" class="md-nav__link">
+      Column Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grid-options/" title="Grid Options" class="md-nav__link">
+      Grid Options
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../master-detail-grid/" title="Master Detail Grid" class="md-nav__link">
+      Master Detail Grid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../subgrid/" title="Subgrid" class="md-nav__link">
+      Subgrid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exporting-data/" title="Exporting Data" class="md-nav__link">
+      Exporting Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../importing-data/" title="Importing Data" class="md-nav__link">
+      Importing Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conditional-formatting/" title="Conditional Formatting" class="md-nav__link">
+      Conditional Formatting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grouping/" title="Grouping" class="md-nav__link">
+      Grouping
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grouping-headers/" title="Grouping Headers" class="md-nav__link">
+      Grouping Headers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../search/" title="Search" class="md-nav__link">
+      Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grid-events/" title="Grid Events" class="md-nav__link">
+      Grid Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../validation/" title="Validation" class="md-nav__link">
+      Validation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../upload-files/" title="Upload Files" class="md-nav__link">
+      Upload Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../footer-summary/" title="Footer Summary" class="md-nav__link">
+      Footer Summary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../autocomplete/" title="Autocomplete" class="md-nav__link">
+      Autocomplete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../multiselect-filter/" title="Multiselect Filter" class="md-nav__link">
+      Multiselect Filter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../state-persistence/" title="State Persistence" class="md-nav__link">
+      State Persistence
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Layout & UI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Layout & UI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../responsive-design/" title="Responsive Design" class="md-nav__link">
+      Responsive Design
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../localization/" title="Localization" class="md-nav__link">
+      Localization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../themes/" title="Themes" class="md-nav__link">
+      Themes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-with-sql-server/" title="Connecting with SQL Server" class="md-nav__link">
+      Connecting with SQL Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-with-postgres/" title="Connecting with Postgres" class="md-nav__link">
+      Connecting with Postgres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-with-oracle/" title="Connecting with Oracle" class="md-nav__link">
+      Connecting with Oracle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../debug-mode/" title="Debug Mode" class="md-nav__link">
+      Debug Mode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Demo Apps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Demo Apps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic-todo-list-application/" title="Simple Todo List" class="md-nav__link">
+      Simple Todo List
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      FAQs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        FAQs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../general-faqs/" title="General FAQs" class="md-nav__link">
+      General FAQs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grid-appearance-faqs/" title="Grid Appearance FAQs" class="md-nav__link">
+      Grid Appearance FAQs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../column-appearance-faqs/" title="Column Appearance FAQs" class="md-nav__link">
+      Column Appearance FAQs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../column-settings-faqs/" title="Column Settings FAQs" class="md-nav__link">
+      Column Settings FAQs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dialog-customization-faqs/" title="Dialog Customization FAQs" class="md-nav__link">
+      Dialog Customization FAQs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../javascript-api-faqs/" title="Javascript API FAQs" class="md-nav__link">
+      Javascript API FAQs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../databases-faqs/" title="Databases FAQs" class="md-nav__link">
+      Databases FAQs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Master Detail FAQs
+      </label>
+    
+    <a href="./" title="Master Detail FAQs" class="md-nav__link md-nav__link--active">
+      Master Detail FAQs
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#master-detail-faqs" title="Master Detail FAQs" class="md-nav__link">
+    Master Detail FAQs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-dynamically-change-detail-grids-dropdown-field-content-based-on-selection-of-master-grid-row" title="Q) How to dynamically change detail grid's dropdown field content, based on selection of master grid row?" class="md-nav__link">
+    Q) How to dynamically change detail grid's dropdown field content, based on selection of master grid row?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-load-grid-with-table-that-have-fields-with-spaces" title="Q) How to load grid with table that have fields with spaces?" class="md-nav__link">
+    Q) How to load grid with table that have fields with spaces?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-use-table-with-composite-keys-index" title="Q) How to use table with composite keys index?" class="md-nav__link">
+    Q) How to use table with composite keys index?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-show-footer-row-in-subgrid" title="Q) How to show footer row in subgrid?" class="md-nav__link">
+    Q) How to show footer row in subgrid?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-reload-parent-after-new-record-added-in-subgrid" title="Q) How to reload parent after new record added in subgrid ?" class="md-nav__link">
+    Q) How to reload parent after new record added in subgrid ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-keep-subgrid-expanded-after-parent-grids-refresh" title="Q) How to keep subgrid expanded after parent grid's refresh ?" class="md-nav__link">
+    Q) How to keep subgrid expanded after parent grid's refresh ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-disable-subgrid-expansion-on-specific-row" title="Q) How to disable subgrid expansion on specific row ?" class="md-nav__link">
+    Q) How to disable subgrid expansion on specific row ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-select-inserted-row-in-master-grid-and-refresh-the-detail-grid-for-linked-operations" title="Q) How to select inserted row in master grid, and refresh the detail grid for linked operations?" class="md-nav__link">
+    Q) How to select inserted row in master grid, and refresh the detail grid for linked operations?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-refresh-parent-grid-on-subgrid-insertion" title="Q) How to refresh parent grid on subgrid insertion?" class="md-nav__link">
+    Q) How to refresh parent grid on subgrid insertion?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-enable-cell-edit-on-double-click-and-functional-on-master-detail-grid" title="Q) How to enable cell edit on double click and functional on master-detail grid?" class="md-nav__link">
+    Q) How to enable cell edit on double click and functional on master-detail grid?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-can-i-set-the-selected-row-first-row-on-load-page" title="Q) How can I set the selected row (first row) on load page?" class="md-nav__link">
+    Q) How can I set the selected row (first row) on load page?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-can-i-change-the-detail-title-when-i-select-a-row-from-master-grid" title="Q) How can I change the detail title when I select a row from master grid?" class="md-nav__link">
+    Q) How can I change the detail title when I select a row from master grid?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-can-hideshow-detail-grid-on-selecting-a-row-from-master-grid" title="Q) How can hide/show detail grid on selecting a row from master grid?" class="md-nav__link">
+    Q) How can hide/show detail grid on selecting a row from master grid?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../export-faqs/" title="Export FAQs" class="md-nav__link">
+      Export FAQs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../misc-faqs/" title="Misc FAQs" class="md-nav__link">
+      Misc FAQs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#master-detail-faqs" title="Master Detail FAQs" class="md-nav__link">
+    Master Detail FAQs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-dynamically-change-detail-grids-dropdown-field-content-based-on-selection-of-master-grid-row" title="Q) How to dynamically change detail grid's dropdown field content, based on selection of master grid row?" class="md-nav__link">
+    Q) How to dynamically change detail grid's dropdown field content, based on selection of master grid row?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-load-grid-with-table-that-have-fields-with-spaces" title="Q) How to load grid with table that have fields with spaces?" class="md-nav__link">
+    Q) How to load grid with table that have fields with spaces?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-use-table-with-composite-keys-index" title="Q) How to use table with composite keys index?" class="md-nav__link">
+    Q) How to use table with composite keys index?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-show-footer-row-in-subgrid" title="Q) How to show footer row in subgrid?" class="md-nav__link">
+    Q) How to show footer row in subgrid?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-reload-parent-after-new-record-added-in-subgrid" title="Q) How to reload parent after new record added in subgrid ?" class="md-nav__link">
+    Q) How to reload parent after new record added in subgrid ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-keep-subgrid-expanded-after-parent-grids-refresh" title="Q) How to keep subgrid expanded after parent grid's refresh ?" class="md-nav__link">
+    Q) How to keep subgrid expanded after parent grid's refresh ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-disable-subgrid-expansion-on-specific-row" title="Q) How to disable subgrid expansion on specific row ?" class="md-nav__link">
+    Q) How to disable subgrid expansion on specific row ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-select-inserted-row-in-master-grid-and-refresh-the-detail-grid-for-linked-operations" title="Q) How to select inserted row in master grid, and refresh the detail grid for linked operations?" class="md-nav__link">
+    Q) How to select inserted row in master grid, and refresh the detail grid for linked operations?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-refresh-parent-grid-on-subgrid-insertion" title="Q) How to refresh parent grid on subgrid insertion?" class="md-nav__link">
+    Q) How to refresh parent grid on subgrid insertion?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-to-enable-cell-edit-on-double-click-and-functional-on-master-detail-grid" title="Q) How to enable cell edit on double click and functional on master-detail grid?" class="md-nav__link">
+    Q) How to enable cell edit on double click and functional on master-detail grid?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-can-i-set-the-selected-row-first-row-on-load-page" title="Q) How can I set the selected row (first row) on load page?" class="md-nav__link">
+    Q) How can I set the selected row (first row) on load page?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-can-i-change-the-detail-title-when-i-select-a-row-from-master-grid" title="Q) How can I change the detail title when I select a row from master grid?" class="md-nav__link">
+    Q) How can I change the detail title when I select a row from master grid?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-how-can-hideshow-detail-grid-on-selecting-a-row-from-master-grid" title="Q) How can hide/show detail grid on selecting a row from master grid?" class="md-nav__link">
+    Q) How can hide/show detail grid on selecting a row from master grid?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Master Detail FAQs</h1>
+                
+                <h2 id="master-detail-faqs">Master Detail FAQs</h2>
+<h4 id="q-how-to-dynamically-change-detail-grids-dropdown-field-content-based-on-selection-of-master-grid-row">Q) How to dynamically change detail grid's dropdown field content, based on selection of master grid row?</h4>
+<p>Step1: In master-detail.php, we added a dropdown in detail grid, with daraUrl param set to a php page.</p>
+<pre><code>$col = array();
+$col["title"] = "Client";
+$col["name"] = "client_id";
+$col["width"] = "100";
+$col["align"] = "left";
+$col["search"] = true;
+$col["editable"] = true;
+$col["edittype"] = "select"; // render as select
+$col["editoptions"] = array("dataUrl"=&gt;"http://jqgrid/dev/build-select.php");
+$cols[] = $col;
+</code></pre>
+<p>Put build-select.php in some web access path, and set correct http url.
+and, we also set the master grid selection id into session variable.</p>
+<pre><code>$id = intval($_GET["rowid"]);
+if ($id &gt; 0)
+    $_SESSION["rowid"] = $_GET["rowid"];
+</code></pre>
+<p>Step2: In build-select.php, we read the session variable and show the dropdown select based on that variable data.</p>
+<pre><code>&lt;?
+if (!isset($_SESSION) || !is_array($_SESSION))
+    session_start();
+
+if ($_SESSION["rowid"] == "1") {
+?&gt;
+    &lt;select&gt;
+    &lt;option value='1'&gt;One&lt;/option&gt;
+    &lt;option value='2'&gt;Two&lt;/option&gt;
+    &lt;/select&gt;
+&lt;?
+}
+else {
+?&gt;
+    &lt;select&gt;
+    &lt;option value='3'&gt;Three&lt;/option&gt;
+    &lt;option value='4'&gt;Four&lt;/option&gt;
+    &lt;/select&gt;
+&lt;?
+}
+</code></pre>
+<p>For cascaded dropdown, Following config will be required.</p>
+<p>On change this column ($col), it will run sql and search it's data on particular field (<code>search_on</code>), then update another dropdown specified in <code>update_field</code>.</p>
+<pre><code>$col["editoptions"] = array(
+            "value"=&gt;$str,
+            "onchange" =&gt; array(    "sql"=&gt;"select note as k, note as v from invheader",
+                                    "search_on"=&gt;"client_id",
+                                    "update_field" =&gt; "note" )
+                            );
+</code></pre>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-load-grid-with-table-that-have-fields-with-spaces">Q) How to load grid with table that have fields with spaces?</h4>
+<p>You will need to alias the spaced fields with '-' and set query in select_command. e.g.</p>
+<pre><code>$g-&gt;select_command = "SELECT `i d` as `i-d`, `client id` AS `client-id`, `inv date` AS `inv-date` FROM invheader";
+</code></pre>
+<p>Rest functionality (add/update/del/search) will be handled by library.</p>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-use-table-with-composite-keys-index">Q) How to use table with composite keys index?</h4>
+<p>For composite keys - there are two possible approaches:</p>
+<p>1) Creating a new AUTO_INCREMENT column directly in the database, so that each row has a unique id, then using this column for primary key. You can hide the column using hidden =&gt; true.</p>
+<p>2) In your SELECT statement (select_command), you may try to select a first column as special concat value that is based on composite keys. This will handle the listings. For insert/update/delete, you will need to use custom events on_update/on_insert/on_delete to parse the new concat field and perform desired operation. Refer demos/editing/custom-events.php for help.</p>
+<pre><code>// example code 1
+
+$g-&gt;select_command = "SELECT concat(pk1,'-',pk2) as pk, col2, col3 FROM table";
+
+$e["on_insert"] = array("add_client", null, true);
+$g-&gt;set_events($e);
+
+function add_client($data)
+{
+    $pk = $data["params"]["pk"];
+    list(pk1, pk2) = explode("-",$pk);
+
+    $data["params"]["pk1"] = $pk1; // setting $data will make sure it will be there in INSERT SQL
+    $data["params"]["pk2"] = $pk2;
+}
+
+// example code 2
+
+// Step1: Select concatenated PK with combined composite key
+$g-&gt;select_command = "SELECT concat(Year_No,'-',Order_No,'-',LocationID,'-',TranscationId) as pk,  Year_No, Order_No, LocationID, TranscationId, Startdate, ExpiredDate FROM mylocations ";
+
+// Step2: Connect on_update event hander
+$e["on_update"] = array("update_data", null, false);
+$g-&gt;set_events($e);
+
+// Step3: In handler, split the PK with your separator, and execute custom UPDATE query
+function update_data($data)
+{
+        list($Year_No,$Order_No,$LocationID,$TranscationId) = explode("-",$data["pk"]);
+
+        $s = array();
+        foreach($data["params"] as $k=&gt;$v)
+        {
+                $s[] = "$k = '$v'";
+        }
+        $s = implode(",",$s);
+
+        $w = "Year_No=$Year_No and Order_No=$Order_No and LocationID=$LocationID and TranscationId=$TranscationId";
+
+        mysql_query("UPDATE mylocations set $s WHERE $w");
+}
+</code></pre>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-show-footer-row-in-subgrid">Q) How to show footer row in subgrid?</h4>
+<p>In subgrid_detail, do following config.</p>
+<pre><code>$grid["footerrow"] = true;
+$g-&gt;set_options($grid);
+
+$e["js_on_load_complete"] = "subgrid_onload";
+$g-&gt;set_events($e);
+</code></pre>
+<p>In parent grid, put function to fill subgrid footer</p>
+<pre><code>&lt;script&gt;
+    var subgrid_onload = function () {
+            var grid = $("td.subgrid-data &gt; .tablediv &gt; div").attr("id").replace("gbox_","");
+            grid = jQuery("#"+grid);
+
+            // sum of displayed result
+            sum = grid.jqGrid('getCol', 'total', false, 'sum');
+
+            c = grid.jqGrid('getCol', 'id', false, 'sum');
+            grid.jqGrid('footerData','set', {id: 'Sum:' + c, total: 'Total: '+sum});
+        };
+&lt;/script&gt;
+</code></pre>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-reload-parent-after-new-record-added-in-subgrid">Q) How to reload parent after new record added in subgrid ?</h4>
+<p>Following config in subgrid_detail will reload parent when new record is inserted in detail grid.
+Reloading parent will make subgrid hidden again.</p>
+<p>In subgrid_detail php file, just add this line in grid options.</p>
+<pre><code>$grid["add_options"]["afterSubmit"] = "function(){jQuery('#list1').trigger('reloadGrid',[{page:1}]); return [true, ''];}";
+</code></pre>
+<p>where list1 is parent list id.</p>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-keep-subgrid-expanded-after-parent-grids-refresh">Q) How to keep subgrid expanded after parent grid's refresh ?</h4>
+<p>Following JS code snippet will keep subgrid opened after parent's refresh.
+You can place this script with parent grid's code.</p>
+<p>PHP Part:</p>
+<pre><code>// reload previous expanded subgrids on load event
+$e["js_on_load_complete"] = "grid_onload";
+$grid-&gt;set_events($e);
+</code></pre>
+<p>JS Part:</p>
+<pre><code>&lt;script&gt;
+var scrollPosition = 0
+var ids = new Array();
+
+function grid_onload()
+{
+    jQuery.each(ids, function (id,data) {
+        $("#list1").expandSubGridRow(data);
+        jQuery("#list1").closest(".ui-jqgrid-bdiv").scrollTop(scrollPosition);
+    });
+}
+
+// custom refresh button
+jQuery(document).ready(function(){
+
+    jQuery('#list1').jqGrid('navButtonAdd', '#list1_pager',
+    {
+        'caption'      : 'Refresh',
+        'buttonicon'   : 'ui-icon-extlink',
+        'onClickButton': function()
+        {
+            ids = new Array();
+            $('tr:has(.sgexpanded)').each(function(){ids.push($(this).attr('id'))});
+            scrollPosition = jQuery("#list1").closest(".ui-jqgrid-bdiv").scrollTop()
+            $("#list1").trigger("reloadGrid");
+        },
+        'position': 'last'
+    });
+});
+&lt;/script&gt;
+</code></pre>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-disable-subgrid-expansion-on-specific-row">Q) How to disable subgrid expansion on specific row ?</h4>
+<p>Following snippet will remove subgrid from e.g. rowid 2</p>
+<pre><code>$opt["loadComplete"] = "function(){
+                                    var rowid=2;
+                                    jQuery('tr#'+rowid+' td[aria-describedby$=subgrid]').html('');
+                                    jQuery('tr#'+rowid+' td[aria-describedby$=subgrid]').unbind();
+                                    }";
+// ...
+$g-&gt;set_options($opt);
+</code></pre>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-select-inserted-row-in-master-grid-and-refresh-the-detail-grid-for-linked-operations">Q) How to select inserted row in master grid, and refresh the detail grid for linked operations?</h4>
+<p>Following add_options setting in master grid will SELECT the newly inserted row.</p>
+<pre><code>$opt["add_options"]["afterComplete"] = "function (response, postdata) { r = JSON.parse(response.responseText);
+                                                                        jQuery( document ).ajaxComplete(function() {
+                                                                            jQuery('#list1').setSelection(r.id);
+                                                                            jQuery( document ).unbind('ajaxComplete');
+                                                                            });
+                                                                        }";
+$grid-&gt;set_options($opt);
+</code></pre>
+<p>If you wish to show highlight effect, you can include jquery ui script,</p>
+<pre><code>&lt;script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>And have highlight code in afterComplete:</p>
+<pre><code>$opt["add_options"]["afterComplete"] = "function (response, postdata) { r = JSON.parse(response.responseText); jQuery('#'+r.id,'#list1').effect('highlight', {color:'yellow'}, 2000); }";
+$grid-&gt;set_options($opt);
+</code></pre>
+<p>A condition that new record should come in grid list, You can sort grid to decending id, to show newly added record on top of grid.</p>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-refresh-parent-grid-on-subgrid-insertion">Q) How to refresh parent grid on subgrid insertion?</h4>
+<p>Following code steps will refresh subgrid's parent on child grid insertion.
+It will also expand the last child subgrid after refresh.</p>
+<p>First, disable default refresh button of parent grid.</p>
+<pre><code>$grid-&gt;set_actions(array(
+                        "refresh"=&gt;false // will add a custom refresh button
+                        )
+                    );
+</code></pre>
+<p>Set on_load event handler for parent.</p>
+<pre><code>// reload previous expanded subgrids on load event
+$e["js_on_load_complete"] = "grid_onload";
+$grid-&gt;set_events($e);
+</code></pre>
+<p>Put following script tag in parent grid.</p>
+<pre><code>&lt;script&gt;
+var scrollPosition = 0
+var ids = new Array();
+
+// expand last child grid on load
+function grid_onload()
+{
+    jQuery.each(ids, function (id,data) {
+        $("#list1").expandSubGridRow(data);
+        jQuery("#list1").closest(".ui-jqgrid-bdiv").scrollTop(scrollPosition);
+    });
+}
+
+function reload_parent()
+{
+    ids = new Array();
+    $('tr:has(.sgexpanded)').each(function(){ids.push($(this).attr('id'))});
+    scrollPosition = jQuery("#list1").closest(".ui-jqgrid-bdiv").scrollTop()
+    $("#list1").trigger("reloadGrid");
+}
+
+// custom refresh button
+jQuery(document).ready(function(){
+
+    jQuery('#list1').jqGrid('navButtonAdd', '#list1_pager',
+    {
+        'caption'      : 'Refresh',
+        'buttonicon'   : 'ui-icon-extlink',
+        'onClickButton': function()
+        {
+            reload_parent();
+        },
+        'position': 'last'
+    });
+});
+&lt;/script&gt;
+</code></pre>
+<p>In child subgrid, set afterSubmit to call reload_parent() after insert.</p>
+<pre><code>$grid["add_options"]["afterSubmit"] = "function(){ reload_parent(); return [true, ''];}";
+</code></pre>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-to-enable-cell-edit-on-double-click-and-functional-on-master-detail-grid">Q) How to enable cell edit on double click and functional on master-detail grid?</h4>
+<p>Adding following options will make celledit work on double click and functional on master detail grid.</p>
+<pre><code>// celledit double click (master-detail) - list1 is grid id
+$opt["cellEdit"] = true;
+$opt["beforeSelectRow"] = "function(rowid) { if (jQuery('#list1').jqGrid('getGridParam','selrow') != rowid) { jQuery('#list1').jqGrid('resetSelection'); jQuery('#list1').setSelection(rowid); } return false; }";
+$opt["ondblClickRow"] = "function (rowid, iRow,iCol) { jQuery('#list1').editCell(iRow, iCol, true); }";
+
+$grid-&gt;set_options($opt);
+</code></pre>
+<p>Refer demos/master-detail/excelview-detail.php</p>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-can-i-set-the-selected-row-first-row-on-load-page">Q) How can I set the selected row (first row) on load page?</h4>
+<p>Following config will select the first row of grid on load event. You can customize as per your need.</p>
+<p>PHP:</p>
+<pre><code>$e["js_on_load_complete"] = "grid_onload";
+$grid-&gt;set_events($e);
+</code></pre>
+<p>JS:</p>
+<pre><code>function grid_onload(ids)
+{
+    // get row ids from grid (with id: list1)
+    var ids = $("#list1").jqGrid('getDataIDs');
+    setTimeout( function(){ jQuery('#list1').jqGrid('setSelection', ids[0], true); },100);
+}
+</code></pre>
+<p>Also check: https://www.gridphp.com/support/questions/select-row-on-load-page/</p>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-can-i-change-the-detail-title-when-i-select-a-row-from-master-grid">Q) How can I change the detail title when I select a row from master grid?</h4>
+<p>On master grid, set onselect event.</p>
+<pre><code>$e["js_on_select_row"] = "do_onselect";
+$grid-&gt;set_events($e);
+</code></pre>
+<p>and in html part add this script.</p>
+<pre><code>&lt;script&gt;
+function do_onselect(id)
+{
+    // get selected row company column value
+    var ctype = jQuery('#list1').jqGrid('getCell', id, 'company'); // where invdate is column name
+
+    // set company name in detail grid caption
+    jQuery('#list2').jqGrid('setCaption','Company Details: ' + ctype);
+}
+&lt;/script&gt;
+</code></pre>
+<p>Also check: https://www.gridphp.com/support/questions/select-row-on-load-page/</p>
+<p><a href="#top">^ Top</a></p>
+<h4 id="q-how-can-hideshow-detail-grid-on-selecting-a-row-from-master-grid">Q) How can hide/show detail grid on selecting a row from master grid?</h4>
+<p>On master grid, set onselectrow event. If gender is male, it will hide detail grid otherwise show it. (where list1 is master, list2 is detail)</p>
+<pre><code>$opt["onSelectRow"] = "function(id){
+                        var gid = jQuery('#list1').jqGrid('getCell', id, 'gender');
+                        if (gid == 'male')
+                            $('#list2').jqGrid('setGridState', 'hidden');
+                        else
+                            $('#list2').jqGrid('setGridState', 'visible');
+                        }";
+</code></pre>
+<p><a href="#top">^ Top</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../databases-faqs/" title="Databases FAQs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Databases FAQs
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../export-faqs/" title="Export FAQs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Export FAQs
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2010 - 2020
+          </div>
+        
+        <!-- powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a> -->
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/gridphp" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/abu-ghufran-bb22a512a" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://web.facebook.com/PHP-Grid-Framework-268762813193993/" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://github.com/gridphp" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="../extra/extra.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-31709948-1","gridphp.com"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

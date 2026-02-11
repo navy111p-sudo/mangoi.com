@@ -1,0 +1,548 @@
+@charset "utf-8";
+
+
+/*common*/
+.box_dot{border:1px dotted #bbb; background-color:#fcfcfc;padding:30px;}
+.box_dot2{border:1px dotted #464646;background:rgba(55,55,55,0.7); ;padding:15px;}
+.box_dot3{border:1px dotted #bbb;background:rgba(255,255,255,0.5); ;padding:35px;}
+.dot_line{border-bottom:1px dotted #bbb;margin-top:20px;margin-bottom:20px;}
+
+/*works 분류카테고리*/
+.works_cate{text-align:center;color:#ccc;font-size:11px;margin-bottom:50px;}
+.works_cate a{line-height:30px;padding:10px 3px;font-size:13px;color:#777;}
+.works_cate a:hover{color:#ed1d24;}
+.works_cate a.selected{color:#ed1d24;font-weight:600;}
+
+/********* 2_1. Why 진독개? *********/
+.SubPro1{text-align:justify; font-size:15px; line-height:1.7; font-weight:normal;font-family:"NanumBarunGothic", NanumGothic, Dotum,"돋움", Arial;}
+.SubPro1 .Tb1_2A{margin-bottom:15px;}
+.SubPro1 .Tb1_2A th{width:138px;}
+.SubPro1 .Tb1_2A .Td{width:14px;}
+.SubPro1 .Tb1_2A .Tcontent{height:121px; border:2px solid #ddd; border-radius:15px; padding:10px 25px; box-sizing:border-box; background:#fff;}
+.SubPro1 .Tb1_2B{margin-bottom:50px;}
+.SubPro1 .Tb1_2B:last-child{margin-bottom:0;}
+.SubPro1 .Tb1_2B img{border:1px solid #ddd; border-radius:22px; width:100%;}
+.SubPro1 .Tb1_2B .Td{width:1%;}
+.SubPro1 .Tb1_2B th{height:50px; font-size:16px;}
+
+/********* 2_1. 독서란? *********/
+.Sub2_1{text-align:justify; font-size:14.5px; line-height:1.7; font-weight:normal;font-family:"NanumBarunGothic", NanumGothic, Dotum,"돋움", Arial;}
+.Sub2_1 strong{font-size:16px;}
+.Sub2_1 > img{margin:20px 0 30px 0;}
+
+.Sub2_1 .Tb2_1{margin:20px 0 30px 0;}
+.Sub2_1 .Tb2_1 img{width:100%;}
+.Sub2_1 .Tb2_1 .Td{width:1%;}
+.Sub2_1 .Tb2_1 th{height:50px; font-weight:normal; text-align:left; padding:0 0 0 2px;}
+.Sub2_1 .Tb2_1 th b{font-size:20px;}
+.Sub2_1 .Tb2_1 .Th{background:#ffcc5f; text-align:center;}
+.Sub2_1 .Tb2_1 .Th h1{font-size:28px;}
+
+.Sub2_1 .Tb2_1 td{width:49.5%;}
+
+.Sub2_1 > h2{font-size:28px; text-align:center; margin:-10px 0 30px 0;}
+
+/********* 2_2. 독서가 인생에 미치는 영향 *********/
+.Sub2_2{font-size:14.5px; line-height:1.8; font-weight:normal;font-family:"NanumBarunGothic", NanumGothic, Dotum,"돋움", Arial; overflow:hidden;}
+.Sub2_2 > img{width:100%; margin-bottom:40px;}
+.Sub2_2 .Wise{position:relative; width:100%; height:1630px; background:url(../images1/BgLine.png) no-repeat center top;}
+.Sub2_2 .Wise > div{width:46%; position:absolute;}
+.Sub2_2 .Wise > div > img{margin-top:14px;}
+.Sub2_2 .Wise h3{font-size:20px; color:#444;}
+.Sub2_2 .Wise .Wise1, .Sub2_2 .Wise .Wise3, .Sub2_2 .Wise .Wise5, .Sub2_2 .Wise .Wise7{text-align:right;}
+.Sub2_2 .Wise .Wise2, .Sub2_2 .Wise .Wise4, .Sub2_2 .Wise .Wise6, .Sub2_2 .Wise .Wise8{text-align:left;}
+.Sub2_2 .Wise .Wise1{top:40px; right:54%;}
+.Sub2_2 .Wise .Wise2{top:175px; left:54%;}
+.Sub2_2 .Wise .Wise3{top:455px; right:54%;}
+.Sub2_2 .Wise .Wise4{top:600px; left:54%;}
+.Sub2_2 .Wise .Wise5{top:695px; right:54%;}
+.Sub2_2 .Wise .Wise6{top:1045px; left:54%;}
+.Sub2_2 .Wise .Wise7{top:1190px; right:54%;}
+.Sub2_2 .Wise .Wise8{top:1280px; left:54%;}
+
+/********* 2_2. 프로그램 목적 *********/
+.SubPro2{text-align:justify; font-size:15px; line-height:1.8; font-weight:normal;font-family:"NanumBarunGothic", NanumGothic, Dotum,"돋움", Arial;}
+.SubPro2 h3{font-size:20px; color:#444; padding:0 0 12px 12px;}
+.SubPro2 h3 img{vertical-align:middle; margin:0 2px 1px 0;}
+.SubPro2 .Div{background:#fff; box-shadow:0 5px 10px rgba(0,0,0,0.1); border-radius:12px; padding:25px 30px;}
+.SubPro2 .Overflow{overflow:hidden;}
+.SubPro2 .Overflow > div{width:49%;}
+.SubPro2 .Overflow > div img{width:100%; display:block;}
+.SubPro2 .Overflow > .Left{float:left;}
+.SubPro2 .Overflow > .Right{float:right;}
+.SubPro2 .Overflow > .Left th, .SubPro2 .Overflow > .Right th{background:#76d1d8; border-radius:12px; height:60px; font-size:18px; color:#444; text-align:center;}
+.SubPro2 .Overflow .Tcontent{background:#fff; border-radius:0 0 12px 12px; height:170px; padding:15px 25px 20px 25px; box-sizing:border-box;}
+.SubPro2 .Tb1_1A{height:136px; margin-bottom:45px;}
+.SubPro2 .Tb1_1A:last-child{margin-bottom:0;}
+.SubPro2 .Tb1_1A th{border-radius:12px 0 0 12px; background:#76d1d8; border:2px solid #76d1d8; font-size:18px; color:#fff; width:182px; text-align:center;}
+.SubPro2 .Tb1_1A td{border-radius:0 12px 12px 0; border:2px solid #76d1d8; box-sizing:border-box; padding:15px 20px; background:#fff; font-size:16px;}
+
+/********* 2_3. 도서 선정 *********/
+.SubPro3{text-align:justify; line-height:1.84; font-weight:normal;font-family:"NanumBarunGothic", NanumGothic, Dotum,"돋움", Arial;}
+.SubPro3 > h3{margin-bottom:35px; font-size:18px;}
+.SubPro3 > div{border:2px solid #ddd; border-radius:0 12px 12px 0; background:#fff; margin-bottom:30px; font-size:16px;}
+.SubPro3 h4{font-size:18px;}
+.SubPro3 th{width:37%; text-align:left;}
+.SubPro3 th img{width:85.5%;}
+.SubPro3 td{padding:0 25px 0 0;}
+
+/********* 원장인사말 *********/
+.Sub1_5{text-align:justify; font-size:14.5px; line-height:1.84; font-weight:normal;font-family:"NanumBarunGothic", NanumGothic, Dotum,"돋움", Arial;}
+.Sub1_5 > img{float:left; margin:0 30px 10px 0;}
+.Sub1_5 > strong{display:block; text-align:right; font-size:15px;}
+
+/********* 찾아오시는길 *********/
+.Sub1_6{line-height:1.85; font-size:14px; font-weight:normal;font-family:"NanumBarunGothic", NanumGothic, Dotum,"돋움", Arial;}
+
+/********* 로그인 *********/
+.Login{width:400px; margin:0 auto; font-size:14px;}
+.Login h3{font-size:42px; text-align:center;}
+.Login h3 span{display:block; font-size:16px; padding:24px 0 30px 0;}
+.Login > div > input{width:100%; height:60px; border:1px solid #aaa; background:#fff; margin-bottom:12px; padding-left:15px; box-sizing:border-box;}
+.Login > div > a{display:block; width:100%; height:60px; line-height:60px; background:#555; color:#fff; font-size:24px; text-align:center;}
+.Login > div > div{background:#ccc; height:1px; margin:10px 0 25px 0;}
+.Login .BtnJoin{margin-top:15px; border:1px solid #ccc; color:#555; background:#fff;}
+
+/**************************** 회원가입 ****************************/
+.TbJoin{color:#696969;}
+.TbJoin span{display:inline-block; padding-left:10px;}
+.TbJoin th{width:16%; border-bottom:1px solid #ccc; font-size:13px; color:#555; text-align:left; padding-left:18px; letter-spacing:-1px;}
+.TbJoin td{border-bottom:1px solid #ccc; font-family:"돋움", "굴림", "맑은 고딕"; padding:10px 0;}
+.TbJoin .FirstRow{border-top:none; border-bottom:none; border:2px solid #111; border-left:none; border-right:none; padding:14px 0;}
+.TbJoin th.FirstRow{padding-left:18px;}
+.TbJoin .FirstRow .Rdo{margin-left:22px; width:14px; height:14px; margin-bottom:1px;}
+.TbJoin td > span{color:#a1a1a1;}
+.TbJoin td > .Input{width:100%; height:32px; line-height:30px; border:1px solid #e5e5e5; padding-left:10px; color:#696969; font-family:"돋움", "굴림", "맑은 고딕";}
+.TbJoin td > .Input2{width:53px; height:32px; line-height:30px; margin-right:12px; border:1px solid #e5e5e5; text-align:center; color:#696969; font-family:"돋움", "굴림", "맑은 고딕";}
+.TbJoin td > select{width:95px; height:32px; line-height:32px; border:1px solid #e5e5e5; padding-left:8px; color:#696969; font-family:"돋움", "굴림", "맑은 고딕";}
+.TbJoin textarea{border:1px solid #e5e5e5; padding:10px; width:98%; height:100px;}
+
+.TbJoin .BtnGray{display:inline-block; width:100px; height:32px; line-height:32px; text-align:center; background:#f3f3f3; border:1px solid #bbb; color:#4e4e4e; font-weight:bold; vertical-align:middle; font-size:13px; font-family:"NanumBarunGothic", NanumGothic, Dotum,"돋움", Arial;}
+.TbJoin .Join1 .Input{width:200px;}
+
+.TbJoin .Join2 select{width:100px;}
+.TbJoin .Join2 .Input{width:100px;}
+
+.TbJoin .Join3 select{width:130px;}
+.TbJoin .Join3 .Input{width:130px;}
+
+.TbJoin .Join4 select{width:150px;}
+
+.TbJoin .Join5 .Input{width:200px;}
+
+.Areement{border-top:2px solid #111; background:#f5f5f5; padding:25px 30px; margin-top:30px;}
+.Areement > h3{color:#4e4e4e; font-size:15px; padding-bottom:10px; padding-left:1px;}
+.Areement > div{border:1px solid #e3e3e3; background:#fff; padding:20px; margin-bottom:19px; height:100px; color:#999; line-height:1.6; overflow-y:scroll;}
+.Areement > div > p{padding:10px 0 20px 0;}
+
+/****************************  회원가입완료 ****************************/
+.BoxJoin{border:2px solid #111; color:#4e4e4e; font-size:16px; text-align:center; padding:53px 0 55px 0; line-height:1.6; letter-spacing:-1px;}
+.BoxJoin > img{margin-bottom:15px;}
+
+/**************************** 아디 비번찾기 : goonglee ****************************/
+.BoxMember h3{padding-bottom:10px;}
+.TabIdPw{overflow:hidden; margin-bottom:20px;}
+.TabIdPw li{float:left; width:50%; text-align:center; font-weight:bold;}
+.TabIdPw li a{display:block; background:#ccc; border:2px solid #ccc; color:#fff; font-size:14px; height:40px; line-height:40px;}
+.TabIdPw li a:hover{background:#fff; border:2px solid #777; color:#555;}
+.TabIdPw li a.active{background:#fff; border:2px solid #777; color:#555;}
+
+/**************************** 서비스이용약관, 개인정보취급방침 ****************************/
+.SubAgree{height:600px; padding:25px 30px; overflow-y:auto; border:1px solid #ddd; font-size:13px; background:#fff;}
+
+/********************************************************************/
+/**************************** 마이페이지 ****************************/
+/********************************************************************/
+.MyPage{line-height:1.7; font-size:16px;}
+.MyPage img{vertical-align:middle;}
+.MyPage .Input{width:100%; height:34px; border:1px solid #e7e7e7; padding:0 0 0 10px; box-sizing:border-box;}
+.MyPage .Select{width:33%; height:36px; border:1px solid #e7e7e7; padding:0 0 0 10px; box-sizing:border-box;}
+.MyPage .Txt{border:1px solid #e6e6e6; width:100%; height:100px; padding:10px; font-family:"나눔고딕", "맑은 고딕", "돋움"}
+.MyPage h4{padding:0 0 10px 0; font-size:18px;}
+
+/**************************** 1_1. 마이페이지 ****************************/
+.MyTop{overflow:hidden; border-radius:8px; background:#a2d6f5; padding:10px; margin-bottom:40px;}
+.MyTop .Left{float:left; width:62%;}
+.MyTop .Left th{background:#fff; border-radius:8px; padding:10px; width:31%;}
+.MyTop .Left th img{width:100%;}
+.MyTop .Left td{padding:5px; font-size:15px; text-align:center;}
+.MyTop .Left td h1{font-size:20px; font-weight:normal;}
+.MyTop .Left td h1 b{font-size:30px; font-weight:normal;}
+.MyTop .Left td span{vertical-align:middle; display:block; font-family:"나눔고딕", "맑은 고딕", "돋움";}
+.MyTop .Left td span .BtnPhoto{display:inline-table; background:#2c4455; color:#fff; width:92px; height:28px; line-height:28px; border-radius:4px; text-align:center; font-size:13px; margin-left:10px;}
+.MyTop .Left td strong{display:block; padding-top:18px; font-weight:normal;}
+.MyTop .Left td strong .BtnPhoto{display:inline-table; background:#2c4455; color:#fff; width:92px; height:28px; line-height:28px; border-radius:4px; text-align:center; font-size:13px; margin-left:10px;}
+.MyTop .Left td div{overflow:hidden; margin-top:10px;}
+.MyTop .Left td div{overflow:hidden; margin-top:10px;}
+.MyTop .Left td div a{display:inline-block; margin:0 5px; width:82px; height:82px; background:#fff; text-align:center; border-radius:39px; line-height:1.2; padding:23px 0; vertical-align:middle; color:#5f8eb0;}
+.MyTop .Left td div a:hover{background:#2c4455; color:#a2d6f5;}
+.MyTop .Left td div a.active{background:#2c4455; color:#a2d6f5;}
+.MyTop .Left td div a img{vertical-align:top; margin:-7px 0 4px 0;}
+.MyTop .Right{float:right; width:37%; background:#fff; border-radius:8px; height:189px;}
+.MyTop .Right td{padding:0 15px 0 25px;}
+.MyTop .Right td > h3{color:#45acea; font-size:24px; line-height:1.3;}
+
+.MyIng{overflow:hidden; margin-bottom:40px;}
+.MyIng > div{float:left; width:32%; margin-right:2%; box-sizing:border-box; padding:20px 0; background:#fff; border-radius:15px;}
+.MyIng div:last-child{margin-right:0;}
+.MyIng th{font-size:16px; font-weight:normal;}
+.MyIng table td{height:190px; text-align:center; line-height:1;}
+.MyIng table td h1{color:#2c4455; font-weight:normal;}
+.MyIng table td h1 b{font-size:140px; font-weight:normal; vertical-align:middle;}
+.MyIng table td h3{font-size:27px; font-weight:normal; color:#2c4455; line-height:1.2;}
+.MyIng .Box1{border:6px solid #76d9c5;}
+.MyIng .Box2{border:6px solid #bcdb52;}
+.MyIng .Box3{border:6px solid #fcb54d;}
+
+.MyIng .Box1 td{vertical-align:top; padding-top:10px;}
+.MyIng .Box1 td span{display:block; padding:25px 0 14px 0;}
+.MyIng .Box3 td{height:233px;}
+
+.MyVideo{background:#e7e8e8; padding:20px 30px; text-align:center; border-radius:8px;}
+.MyVideo h1{font-weight:normal; font-size:28px; margin-bottom:15px;}
+
+/**************************** 2_1. 나의 독서활동 ****************************/
+.TbRoadMap{border-collapse:separate; border-spacing:0 5px; font-size:14px; margin-bottom:30px;}
+.TbRoadMap th{background:#a2d6f5; border-radius:8px; color:#fff; height:50px;}
+.TbRoadMap .Th{background:none; width:5px;}
+.TbRoadMap .ThR{background:none; width:5px;}
+
+
+
+.TbRoadMap .OverFlow{overflow:hidden;}
+.TbRoadMap .OverFlow .Left{float:left; width:59%;}
+.TbRoadMap .OverFlow .Right{float:right; width:41%;}
+
+.TbRoadMap .OverFlow .Left .Col1{width:13%;}
+.TbRoadMap .OverFlow .Left .Col2{width:23%;}
+.TbRoadMap .OverFlow .Left .Col3{text-align:left; padding:0 5px 0 16px;}
+
+.TbRoadMap .OverFlow .Right td{width:24%; vertical-align:middle;}
+.TbRoadMap .OverFlow .Right th{width:24%;}
+.TbRoadMap .OverFlow .Right .Th{background:none; width:5px;}
+.TbRoadMap .OverFlow .Right .ThR{background:none; width:5px;}
+
+.TbRoadMap .OverFlow td{background:#fff; border-radius:8px; line-height:1.3; height:50px; padding:0 5px; border:1px solid #ddd; text-align:center;}
+
+a.BtnRoadMap{display:inline-block; width:100%; height:34px; line-height:34px; background:#5e5e5e; color:#fff; font-size:12px; border-radius:8px;}
+a.BtnRoadMap img{margin:0 1px 1px 0;}
+
+a.BtnRoadMap1{display:inline-block; width:100%; height:34px; line-height:34px; background:#82a4bd; color:#fff; font-size:12px; border-radius:8px;}
+a.BtnRoadMap1 img{margin:0 1px 1px 0;}
+
+a.BtnRoadMap2{display:inline-block; width:100%; height:34px; line-height:34px; background:#496f89; color:#fff; font-size:12px; border-radius:8px;}
+a.BtnRoadMap2 img{margin:0 1px 1px 0;}
+
+a.BtnRoadMap3{display:inline-block; width:100%; height:34px; line-height:34px; background:#2c4455; color:#fff; font-size:12px; border-radius:8px;}
+a.BtnRoadMap3 img{margin:0 1px 1px 0;}
+
+a.BtnRoadMap11{display:inline-block; width:100%; height:34px; line-height:34px; background:#b5b5b5; color:#fff; font-size:12px; border-radius:8px;}
+a.BtnRoadMap11 img{margin:0 1px 1px 0;}
+
+a.BtnRoadMap12{display:inline-block; width:100%; height:34px; line-height:34px; background:#5e5e5e; color:#fff; font-size:12px; border-radius:8px;}
+a.BtnRoadMap12 img{margin:0 1px 1px 0;}
+
+.Chart{border:1px solid #ddd; padding:20px; margin-bottom:30px;}
+.ChartOver{overflow:hidden;}
+.ChartOver > div{width:49%;}
+.ChartOver .Left{float:left;}
+.ChartOver .Right{float:right;}
+.ChartOver > div > div{border:1px solid #ddd; padding:20px;}
+
+/**************************** 3_1. 진로정보 ****************************/
+.TabMenu1{overflow:hidden; font-size:18px; margin-bottom:30px;}
+.TabMenu1 .Left{float:left;}
+.TabMenu1 .Right{float:right;}
+.TabMenu1 a{display:inline-block; width:49.5%; height:50px; line-height:50px; background:#fff; border:1px solid #ddd; text-align:center; border-radius:8px;}
+.TabMenu1 a:hover{background:#2c4455; border:1px solid #2c4455; color:#fff;}
+.TabMenu1 a.active{background:#2c4455; border:1px solid #2c4455; color:#fff;}
+
+.TbMy1{border-collapse:separate; border-spacing:0 5px;}
+.TbMy1 th{background:#a2d6f5; border-radius:8px; color:#fff; line-height:1.3; width:15%; padding:12px 0;}
+.TbMy1 td{background:#fff; border-radius:8px; line-height:1.3; padding:12px 2%; border:1px solid #ddd;}
+.TbMy1 .Th{background:none; width:5px;}
+
+/**************************** 3_2. 독서이력 ****************************/
+.TbMy2{border-collapse:separate; border-spacing:0 5px;}
+.TbMy2 th{background:#a2d6f5; border-radius:8px; color:#fff; line-height:1.3; padding:12px 0;}
+.TbMy2 td{background:#fff; border-radius:8px; line-height:1.3; padding:12px 0; border:1px solid #ddd; text-align:center;}
+.TbMy2 td.Left{text-align:left; padding:12px 5px 12px 20px;}
+.TbMy2 .Th{background:none; width:5px;}
+
+/**************************** 3_2. 독서이력 등록하기 ****************************/
+.BoxPop{font-size:15px; padding:30px 25px;}
+.BoxPop .Input{width:100%; padding:0 0 0 12px; border:1px solid #ddd; height:32px;}
+.BoxPop .Select{width:28%; padding:0 0 0 12px; border:1px solid #ddd; height:34px;}
+.BoxPop h1{text-align:center; padding:0 0 40px 0;}
+.BoxPop .Total{text-align:right; padding:0 2px 5px 0; font-family:"맑은 고딕", "돋움", "굴림";}
+
+.BoxPop .SearchBook li{margin-bottom:10px; border:1px solid #ddd; border-radius:8px; padding:12px 3%;}
+.BoxPop .SearchBook .Btn{display:block; background:#2c4455; color:#fff; height:32px; line-height:32px; text-align:center;}
+.BoxPop .SearchBook .Btn img{vertical-align:middle; margin:0 1px 1px 0;}
+
+.TbPop1{border-collapse:separate; border-spacing:0 5px;}
+.TbPop1 th{background:#a2d6f5; border-radius:8px; color:#fff; line-height:1.3; padding:12px 0;}
+.TbPop1 td{background:#fff; border-radius:8px; line-height:1.3; padding:12px 0; border:1px solid #ddd; text-align:center;}
+.TbPop1 td.Left{text-align:left; padding:12px 5px 12px 20px;}
+.TbPop1 .Th{background:none; width:5px;}
+
+.NumberArea{overflow:hidden; text-align:center; padding:15px 0 0 0;}
+.NumberArea a, .NumberArea span{display:inline-block; margin:0 1px; vertical-align:middle; border:1px solid #ddd; width:25px; height:25px; line-height:25px; text-align:center;}
+.NumberArea a:hover{background:#444; color:#fff; border:1px solid #333;}
+.NumberArea .active{background:#444; color:#fff; border:1px solid #333;}
+.NumberArea img{vertical-align:middle; margin:0 0 4px 0;}
+
+/***** 넘버링 *****/
+.number{text-align:center; padding:14px 0 0 0;}
+.number a{color:#333; vertical-align:middle; display:inline-block; margin:0 1px; background:#fff; border:1px solid #ddd; height:26px; line-height:24px; width:26px; text-align:center; font-weight:bold;}
+.number a:hover{color:#fff; background:#1cb8ad; border:1px solid #1cb8ad;}
+.number a.pad{font-size:11px; margin:0 8px;}
+.number a.active{color:#fff; background:#1cb8ad; border:1px solid #1cb8ad;}
+.number span{color:#333; vertical-align:middle; display:inline-block; margin:0 5px; background:#fff; border:1px solid #ddd; height:26px; line-height:24px; width:26px; text-align:center;}
+.number span.pad{font-size:11px; margin:0 8px;}
+
+/**************************** 3_4. 포트폴리오 ****************************/
+.PortFolio{padding:30px; color:#333; font-size:14px;}
+.PortFolio .HeaderPort{display:none;}
+.PortFolio .Box{border:6px solid #a2d6f5; width:100%; padding:35px 25px 25px 25px; box-sizing:border-box;}
+.PortFolio .Box h1{font-size:32px; text-align:center; margin:0 0 25px 0;}
+.PortFolio .Box h2{font-size:22px; text-align:center; margin:20px 0 15px 0;}
+.PortFolio .BtnCenter{padding:25px 0 20px 0;}
+
+.TbPort1{border-collapse:separate; border-spacing:0 5px; margin-bottom:5px;}
+.TbPort1 th{background:#a2d6f5; border-radius:8px; line-height:1.3; padding:12px 0; height:45px;}
+.TbPort1 td.Photo{padding:10px; text-align:center;}
+.TbPort1 td.Photo img{width:100%;}
+.TbPort1 td{border-radius:8px; line-height:1.3; padding:12px 1.5%; border:1px solid #ddd; text-align:center;}
+.TbPort1 td.Left{text-align:justify; padding:12px 2%;}
+.TbPort1 .Th{background:none; width:5px;}
+
+.PortFolio2{border:6px solid #a2d6f5; width:100%; padding:30px; box-sizing:border-box; font-size:14px;}
+.TbPort{border-collapse:separate; border-spacing:0 5px;}
+.TbPort th{background:#a2d6f5; border-radius:8px; line-height:1.3; padding:12px 2px; height:45px; width:22%;}
+.TbPort td{border-radius:8px; line-height:1.3; padding:12px 1.5%; border:1px solid #ddd; background:#fff;}
+.TbPort .Th{background:none; width:5px;}
+.TbPort .Input{border:1px solid #e6e6e6; width:100%; height:32px; padding:0 0 0 12px;}
+.TbPort .Txt{border:1px solid #e6e6e6; width:100%; height:100px; padding:10px;}
+
+/*미디어쿼리 start*/
+@media screen and (max-width:1280px){
+/********* 3_1. 도서 선정 *********/
+.SubPro3 td > div{margin:15px 0;}
+}
+@media screen and (max-width:1024px){
+}
+@media screen and (max-width:768px) {
+	
+/**************************** 1_1. 마이페이지 ****************************/
+.MyTop .Left{float:none; width:100%; margin-bottom:10px;}
+.MyTop .Right{float:none; width:100%; height:154px; text-align:center;}
+
+.MyIng > div{width:49%; margin-right:1%;}
+.MyIng div:nth-child(2){margin-right:0;}
+
+.MyIng .Box2{float:right;}
+.MyIng .Box3{float:left; width:100%; margin-right:0; margin-top:12px;}
+
+.MyVideo h1{font-size:18px; margin-bottom:12px;}
+
+/**************************** 2_1. 나의 독서활동 ****************************/
+.TbRoadMap .OverFlow .Left{float:none; width:100%; margin-bottom:5px;}
+.TbRoadMap .OverFlow .Right{float:none; width:100%;}
+.TbRoadMap .ThR{display:none;}
+
+.ChartOver > div{width:100%;}
+.ChartOver .Left{float:none; margin-bottom:30px;}
+.ChartOver .Right{float:none;}
+
+/********* 2_1. 독서란? *********/
+.Sub2_1{font-size:14px; line-height:1.7;}
+.Sub2_1 strong{font-size:15px;}
+.Sub2_1 .Tb2_1 th b{font-size:17px;}
+.Sub2_1 .Tb2_1 .Th{line-height:1.3;}
+.Sub2_1 .Tb2_1 .Th h1{font-size:18px;}
+.Sub2_1 > h2{font-size:18px;}
+
+/********* 2_2. 독서가 인생에 미치는 영향 *********/
+.Sub2_2{font-size:14px; line-height:1.7;}
+.Sub2_2 img{width:100%;}
+.Sub2_2 .Wise{overflow:hidden; height:auto; background:none;}
+.Sub2_2 .Wise > div{width:100%; position:relative; float:left; margin-bottom:30px; background:#fff; padding:15px 20px; border:1px solid #ddd;}
+.Sub2_2 .Wise > div > img{margin-top:8px;}
+.Sub2_2 .Wise h3{font-size:17px;}
+.Sub2_2 .Wise .Wise1, .Sub2_2 .Wise .Wise3, .Sub2_2 .Wise .Wise5, .Sub2_2 .Wise .Wise7{text-align:justify;}
+.Sub2_2 .Wise .Wise2, .Sub2_2 .Wise .Wise4, .Sub2_2 .Wise .Wise6, .Sub2_2 .Wise .Wise8{text-align:justify;}
+.Sub2_2 .Wise .Wise1{top:0; right:0;}
+.Sub2_2 .Wise .Wise2{top:0; left:0;}
+.Sub2_2 .Wise .Wise3{top:0; right:0;}
+.Sub2_2 .Wise .Wise4{top:0; left:0;}
+.Sub2_2 .Wise .Wise5{top:0; right:0;}
+.Sub2_2 .Wise .Wise6{top:0; left:0;}
+.Sub2_2 .Wise .Wise7{top:0; right:0;}
+.Sub2_2 .Wise .Wise8{top:0; left:0;}
+
+/**************************** 3_2. 독서이력 등록하기 ****************************/
+.BoxPop h1{font-size:24px;}
+
+/**************************** 3_4. 포트폴리오 ****************************/
+.PortFolio{padding:0;}
+.PortFolio .BtnCenter{display:none;}
+.PortFolio .Box h1{display:none;}
+.PortFolio .Box{margin-top:28px;}
+.PortFolio .HeaderPort{display:block; background:#a2d6f5; text-align:center; height:60px; line-height:60px; position:fixed; top:0; width:100%; z-index:100;}
+.PortFolio .HeaderPort a{position:absolute; top:15px; right:15px;}
+.PortFolio .HeaderPort a img{height:32px;}
+
+.PortFolio2{border:2px solid #a2d6f5; padding:15px; font-size:13px;}
+.TbPort th{width:25%;} 
+
+}
+@media screen and (max-width:640px) {
+
+ 
+/********* 원장인사말 *********/
+.Sub1_5{font-size:14px; line-height:1.8;}
+.Sub1_5 > img{float:none; margin:0 0 30px 0; width:100%;}
+
+/********* 1_1. Why 진독개? *********/
+.SubPro1 .Tb1_2A{margin-bottom:0;}
+.SubPro1 .Tb1_2A th{display:none;}
+.SubPro1 .Tb1_2A .Td{display:none;}
+.SubPro1 .Tb1_2A .Tcontent{width:100%; padding:10px 20px; border-radius:15px; border:1px solid #ddd;}
+.SubPro1 .Tb1_2B{margin-bottom:30px;}
+.SubPro1 .Tb1_2B th{font-size:13px; font-weight:normal; text-align:center;}
+
+/********* 1_2. 프로그램 목적 *********/
+.SubPro2{font-size:14px; line-height:1.7;}
+.SubPro2 h3{font-size:18px;}
+.SubPro2 .Div{border-radius:12px; padding:20px 25px;}
+.SubPro2 .Overflow > div{width:100%;}
+.SubPro2 .Overflow > .Left{float:none;}
+.SubPro2 .Overflow > .Right{float:none;}
+.SubPro2 .Overflow > .Left th, .SubPro2 .Overflow > .Right th{font-size:17px;}
+.SubPro2 .Overflow .Tcontent{padding:15px 25px 20px 25px; height:140px;}
+.SubPro2 .Tb1_1A th{font-size:15px; width:120px; border-radius:0;}
+.SubPro2 .Tb1_1A td{padding:10px 15px; font-size:14px; border-radius:0;}
+
+/********* 1_3. 도서 선정 *********/
+.SubPro3 > h3{margin-bottom:25px; font-size:16px; line-height:1.65;}
+.SubPro3 > div{font-size:15px; border-radius:12px;}
+.SubPro3 h4{font-size:17px;}
+.SubPro3 th{display:none;}
+.SubPro3 td{width:100%; padding:15px 25px;}
+
+/********************************************************************/
+/**************************** 마이페이지 ****************************/
+/********************************************************************/
+.MyPage{line-height:1.6; font-size:15px;}
+
+.TbRoadMap .Th{background:none; width:3px;}
+.TbRoadMap .ThR{background:none; width:3px;}
+
+.TbRoadMap .OverFlow .Right .Th{background:none; width:3px;}
+.TbRoadMap .OverFlow .Right .ThR{background:none; width:3px;}
+.TbMy1 .Th{background:none; width:3px;}
+.TbMy2 .Th{background:none; width:3px;}
+.TbPop1 .Th{background:none; width:3px;}
+.TbPort1 .Th{background:none; width:3px;}
+.TbPort .Th{background:none; width:3px;}
+
+.TbRoadMap{border-spacing:0 3px;}
+.TbMy1{border-spacing:0 3px;}
+.TbMy2{border-spacing:0 3px;}
+.TbPop1{border-spacing:0 3px;}
+.TbPort1{border-spacing:0 3px;}
+.TbPort{border-spacing:0 3px;}
+
+/**************************** 1_1. 마이페이지 ****************************/
+.MyTop .Left th{padding:8px;}
+.MyTop .Left td{font-size:13px;}
+.MyTop .Left td h1{font-size:17px;}
+.MyTop .Left td h1 b{font-size:24px;}
+.MyTop .Left td span .BtnPhoto{width:90px; margin-left:5px;}
+.MyTop .Left td div a{margin:0 1px; width:75px; height:75px; padding:21px 0;}
+.MyTop .Left td div a img{margin:-8px 0 3px 0;}
+
+.MyTop .Right{height:130px;}
+.MyTop .Right td{padding:10px;}
+.MyTop .Right td > h3{font-size:20px;}
+
+.MyIng table td h3{font-size:20px;}
+
+.MyIng .Box1{float:none; width:100%; margin-right:0;}
+.MyIng .Box2{float:none; width:100%; margin-right:0; margin-top:12px;}
+.MyIng .Box3{float:none; width:100%; margin-right:0; margin-top:12px;}
+
+/**************************** 2_1. 나의 독서활동 ****************************/
+.TbRoadMap th{font-size:12px;}
+.TbRoadMap td{font-size:12px;}
+
+/**************************** 3_1. 진로정보 ****************************/
+.TbMy1 th{width:19%; font-size:13px;}
+.TbMy1 td{font-size:13px;}
+
+.TabMenu1{font-size:15px; margin-bottom:15px;}
+.TabMenu1 a{width:49.5%; height:42px; line-height:42px;}
+
+/**************************** 3_2. 독서이력 등록하기 ****************************/
+.BoxPop{font-size:14px; padding:20px 15px;}
+.BoxPop h1{font-size:18px;  padding:0 0 25px 0;}
+.TbPop1 th{font-size:13px;}
+.TbPop1 td{font-size:13px;}
+
+/**************************** 3_2. 독서이력 ****************************/
+.TbMy2 th{font-size:13px;}
+.TbMy2 td{font-size:13px;}
+
+/**************************** 회원가입 ****************************/
+.TbJoin th{width:21%; font-size:12px; padding-left:5px;}
+.TbJoin td{padding:10px 0 10px 6px;}
+.TbJoin th.FirstRow{padding-left:5px;}
+
+}
+
+@media screen and (max-width:480px) {
+ .box_dot{padding:15px;}
+ 
+ .works_cate{margin-bottom:20px;}
+ .works_cate a{padding:10px 2px;font-size:12px;}
+ 
+/**************************** 2_1. 나의 독서활동 ****************************/
+a.BtnRoadMap1, a.BtnRoadMap2, a.BtnRoadMap3, a.BtnRoadMap11, a.BtnRoadMap12{font-size:11px;}
+a.BtnRoadMap1 img, a.BtnRoadMap2 img, a.BtnRoadMap3 img, a.BtnRoadMap11 img, a.BtnRoadMap12 img{display:none;}
+
+/********* 2_1. 독서란? *********/
+.Sub2_1{font-size:14px; line-height:1.6;}
+.Sub2_1 strong{font-size:15px;}
+.Sub2_1 .Tb2_1 th b{font-size:16px;}
+.Sub2_1 .Tb2_1 .Th{line-height:1.2; font-size:12.5px; padding:2px 1px;}
+.Sub2_1 .Tb2_1 .Th h1{font-size:15px;}
+.Sub2_1 > h2{font-size:16px;}
+
+/********* 로그인 *********/
+.Login{width:98%;}
+.Login h3 span{font-size:14px;}
+
+/********* 회원가입 *********/
+.TbJoin th{width:22%; padding-left:8px;}
+.TbJoin th.FirstRow{padding-left:8px;}
+.TbJoin .FirstRow .Rdo{margin-left:12px;}
+
+.Areement{padding:12px 15px;}
+
+.TbJoin span{padding:4px 0 0 0; line-height:1.2;}
+.TbJoin .BtnGray{width:38%; font-size:12px;}
+.TbJoin .Join1 .Input{width:59%;}
+
+.TbJoin .Join2 select{width:30%;}
+.TbJoin .Join2 .Input{width:30%;}
+
+.TbJoin .Join3 select{width:45%;}
+.TbJoin .Join3 .Input{width:45%; margin-bottom:4px;}
+
+.TbJoin .Join4 select{width:40%;}
+
+.TbJoin .Join5 .Input{width:45%;}
+ 
+}
+/*end 미디어쿼리*/

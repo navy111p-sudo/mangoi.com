@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>주저없는 선택 망고아이</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" id="viewport">
+<link href="css/eng_name.css" rel="stylesheet" type="text/css"/>
+<script src="../js/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+	<div class="tab_eng_fix">
+        <ul class="tab_eng_name">
+            <li class="active">남자 이름</li>
+            <li>여자 이름</li>
+            <li>남자 또는 여자 이름</li>
+        </ul>
+    </div>
+    
+    <div class="table_area">
+    	<div class="div_eng_name" style="display:block;">
+            <table class="table_eng_name">
+            	<tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td width="20%">WALLACE</td><td>낯선 사람</td><td width="25%">켈트어/게일어</td></tr>
+	<tr><td>WALT</td><td>WALTER 이름에서</td><td>독일어</td></tr>
+	<tr><td>WALTER</td><td>육군 장군</td><td>독일어</td></tr>
+	<tr><td>WARNER</td><td>보호자</td><td>독일어</td></tr>
+	<tr><td>WARREN</td><td>보존하는</td><td>영어</td></tr>
+	<tr><td>WASHINGTON</td><td>강 근처의 마을</td><td>영어</td></tr>
+	<tr><td>WATSON</td><td>Walter의 아들</td><td>영어</td></tr>
+	<tr><td>WEBB</td><td>직공</td><td>영어</td></tr>
+	<tr><td>WEBSTER</td><td>직공</td><td>영어</td></tr>
+	<tr><td>WERNER</td><td>WARREN의 이름에서</td><td>독일어</td></tr>
+	<tr><td>WESTON</td><td>서쪽 마을 출신</td><td>영어</td></tr>
+	<tr><td>WILFORD</td><td>버드나무로 여울을 건넘</td><td>영어</td></tr>
+	<tr><td>WILFRED</td><td>평화로운</td><td>영어</td></tr>
+	<tr><td>WILL</td><td>WILLIAM 이름에서</td><td>영어(미국)</td></tr>
+	<tr><td>WILLIAM</td><td>보호자</td><td>영어</td></tr>
+	<tr><td>WILLIS</td><td>WILLIAM의 아들</td><td>독일어</td></tr>
+	<tr><td>WILSON</td><td>WILLIAM의 아들</td><td>독일어</td></tr>
+	<tr><td>WINFRED</td><td>평화의 친구</td><td>켈트어/게일어</td></tr>
+	<tr><td>WINSLOW</td><td>승리의 언덕</td><td>영어</td></tr>
+	<tr><td>WINSTON</td><td>승리 마을</td><td>영어</td></tr>
+	<tr><td>WOOD</td><td>WOODY 이름에서</td><td>영어(미국)</td></tr>
+	<tr><td>WOODS</td><td>숲의</td><td>영어(미국)</td></tr>
+	<tr><td>WOODWARD</td><td>숲의 보호</td><td>영어</td></tr>
+	<tr><td>WOODY</td><td>숲 이름에서</td><td>영어(미국)</td></tr>
+	<tr><td>WYCLIFF</td><td>하얀 바위</td><td>영어</td></tr>
+            </table>
+        </div>
+        <div class="div_eng_name">
+            <table class="table_eng_name">
+                <tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td width="20%">WANDA</td><td>날씬한, 어린 나무</td><td width="25%">독일어</td></tr>
+	<tr><td>WENDA</td><td>하얀 파도</td><td>웨일즈 어</td></tr>
+	<tr><td>WENDI</td><td>Gwendolyn에서</td><td>웨일즈 어</td></tr>
+	<tr><td>WENDY</td><td>하얀 피부</td><td>웨일즈 어</td></tr>
+	<tr><td>WILDA</td><td>야성의</td><td>독일어</td></tr>
+	<tr><td>WILLA</td><td>보호자</td><td>라틴어</td></tr>
+	<tr><td>WIND</td><td>이동하는 대기</td><td>영어(미국)</td></tr>
+	<tr><td>WINDA</td><td>사냥군</td><td>스와힐리어</td></tr>
+            </table>
+        </div>
+        <div class="div_eng_name">
+            <table class="table_eng_name">
+                <tr><th width="24%">이름</th><th>뜻</th><th width="26%">어원</th></tr>
+	<tr><td width="20%">WALKER</td><td>산책을 좋아하는 사람</td><td width="25%">영어</td></tr>
+	<tr><td>WHITLEY</td><td>작은 벌판</td><td>영어</td></tr>
+	<tr><td>WHITNEY</td><td>하얀 섬</td><td>영어</td></tr>
+            </table>
+        </div>
+    </div>
+ 
+ 
+<script>
+$(document).ready(function () {
+    $('.tab_eng_name > li').click(function () {
+        $('.tab_eng_name > li').removeClass('active')
+        $(this).addClass('active');
+        var k = $(this).index();
+        $('.table_area > .div_eng_name').css('display', 'none');
+        $('.table_area > .div_eng_name').eq(k).fadeIn(300);
+    });
+});
+</script>   
+</body>
+</html>
+
+

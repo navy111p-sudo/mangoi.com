@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+#bbs{font-size:13px; color:#555;}
+#bbs a{text-decoration:none; vertical-align:middle;}
+#bbs li{list-style:none;}
+#bbs img{border:0; vertical-align:middle;}
+#bbs select, input[type=text], input[type=password]{border:1px solid #ddd; color:#555; font-size:13px; height:30px; padding-left:10px; vertical-align:middle; outline:0;}
+#bbs select{height:32px;}
+#bbs textarea{color:#666; border:1px solid #ddd; font-size:13px; width:98%; padding:1%; box-sizing:border-box; margin:0 auto; outline:0;}
+
+@media all and (min-width:1024px) {	
+#bbs select, #bbs input[type=text], #bbs input[type=password], #bbs textarea, #bbs select{font-size:14px;}
+}
+@media all and (min-width:1280px) {	
+#bbs{font-size:15px;}
+}
+
+#bbs .left{float:left;}
+#bbs .right{float:right;}
+#bbs .center{margin:0 auto;}
+#bbs .v_align{vertical-align:middle;}
+#bbs .no_border{border-bottom:0;}
+
+#bbs .txt_right{text-align:right; padding-right:15px;}
+
+/***** 스킨 색상 변경시 활용 *****/
+#bbs .back_color1{background:#525252;}
+#bbs .back_color2{background:#666;}
+#bbs .back_color3{background:#fafafa;}
+
+
+#bbs .txt_color1{color:#fff;}
+#bbs .txt_color2{color:#444;}
+
+#bbs .th_color{background:#68ccce; color:#fff;}
+#bbs .th_color2{background:#f4f4f4; color:#444;}
+#bbs .td_color{background:#fff;}
+
+#bbs .br_left{border-left:1px solid #ccc;}
+#bbs .br_right{border-right:1px solid #ccc;}
+#bbs .br_bottom{border-bottom:1px solid #ccc;}
+#bbs .br_top{border-top:1px solid #ccc;}
+
+#bbs .br_left2{border-left:1px solid #eee;}
+#bbs .br_right2{border-right:1px solid #eee;}
+#bbs .br_bottom2{border-bottom:1px solid #eee;}
+#bbs .br_top2{border-top:1px solid #eee;}
+
+#bbs .br_left3{border-left:1px dashed #ddd;}
+#bbs .br_right3{border-right:1px dashed #ddd;}
+#bbs .br_bottom3{border-bottom:1px dashed #ddd;}
+#bbs .br_top3{border-top:1px dashed #ddd;}
+
+#bbs .border1{border:1px solid #ccc;}
+
+/***** 스킨 색상 변경시 활용 *****/
+#bbs .bbs_top{height:24px; margin-bottom:20px; padding:0 2px;}
+#bbs .total{padding-top:6px;}
+
+/***** 상단 검색 영역 *****/
+#bbs .TopSearch{overflow:hidden; margin:0 0 10px 0; padding:0 2px;}
+#bbs .TopSearch span{float:left; padding:5px 0 0 5px; width:10%; vertical-align:top;}
+#bbs .TopSearch span b{color:#0d379c; font-weight:normal; vertical-align:top;}
+#bbs .TopSearch form{float:right; width:90%; text-align:right;}
+#bbs .TopSearch input{width:170px; height:32px; border-right:0;}
+#bbs .TopSearch select{width:100px;}
+#bbs .TopSearch .BtnSearch{display:inline-block; background:#68ccce; color:#fff; width:50px; height:32px; line-height:32px; text-align:center; font-weight:500;}
+
+/***** 리스트 테이블 *****/
+#bbs .table1{border-collapse:separate; border-spacing:1px; width:100%;}
+#bbs .table1 th{height:44px; text-align:center; font-weight:500;}
+#bbs .table1 td{height:44px; text-align:center; vertical-align:middle;}
+#bbs .table1 td.title{text-align:left; padding-left:12px;}
+#bbs .table1 a{color:#555; vertical-align:middle }
+#bbs .table1 a:hover{color:#000;}
+#bbs .new{font-size:10px; padding-left:8px; display:inline-block; color:#F60; font-weight:bold;}
+#bbs .key{padding:0 4px; display:inline-block; vertical-align:middle}
+#bbs .comment{font-size:13px; padding-left:2px; display:inline-block; color:#F60; font-weight:bold;}
+
+/***** 쓰기 테이블 *****/
+#bbs .TbWriteTop{border-top:1px solid #ddd;}
+#bbs .TbWriteTop th{text-align:right; padding:0 20px 0 0; width:15%; height:45px; border-bottom:1px solid #ddd;}
+#bbs .TbWriteTop td{border-bottom:1px solid #ddd; padding:0 20px 0 0;}
+#bbs .TbWriteTop input{width:100%;}
+#bbs .TbWriteTop td.title{}
+#bbs .TbWriteTop td input[type=checkbox]{vertical-align:-3px;}
+
+/***** 읽기 테이블 *****/
+#bbs .table2 th{height:44px;}
+#bbs .table2 td{height:44px; text-align:center; background:#fff;}
+#bbs .table2 td.title{text-align:left; padding-left:14px;}
+#bbs .table2 td.title2{text-align:left; padding-left:14px; color:#555; font-weight:bold;}
+#bbs .table2 a{color:#555; vertical-align:middle }
+#bbs .table2 a:hover{color:#000;}
+#bbs .table2 a.txt_file{color:#999; font-size:11px; vertical-align:middle;}
+#bbs .table2 .con{padding:15px 12px 35px 12px; text-align:justify; vertical-align:top; line-height:1.6; color:#333;}
+#bbs .table2 .con2{padding:15px 12px 15px 12px; text-align:justify; line-height:1.6;}
+#bbs .table2 .con3{padding:7px 8px;}
+#bbs .table2 .date{color:#777; font-size:11px;}
+#bbs .table2 .plus a{vertical-align:middle; display:inline-block; padding-top:2px;}
+#bbs .table2 input[type=text], input[type=password]{width:97%;}
+/*** #bbs .table2 input[type=file]{height:22px; vertical-align:middle; border:1px solid #ddd; color:#333;} ***/
+
+/***** 읽기 테이블2 *****/
+#bbs .TbRead1{line-height:1.5;}
+#bbs .TbRead1 td{border-bottom:1px solid #ddd; padding:8px 10px; height:44px;}
+#bbs .TbRead1 .Con{padding:10px 10px 30px 10px; line-height:1.8; text-align:justify; vertical-align:top;}
+#bbs .TbRead1 .Con img{display:block; margin:12px 0;}
+#bbs .TbRead1 .Video{text-align:center; padding:20px 10px;}
+#bbs .TbRead1 .Caption{color:#fff; background:#68ccce; font-weight:bold; border-bottom:0; padding-left:15px;}
+#bbs .TbRead1 b{vertical-align:top;}
+#bbs .TbRead1 td span{display:inline-block; margin-right:15px;}
+#bbs .TbRead1 td span:last-child{margin-right:0;}
+#bbs .TbRead1 strong{vertical-align:top; text-decoration:underline;}
+
+/********************** 댓글달기 **********************/
+#bbs .TbReply{border-top:2px solid #111; line-height:1.5; margin:30px 0 0 0;}
+#bbs .TbReply td{border-bottom:1px solid #ddd; padding:8px 8px; height:40px;}
+#bbs .TbReply textarea{float:left; border:1px solid #ccc; padding:10px; box-sizing:border-box; width:82%; height:90px;}
+#bbs .TbReply .BtnReply{float:right; display:inline-block; background:#68ccce; color:#fff; height:100px; line-height:100px; font-size:14px; width:17%; text-align:center; font-weight:bold;}
+#bbs .TbReply .ReplyTop{position:relative; padding-left:1px;}
+#bbs .TbReply .ReplyTop span{display:inline-block; margin-right:20px; padding:4px 0 8px 0;}
+#bbs .TbReply .ReplyTop span:last-child{margin-right:0;}
+#bbs .TbReply .ReplyTop a{position:absolute; right:0; top:1px;}
+#bbs .TbReply .ReplyBottom{padding:10px 13px; background:#f1f1f1; text-align:justify;}
+#bbs .TbReply .Input{width:100%; height:24px; border:1px solid #ddd;  padding-left:6px; background:#fff; box-sizing:border-box;}
+
+/***** 비밀글 보기 *****/
+#bbs .BgPw{background:#fafafa; border:1px solid #ddd; overflow:hidden; padding:20px 0 30px 0;}
+#bbs .BgPw table{margin-bottom:18px;}
+#bbs .BgPw th, #bbs .BgPw td{text-align:center;}
+#bbs .BgPw .center{width:54px; margin:0 auto;}
+#bbs .BgPw h1{font-size:18px; border:1px solid #ccc; width:170px; margin:0 auto; padding:5px; background:#fff; border-radius:2px;}
+#bbs .BgPw img{margin:22px 0 18px 0;}
+#bbs .BgPw input{margin-top:13px; height:36px;}
+
+/***** 넘버링 *****/
+#bbs .Number{text-align:center; padding:15px 0 0 0;}
+#bbs .Number a{color:#333; vertical-align:middle; display:inline-block; background:#fff; border:1px solid #ddd; height:32px; line-height:30px; width:32px; text-align:center; font-weight:bold;}
+#bbs .Number a:hover{color:#fff; background:#68ccce; border:1px solid #68ccce;}
+#bbs .Number a.pad{font-size:11px;}
+#bbs .Number a.active{color:#fff; background:#68ccce; border:1px solid #68ccce;}
+#bbs .Number span{color:#333; vertical-align:middle; display:inline-block; background:#fff; height:32px; line-height:30px; text-align:center; width:32px; border:1px solid #ddd; color:#aaa;}
+#bbs .Number img{height:8px; vertical-align:2px;}
+
+/***** 버튼들 *****/
+#bbs .BtnRight{text-align:right; padding:30px 2px 0 0;}
+#bbs .BtnCenter{text-align:center; padding:30px 0 0 0;}
+
+#bbs .BtnA{display:inline-block; background:#555; width:60px; height:32px; line-height:32px; color:#fff; font-weight:bold; text-align:center;}
+
+#bbs .btn1 {margin-top:15px;}
+#bbs .btn1 a{display:inline-block; height:32px; vertical-align:middle; line-height:32px; padding:0 16px; border-radius:0px; font-size:14px; font-weight:bold;}
+#bbs .btn1 a:hover{background:#999;}
+
+#bbs .btn2{width:100%;}
+#bbs .btn2 a{display:block; height:52px; vertical-align:middle; line-height:52px; border-radius:0px; font-size:13px; font-weight:bold; width:90%; color:#fff;}
+#bbs .btn2 a:hover{background:#999; color:#fff;}
+
+#bbs .btn3 {margin-top:15px;}
+#bbs .btn3 a{display:inline-block; height:32px; vertical-align:middle; line-height:32px; padding:0 14px; border-radius:2px; font-size:14px; font-weight:bold;}
+#bbs .btn3 a:hover{background:#666; color:#fff; border:1px solid #666;}
+
+#bbs .btn_area .left a{margin-right:5px;}
+
+#bbs .BtnGray{display:inline-block; width:120px; height:40px; line-height:40px; font-size:14px; font-weight:500; text-align:center; background:#68ccce; color:#fff;}
+
+/********************** 갤러리리스트 **********************/
+.Gallery{overflow:hidden; border-top:1px solid #ccc; border-bottom:1px solid #ddd; padding:2px 0 14px 0;}
+.Gallery li{float:left; line-height:1.5; padding:18px 0 0 0; width:23.5%; margin-right:2%;}
+.Gallery li:nth-child(4n){margin-right:0;}
+.Gallery li img{margin-bottom:6px; border:1px solid #ddd; width:100%; height:140px;}
+.Gallery li b{font-weight:normal; color:#444; display:block; width:100%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.Gallery li p{padding-left:2px; color:#999;}
+
+.TabGallery{overflow:hidden; border-bottom:2px solid #444; margin-bottom:20px;}
+.TabGallery li{float:left; height:40px; line-height:40px; margin-right:2px; background:#888; border-radius:5px 5px 0 0; width:150px; text-align:center; color:#fff;}
+.TabGallery li a{display:block; color:#fff; border-radius:5px 5px 0 0; font-size:14px; font-weight:bold;}
+.TabGallery li a:hover{background:#444;}
+.TabGallery li a.Active{background:#444;}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+/********************** 갤러리리스트 **********************/
+.Gallery li{width:32%; margin-right:2%;}
+.Gallery li:nth-child(4n){margin-right:2%;}
+.Gallery li:nth-child(3n){margin-right:0;}
+.Gallery li img{height:140px;}
+}
+
+@media all and (max-width:768px) {	
+/********************** 갤러리리스트 **********************/
+.Gallery li{width:32%; margin-right:2%;}
+.Gallery li:nth-child(4n){margin-right:2%;}
+.Gallery li:nth-child(3n){margin-right:0;}
+.Gallery li img{height:140px;}
+}
+
+@media all and (max-width:640px) {	
+#bbs .TopSearch span{display:none;}
+#bbs .TopSearch form{float:none; width:100%;}
+#bbs .table1 .td1{display:none; width:0;}
+#bbs .table1 .td5{display:none; width:0;}
+	
+/********************** 갤러리리스트 **********************/
+.Gallery li{width:48%; margin-right:4%;}
+.Gallery li:nth-child(4n){margin-right:4%;}
+.Gallery li:nth-child(3n){margin-right:4%;}
+.Gallery li:nth-child(2n){margin-right:0;}
+.Gallery li img{height:170px;}	
+}
+@media all and (max-width:480px) {	
+#bbs .table1 .td4{width:24%;}
+	
+/***** 상단 검색 영역 *****/
+#bbs .TopSearch input{width:150px;}
+#bbs .TopSearch select{width:90px;}
+#bbs .TopSearch .BtnSearch{width:48px;}
+
+/***** 쓰기 테이블 *****/
+#bbs .TbWriteTop th{padding:0 10px 0 0; width:22%;}
+#bbs .TbWriteTop td{border-bottom:1px solid #ddd; padding:0 5px 0 0;}
+
+/***** 넘버링 *****/
+#bbs .Number a{height:26px; line-height:26px; width:26px;}
+#bbs .Number span{height:26px; line-height:26px; width:26px;}
+
+/********************** 갤러리리스트 **********************/
+.Gallery li{width:100%; margin-right:0;}
+.Gallery li:nth-child(4n){margin-right:0;}
+.Gallery li:nth-child(3n){margin-right:0;}
+.Gallery li:nth-child(2n){margin-right:0;}
+.Gallery li img{height:230px;}	
+
+
+.TabGallery li{width:49.7%; margin-right:0.6%;}
+.TabGallery li:last-child{margin-right:0;}
+}
+
+/** 레슨 비디오 **/
+.bbs_lesson_select_wrap{text-align:right; padding:0 0 15px 0;}
+.bbs_lesson_select{width:40%;}
+.bbs_lesson_list{display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; flex-direction:row; flex-wrap:wrap;}
+
+.bbs_lesson_list li{margin:0 0 3% 0; border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-top:3px solid #ffd83f; width:100%;}
+.bbs_lesson_photo_wrap{display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; flex-direction:row; justify-content:space-between;}
+.bbs_lesson_photo{width:49%; height:110px; background-repeat:no-repeat; background-position:center; background-size:cover;}
+.bbs_lesson_inner{height:78px; padding:12px 10px 0 10px;}
+.bbs_lesson_caption{font-size:17px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:500; color:#333;}
+.bbs_lesson_date{font-size:14px; color:#666; padding:6px 0 6px 0; display:block;}
+.bbs_lesson_btns{display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; flex-direction:row; justify-content:space-between;}
+.bbs_lesson_btn{display:block; width:40%; height:28px; line-height:26px; font-size:13px; text-align:center; border:1px solid #ccc; color:#999; border-radius:14px; background-color:rgba(255,255,255,0.9);}
+.bbs_lesson_btn .arrow{width:8px; margin:-1px 0 0 4px;}
+@media all and (min-width:480px){
+.bbs_lesson_photo{height:140px;}	
+}
+@media all and (min-width:640px){
+.bbs_lesson_select{width:160px;}    
+.bbs_lesson_photo{height:105px;}	
+.bbs_lesson_list li{width:49%; margin:0 2% 2% 0;}
+.bbs_lesson_list li:nth-child(2n){margin-right:0;}  
+}
+@media all and (min-width:768px){
+.bbs_lesson_select_wrap{padding:0 0 25px 0;}   
+.bbs_lesson_photo{height:80px;}	
+.bbs_lesson_list li{width:32%; margin:0 2% 2% 0;}
+.bbs_lesson_list li:nth-child(2n){margin-right:2%;}    
+.bbs_lesson_list li:nth-child(3n){margin-right:0;}  
+}
+@media all and (min-width:1024px){
+.bbs_lesson_photo{height:80px;}	
+.bbs_lesson_list li{width:23.5%; margin:0 2% 2% 0;}
+.bbs_lesson_list li:nth-child(3n){margin-right:2%;}
+.bbs_lesson_list li:nth-child(4n){margin-right:0;}	   
+}
+@media all and (min-width:1280px){
+.bbs_lesson_photo{height:85px;}	
+.bbs_lesson_list li{width:23.5%; margin:0 2% 2% 0;}
+.bbs_lesson_list li:nth-child(3n){margin-right:2%;}
+.bbs_lesson_list li:nth-child(4n){margin-right:0;}	
+}

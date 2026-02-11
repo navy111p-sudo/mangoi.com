@@ -1,0 +1,4029 @@
+
+/*
+	Template Name: Maleo
+	Description: Multipurpose Mobile Template
+	Author: Alfisahr
+	Author URI: http://themeforest.net/user/alfisahr
+	Version: 1.0
+*/
+
+/*==============================================================
+>>> TABLE OF CONTENTS:
+================================================================
+1. Import
+2. Normalize
+3. Global
+4. Clearings
+5. Links
+6. Media
+7. Forms
+8. Shortcodes
+9. Sidebar
+	9.1. Left Sidebar
+	9.2. Right Sidebar
+10. Content
+	10.1. Fixed Navbar
+11. Widget
+	11.1. Widget Global (Theme Card)
+	11.2. Slider
+12. Pages
+	12.1. Frontpage (Maleo Homepage)
+	12.2. Blog
+	12.3. Shop
+	12.4. Event
+	12.5. FAQ
+	12.6. Testimonial
+	12.7. Search
+	12.8. Not Found
+	12.9. Gallery
+13. App
+	13.1. Sequence
+	13.2. Drawer
+	13.3. To Do
+	13.4. Chat
+	13.5. Profile
+	13.6. Lockscreen
+	13.7. Calendar
+	13.8. Login/Signup
+14. Footer
+15. Responsive
+--------------------------------------------------------------*/
+
+/*==============================================================
+1. Import
+==============================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,700');
+@import url('../css/materialize.css');
+@import url('../css/slick.css');
+@import url('../css/keyframe.css');
+@import url('../css/swipebox.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+/*==============================================================
+2. Normalize
+==============================================================*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+a{text-decoration:none; color:#666;}
+a,input,button{-webkit-tap-highlight-color:transparent;}
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	height:auto;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+	border-bottom: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	outline:0;
+	background-image: none;
+}
+
+
+/*==============================================================
+3. Global
+==============================================================*/
+body {
+	font-family: 'Lato', sans-serif;
+	background: #eee;
+	line-height: 1.5;
+	font-size:15px;
+	color: #444;
+}
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+h1,h2,h3,h4,h5,h6 {font-weight:700;margin:0;padding:0;}
+h1 {font-size:30px;}
+h2 {font-size:26px;}
+h3 {font-size:23px;}
+h4 {font-size:20px;}
+h5 {font-size:18px;}
+h6 {font-size:16px;}
+
+ul,ol {
+	padding-left:15px;
+}
+ul li {
+	list-style-type: disc;
+}
+ul li,
+ol li {
+	list-style-position: inside;
+}
+
+address {
+	font-style:normal;
+	margin-bottom:20px;
+}
+
+td, th {
+	padding: 7px 5px;
+}
+
+.line {height:1px;background:#eee;margin-bottom:20px;}
+.text-center {text-align:center;}
+.bold {font-weight: 700;}
+
+.content-container {
+	min-height:400px;
+	padding:10px 10px 60px 10px;
+	overflow:hidden;
+	width:100%;
+	box-sizing:border-box;
+}
+.FixPadding{padding:0 0 65px 0;}
+.BgLogo{background:url(../images/LogoBlur.png); background-repeat:no-repeat; background-size:60%; background-position:50% 12%;}
+.content-container.full-overlay {
+	background: #000;
+	background: rgba(0,0,0,0.5);
+	height: calc(100vh - 56px);
+	position: relative;
+}
+.content-container.no-overlay {
+	height: calc(100vh - 56px);
+	position: relative;
+}
+.bottom {
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width:100%;
+	box-sizing: border-box;
+}
+.padding {
+	padding: 15px;
+}
+.margin-bottom_low {
+	margin-bottom: 5px;
+}
+.margin-bottom {
+	margin-bottom: 15px;
+}
+.margin-top {
+	margin-top: 15px;
+}
+.justify {
+	text-align: justify;
+}
+.border-bottom {
+	border-bottom: 1px solid #efefef;
+}
+.fixed {
+	position: fixed;
+}
+
+.page-title {
+	color: #000;
+	padding: 15px 0;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.lock, .socmed {
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	display: inline-block;
+}
+.lock {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid transparent;
+}
+.lock:hover {
+	border: 2px solid #fff;
+}
+
+.coming-soon {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+}
+.social-media {
+	padding: 15px 15px 25px 15px;
+	text-align: center;
+}
+.social-media a {
+	color: #fff;
+	display: inline-block;
+	margin: 0 10px;
+	font-size: 25px;
+}
+
+.valign-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.input-field label {
+	left:0;
+	width: 100%;
+}
+.input-field.with-icon input {
+	padding-left: 25px;
+	box-sizing: border-box;
+}
+.input-field.with-icon label {
+	left: 30px;
+}
+.input-field.with-icon .icon {
+	color: #9e9e9e;
+	font-size: 20px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+
+.load-more {
+	display:block;
+	background: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	color: #000;
+	text-align: center;
+	padding: 8px 15px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+blockquote {
+	border:none;
+	padding:8px 6px;
+	margin-bottom:15px;
+	border: 1px solid #efefef;
+	font-size:20px;
+	font-style:italic;
+	line-height:28px;
+}
+blockquote cite {
+	display:block;
+	font-style:normal;
+	font-weight:700;
+	font-size:15px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.pagination {
+	padding:0;
+}
+.pagination li {
+	border-radius: 0;
+}
+
+.pagination li a {
+	text-decoration: none;
+}
+
+.pagination li.active {
+	background-color: #11b2e1;
+	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/*==============================================================
+4. Clearings
+==============================================================*/
+.clear:before,
+.clear:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after {
+	clear: both;
+}
+
+/*==============================================================
+5. Links
+==============================================================*/
+a {
+	color: #11b2e1;
+	text-decoration:underline;
+}
+
+a:visited {
+}
+
+a:hover,
+a:focus,
+a:active {
+	color:none;
+	text-decoration:none;
+}
+
+a:focus {
+	outline: 0;
+	text-decoration:none;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+	text-decoration:none;
+}
+/*--------------------------*/
+
+/*==============================================================
+6. Media
+==============================================================*/
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	width: 100%;
+	border:0;
+}
+/*--------------------------*/
+
+/*==============================================================
+7. Forms
+==============================================================*/
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea.materialize-textarea {
+	border-bottom: 1px solid #ccc;
+}
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #548aa2;
+  box-shadow: 0 1px 0 0 #548aa2;
+}
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #548aa2;
+}
+
+[type="checkbox"]:checked + label:before {
+    border-right: 2px solid #11b2e1;
+    border-bottom: 2px solid #11b2e1;
+}
+[type="radio"]:checked + label:after {
+    border: 2px solid #11b2e1;
+    background-color: #11b2e1;
+}
+[type="radio"].with-gap:checked + label:before {
+    border: 2px solid #11b2e1;
+}
+[type="radio"].with-gap:checked + label:after {
+    border: 2px solid #11b2e1;
+    background-color: #11b2e1;
+}
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: #aeedff;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #11b2e1;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #11b2e1;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+.btn:hover, .btn-large:hover {
+	background-color: #11b2e1;
+}
+.btn.block, .btn-large.block {
+	width: 100%;
+}
+
+
+/*==============================================================
+8. Shortcodes
+==============================================================*/
+span.highlight {
+	display:inline-block;
+	padding:0 5px;
+	background:#FCFCB3;
+}
+span.dropcap {
+	font-weight: 700;
+	display:block;
+	float: left;
+	padding:0px 5px 0 3px;
+	line-height:30px;
+	font-size: 28px;
+	text-transform: uppercase;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+span.pull-right {
+	text-transform:uppercase;
+	display:block;
+	float:right;
+	margin:0 0 10px 20px;
+	color:#ccc;
+	line-height:22px;
+	width:30%;
+	font-size:18px;
+	text-align:right;
+}
+span.pull-left {
+	text-transform:uppercase;
+	display:block;
+	float:left;
+	margin:0 20px 10px 0;
+	color:#ccc;
+	width:30%;
+	font-size:18px;
+	line-height:22px;
+}
+
+/*==============================================================
+9. Sidebar
+==============================================================*/
+/*--------------------------------------------------------------
+9.1. Left Sidebar
+--------------------------------------------------------------*/
+.searchbar {
+	padding: 7px 15px;
+	background: #efefef;
+}
+.searchbar .icon {
+	float:left;
+	width: 28px;
+	color: #999;
+}
+.searchbar input {
+    border: none;
+    height: auto;
+    width: calc(100% - 35px);
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+.searchbar input:focus:not([readonly]) {
+  border-bottom: none;
+  box-shadow: 0 0 0 0 #11b2e1;
+}
+
+.top-left-nav {
+	padding: 15px 10px;
+	background: #000;
+	margin-bottom:20px;
+	box-sizing:border-box;
+}
+
+#slide-out-left,
+#slide-out-right {
+	background:#fff;
+	color:#444;
+}
+#slide-out-left .collapsible,
+#slide-out-right .collapsible {
+	border: none;
+	box-shadow: none;
+	padding:0;
+	margin: 30px 0 0 0;
+}
+
+#slide-out-left .collapsible li,
+#slide-out-right .collapsible li {
+  padding: 0;
+  list-style:none;
+}
+
+#slide-out-left .collapsible-header,
+#slide-out-left > .collapsible > li > a,
+#slide-out-right .collapsible-header,
+#slide-out-right > .collapsible > li > a{
+	background-color: transparent;
+	border: none;
+	padding:0;
+	padding:10px 0;
+	text-decoration:none;
+	color:#000;
+}
+#slide-out-left > .collapsible > li > a,
+#slide-out-left li.heading-menu,
+#slide-out-right > .collapsible > li > a,
+#slide-out-right li.heading-menu {
+	display:block;
+	margin: 0 1.5rem;
+	color:#000;
+}
+#slide-out-left li.heading-menu,
+#slide-out-right li.heading-menu {
+	color: #999;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+#slide-out-left li .line-separator,
+#slide-out-right li .line-separator {
+	margin: 0 18px 10px 20px;
+	height: 1px;
+	background: #ddd;
+}
+#slide-out-left li a i.fa,
+#slide-out-right li a i.fa {
+	margin-right: 1rem;
+	color: #999;
+	display:inline-block; width:20px; text-align:center;
+}
+#slide-out-left .collapsible-header i.fa,
+#slide-out-right .collapsible-header i.fa {
+	line-height: none;
+	font-size: 14px;
+	color: #999;
+
+}
+#slide-out-left .collapsible-header span.fa,
+#slide-out-right .collapsible-header span.fa {
+	float:right;
+}
+#slide-out-left .collapsible .active span.fa,
+#slide-out-right .collapsible .active span.fa {
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+#slide-out-left li.current-item a,
+#slide-out-left li.current-item a i,
+#slide-out-left .collapsible-header.current-item,
+#slide-out-right li.current-item a,
+#slide-out-right li.current-item a i,
+#slide-out-right .collapsible-header.current-item {
+	color: #11b2e1;
+	font-weight: 700;
+}
+#slide-out-left .collapsible-body,
+#slide-out-right .collapsible-body {
+  border: 0;
+  background-color: transparent;
+}
+#slide-out-left .collapsible-body ul,
+#slide-out-right .collapsible-body ul {
+	padding:0;
+	background: #efefef;
+}
+#slide-out-left .collapsible-body li a,
+#slide-out-right .collapsible-body li a {
+	padding:7px 10px 7px 30px;
+	display:block;
+	text-decoration: none;
+	color: #444;
+	font-weight: 400;
+}
+#slide-out-left .collapsible-body li.current-item a,
+#slide-out-right .collapsible-body li.current-item a {
+	color: #11b2e1;
+}
+
+#slide-out-left li:hover,
+#slide-out-left li.active,
+#slide-out-right li:hover,
+#slide-out-right li.active {
+  background-color: transparent;
+}
+
+.side-cover {
+	height:140px;
+	background: #11b2e1;
+	position: relative;
+}
+.side-cover .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+	background: -webkit-linear-gradient(top, transparent, #000);
+	background: -moz-linear-gradient(top, transparent, #000);
+	background: -ms-linear-gradient(top, transparent, #000);
+	background: -o-linear-gradient(top, transparent, #000);
+	opacity: 0.5;
+}
+.side-cover .cover-img {
+	height:140px;
+	overflow: hidden;
+}
+.side-cover .cover-img img {
+	width: 100%;
+	overflow: hidden;
+}
+.side-cover .prof-container {
+	position:absolute;
+	bottom:-30px;
+	width:100%;
+	padding: 0 10px;
+}
+.side-cover .prof-container .avatar {
+	float:left;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 3px solid #fff;
+}
+.side-cover .prof-container .avatar img {
+	width: 100%;
+}
+.side-cover .prof-container .profile-name {
+	float: right;
+	width: calc(100% - 80px);
+	font-size: 17px;
+	font-weight: 500;
+	color: #fff;
+	padding: 5px 0 0 1px;
+}
+
+
+/*--------------------------------------------------------------
+9.2. Right Sidebar
+--------------------------------------------------------------*/
+.row .col.s3 {
+	margin-left:0;
+}
+
+.tabs {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: auto;
+  background-color: #ccc;
+  margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  box-sizing:border-box;
+  padding:0;
+}
+
+.tabs .tab {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 0;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  text-transform: none;
+  text-overflow: none;
+  overflow: hidden;
+  letter-spacing: auto;
+  width: auto;
+  min-width: auto;
+}
+
+.tabs .tab a {
+  color: #999;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-overflow: none;
+  overflow: hidden;
+  padding:0 5px;
+  transition: color .28s ease;
+}
+
+.tabs .tab a:hover {
+  color: none;
+}
+.tabs .tab a.active {
+	color: #fff;
+}
+
+.tabs .tab.disabled a {
+  color: #f9c9cb;
+  cursor: default;
+}
+
+.tabs .indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #222;
+  will-change: left, right;
+}
+
+.sidebar-tabs .tabs .tab {
+}
+.sidebar-tabs .tabs .tab a {
+	padding:0;
+	display:block;
+	width:110px;
+	text-align:center;
+	text-decoration:none;
+}
+.sidebar-tabs .tabs .tab a:hover {
+	color: #999;
+}
+.sidebar-tabs .tabs .tab a.active:hover {
+	color: #fff;
+}
+.sidebar-tabs .tabs .tab a.active {
+	font-weight: 700;
+}
+
+
+.tabs-content {
+	padding: 15px;
+}
+.tabs-date {
+	font-size: 25px;
+	font-weight: 300;
+}
+.tabs-block {
+	padding: 15px 0 0 0;
+	font-size: 14px;
+}
+.tabs-block .block-heading {
+	border-top: 1px solid #eee;
+	padding: 15px 0 0 0;
+	color: #aaa;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.tabs-notifications {
+	list-style: none;
+	padding:0;
+	margin: 0;
+}
+.tabs-notifications li {
+	padding: 10px 0;
+}
+.tabs-notifications .user-pic {
+	float: left;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 5px 0 0 0;
+}
+.tabs-notifications .user-pic img {
+	width: 100%;
+}
+.tabs-notifications .app-content {
+	float: right;
+	width: calc(100% - 40px);
+}
+.tabs-notifications .app-content .username {
+	font-weight: 700;
+}
+.tabs-notifications .app-content span.time {
+	font-size: 12px;
+	color: #bbb;
+}
+.tabs-latest_tweet {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.tabs-latest_tweet li {
+	padding: 15px 0;
+}
+.tabs-latest_tweet li a {
+	text-decoration: none;
+	font-weight: 700;
+	color: #333;
+}
+.tabs-latest_tweet li span {
+	display: block;
+}
+.tabs-latest_tweet li span a {
+	color: #aaa;
+	font-weight: 400;
+}
+.tabs-chat {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+.tabs-chat li {
+	padding: 10px 0; border-bottom:1px solid #ddd; position:relative;
+}
+.tabs-chat .user-pic {
+	float: left;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 5px 8px 0 0;
+}
+.tabs-chat .user-pic img {
+	width: 100%;
+}
+.tabs-chat .user {
+	float: left;
+	max-width: calc(100% - 50px);
+}
+.tabs-chat .user .username {
+	padding: 7px 0;
+	color: #000;
+}
+.tabs-chat .indicator {
+	position:absolute; right:10px; top:1px; width:20px;height:20px; line-height:20px; color:#fff; border-radius:50%; background:#1EBF02; margin:12px 0 0 0; text-align:center; font-size:11px;
+}
+.tabs-chat h6{font-size:15px; font-family: 'Jeju Gothic', serif; font-weight:normal;}
+.tabs-chat .Msg{width:100%;  font-size:12px; padding-top:6px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+/**   **/
+.tabs-event {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.tabs-event li {
+	padding: 10px 0;
+	min-height: 65px;
+}
+.tabs-event li .event-date {
+	float: left;
+	width: 48px;
+	border: 1px solid #11b2e1;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.tabs-event li .event-date span {
+	display: block;
+	text-align: center;
+}
+.tabs-event li .event-date span.year {
+	font-size: 12px;
+}
+.tabs-event li .event-date span.date {
+	font-size: 20px;
+	font-weight: 700;
+}
+.tabs-event li .event-date span.month {
+	background:#11b2e1;
+	color: #fff;
+	font-size: 12px;
+}
+.tabs-event li .event-name {
+	width: calc(100% - 60px);
+	margin: 0 0 0 60px;
+	padding: 3px 0 0 0;
+	line-height: 16px;
+}
+
+/*==============================================================
+10. Content
+==============================================================*/
+
+#page {
+	padding-top:56px;
+	position: relative;
+}
+
+.page-bg {
+	background: url(../images/8.jpg) no-repeat center / cover !important;
+}
+
+/*--------------------------------------------------------------
+10.1. Fixed Navbar
+--------------------------------------------------------------*/
+
+.top-navbar {
+	background: #fff;
+	border-bottom: 1px solid #548aa2;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	height:56px;
+	position:fixed;
+	-webkit-transform: translateZ(0);
+	z-index:99;
+	top:0;
+	left:0;
+	right:0;
+	width:100%;
+}
+.top-navbar .site-title {
+	text-align:center;
+	margin:0 auto;
+	max-width:calc(100% - 100px);
+	padding:7px 0;
+}
+.top-navbar .site-title h1 {
+	margin:0;
+	padding:0;
+	font-size:19px;
+	font-weight:400;
+	padding:8px 0;
+	color: #111;
+}
+.top-navbar .site-title h1 span{font-size:12px; font-weight:normal;}
+.top-navbar .site-title i{padding-right:3px; font-size:21px; color:#444;}
+.top-navbar .site-title b{font-weight:normal; color:#444; font-size:19px;}
+.top-navbar .top-navbar-left {
+	float:left;
+}
+.top-navbar .top-navbar-right {
+	float:right;
+	padding-right: 10px;
+}
+.top-navbar .top-navbar-right .BtnTopWrite{color:#548aa2;}
+.top-navbar .top-navbar-right .WriteComplete{font-size:16px; color:#666; line-height:36px;}
+.top-navbar .top-navbar-left .TxtNav{font-size:16px; color:#666; line-height:36px;}
+.top-navbar .top-navbar-right .TxtNav{font-size:16px; color:#666; line-height:36px;}
+.top-navbar .top-navbar-left a {
+	font-size:22px;
+	padding:10px 15px;
+	display:inline-block;
+	color: #555;
+}
+.top-navbar .top-navbar-right a {
+	font-size:22px;
+	padding:10px 5px;
+	display:inline-block;
+	color: #555;
+}
+.top-navbar .dropdown-content {
+    background-color: #fff;
+    margin: 56px 0 0 0;
+    display: none;
+    min-width: 170px;
+    max-height: 650px;
+    overflow-y: auto;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    will-change: width, height;
+	list-style: none;
+	padding: 0;
+}
+.top-navbar .dropdown-content li {
+	list-style: none;
+	min-height: auto;
+	line-height: auto;
+	padding: 0 8px;
+}
+.top-navbar .dropdown-content li a {
+	font-size: 15px;
+	line-height: auto;
+	text-decoration: none;
+	color: #000;
+}
+.top-navbar .dropdown-content li a i.fa {
+	display: inline-block;
+	width: 23px;
+	color: #999;
+}
+.top-navbar .dropdown-content li a i.Red{color:#C00;}
+.top-navbar .dropdown-content li a i.Yellow{color:#fbe300;}
+.top-navbar .dropdown-content li a i.Green{color:#9ccc65;}
+
+.top-navbar.float-navbar {
+	background: transparent;
+	position: absolute;
+	border-bottom: 0;
+	box-shadow: none;
+}
+
+/*==============================================================
+11. Widget
+==============================================================*/
+/*--------------------------------------------------------------
+11.1. Widget Global (Theme Card)
+--------------------------------------------------------------*/
+
+.maleo-card {
+	background: #fff;
+	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.maleo-card.full-height {
+	height: calc(100vh - 80px);
+	width: 100%;
+	box-sizing: border-box;
+}
+.maleo-card.full-height_alt {
+	height: calc(100vh - 140px);
+	width: 100%;
+	box-sizing: border-box;
+}
+.maleo-card_title {
+	font-size: 16px;
+	font-weight: 700;
+	padding: 15px;
+	margin:0;
+	border-bottom: 1px solid #efefef;
+}
+.maleo-card_title.big-title {
+	font-size: 24px;
+}
+
+/*--------------------------------------------------------------
+11.2. Slider
+--------------------------------------------------------------*/
+
+.featured-slider {
+	background:#999;
+	position:relative;
+}
+.featured-slider .featured-item {
+	position:relative;
+	height:220px;
+	overflow:hidden;
+}
+.featured-slider .featured-item .icons {
+	position:absolute;
+	top:20px;
+	left:15px;
+	width:30px;
+	height:30px;
+	background:#000;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	border-radius: 50%;
+	padding:4px 0 0 0;
+	text-align:center;
+}
+.featured-slider .featured-item .thumbnail {
+	position:absolute;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	top:0;
+	left:0;
+}
+.featured-slider .featured-item .thumbnail img,
+.featured-gallery-slider .featured-item .thumbnail img {
+	width:100%;
+}
+.featured-slider .featured-item .overlay {
+	position:absolute;
+	width:100%;
+	height:80%;
+	bottom:0;
+	background: #000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+	background: -webkit-linear-gradient(top, transparent, #000);
+	background: -moz-linear-gradient(top, transparent, #000);
+	background: -ms-linear-gradient(top, transparent, #000);
+	background: -o-linear-gradient(top, transparent, #000);
+	opacity:0.8;
+}
+.featured-slider .featured-item .caption {
+	position:absolute;
+	bottom:0;
+	padding:5px 15px 45px 15px;
+}
+.featured-slider .featured-item .caption .underline {
+	border-bottom: 2px solid #11b2e1;
+}
+.featured-slider .featured-item .caption .highlight {
+	background: #11b2e1;
+	color: #fff;
+	padding: 2px 3px;
+}
+.featured-slider .featured-item .caption .issue {
+	color: #FA6E6E;
+	font-size: 13px;
+}
+.featured-slider .featured-item .caption h2 {
+	margin:0 0 5px 0;
+	padding:0;
+	font-size:22px;
+	color: #fff;
+}
+.featured-slider .featured-item .caption h2 a {
+	color: #fff;
+	text-decoration:none;
+}
+.featured-slider .featured-item .caption .meta {
+	font-size: 13px;
+	color: #bbb;
+}
+.featured-slider .featured-item .caption .rating {
+	font-size: 10px;
+	color: #999;
+}
+.featured-slider .featured-item .caption .rating i.fa.active {
+	color: #EBE305;
+}
+.featured-slider .featured-item .fullscreen,
+.featured-gallery-slider .featured-item .fullscreen {
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.featured-slider .featured-item .fullscreen a,
+.featured-gallery-slider .featured-item .fullscreen a {
+	font-size:18px;
+	padding:3px 7px;
+	display:inline-block;
+	background:#000;
+	background:rgba(0,0,0,0.5);
+	color: #fff;
+}
+.featured-slider .slick-dots,
+.maleo-testimonial_slider .slick-dots {
+	width:auto;
+	position:absolute;
+	bottom:0;
+	padding:0;
+	left:50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.featured-slider .slick-dots li,
+.maleo-testimonial_slider .slick-dots li {
+	float:left;
+	margin:0 2px;
+	list-style:none;
+}
+.featured-slider .slick-dots li button,
+.maleo-testimonial_slider .slick-dots li button {
+	width:10px;
+	height:10px;
+	overflow:hidden;
+	border-radius: 50%;
+	display:inline-block;
+	padding:0;
+	font-size:0px;
+	border-width: 0;
+}
+.featured-slider .slick-dots li button {
+	background: #fff;
+}
+.maleo-testimonial_slider .slick-dots li button {
+	background: #999;
+}
+.featured-slider .slick-dots li.slick-active button,
+.maleo-testimonial_slider .slick-dots li.slick-active button {
+	background: #11b2e1;
+}
+.featured-gallery-slider .prev-arr,
+.featured-gallery-slider .next-arr {
+	position:absolute;
+	top:40%;
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+	color: #fff;
+	cursor:pointer;
+	display:inline-block;
+	background:#000;
+	background:rgba(0,0,0,0.5);
+	z-index:10;
+	text-align:center;
+	padding-top:5px;
+}
+.featured-gallery-slider .prev-arr {
+	left:10px;
+	padding-right:2px;
+}
+.featured-gallery-slider .next-arr {
+	right:10px;
+	padding-left:2px;
+}
+
+
+/*==============================================================
+12. Pages
+==============================================================*/
+
+/*--------------------------------------------------------------
+12.1. Frontpage (Maleo Homepage)
+--------------------------------------------------------------*/
+.fp_item-presentation {
+	padding: 15px;
+	text-align:center;
+	color: #555;
+	font-size: 13px;
+}
+.fp_item-presentation .icon-presentation {
+	font-size:35px;
+	margin: 0 auto 10px auto;
+	color: #11b2e1;
+	border-radius: 50%;
+	background: #efefef;
+	width: 75px;
+	height: 75px;
+	line-height: 70px;
+}
+.fp_item-presentation .title-presentation {
+	font-size:18px;
+	font-weight: 700;
+	color: #000;
+}
+.front-ads {
+	float: left;
+	width: 50%;
+	height: 110px;
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+.front-ads .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background: #000;
+	background: rgba(0,0,0,0.5);
+}
+.front-ads .thumb img {
+	width: 100%;
+}
+.front-ads .text-ads {
+	color: #ccc;
+	font-size: 13px;
+	position: absolute;
+	bottom:0;
+	left:0;
+	padding:0 10px 20px 10px;
+	text-align: center;
+	width: 100%;
+}
+.front-ads h3 {
+	color: #fff;
+	margin:0 0 3px 0;
+	padding:0;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.fp_newsletter {
+	text-align:center;
+	padding: 15px;
+}
+.fp_newsletter .heading-nl {
+	border-bottom: 1px solid #efefef;
+	padding:0 0 15px 0;
+}
+.fp_newsletter .heading-nl h3 {
+	font-size:18px;
+	font-weight: 700;
+	color: #000;
+	margin:0 0 5px 0;
+}
+.fp_newsletter .heading-nl p {
+	font-size: 13px;
+	color: #666;
+}
+
+
+/*--------------------------------------------------------------
+12.2. Blog
+--------------------------------------------------------------*/
+
+.blog-archieve_tools {
+	padding: 15px;
+}
+.blog-archieve_tools .archieve-date {
+	float: left;
+	width: calc(50% - 5px);
+}
+.blog-archieve_tools .archieve-category {
+	float: right;
+	width: calc(50% - 5px);
+}
+.blog-archieve_tools input,
+.blog-archieve_tools select {
+	margin:0;
+}
+
+.blog-archieve {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.blog-archieve li {
+	padding: 5px 15px;
+	border-bottom: 1px solid #efefef;
+}
+.blog-archieve li .item-archieve {
+	text-decoration: none;
+	color: #222;
+}
+.blog-archieve li .archieve-date {
+	display: block;
+	font-size: 12px;
+	color: #999;
+	margin: 2px 0 0 0;
+}
+.blog-archieve li .issue {
+	display: block;
+	color: #11b2e1;
+	font-size: 13px;
+}
+
+.maleo-blog .maleo-blog_thumb {
+	max-height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+.maleo-blog .maleo-blog_thumb img {
+	width: 100%;
+}
+.maleo-blog .maleo-blog_thumb .post-type_badge {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	width: 37px;
+	height: 37px;
+	border-radius: 50%;
+	background: #fff;
+	color: #000;
+	text-align: center;
+	line-height: 35px;
+	font-size: 19px;
+}
+.maleo-blog .maleo-blog_thumb .post-pinned {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 33px;
+	height: 33px;
+	background: #11b2e1;
+	color: #fff;
+	text-align: center;
+	line-height: 33px;
+	font-size: 17px;
+}
+.maleo-blog .maleo-blog_thumb .thumb-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+	background: -webkit-linear-gradient(top, transparent, #000);
+	background: -moz-linear-gradient(top, transparent, #000);
+	background: -ms-linear-gradient(top, transparent, #000);
+	background: -o-linear-gradient(top, transparent, #000);
+	opacity: 0.6;
+}
+.maleo-blog .maleo-blog_thumb .thumb-navigation {
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	padding: 15px;
+}
+.maleo-blog .maleo-blog_thumb .thumb-navigation .issue {
+	display: block;
+	font-size: 13px;
+	color: #FA6E6E;
+}
+.maleo-blog .maleo-blog_thumb .thumb-navigation .blog-title {
+	font-size: 20px;
+	line-height: 22px;
+	margin:0 0 6px 0;
+}
+.maleo-blog .maleo-blog_thumb .thumb-navigation .blog-title a {
+	color: #fff;
+	text-decoration: none;
+}
+.maleo-blog .maleo-blog_thumb .thumb-navigation .blog-meta {
+	font-size: 13px;
+	color: #ccc;
+}
+.maleo-blog .maleo-blog_content,
+.maleo-blog .maleo-blog_action {
+	padding: 15px;
+}
+.maleo-blog .maleo-blog_action {
+	border-top: 1px solid #efefef;
+}
+.maleo-blog .maleo-blog_action a {
+	color: #000;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.maleo-blog_small {
+	float: left;
+	width: 100%;
+}
+.maleo-blog_small .maleo-blog_thumb {
+	float: left;
+	width: 110px;
+	overflow: hidden;
+	line-height:0;
+	position: relative;
+}
+.maleo-blog_small .maleo-blog_thumb .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top: 0;
+	background: #000;
+	opacity: 0.5;
+}
+.maleo-blog_small .maleo-blog_thumb .icon {
+	position: absolute;
+	top:30%;
+	font-size: 28px;
+	left: 0;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+}
+.maleo-blog_small .maleo-blog_thumb img {
+	width: 100%;
+}
+.maleo-blog_small .maleo-blog_rightcontent {
+	float: right;
+	width: calc(100% - 120px);
+	padding: 5px 5px 5px 0;
+}
+.maleo-blog_small .maleo-blog_rightcontent .blog-title {
+	font-size: 15px;
+	margin:0 0 5px 0;
+	font-weight: 700;
+}
+.maleo-blog_small .maleo-blog_rightcontent .blog-title a {
+	color: #000;
+	text-decoration: none;
+}
+.maleo-blog_small .maleo-blog_rightcontent .blog-meta {
+	font-size: 12px;
+	color: #999;
+}
+
+.blog-comments_form {
+	padding: 15px;
+	border-bottom: 1px solid #efefef;
+}
+
+.blog-comments {
+	padding:0 15px;
+	margin:0;
+	list-style:none;
+}
+.blog-comments_child {
+	padding:0 15px 0 30px;
+	margin:0;
+	list-style:none;
+}
+.blog-comments li {
+	padding: 15px 0;
+	float: left;
+	width: 100%;
+	box-sizing: border-box;
+}
+.blog-comments li.has_child {
+	padding: 15px 0 0 0;
+}
+.blog-comments > li {
+	border-bottom: 1px solid #efefef;
+}
+.blog-comments_child {
+	margin: 15px 0 0 0;
+}
+.blog-comments_child li {
+	border-top: 1px solid #efefef;
+}
+.blog-comments li .user-pic,
+.blog-comments_child li .user-pic {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.blog-comments li .user-pic img,
+.blog-comments_child li .user-pic img {
+	width: 100%;
+}
+.blog-comments li .comment-content,
+.blog-comments_child li .comment-content {
+	float: right;
+	width: calc(100% - 65px);
+}
+.blog-comments li.has_child > .comment-content {
+	margin-bottom: 15px;
+}
+.blog-comments li .comment-content .user-name,
+.blog-comments_child li .comment-content .user-name {
+	margin:0;
+	font-size:15px;
+	font-weight: 700;
+}
+.blog-comments li .comment-content .comment-meta,
+.blog-comments_child li .comment-content .comment-meta {
+	margin:0 0 10px 0;
+	color: #999;
+	font-size: 12px;
+}
+
+.maleo-article .post-header {
+	padding: 15px;
+}
+.maleo-article .post-header .entry-title_page,
+.maleo-article .post-header .entry-title {
+	margin:0;
+	font-size: 22px;
+	color: #000;
+}
+.maleo-article .post-header .entry-title_page {
+	font-weight: 700;
+}
+.maleo-article .post-header .entry-meta {
+	margin:5px 0 0 0;
+	font-size: 13px;
+	color: #999;
+}
+.maleo-article .blog-content {
+	padding: 15px;
+}
+.maleo-article .blog-content .thumb img {
+	width: 100%;
+}
+.maleo-article .blog-content .thumb .caption {
+	background: #eee;
+	font-size: 12px;
+	padding: 4px 5px;
+	color: #555;
+	font-style: italic;
+}
+.maleo-article .blog-content p,
+.maleo-article .blog-content .thumb,
+.maleo-event .event-content p,
+.product-single .product-content p {
+	margin-bottom: 17px;
+}
+.maleo-article .blog-shared a:not(.btn):not(.btn-large):not(.btn-floating),
+.maleo-event .event-shared a:not(.btn):not(.btn-large):not(.btn-floating) {
+	color: #fff;
+}
+.maleo-article .blog-shared,
+.maleo-event .event-shared {
+	text-align: center;
+	border-top: 1px solid #efefef;
+	padding: 15px;
+}
+.maleo-article .blog-shared a,
+.maleo-event .event-shared a {
+	font-size: 16px;
+	line-height: 30px;
+	height: 30px;
+	width: 30px;
+	display:inline-block;
+	border-radius: 50%;
+}
+.maleo-article .blog-shared a.fb,
+.maleo-event .event-shared a.fb {
+	background:#3b5998;
+}
+.maleo-article .blog-shared a.tw,
+.maleo-event .event-shared a.tw {
+	background:#55acee;
+}
+.maleo-article .blog-shared a.gplus,
+.maleo-event .event-shared a.gplus {
+	background:#dd4b39;
+}
+.maleo-article .blog-tagged {
+	padding: 15px;
+	border-top: 1px solid #efefef;
+}
+.maleo-article .blog-tagged i.fa {
+	display:iniline-block;
+	margin:0 12px 0 0;
+	color: #ccc;
+}
+.maleo-article .blog-tagged a {
+	display:iniline-block;
+	margin:0 7px 0 0;
+	color: #999;
+}
+.maleo-article .thumb .caption {
+	background: #eee;
+	font-size: 12px;
+	padding: 4px 5px;
+	margin-top: -5px;
+	color: #555;
+	font-style: italic;
+}
+.post-featured-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+	margin:0 0 20px 0;
+}
+.post-featured-video iframe.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------------------------------------------------------
+12.3. Shop
+--------------------------------------------------------------*/
+
+.shop_category-item {
+	display: inline-block;
+	text-decoration: none;
+	line-height: 0;
+	width: calc(50% - 2px);
+	margin-bottom: 4px;
+}
+.shop_category-item.left {
+	margin-right: 2px;
+}
+.shop_category-item.right {
+	margin-left: 2px;
+}
+.shop_category-item .thumb {
+	position: relative;
+	height: 100px;
+	overflow: hidden;
+}
+.shop_category-item .thumb .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+	background: -webkit-linear-gradient(top, transparent, #000);
+	background: -moz-linear-gradient(top, transparent, #000);
+	background: -ms-linear-gradient(top, transparent, #000);
+	background: -o-linear-gradient(top, transparent, #000);
+	opacity: 0.8;
+}
+.shop_category-item .thumb .caption {
+	position: absolute;
+	width: 100%;
+	bottom:0;
+	left:0;
+	padding: 15px;
+}
+.shop_category-item .thumb .caption .category-name {
+	color: #fff;
+	margin:0 0 5px 0;
+	padding:0;
+	font-size: 18px;
+}
+.shop_category-item .thumb .rating {
+	font-size: 10px;
+	color: #999;
+}
+.shop_category-item .thumb .rating i.fa.active {
+	color: #EBE305;
+}
+.shop_category-item .thumb img {
+	width: 100%;
+}
+.shop_review-list {
+	margin:0 0 20px 0;
+	padding:0;
+	list-style:none;
+}
+.shop_review-list li {
+	padding: 10px 0;
+	border-bottom: 1px solid #efefef;
+}
+.shop_review-list li .review-idty {
+	float:left;
+	width: 80px;
+}
+.shop_review-list li .review-ctn {
+	width: calc(100% - 95px);
+	margin: 0 0 0 95px;
+	min-height: 60px;
+}
+.shop_review-list li .name {
+	margin:0 0 5px 0;
+	font-weight: 700;
+}
+.shop_review-list li .product-rating {
+	font-size: 10px;
+	color: #eee;
+}
+.shop_review-list li .product-rating i.fa.active {
+	color: #EBE305;
+}
+
+.product-list {
+	padding:0;
+	list-style:none;
+	margin:0;
+}
+.product-list .product-item {
+	padding: 10px;
+	float:left;
+	width: 50%;
+}
+.product-list .product-item .thumb {
+	max-height: 100px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.product-list .product-item .thumb img {
+	width: 100%;
+}
+.product-list .product-item .product-name {
+	max-height: 40px;
+	font-weight: 700;
+	overflow: hidden;
+}
+.product-list .product-item .product-price {
+	margin:0 0 5px 0;
+}
+.product-list .product-item .product-price .product-price_original {
+	color: #aaa;
+	font-size: 12px;
+	text-decoration: line-through;
+	display:inline-block;
+	margin-right: 5px;
+}
+.product-list .product-item .product-price .product-price_reduced {
+	color: #ff9900;
+	font-weight: 700;
+}
+.product-list .product-item .product-rating {
+	font-size: 12px;
+	color: #eee;
+}
+.product-list .product-item .product-rating i.fa.active {
+	color: #EBE305;
+}
+.separator-right {
+	border-right: 1px solid #efefef;
+}
+.separator-bottom {
+	border-bottom: 1px solid #efefef;
+}
+
+.product-single .thumb {
+}
+.maleo-article .thumb img,
+.product-single .thumb img,
+.maleo-event .thumb img {
+	width: 100%;
+}
+.product-single .product-header {
+	padding: 10px;
+	border-bottom: 1px solid #efefef;
+}
+.product-single .product-header .product-name {
+	font-weight: 700;
+	font-size: 18px;
+	margin:0 0 5px 0;
+}
+.product-single .product-header .product-price {
+	margin:0 0 5px 0;
+}
+.product-single .product-header .product-price .product-price_original {
+	color: #aaa;
+	font-size: 12px;
+	text-decoration: line-through;
+	display:inline-block;
+	margin-right: 5px;
+}
+.product-single .product-header .product-price .product-price_reduced {
+	color: #ff9900;
+	font-weight: 700;
+}
+.product-single .product-header .product-rating {
+	font-size: 12px;
+	color: #eee;
+}
+.product-single .product-header .product-rating i.fa.active {
+	color: #EBE305;
+}
+.product-single .product-tabs .tabs {
+	background-color: #fff;
+	border-bottom: 1px solid #efefef;
+}
+.product-single .product-tabs .tabs .tab {
+	padding:0 10px;
+}
+.product-single .product-tabs .tabs .tab a {
+	color: #bbb;
+	text-decoration:none;
+}
+.product-single .product-tabs .tabs .tab a.active {
+	color: #000;
+}
+.product-single .product-tabs .tabs .indicator {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+}
+.product-single .product-content {
+	padding: 15px;
+}
+
+.subtitle {
+	font-size: 17px;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+}
+
+.maleo-shop_checkout .collapsible {
+	list-style:none;
+	padding:0;
+	margin:0;
+	border-top: 0 solid #ddd;
+    border-right: 0 solid #ddd;
+    border-left: 0 solid #ddd;
+	box-shadow: none;
+}
+.maleo-shop_checkout .collapsible > li {
+	list-style:none;
+	margin:0 0 5px 0;
+	background-color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.maleo-shop_checkout .collapsible li .collapsible-header {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 0px;
+	padding: 15px;
+	font-weight: 700;
+}
+.maleo-shop_checkout .collapsible li .collapsible-header .total-cart {
+	display: inline-block;
+	float: right;
+}
+.maleo-shop_checkout .collapsible li .collapsible-header span.fa {
+	float: right;
+}
+.maleo-shop_checkout .collapsible .active span.fa {
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.maleo-shop_checkout .collapsible li .collapsible-body {
+    display: none;
+    border-bottom: none;
+    border-top: 1px solid #efefef;
+    box-sizing: border-box;
+	padding: 15px;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-items {
+	padding:0;
+	margin: 0 0 10px 0;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-items li {
+	margin:0;
+	list-style: none;
+	border-bottom: 1px solid #efefef;
+	padding: 5px 0;
+	min-height: 50px;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-items li .item-img {
+	display: inline-block;
+	width: 50px;
+	float: left;
+	max-height: 40px;
+	overflow: hidden;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-items li .item-img img {
+	width: 100%;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-items li .item-name {
+	width: calc(100% - 125px);
+	display: inline-block;
+	margin:0 5px 0 5px;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-items li .item-price {
+	width: 60px;
+	display: inline-block;
+	text-align: right;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-subtotal,
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-addon {
+	padding: 5px 0;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-subtotal {
+	font-weight: 700;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-subtotal .subtotal-value,
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-addon .addon-value,
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-total .total-value {
+	float: right;
+}
+.maleo-shop_checkout .collapsible li .collapsible-body .cart-total {
+	font-weight: 700;
+	padding: 10px 0;
+	border-top: 1px solid #efefef;
+}
+.maleo-shop_checkout .input-field {
+	padding:0 15px;
+}
+.maleo-shop_checkout .input-field label {
+	left: 15px;
+}
+
+/*--------------------------------------------------------------
+12.4. Event
+--------------------------------------------------------------*/
+
+.maleo-event .event-content {
+	padding: 15px;
+}
+.maleo-event .event-content .event-item_spec {
+	margin: 0 0 15px 0;
+}
+.maleo-event .event-content .event-item_spec .spec-main {
+	display: block;
+	color: #999;
+	font-size: 13px;
+}
+.maleo-event .event-content .event-item_spec .spec-main i.fa {
+	margin: 0 5px 0 0;
+	display: inline-block;
+}
+.maleo-event .post-header {
+	margin-bottom: 15px;
+}
+.maleo-event .post-header .event-date {
+	float: left;
+	width: 70px;
+	text-align: center;
+	line-height: 23px;
+	padding: 5px;
+}
+.maleo-event .post-header .event-date span {
+	display: block;
+}
+.maleo-event .post-header .event-date span.month {
+}
+.maleo-event .post-header .event-date span.date {
+	font-size: 30px;
+}
+.maleo-event .post-header .event-date span.year {
+	font-size: 12px;
+}
+.maleo-event .post-header .event-title {
+	float: right;
+	width: calc(100% - 70px);
+	padding: 15px 15px 0 0;
+	line-height: 23px;
+	margin: 0;
+	font-size: 20px;
+}
+.maleo-event_list {
+	float: left;
+	width: 100%;
+}
+.maleo-event_list .event-date {
+	float: left;
+	width: 70px;
+	text-align: center;
+	line-height: 23px;
+	padding: 10px 5px;
+	background: #ddd;
+}
+.maleo-event_list .event-content {
+	float: right;
+	width: calc(100% - 80px);
+	padding: 5px;
+}
+.maleo-event_list .event-date span {
+	display: block;
+}
+.maleo-event_list .event-date span.month {
+}
+.maleo-event_list .event-date span.date {
+	font-size: 30px;
+}
+.maleo-event_list .event-date span.year {
+	font-size: 12px;
+}
+.maleo-event_list .event-content .event-name {
+	line-height: 20px;
+	margin: 0 0 5px 0;
+	font-size: 16px;
+}
+.maleo-event_list .event-content .event-name a {
+	color: #000;
+	text-decoration: none;
+}
+.maleo-event_list .event-content .event-location {
+	color: #999;
+	font-size: 13px;
+}
+
+
+/*--------------------------------------------------------------
+12.5. FAQ
+--------------------------------------------------------------*/
+
+.maleo-faq .collapsible {
+	list-style:none;
+	padding:0;
+	margin:0;
+	border-top: 0 solid #ddd;
+    border-right: 0 solid #ddd;
+    border-left: 0 solid #ddd;
+	box-shadow: none;
+}
+.maleo-faq .collapsible li {
+	list-style:none;
+	margin:0 0 5px 0;
+	background-color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.maleo-faq .collapsible li .collapsible-header {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 0px;
+	padding: 15px;
+	font-weight: 400;
+}
+.maleo-faq .collapsible li .collapsible-header h6{padding:0 0 6px 0; border-bottom:1px solid #ddd; margin:0 0 5px 0;}
+.maleo-faq .collapsible li .collapsible-header b{font-weight:normal; color:#777; font-size:14px;}
+.maleo-faq .collapsible li .collapsible-header span.fa {
+	float: right;
+}
+.maleo-faq .collapsible .active span.fa {
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.maleo-faq .collapsible li .collapsible-body {
+    display: none;
+    border-bottom: none;
+    border-top: 1px solid #efefef;
+    box-sizing: border-box;
+}
+.maleo-faq .collapsible li .collapsible-body p {
+    margin: 0;
+    padding: 15px;
+}
+
+/*--------------------------------------------------------------
+12.6. Testimonial
+--------------------------------------------------------------*/
+.maleo-testimonial,
+.maleo-testimonial_slider {
+	margin: 0 0 15px 0;
+	position: relative;
+	box-sizing: border-box;
+}
+.maleo-testimonial .items,
+.maleo-testimonial_slider .items {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5px 0;
+	margin:0 0 40px 0;
+}
+.maleo-testimonial_slider .items {
+	margin:0 0 40px 0;
+}
+.maleo-testimonial .items {
+	margin:0 0 15px 0;
+}
+.maleo-testimonial .items .profile,
+.maleo-testimonial_slider .items .profile {
+	float: left;
+	width: 90px;
+	text-align: center;
+}
+.maleo-testimonial .items .profile .pic,
+.maleo-testimonial_slider .items .profile .pic {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin: 0 auto 10px auto;
+	overflow: hidden;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.maleo-testimonial .items .profile .pic img,
+.maleo-testimonial_slider .items .profile .pic img {
+	width: 100%;
+}
+.maleo-testimonial .items .profile .name,
+.maleo-testimonial_slider .items .profile .name {
+	margin:0;
+	padding:0;
+	font-size: 12px;
+	font-weight: 700;
+}
+.maleo-testimonial .items .profile .desc,
+.maleo-testimonial_slider .items .profile .desc {
+	font-size: 12px;
+	color: #999;
+	line-height: 15px;
+	display: inline-block;
+}
+.maleo-testimonial .items .content-testi,
+.maleo-testimonial_slider .items .content-testi {
+	background: #fff;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	width: calc(100% - 101px);
+	margin: 0 0 0 99px;
+	min-height: 120px;
+	padding: 15px;
+	position: relative;
+	font-size:13px;
+}
+.maleo-testimonial .items .content-testi:after,
+.maleo-testimonial_slider .items .content-testi:after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 30px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    z-index: 9;
+    border-style: solid;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+/*--------------------------------------------------------------
+12.7. Search
+--------------------------------------------------------------*/
+.search-form input[type="search"],
+.search-form input[type="text"] {
+	background: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	padding: 25px 15px;
+	font-size: 20px;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+12.8. Not Found
+--------------------------------------------------------------*/
+.not-found {
+	padding:60px 20px 0 20px;
+	text-align:center;
+}
+.not-found h2 {
+	font-size:75px;
+	font-weight: 700;
+	margin:0;
+	padding:0;
+	color: #ccc;
+}
+.not-found h2.coming-soon {
+	font-size:35px;
+}
+.not-found h3 {
+	margin:0 0 30px 0;
+	padding:0;
+}
+.not-found .btn-to-home a {
+}
+
+/*--------------------------------------------------------------
+12.9. Gallery
+--------------------------------------------------------------*/
+.gallery-list {
+	padding: 5px;
+}
+.gallery-list a {
+	display: block;
+	float: left;
+	width:12.5%;
+	padding:3px;
+	overflow: hidden;
+	height:120px;
+}
+.gallery-list a img {
+	width:100%; height:100%;
+	
+}
+.gallery-list .mix-target {
+	display: none;
+}
+
+.gallery-filter {
+	background-color: #fff;
+	width:calc(100% - 20px);
+	margin:0;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.gallery-filter .tab {
+    padding: 0 7px;
+}
+.gallery-filter .tab a {
+    color: #ccc;
+	text-decoration: none;
+}
+.gallery-filter .tab a:hover {
+	color: #000;
+}
+.gallery-filter .tab a.active {
+	color: #000;
+}
+
+@media all and (max-width:768px){	
+.gallery-list a{width:16.6%; height:110px;}
+}
+@media all and (max-width:640px){	
+.gallery-list a{width:20%; height:105px;}
+}
+@media all and (max-width:480px){	
+.gallery-list a{width:25%; height:100px;}
+}
+@media all and (max-width:360px){	
+.gallery-list a{width:33.3%; height:100px;}
+}
+
+/*==============================================================
+13. App
+==============================================================*/
+
+/*--------------------------------------------------------------
+13.1. 학원 슬라이딩
+--------------------------------------------------------------*/
+
+.maleo-sequence {
+	padding:15px 0 25px 0;
+	text-align: center;
+	background:#fff;
+}
+.maleo-drawer {
+	padding:10px;
+	text-align: center;
+}
+.maleo-sequence .items {
+	position:relative;
+	overflow: hidden;
+}
+.maleo-drawer .items {
+	position:relative;
+	overflow:hidden;
+
+}
+.maleo-sequence .items .thumb-icon {
+	margin:0 auto 10px auto;
+	width: 300px;
+	height: 200px; line-height:200px; vertical-align:bottom;
+}
+.maleo-sequence .items .thumb-icon img {
+	width:300px; height:200px; border-radius:10px; border:2px solid #eee;
+}
+.maleo-sequence .items .thumb-icon i{font-size:200px; color:#ddd;}
+.OverFlow{overflow:hidden; width:300px; margin:0 auto 10px auto;}
+.maleo-sequence .items .heading {
+	float:left;
+	font-size: 17px;
+	color: #333;
+	font-weight:400;
+}
+.maleo-sequence .items .heading span{display:inline-block; font-weight:normal; font-size:22px; margin-right:4px; vertical-align:bottom;}
+.Color_A{color:#ed6d00;}
+.Color_B{color:#8cc63e;}
+.Color_C{color:#00bff3;}
+.Bg_A{background:#ed6d00;}
+.Bg_B{background:#8cc63e;}
+.Bg_C{background:#00bff3;}
+
+.Lamp{text-align:center; float:right; padding-top:2px;}
+.Lamp span{display:inline-block; width:18px; height:18px; border-radius:50%; margin-left:4px;}
+.Lamp .Active{border:2px solid #333;}
+.Lamp .Green{background:#00a651;}
+.Lamp .Yellow{background:#fff200;}
+.Lamp .Red{background:#cf383a;}
+
+.AttCheck{width:300px; margin:0 auto 15px auto;}
+.AttCheck .RtnGray{width:100%; font-size:14px;}
+.AttCheck .RtnGray i{margin-right:5px;}
+
+.maleo-sequence .items p {
+	color: #777;
+	font-size: 13px;
+}
+.maleo-sequence .slick-dots,
+.maleo-drawer .slick-dots {
+	width:auto;
+	position:absolute;
+	padding:0;
+	left:50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.maleo-drawer .slick-dots {
+	bottom:-10px;
+}
+.maleo-sequence .slick-dots {
+	bottom:15px;
+}
+.maleo-sequence .slick-dots li,
+.maleo-drawer .slick-dots li {
+	float:left;
+	margin:0 2px;
+	list-style:none;
+}
+.maleo-sequence .slick-dots li button,
+.maleo-drawer .slick-dots li button {
+	width:15px;
+	height:6px;
+	overflow:hidden;
+	background: #999;
+	display:inline-block;
+	font-size:0px;
+	border-width: 0;
+}
+.maleo-sequence .slick-dots li.slick-active button,
+.maleo-drawer .slick-dots li.slick-active button {
+	background: #11b2e1;
+}
+
+/*--------------------------------------------------------------
+13.2. Drawer
+--------------------------------------------------------------*/
+.drawer-icon {
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.drawer-icon li {
+	margin:5px 12px 20px 12px;
+	float: left;
+}
+.drawer-icon li .name {
+	color: #666;
+	font-size: 12px;
+	padding: 5px 0;
+}
+.drawer-icon li .icon {
+	background: #ccc;
+	width: 58px;
+	height: 58px;
+	border-radius: 10px;
+	font-size: 30px;
+	line-height: 55px;
+	color: #fff;
+}
+.drawer-icon li .icon.green-gradient {
+	background: #36E01F;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#67F754), to(#36E01F));
+	background: -webkit-linear-gradient(top, #67F754, #36E01F);
+	background: -moz-linear-gradient(top, #67F754, #36E01F);
+	background: -ms-linear-gradient(top, #67F754, #36E01F);
+	background: -o-linear-gradient(top, #67F754, #36E01F);
+}
+.drawer-icon li .icon.blue-gradient {
+	background: #269ED1;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#41B6E8), to(#269ED1));
+	background: -webkit-linear-gradient(top, #41B6E8, #269ED1);
+	background: -moz-linear-gradient(top, #41B6E8, #269ED1);
+	background: -ms-linear-gradient(top, #41B6E8, #269ED1);
+	background: -o-linear-gradient(top, #41B6E8, #269ED1);
+}
+
+/*--------------------------------------------------------------
+13.3. To Do
+--------------------------------------------------------------*/
+.todo {
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+.todo > li {
+	padding: 15px;
+	border-bottom: 1px solid #ddd;
+}
+.todo > li.heading {
+	padding: 8px 15px 8px 10px;
+	font-weight: 700;
+	color: #000; font-size:16px;
+}
+.todo li [type="checkbox"] + label {
+	color: #333;
+    font-size: 14px;
+	font-weight:bold;
+}
+.todo li .todo-time {
+	display: block;
+	font-size: 12px;
+	margin:0 0 0 35px;
+	color: #999;
+}
+.todo li .todo-icon {
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin: 5px 0 0 3px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.todo li .todo-icon img {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+13.4. Chat
+--------------------------------------------------------------*/
+.maleo-chat {
+	padding:0;
+	margin:10px 5px 55px 5px;
+	list-style: none; font-size:13px;
+}
+.maleo-chat .File{display:block; text-align:right; padding:2px 4px;}
+.maleo-chat .File i{display:inline-block; padding-right:4px;}
+.maleo-chat > li {
+	margin: 0 0 25px 0;
+}
+.maleo-chat .tl-date {
+	text-align: center;
+	color: #999;
+}
+.maleo-chat .opponent .pic,
+.maleo-chat .self .pic {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.maleo-chat .opponent{position:relative; text-align:left;}
+.maleo-chat .self{text-align:right; position:relative;}
+.maleo-chat .opponent .pic {
+	float: left;
+	margin: 0 15px 0 0;
+}
+.maleo-chat .self .pic {
+	float: right;
+}
+.maleo-chat .opponent .pic img,
+.maleo-chat .self .pic img {
+	width: 100%;
+}
+.maleo-chat .opponent .message,
+.maleo-chat .opponent .messages {
+	display:inline-block;
+	padding:6px 10px;
+	border-radius:5px;
+	box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+	text-align:justify;
+}
+.maleo-chat .self .message:after{
+	content: '';
+    position: absolute;
+    right: -6px;
+    top: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    z-index: 9;
+    border-style: solid;
+    border-width: 5px 0 5px 6px;
+    border-color: transparent transparent transparent #f0faff;	
+}
+.maleo-chat .opponent .message:after{
+	content: '';
+    position: absolute;
+    left: 59px;
+    top: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    z-index: 9;
+    border-style: solid;
+    border-width: 5px 6px 5px 0;
+    border-color: transparent #fff transparent transparent;	
+}
+.maleo-chat .self .message,
+.maleo-chat .self .messages{
+	display:inline-block;
+	padding:6px 10px; 
+	border-radius:5px;
+	box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+	text-align:justify;
+}
+.maleo-chat .opponent .message,
+.maleo-chat .opponent .messages {
+	background: #fff;
+	margin:0 0 0 0;
+}
+.maleo-chat .self .message,
+.maleo-chat .self .messages {
+	background: #f0faff;
+	margin:0;
+}
+.maleo-chat .self .messages,
+.maleo-chat .opponent .messages {
+	padding: 0;
+	list-style: none;
+}
+.maleo-chat .self .messages > li,
+.maleo-chat .opponent .messages > li {
+	padding: 10px;
+	border-bottom: 1px solid #efefef;
+}
+.maleo-chat .self .messages img,
+.maleo-chat .opponent .messages img,
+.maleo-chat .self .message img,
+.maleo-chat .opponent .message img {
+	width: 100%;
+}
+.maleo-chat .opponent .latest-seen {
+	font-size: 11px;
+	color: #999;
+	padding:4px 0 0 3px;
+	margin: 0 0 0 0;
+	text-align:left;
+	display: block;
+}
+.maleo-chat .self .latest-seen {
+	font-size: 11px;
+	color: #999;
+	padding:4px 3px 0 0;
+	margin: 0 0 0 0;
+	text-align:right;
+	display: block;
+}
+
+.chat-msg-form {
+	background: #ddd;
+	border-top: 1px solid #ccc;
+	padding: 15px 0;
+}
+.chat-msg-form span {
+	display: inline-block;
+}
+.chat-msg-form span.img-icon {
+	text-align: center;
+	width: 40px;
+	color: #666;
+}
+
+.chat-msg-form a.img-icon {
+	display: inline-block;
+	text-align: center;
+	width: 40px;
+	color: #666;
+}
+.chat-msg-form span.input-form {
+	width: calc(100% - 100px);
+}
+.chat-msg-form span.input-form input {
+	background: #fff;
+	margin: 0;
+	border-bottom: none;
+	padding: 5px;
+	height: auto;
+	box-sizing: border-box;
+}
+.chat-msg-form span.input-form input:focus {
+	border-bottom: none;
+	box-shadow: none;
+}
+.chat-msg-form span.send-button {
+	width: 50px;
+	text-align: center;
+}
+.chat-msg-form span.send-button button {
+	background: transparent;
+	border: transparent;
+	font-weight: 700;
+}
+
+/*--------------------------------------------------------------
+13.5. Profile
+--------------------------------------------------------------*/
+.profile-page .cover-container {
+	height: 290px;
+	position: relative;
+}
+.profile-page .cover-container .cover {
+	height: 200px;
+	overflow: hidden;
+}
+.profile-page .cover-container .cover img {
+	width: 100%;
+}
+.profile-page .account-container {
+	position: absolute;
+	top:165px;
+	left:0;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+}
+.profile-page .account-container .user-pic {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin:0 auto 15px auto;
+	border: 2px solid #fff;
+}
+.profile-page .account-container .user-pic img {
+	width: 100%;
+}
+.profile-page .account-container .profile-name {
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+}
+.profile-tabs {
+	width: 100%;
+	overflow: hidden; 
+	margin-bottom:4px;
+}
+.profile-tabs .tabs {
+	background: #fff;
+	box-sizing: border-box;
+}
+.profile-tabs .tabs .tab {
+	width: 50%;
+	list-style:none;
+}
+.profile-tabs .tabs .tab a {
+    color: #ccc;
+	text-decoration: none;
+}
+.profile-tabs .tabs .tab a.active {
+	font-weight: 700;
+	color: #000;
+}
+.profile-content {
+	padding: 0 15px;
+}
+.profile-content .profile-block {
+	padding: 15px 0;
+}
+.profile-content .profile-block .heading {
+	text-transform: uppercase;
+	color: #bbb;
+	font-size: 13px;
+}
+.profile-content .profile-block .profile-photo a {
+	display: inline-block;
+	width:calc(33% - 2px);
+	max-height: 70px;
+	margin:1px 0 0 0;
+	overflow: hidden;
+}
+.profile-content .profile-block .profile-photo a img {
+	width: 100%;
+}
+.friend-list {
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+.friend-list li {
+	height: 80px;
+	border-bottom: 1px solid #efefef;
+}
+.friend-list li .avatar {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+	margin:10px 0 0 0;
+}
+.friend-list li .avatar img {
+	width: 100%;
+}
+.friend-list li .friend-name {
+	width: calc(100% - 70px);
+	margin: 0px 0 0 70px;
+	padding: 25px 0 0 0;
+}
+
+/*--------------------------------------------------------------
+13.6. Lockscreen
+--------------------------------------------------------------*/
+.lockscreen {
+	width: 100%;
+}
+.lockscreen .app-time {
+	text-align: center;
+	margin:0 0 20px 0;
+	line-height: 32px;
+}
+.lockscreen .app-time .clock {
+	font-weight: 700;
+	color: #fff;
+	font-size: 50px;
+}
+.lockscreen .app-time .date {
+	color: #ddd;
+}
+.app-timeline {
+	padding: 10px;
+}
+.app-timeline .user-pic {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.app-timeline .user-pic img {
+	width: 100%;
+}
+.app-timeline .app-content {
+	float: right;
+	width: calc(100% - 65px);
+}
+.app-timeline .app-content .username {
+	font-weight: 700;
+}
+.app-timeline .app-content .time {
+	display: block;
+	text-align: right;
+	color: #999;
+	font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+13.7. Calendar
+--------------------------------------------------------------*/
+.maleo-calendar {
+	padding: 15px;
+}
+.maleo-calendar .month-name {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700; month-name
+}
+.maleo-calendar .month-name a{color:#548aa2; display:inline-block; margin:0 7px; font-size:20px;}
+.maleo-calendar .month-name span{color:#aaa; display:inline-block; margin:0 7px; font-size:20px;}
+.maleo-calendar table {
+	text-align: center;
+}
+.maleo-calendar table thead {
+	border-bottom: none;
+	font-weight: 700;
+}
+.maleo-calendar table td {
+	padding: 5px 7px;
+	text-align: center;
+}
+.maleo-calendar table a{color:#666;}
+.maleo-calendar table td.prev-month {
+	color: #bbb;
+}
+.maleo-calendar table td.current-date {
+	font-weight: 700;
+	background: #548aa2; color:#fff200;
+}
+.maleo-calendar table td.current-date a{
+	color:#fff200;
+}
+.maleo-calendar_schedule {
+	padding: 0;
+	margin:0;
+	list-style: none;
+}
+.maleo-calendar_schedule li {
+	border-bottom: 1px solid #efefef;
+	padding: 20px 15px;
+}
+.maleo-calendar_schedule li .schedule-name {
+	font-size: 16px;
+	margin:0 0 10px 0;
+}
+.maleo-calendar_schedule li .schedule-time {
+	color: #999;
+	font-size: 13px;
+}
+.maleo-calendar_schedule li b{color:#666; display:inline-block; margin:0 3px;}
+.maleo-calendar_schedule li .schedule-time i.fa {
+	font-size: 20px;
+	display: inline-block;
+	margin:0 10px 0 0;
+}
+.maleo-calendar_schedule li .schedule-icon {
+	float: right;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 50%;
+	overflow: hidden;
+	color: #11b2e1;
+	background: #efefef;
+	margin-left: 5px;
+}
+.maleo-calendar_schedule li .schedule-icon img {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+13.8. Login/Signup
+--------------------------------------------------------------*/
+.app-desc {
+	color: #666;
+	font-size: 13px;
+}
+.signup .form-content {
+	padding: 15px;
+}
+
+
+/*==============================================================
+14. Footer
+==============================================================*/
+.footer {
+	background: #ddd;
+	color: #777;
+	text-align:center;
+	font-size: 13px;
+	padding: 20px 15px;
+	margin:15px 0 0 0;
+	box-shadow: 0px -2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.footer .heading {
+	font-size: 22px;
+	font-weight: 700;
+	margin:0;
+	color: #444;
+}
+.footer p {
+	margin-bottom: 17px;
+}
+.social-footer a {
+	display:inline-block;
+	margin:0 5px;
+	font-size:20px;
+	color: #666;
+}
+.footer .copyright {
+	color: #999;
+	padding: 15px 0 0 0;
+	margin: 15px 0 0 0;
+	border-top: 1px solid #ccc;
+}
+#to-top {
+	position: fixed;
+	right: 30px;
+	bottom:-100px;
+	width: 45px;
+	height: 40px;
+	text-align: center;
+	overflow: auto;
+	padding: 2px 0 0 0;
+	font-size: 20px;
+	cursor: pointer;
+	background: #870404;
+	background:rgba(17,178,225,0.5);
+	color: #fff;
+	-moz-transition: all .7s ease-in-out;
+	-o-transition: all .7s ease-in-out;
+	-webkit-transition: all .7s ease-in-out;
+	transition: all .7s ease-in-out;
+	z-index: 111;
+	border-radius: 5px;
+}
+
+/*==============================================================
+15. Responsive
+==============================================================*/
+@media screen and (min-width: 768px) {
+	.featured-slider .featured-item {
+		height:500px;
+	}
+}
+
+@media screen and (max-width: 374px) {
+	.featured-slider .featured-item {
+		height:200px;
+	}
+	.featured-slider .featured-item .caption {
+		padding:2px 15px 25px 15px;
+	}
+}
+
+/*==============================================================
+	메인 글 리스트
+==============================================================*/
+.WrapHome{padding:12px 0;}
+.WrapList{background:#fff; border-top:1px solid #ccc; border-bottom:1px solid #ccc; margin-bottom:12px;}
+.WrapList:last-child{margin-bottom:0;}
+.WrapList *{margin:0; padding:0;}
+
+.NoticeRecent *{margin:0; padding:0;}
+.NoticeRecent{background:#fff; padding:12px 3.5% 6px 3.5%; margin-bottom:10px; border-top:1px solid #d6d6d6; border-bottom:1px solid #d6d6d6;}
+.NoticeRecent .Title{position:relative; margin-bottom:4px; font-size:14px; color:#333;}
+.NoticeRecent .Title a{position:absolute; right:0; top:0; color:#999; font-size:11px; font-weight:normal;}
+.NoticeRecent .List li{line-height:36px; border-bottom:1px dashed #ddd; list-style:none;}
+.NoticeRecent .List li a{display:block; color:#444; font-size:13px; width:98%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; position:relative; padding-left:12px;}
+.NoticeRecent .List li span{display:inline-block; width:4px; height:4px; background:#555; position:absolute; top:17px; left:0;}
+.NoticeRecent .List li:last-child{border-bottom:0;}
+
+.ListTop{border-bottom:1px solid #eee;}
+.ListTop .Bg1{background:#cf383a;}
+.ListTop .Bg2{background:#11b2e1;}
+.ListTop .Bg3{background:#8cc63e;}
+.ListTop .Bg4{background:#ed6d00;}
+.ListTop .Bg5{background:#fff200; color:#3b1e1e;}
+.ListTop .Left{width:70px; height:62px; text-align:center; color:#fff; border-radius:0 20px 20px 0;}
+.ListTop .Left img{width:48px; height:48px; border-radius:50%; vertical-align:middle;}
+.ListTop .Right{padding:0 8px 0 5px; font-size:12px; color:#999; line-height:1.6;}
+.ListTop .Right b{font-size:14px; color:#111;}
+.ListTop .Right span{display:inline-block; padding:0 5px; font-size:10px;}
+.WrapList .Content{padding:18px 12px; line-height:1.5; text-align:justify; font-size:15px;}
+.WrapList .Content .ContentTxt{padding:10px 0;}
+.WrapList .Content img{width:100%;}
+.WrapList .Content .Link{color:#111; display:block;}
+.WrapList .Content .Score{padding-top:5px; color:#111;}
+.WrapList .Content .Score b{font-size:24px; color:#ed1c24; display:inline-block; padding-left:5px;}
+.WrapList .Content .Count{padding-top:5px;}
+.WrapList .Content .Count b, .WrapList .Content .Count strong{font-size:24px; display:inline-block; padding:0 5px;}
+.WrapList .Content .Count b{color:#ed1c24;}
+.WrapList .Content .Count strong{color:#999;}
+
+.WrapList .ReplyCount{text-align:right; font-size:12px; color:#777; padding-bottom:5px;}
+.WrapList .ReplyCount span{display:inline-block; padding:0 4px;}
+.WrapList .Center{text-align:center;}
+.ListBottom{border-top:1px solid #ddd;}
+.ListBottom td{text-align:center; font-size:13px; height:45px; background:#f9f9f9; border-right:1px solid #ddd;}
+.ListBottom td:last-child{border-right:none;}
+.ListBottom i{display:inline-block; padding-right:4px; font-size:15px;}
+.ListBottom a{color:#555; text-decoration:none; display:block;}
+
+/**** 표정 ****/
+.FaceArea{position:relative;}
+.FaceIcon{position:absolute; width:315px; padding:6px 0 5px 0; background:rgba(90,90,90,0.9); left:1px; top:-48px; border-radius:2px; text-align:center;}
+.FaceIcon a{display:inline-block;}
+.FaceIcon img{height:30px; margin:0 7px;}
+
+.DivEmoticon{position:fixed; width:120px; height:120px; left:50%; top:50%; margin-left:-60px; margin-top:-60px; z-index:100;}
+.DivEmoticon img{width:120px; height:120px;}
+
+/*==============================================================
+17. 하단 고정 네비
+==============================================================*/
+.NaviBottom{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#606c88+0,3f4c6b+100;Grey+3D+%232 */
+background: #606c88; /* Old browsers */
+background: -moz-linear-gradient(top,  #606c88 0%, #3f4c6b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #606c88 0%,#3f4c6b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #606c88 0%,#3f4c6b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=0 ); /* IE6-9 */
+
+position:fixed; width:100%; height:55px; left:0; bottom:0; color:#fff;
+}
+.NaviBottom ul{overflow:hidden; padding:0; margin:0;}
+.NaviBottom li{list-style:none; float:left; width:20%; text-align:center;}
+.NaviBottom a{font-size:11px; color:#fff; text-decoration:none; display:block;}
+.NaviBottom div{line-height:26px; font-size:19px; padding-top:4px; margin:0; position:relative;}
+.NaviBottom .Label{position:absolute; display:block; width:20px; height:20px; line-height:20px; background:rgba(255,242,0,0.95); text-align:center; color:#111; border-radius:50%; font-size:10px; top:3px; left:50%; margin-left:3px;}
+
+.NaviBottomClass{background:#548aa2; position:fixed; width:100%; height:44px; left:0; bottom:0; line-height:44px; font-size:14px; }
+.NaviBottomClass ul{overflow:hidden; padding:0; margin:0;}
+.NaviBottomClass li{list-style:none; float:left; width:20%; text-align:center;}
+.NaviBottomClass a{text-decoration:none; display:block; color:#fff;}
+.NaviBottomClass a.active{color:#fff200;}
+
+.NaviBottomDiary{background:#548aa2; position:fixed; width:100%; height:44px; left:0; bottom:0; border-top:1px solid #ccc; line-height:44px; font-size:14px; }
+.NaviBottomDiary ul{overflow:hidden; padding:0; margin:0;}
+.NaviBottomDiary li{list-style:none; float:left; width:20%; text-align:center;}
+.NaviBottomDiary a{text-decoration:none; display:block; color:#fff;}
+.NaviBottomDiary a.active{color:#fff200;}
+
+.NaviBottomJang{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#606c88+0,3f4c6b+100;Grey+3D+%232 */
+background: #606c88; /* Old browsers */
+background: -moz-linear-gradient(top,  #606c88 0%, #3f4c6b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #606c88 0%,#3f4c6b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #606c88 0%,#3f4c6b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=0 ); /* IE6-9 */
+
+position:fixed; width:100%; height:55px; left:0; bottom:0; color:#fff;
+}
+.NaviBottomJang ul{overflow:hidden; padding:0; margin:0;}
+.NaviBottomJang li{list-style:none; float:left; width:25%; text-align:center;}
+.NaviBottomJang a{font-size:11px; color:#fff; text-decoration:none; display:block;}
+.NaviBottomJang div{line-height:26px; font-size:19px; padding-top:4px; margin:0; position:relative;}
+.NaviBottomJang .Label{position:absolute; display:block; width:20px; height:20px; line-height:20px; background:rgba(255,242,0,0.95); text-align:center; color:#111; border-radius:50%; font-size:10px; top:3px; left:50%; margin-left:3px;}
+
+/*==============================================================
+	글쓰기
+==============================================================*/
+.TxtWrite{position:fixed; left:0; right:0; top:100px; bottom:0; border:0; padding:15px 12px; background:#fff; border-top:1px solid #eee;}
+.BoxNoticeCheck{padding:10px 3.5%; background:#fff; text-align:right;}
+.BoxNoticeCheck input, .BoxNoticeCheck label{margin:0; padding:0;}
+.BoxNoticeCheck label{padding-left:30px; color:#333;}
+
+.WrapAdd{position:fixed; left:0; top:160px; width:100%; padding:0 3.5%;}
+.BoxAdd{overflow:hidden; padding:11px 0; background:#fafafa; border:1px solid #ddd; height:58px; box-sizing:border-box; margin-bottom:12px;}
+.BoxAdd:last-child{margin-bottom:0;}
+.BoxAdd .Left{float:left; width:48px; text-align:center; line-height:34px; color:#548aa2; font-size:21px;}
+.BoxAdd .Mid{float:left; width:calc(100% - 130px); font-size:14px; padding-left:4px; box-sizing:border-box; text-align:left;}
+.BoxAdd .Mid2{float:left; width:calc(100% - 60px); font-size:14px; padding-left:4px; box-sizing:border-box; text-align:left;}
+.BoxAdd .Mid2 h6{font-size:13px; color:#548aa2; padding-bottom:2px;}
+.BoxAdd .Mid2 h6 .TxtComplete{font-size:12px; color:#777; padding-left:4px; font-weight:normal;}
+.BoxAdd .Mid2 .Subject{width:100%; overflow:hidden; text-overflow: ellipsis; white-space:nowrap; font-size:13px; color:#333;}
+.BoxAdd .Mid h6{font-size:13px; color:#548aa2; padding-bottom:2px;}
+.BoxAdd .Mid h6 .TxtComplete{font-size:12px; color:#777; padding-left:4px; font-weight:normal;}
+.BoxAdd .Mid .Subject{width:100%; overflow:hidden; text-overflow: ellipsis; white-space:nowrap; font-size:13px; color:#333;}
+.BoxAdd .Right{float:right; width:80px; font-size:12px; text-align:center; line-height:34px;}
+.BoxAdd .Right a{color:#777; font-weight:bold;}
+.BoxAdd .Right span{color:#aaa; display:inline-block; margin:0 2px; font-size:10px;}
+
+.BoxInput *{padding:0; margin:0;}
+.BoxInput{position:fixed; left:0; bottom:-1px; width:100%;  border-top:1px solid #ddd; background:#fff;}
+.BoxInput a{color:#444;}
+.TopIcon{overflow:hidden; height:42px; border-bottom:1px solid #ccc;}
+.TopIcon .Left{float:left; overflow:hidden; width:calc(100% - 44px);}
+.TopIcon .Left li{list-style:none; float:left; width:55px; line-height:40px; text-align:center; font-size:18px;}
+.TopIcon .Left li a{display:block;}
+.TopIcon .Right{float:right; width:44px; height:42px; display:inline-block; line-height:40px; text-align:center; font-size:20px; font-weight:100; border-left:1px solid #ddd;}
+
+.TopText{overflow:hidden; height:42px; border-bottom:1px solid #ccc;}
+.TopText .Left{float:left; overflow:hidden; width:calc(100% - 44px);}
+.TopText .Left li{list-style:none; float:left; width:55px; line-height:40px; text-align:center; font-size:17px;}
+.TopText .Left li a{display:block;}
+.TopText .Left li a.Active{color:#11c5d4;}
+.TopText .Right{float:right; width:44px; height:42px; display:inline-block; line-height:40px; text-align:center; font-size:32px; font-weight:100; border-left:1px solid #ddd; background:#aaa; color:#fff;}
+
+.BottomIcon{overflow:hidden; background:#fafafa;}
+.BottomIcon li{list-style:none; float:left; width:25%; height:80px; text-align:center; font-size:22px;}
+.BottomIcon li a{display:block; color:#444;}
+.BottomIcon li i{display:inline-block; height:50px; line-height:55px;}
+.BottomIcon li div{font-size:14px; height:30px; line-height:15px;}
+
+/*==============================================================
+19. 메인 공지 및 과제, To Do List, 과제하기, 1:1 상담, 내 정보
+==============================================================*/
+.MainNotice{margin-top:10px; background:#fff; padding:10px 3%;}
+.ListNotice{border-bottom:1px solid #ddd; position:relative; height:50px; line-height:50px; padding-left:50px;}
+.ListNotice .Left{position:absolute; width:50px; height:50px; top:0; left:0; text-align:center;}
+.ListNotice .Right{padding-left:8px; padding-right:5px;}
+.ListNotice span{display:inline-block; width:32px; height:32px; line-height:32px; color:#fff;}
+.ListNotice  a{text-decoration:none; color:#666; font-size:13px; white-space:nowrap; overflow:hidden; word-wrap:normal; text-overflow:ellipsis; display:block;}
+.ListNotice b{color:#222; padding-right:4px;}
+
+.ListNotice_2 *{margin:0; padding:0;}
+.ListNotice_2{background:#fff; padding:6px 3.5%; font-size:13px; margin:0; line-height:1.5; text-align:justify;}
+.ListNotice_2 li{list-style:none; border-bottom:1px solid #ddd; padding:10px 0 10px 0;}
+.ListNotice_2 li:last-child{border-bottom:0;}
+.ListNotice_2 li a{color:#333; display:block; width:100%; overflow:hidden; text-overflow: ellipsis; white-space:normal; word-wrap:break-word; display:-webkit-box; -webkit-line-clamp:3; max-height:40px;}
+.ListNotice_2 .Date{font-size:12px; color:#999; padding-top:7px;}
+.ListNotice_2 .Date .Img{width:25px; height:25px; border-radius:50%; vertical-align:bottom; margin-right:6px;}
+
+.WorkCheck{background:#fff; padding:10px 3%;}
+.WorkComplete{background:#f9f9f9; padding:10px 3%;}
+.WorkCheck h4, .WorkComplete h4{color:#333; font-size:18px; padding:5px 0 10px 5px; color:#000;}
+.WorkCheck h4.Complete{color:#11b2e1;}
+.ListCheck{position:relative; height:60px; border-bottom:1px solid #ddd; padding-left:82px; padding-right:30px;}
+.ListCheck .Left{position:absolute; width:65px; height:50px; top:20px; left:0; text-align:center; font-size:12px; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ListCheck span{display:inline-block; width:32px; height:32px; line-height:32px; color:#fff;}
+.ListCheck .Right{position:absolute; width:32px; height:30px; top:18px; right:0; text-align:center;}
+.ListCheck .Mid{text-decoration:none; color:#666; font-size:13px; padding:9px 0 0 0}
+.ListCheck b{color:#333; font-size:14px;}
+
+.WorkToday{background:#fff; padding:10px 3%;}
+.WorkToday h4{color:#333; font-size:18px; padding:5px 0 10px 5px; color:#000; position:relative;}
+.WorkToday h4 span{display:inline-block; font-weight:normal; padding-left:5px; font-size:16px;}
+.WorkToday h4 .IconMonth{position:absolute; right:0; top:5px; color:#333;}
+.ListToday{position:relative; height:60px; border-bottom:1px solid #ddd; padding-left:130px; padding-right:30px;}
+.ListToday .Left{position:absolute; width:110px; height:59px; bottom:0; left:0; text-align:center; font-size:12px; font-weight:bold; background:#f9f9f9; padding-top:12px;}
+.ListToday span{display:inline-block; width:32px; height:32px; line-height:32px; color:#fff;}
+.ListToday .Right{position:absolute; width:32px; height:30px; top:18px; right:0; text-align:center;}
+.ListToday .Mid{text-decoration:none; color:#333; font-size:13px; line-height:59px; font-size:18px;}
+.ListToday b{color:#333; font-size:14px;}
+
+/************ 학부모 ***********/
+.ListTodayParent{position:relative; height:59px; border-bottom:1px solid #ddd; padding-left:105px;}
+.ListTodayParent .Left{position:absolute; width:90px; line-height:53px; bottom:0; left:0; text-align:center; font-size:14px; font-weight:bold; background:#f9f9f9; color:#444;}
+.ListTodayParent h6{padding-bottom:3px; font-size:15px; color:#444;}
+.ListTodayParent .Mid{color:#666; font-size:14px; line-height:1.6; padding-top:10px;}
+
+.HomeWork{background:#fff; padding:0 3% 10px 3%;}
+.HomeWork h4{color:#333; font-size:16px; padding:20px 0 10px 10px; border-bottom:1px solid #aaa; margin-bottom:5px;}
+.ListWork{position:relative; border-bottom:1px dashed #ccc; padding:10px 0 10px 60px;}
+.ListWork .Left{position:absolute; width:50px; height:50px; top:10px; left:0; text-align:center;}
+.ListWork .Left span{display:inline-block; width:32px; height:32px; line-height:32px; color:#fff;}
+.ListWork .Right{padding:0 0 0 0;}
+.ListWork .Title{color:#999; padding:0 0 12px 0;}
+.ListWork .Bold{font-weight:bold; color:#444;}
+.ListWork b{color:#333; font-size:14px;}
+.ListWork a{text-decoration:none;}
+.ListWork .RtnRed, .ListWork .RtnBlue, .ListWork .RtnOff{font-size:13px; width:80px; line-height:30px;}
+.ListWork small{font-size:11px;}
+
+.Counsel{background:#fff; padding:10px 3%;}
+.ListCounsel{position:relative; border-bottom:1px solid #ddd; padding:10px 30px 10px 60px; display:block; text-decoration:none; color:#333;}
+.ListCounsel .Left{position:absolute; width:50px; height:50px; top:10px; left:0; text-align:center;}
+.ListCounsel .Left span{display:inline-block; width:32px; height:32px; line-height:32px; color:#fff;}
+.ListCounsel .Right{position:absolute; color:#fff; background:#c00; width:22px; height:22px; line-height:22px; text-align:center; font-size:11px; border-radius:50%; top:17px; right:5px;}
+.ListCounsel .Title{padding:0 0 5px 0; font-size:14px; font-weight:bold;}
+.ListCounsel .TxtArea{color:#555; font-size:13px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.ListCounsel small{color:#999;}
+
+.Mypage{background:#fff; padding:10px 3%;}
+.Mypage h4{font-size:16px; color:#333; padding:10px 0;}
+.MyTop{overflow:hidden; margin:0 0 20px 0;}
+.MyTop img{float:left; width:110px; height:110px; border-radius:50%; margin:0 20px 0 0;}
+.MyTop .Right{float:left; font-size:13px; padding:5px 0 0 0;}
+.MyTop .Right h3{font-size:18px; color:#333; padding:0 0 2px 0;}
+
+.TbCalendar{font-size:12px; border-spacing:1px; border-collapse:separate;}
+.TbCalendar th{background:#aaa; color:#fff; text-align:center; padding:0; height:22px; width:14.29%;}
+.TbCalendar .Sun{background:#cf383a;}
+.TbCalendar .Sat{background:#5dcdff;}
+.TbCalendar td{text-align:center; vertical-align:bottom; padding:2px 3px; height:55px; position:relative;}
+.TbCalendar td span{position:absolute; top:0; left:3px;}
+.TbCalendar td a{text-decoration:none; color:#fff; font-size:10px; display:block; text-align:center; border-radius:2px; margin-top:1px; padding:1px 0;}
+.TbCalendar .Row1{background:#fafafa;}
+.TbCalendar .Row2{background:#f4f4f4;}
+.CalTop{text-align:center; font-size:24px; padding:0 0 10px 0; color:#333;}
+.CalTop a, .CalTop span{padding:0 12px; color:#555;}
+
+/*==============================================================
+20. 회원가입
+==============================================================*/
+.Member{background:#fff; padding:10px 3%;}
+.Member a{text-decoration:none;}
+.Member .BtnGray2, .Member .BtnBlue{width:100px; line-height:32px; font-size:14px;}
+.Member .BtnBlue{background:#548aa2;}
+.MyPhoto{text-align:center; margin-bottom:10px; background:url(../images/BgMember.jpg) no-repeat 100% 0; background-size:160%; padding:17px 0 10px 0;}
+.MyPhoto img{width:120px; height:120px; border-radius:50%; border:4px solid rgba(0,0,0,0.1);}
+.TbMember{font-size:12px; border-top:1px solid #666;}
+.TbMember th{border-bottom:1px solid #ccc; padding:0 8px 0 0; text-align:right; width:22%; color:#333; font-weight:bold;}
+.TbMember td{border-bottom:1px solid #ccc; padding:6px 6px; height:42px;}
+.TbMember .Input{margin:0; border:1px solid #ddd; height:30px; line-height:30px; padding-left:5px; box-sizing:border-box; width:100%;}
+.TbMember .TxtArea{margin:0; border:1px solid #ddd; height:100px; padding:5px; box-sizing:border-box; width:100%;}
+.TbMember .browser-default{margin:0; border:1px solid #ddd; height:30px; line-height:30px; padding-left:5px; box-sizing:border-box; font-size:12px; display:inline-block;}
+.TbMember .Btn{display:inline-block; height:30px; line-height:30px; border:1px solid #bbb; background:#f2f2f2; text-align:center; font-size:12px; color:#444; padding:0; margin:0; vertical-align:middle;}
+.TbMember a img{width:100%;}
+.TbMember .Row1{position:relative; padding-right:94px;}
+.TbMember .Row1 .Btn{position:absolute; right:0; top:0;}
+.TbMember .Row1 .browser-default{position:absolute; right:0; top:0;}
+.TbMember .Birth .Input{text-align:center; padding-left:0;}
+.TbMember label{color:#555;}
+
+.Member input:not([type]):focus:not([readonly]),
+.Member input[type=text]:focus:not([readonly]),
+.Member input[type=password]:focus:not([readonly]),
+.Member select:focus:not([readonly])
+{
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 0 0 0 #eee;
+}
+
+/*==============================================================
+	클래스 리스트, 강사 리스트
+==============================================================*/
+.WrapClass *{margin:0; padding:0;}
+.WrapClass{padding:12px 10px;}
+.WrapClass li{list-style:none;}
+.ListClass{text-align:center; overflow:hidden;}
+.ListClass li{float:left; width:19%; height:160px; border:1px solid #ccc; background:#fff; box-sizing:border-box; border-radius:5px; margin:0 1.25% 1.25% 0; font-size:14px; vertical-align:middle;}
+.ListClass li:nth-child(5n){margin-right:0;}
+
+.ListClass li a{color:#666;}
+.ListClass .Bg1{background:#cf383a;}
+.ListClass .Bg2{background:#11b2e1;}
+.ListClass .ColorWhite{color:#fff;}
+.ListClass .Color1{color:#cf383a;}
+.ListClass .Color2{color:#11b2e1;}
+.ListClass li img{width:100%; height:98px; border-radius:4px 4px 0 0; border-bottom:1px solid #eee;}
+.ListClass h5{font-size:15px; color:#222; line-height:26px; font-family: 'Jeju Gothic', serif; font-weight:normal;}
+.ListClass .Bottom{border-top:1px solid #eee; line-height:28px; border-radius:0 0 4px 4px; overflow:hidden; background:#548aa2;}
+.ListClass .Bottom a{color:#fff;}
+.ListClass .Bottom .Left{float:left; width:50%; border-right:1px solid #fff;}
+.ListClass .Bottom .Right{float:right; width:50%;}
+
+.BtnClass{margin-top:20px; border-top:1px solid #ccc;}
+.BtnClass li{padding-left:12px; line-height:44px; border-bottom:1px solid #ccc;}
+.BtnClass a{color:#222;  font-family: 'Jeju Gothic', serif;}
+.BtnClass i{width:25px;}
+
+@media all and (max-width:768px) {	
+.ListClass li{float:left; width:23.5%; height:160px; margin:0 2% 2% 0; font-size:14px;}
+.ListClass li:nth-child(5n){margin-right:2%;}
+.ListClass li:nth-child(4n){margin-right:0;}
+}
+
+@media all and (max-width:640px) {	
+.ListClass li{float:left; width:32%; height:160px; margin:0 2% 2% 0; font-size:14px;}
+.ListClass li:nth-child(5n){margin-right:2%;}
+.ListClass li:nth-child(4n){margin-right:2%;}
+.ListClass li:nth-child(3n){margin-right:0;}
+}
+
+@media all and (max-width:480px) {	
+.ListClass li{float:left; width:48%; height:160px; margin:0 4% 4% 0; font-size:14px;}
+.ListClass li:nth-child(5n){margin-right:4%;}
+.ListClass li:nth-child(4n){margin-right:4%;}
+.ListClass li:nth-child(3n){margin-right:4%;}
+.ListClass li:nth-child(2n){margin-right:0;}
+}
+
+/*==============================================================
+	클래스 홈
+.BgClass{height:150px; background:url(../images/NoClass.png) no-repeat; background-size:100%; background-position:50% 50%;}
+==============================================================*/
+
+/*==============================================================
+	문제풀기
+==============================================================*/
+.TbClassTip{background:#fff; position:fixed; left:0; right:0; top:54px;}
+.TbClassTip tr{border-bottom:1px solid #ddd;}
+.TbClassTip .Left{padding-left:10px; color:#fff; background:#444; border-radius:0;}
+.TbClassTip .Right{text-align:right; padding-right:10px; font-size:13px; color:#fff; background:#444; border-radius:0;}
+.TbClassTip .TxtTip{padding:10px; font-size:13px; text-align:justify; color:#ed1c24; height:90px;}
+
+.WrapChoose{margin-top:10px; border-top:1px solid #ddd; background:#fff; margin-top:130px;}
+.TbChooseTop{border-bottom:1px solid #ddd; height:40px;}
+.TbChooseTop .Left{padding-left:10px; text-align:left;}
+.TbChooseTop .Right{padding-right:10px; text-align:right;}
+.TbChooseTop .Right a{color:#444; padding:0 5px; display:inline-block; font-size:15px;}
+.TbChooseTop .Right span{color:#aaa; font-size:15px;}
+
+.TbChoose{border-spacing:3px; border-collapse:separate; border-bottom:1px solid #eee; font-size:16px;}
+.TbChoose th, .TbChoose td{text-align:center; border-bottom:1px solid #eee; border-radius:0;}
+.TbChoose th{width:35px; color:#333; font-size:18px;}
+.TbChoose .Check{width:42px;}
+.TbChoose .Check i{color:#9ccc65; font-size:22px;}
+.TbChoose .Icon a{display:inline-block; width:25px; height:20px; margin:0 2px;}
+.TbChoose .Icon i{font-size:26px;}
+.TbChoose .Icon .Tip{color:#ed6d00;}
+.TbChoose .Icon .File{color:#11b2e1;}
+.TbChoose .Number a{display:inline-block; width:24px; height:24px; line-height:22px; text-align:center; border:1px solid #999; border-radius:50%; color:#333; margin:0 2px;}
+.TbChoose .Number a.active{background:#cf383a; border:1px solid #cf383a; color:#fff;}
+.TbChoose .Number a.Correct{background:#9ccc65; border:1px solid #9ccc65; color:#fff;}
+
+.BtnChoose{text-align:center; padding:8px 0; position:fixed; background:#fff; border-top:1px solid #ccc; bottom:0; left:0; right:0;}
+.BtnChoose a{width:100px;}
+
+/*==============================================================
+	다이어리 내 과제
+==============================================================*/
+.WrapDiary{padding:0 0 0 0;}
+
+/*==============================================================
+	To Do List / 학원장 클래스 등록
+==============================================================*/
+.WrapTodo{padding:0 0 0 0;}
+.WrapMytodo{background:#fff; padding:15px 3%;}
+
+.TbMytodo th{width:60px; font-size:13px; text-align:right; padding-right:15px;}
+.TbMytodo td{height:30px; padding:4px 0; font-size:13px;}
+.TbMytodo input{border:1px solid #ddd; height:30px; padding-left:10px; box-sizing:border-box; margin:0;}
+.TbMytodo textarea{border:1px solid #ddd; padding:6px; box-sizing:border-box; height:80px;}
+.TbMytodo .Txt{font-size:13px; padding-top:4px;}
+
+.Line{margin:15px 0; height:1px; background:#ccc;}
+.BoxAlram{padding:0 10px;}
+.BoxAlram h6{padding-bottom:4px;}
+.BoxAlram span{color:#777; font-size:13px;}
+.BoxAlramCheck{padding:5px 0 0 5px; line-height:2;}
+.BoxAlramCheck label{padding:0; padding-left:28px; color:#333;}
+
+.Input{border:1px solid #ddd; height:30px; padding-left:10px; box-sizing:border-box; margin:0; width:100%; display:inline-block;}
+.Select{border:1px solid #ddd; height:30px; padding-left:10px; box-sizing:border-box; margin:0; width:100%; display:inline-block;}
+.TbMytodo .DayX span{display:inline-block; margin-right:20px; padding-left:5px;}
+.TbMytodo .Care{padding:5px 0 0 0; font-size:13px; color:#C00;}
+
+.ListAlram{text-align:center;margin:0; padding:0;}
+.ListAlram *{margin:0; padding:0;}
+.ListAlram li{list-style:none; line-height:38px;}
+.ListAlram .Select{width:60px; padding-left:10px; margin:0 4px 0 8px;}
+
+/*==============================================================
+	내 성적
+==============================================================*/
+.TitleGrade{background:#444; color:#fff; padding:10px 12px; font-weight:normal; font-size:14px;}
+.WrapGrade{background:#fff; padding:15px 3%;}
+.TbAttend{border-top:1px solid #ddd; border-left:1px solid #ddd; font-size:13px; margin-bottom:20px;}
+.TbAttend th, .TbAttend td{text-align:center; border-bottom:1px solid #ddd; border-right:1px solid #ddd;}
+.TbAttend th{background:#f9f9f9; font-weight:normal; width:20%;}
+.InputGrade input{margin:0; width:110px; height:30px; border:1px solid #ccc; padding-left:10px; box-sizing:border-box;}
+.InputGrade input:first-child{margin-left:5px;}
+.Line2{margin:30px 0; height:1px; background:#ccc;}
+
+/*==============================================================
+	검색하기
+==============================================================*/
+.WrapSearch{padding:62px 0 0 0;}
+.BoxSearch{background:#fff; position:fixed; width:100%; height:50px; line-height:48px;  padding:0 72px 0 50px; border-bottom:1px solid #ccc; z-index:999;}
+.BoxSearch .Left, .BoxSearch .Right{position:absolute;}
+.BoxSearch .Left{left:0; top:0; width:44px; text-align:center;}
+.BoxSearch .Left i{color:#444; font-size:20px;}
+.BoxSearch .Right{right:0; top:0; width:70px; text-align:center;}
+.BtnSearch{display:inline-block; width:52px; height:30px; line-height:30px; background:#444; text-align:center; color:#fff; font-size:14px; border-radius:2px;}
+.BoxSearch input{margin:0; border:0; width:100%;}
+
+/*==============================================================
+	글 읽기
+==============================================================*/
+.BoxReply{border-top:1px solid #ccc; background:#fbfbfb;}
+.ReplyCounta{padding:10px 3% 0 3%; border-bottom:1px solid #ddd; font-size:13px; color:#666;}
+.ReplyCounta b{display:inline-block; padding-right:6px;}
+.ListReply{border-bottom:1px solid #ddd;}
+.ListReply:last-child{border-bottom:0;}
+.ListReply .Top{position:relative; height:60px; padding-left:65px;}
+.ListReply .Left{position:absolute; width:60px; height:60px; padding-top:8px; left:0; top:0; text-align:center;}
+.ListReply .Left img{width:44px; height:44px; border-radius:50%;}
+.ListReply .Right{padding-top:14px; color:#999; font-size:12px; line-height:2.2;}
+.ListReply .Right h6{color:#333; font-size:14px;}
+.ListReply .Bottom{padding:15px 4%; text-align:justify; font-size:14px;}
+
+.SendReply{position:fixed; left:0; bottom:0; width:100%; height:54px; line-height:54px; border-top:1px solid #aaa; background:#fff; padding:0 78px 0 40px;}
+.SendReply input{margin:0; border:1px solid #ddd; border-radius:4px; height:34px; padding-left:10px; box-sizing:border-box;}
+.SendReply .Left, .SendReply .Right{position:absolute;}
+.SendReply .Left{left:0; top:0; width:40px; font-size:22px; text-align:center;}
+.SendReply .Left a{color:#777; display:inline-block; margin:0 3px;}
+.SendReply .Right{right:0; top:0; width:78px; text-align:center;}
+.BtnSend{display:inline-block; width:68px; height:34px; line-height:34px; background:#548aa2; color:#fff; text-align:center; border-radius:4px; font-size:14px;}
+
+.ReplyEmotion{margin-top:10px; position:relative;}
+.ReplyEmotion img{width:40px; height:40px; border-radius:50%;}
+.ReplyEmotion .Emotion{width:20px; height:20px; position:absolute; bottom:-2px; right:-2px;}
+.EmotionPlus, .EmotionList{position:relative; width:40px; height:40px; display:inline-block; margin-right:10px; margin-bottom:10px;}
+
+.FaceIconRead{position:absolute; width:315px; padding:6px 0 5px 0; background:rgba(90,90,90,0.9); left:0; top:-50px; border-radius:2px; text-align:center; z-index:100;}
+.FaceIconRead a{display:inline-block;}
+.FaceIconRead img{width:30px; height:30px; margin:0 7px;}
+
+/*==============================================================
+	가정통신문
+==============================================================*/
+.CommInfo{position:relative; font-family: 'Jeju Gothic', serif; font-weight:normal; color:#666; font-size:13px; padding:25px 3%; background:#f9f9f9;}
+.CommInfo h1{font-weight:normal; height:60px; color:#222;}
+.CommInfo h4{font-weight:normal; height:30px; color:#333;}
+.CommInfo h6{font-weight:normal; height:18px; font-size:14px;}
+.CommInfo .Logo{position:absolute; right:3.5%; top:25px; width:110px;}
+
+.WrapComm{padding:15px 3%; background:#fff; border-top:1px solid #d6d6d6;}
+
+.TbChpter{border-top:1px solid #ccc; font-size:13px;}
+.TbChpter th, .TbChpter td{border-bottom:1px solid #ddd; padding:0; height:38px;}
+.TbChpter th{width:108px; text-align:center; font-weight:normal;}
+.TbChpter td{padding-left:8px;}
+.TbChpter b{color:#C00; font-size:14px;}
+
+.TxtComment{font-size:13px; padding:12px 15px; background:#f3fbff; text-align:justify;}
+
+.TitleComm{padding-bottom:12px; font-size:16px; color:#111;}
+.TitleComm i{display:inline-block; width:24px; text-align:center;}
+.Line3{height:1px; border-bottom:1px dashed #aaa; margin:20px 0;}
+
+.ListCommWork{margin:0; padding:0;  text-align:center;}
+.ListCommWork li{list-style:none; display:inline-block; width:30%; margin:0 1%;}
+.ListCommWork .Box{border:1px solid #548aa2; border-radius:8px;}
+.ListCommWork .Caption{background:#548aa2; color:#fff; line-height:36px; border-radius:7px 7px 0 0; font-size:15px; font-weight:normal;}
+.ListCommWork .Score{line-height:54px; font-size:24px; color:#ed1c24;}
+.ListCommWork .Score span{font-size:14px; color:#888;}
+.ChartComm{margin-bottom:15px;}
+.ChartComm h6{text-align:center; font-size:14px; font-weight:normal; padding-top:5px;}
+.TbCommWrong{border-left:1px solid #ddd; border-top:1px solid #ddd; font-size:13px;}
+.TbCommWrong th, .TbCommWrong td{border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+.TbCommWrong th{background:#f9f9f9; text-align:center;}
+.TbCommWrong td{text-align:justify;}
+.TbCommWrong .Num{color:#ed1c24; font-size:15px;}
+.TbCommEnter i{display:inline-block; margin-right:3px; color:#ed6d00;}
+.TbCommNotice{margin-bottom:12px;}
+.TbCommNotice *{margin:0; padding:0; font-size:14px;}
+.TbCommNotice th{background:#548aa2; padding:10px 12px; color:#fff; border-radius:0;}
+.TbCommNotice .Right{text-align:right;}
+.TbCommNotice td{border-bottom:1px solid #548aa2; padding:10px; line-height:1.6; text-align:justify;}
+
+/*==============================================================
+	학원장 홈
+==============================================================*/
+.ListState *{margin:0; padding:0;}
+.ListState{overflow:hidden; padding:0; width:98%; margin:12px auto 0 auto;}
+.ListState li{list-style:none; width:32%; margin-right:2%; float:left; text-align:center;}
+.ListState li:last-child{margin-right:0;}
+.ListState a{color:#333; display:inline-block; width:100%; background:#fff; padding:14px 0 12px 0; border:2px solid #548aa2; border-radius:3px; box-sizing:border-box; font-size:14px; font-weight:bold;}
+.ListState h1{padding-top:5px; font-size:38px; color:#e20008;}
+
+.TodayClass{background:#fff; margin-top:5px; padding:10px 0; position:relative;}
+.Bg1{background:#548aa2;}
+.Bg1 a{color:#fff;}
+.Bg2{background:#fafafa;}
+.Bg2 a{color:#333;}
+.TodayClass .Left{position:absolute; width:95px; text-align:center; font-weight:bold; font-size:16px;}
+.TodayClass .Right{padding-left:105px; font-size:14px;}
+.TodayClass .Right h6{padding-bottom:5px; font-size:15px;}
+.TodayClass .Right span{display:inline-block; width:80px;}
+
+/*==============================================================
+	학원장 학원관리 홈
+==============================================================*/
+.AlignLeft{text-align:left;}
+.AlignRight{text-align:right;}
+
+.WrapClassState{margin:0 auto; width:96%;}
+.WrapClassState{padding:12px 0;}
+
+.BoxClassState{background:#fff; border:1px solid #ccc; border-radius:8px; margin-bottom:12px;}
+.BoxClassState .Top{border-bottom:1px solid #ddd; padding:6px 15px; background:#548aa2; color:#fff; border-radius:7px 7px 0 0;}
+.BoxClassState .TbTop *{margin:0; padding:0;}
+.BoxClassState .TbTop th{font-size:16px;}
+.BoxClassState .TbTop th b{font-size:18px; font-family: 'Jeju Gothic', serif; font-weight:normal;}
+.BoxClassState .TbTop td{font-size:13px;}
+.BoxClassState .TbTop .Color{color:#fff200;}
+
+.BoxClassState .Mid{padding:4px 1%; line-height:1.9;}
+.BoxClassState .TbMid th{width:24px;}
+.BoxClassState .TbMid th a{font-size:24px; color:#999;}
+
+.BoxDayState .Left{position:absolute; width:74px; text-align:center; color:#222;}
+.BoxDayState .Right{padding-left:85px; font-size:13px;}
+.BoxDayState .Right .Attend span{display:inline-block; margin-right:15px;}
+.BoxDayState .Right .Attend span:last-child{margin-right:0;}
+.BoxDayState .Right .Work span{display:inline-block; margin-right:13px;}
+.BoxDayState .Right .Work span:last-child{margin-right:0;}
+
+.BoxClassState .Bottom{overflow:hidden; margin:0; padding:0;}
+.BoxClassState .Bottom li{float:left; width:33.3%; border-right:1px solid #ddd; text-align:center; line-height:36px; list-style:none; border-top:1px solid #ddd; font-size:14px;}
+.BoxClassState .Bottom li:nth-child(3n){border-right:0;}
+.BoxClassState .Bottom a{color:#333; display:block;}
+
+/*==============================================================
+	학원장 알림, ToDoList, 과제 등록
+==============================================================*/
+.TbJang_Top *{margin:0; padding:0;}
+.TbJang_Top th{width:76px; font-size:14px; text-align:center; color:#222; line-height:1.2;}
+.TbJang_Top td{height:30px; padding:4px 0 4px 12px; font-size:13px;}
+.TbJang_Top td span{display:inline-block; width:58px;}
+.TbJang_Top h3{color:#C00;}
+.TbJang_Top .Select{padding-left:10px;}
+
+.TextArea{border:1px solid #ddd; padding:6px; box-sizing:border-box; height:80px; text-align:justify; font-size:12px; line-height:1.6;}
+
+.TbJang_Mid *{margin:0; padding:0;}
+.TbJang_Mid th{width:60px; font-size:13px; text-align:right; padding-right:15px;}
+.TbJang_Mid td{height:30px; padding:4px 0; font-size:13px;}
+.TbJang_Mid input{border:1px solid #ddd; height:30px; padding-left:10px; box-sizing:border-box; margin:0;}
+.TbJang_Mid .Select{padding-left:10px;}
+.TbJang_Mid .TextArea{padding:8px;}
+
+.TbJang_Term *{margin:0; padding:0;}
+.TbJang_Term th{width:70px; font-size:13px; text-align:right; padding-right:15px;}
+.TbJang_Term td{height:30px; padding:4px 0; font-size:13px;}
+.TbJang_Term input{border:1px solid #ddd; height:30px; padding-left:10px; box-sizing:border-box; margin:0;}
+.TbJang_Term .Select{padding-left:6px;}
+
+.TbJang_File *{margin:0; padding:0;}
+.TbJang_File th{width:110px; font-size:13px; text-align:right; padding-right:15px;}
+.TbJang_File td{height:30px; padding:4px 0; font-size:13px;}
+.TbJang_File input{width:100%;}
+
+.TbJang_Auto *{margin:0; padding:0; font-size:13px;}
+.TbJang_Auto th{width:70px; text-align:right; padding-right:15px;}
+.TbJang_Auto td{height:30px; padding:4px 0; font-size:13px;}
+.TbJang_Auto label{font-size:13px; padding:0 8px 0 24px;}
+.TbJang_Auto .Select{padding-left:8px;}
+
+.WrapRegTop{background:#fff; padding:10px 3.5%; margin-bottom:12px; border-bottom:1px solid #eee;}
+.WrapRegTop input{margin:0;}
+.ListRegTop *{margin:0; padding:0;}
+.ListRegTop{margin:0; padding:0;}
+.ListRegTop li{overflow:hidden; list-style:none; line-height:50px; color:#999; border-bottom:1px solid #ddd;}
+.ListRegTop .Left{width:40px; font-size:24px; float:left; text-align:left; padding-left:2px; box-sizing:border-box;}
+.ListRegTop .Mid{width:calc(100% - 40px); float:left;}
+.ListRegTop .Mid input{border-bottom:0; height:30px;}
+.ListRegTop .Right{width:40px; font-size:20px; float:right; text-align:right; padding-right:2px; box-sizing:border-box;}
+
+.WrapRegBottom{background:#fff; padding:10px 3.5%; border-top:1px solid #d6d6d6; border-bottom:1px solid #d6d6d6;}
+.WrapRegBottom input, .WrapRegBottom label{margin:0; padding:0; border:0;}
+.WrapRegBottom label{padding-left:30px; color:#333;}
+.ListRegBottom *{margin:0; padding:0;}
+.ListRegBottom{margin:0; padding:0;}
+.ListRegBottom li{overflow:hidden; list-style:none; line-height:48px; color:#333; border-bottom:1px solid #ddd; font-size:14px;}
+.ListRegBottom li:last-child{border-bottom:0;}
+.ListRegBottom .Select{color:#333; padding-left:5px; font-size:13px;}
+.ListRegBottom .Date, .ListRegBottom .Time{background:#fff; border:1px solid #ddd; height:30px; padding-left:5px; font-size:13px;}
+.ListRegBottom .Left{display:inline-block; width:50px;}
+
+.BoxCheck{margin-top:15px;}
+
+.ListWorkCheck *{margin:0; padding:0;}
+.ListWorkCheck{margin:0; padding:0;}
+.ListWorkCheck input, .ListWorkCheck label{margin:0; padding:0; border:0;}
+.ListWorkCheck label{padding-left:30px; color:#333;}
+.ListWorkCheck li{overflow:hidden; list-style:none; line-height:48px; color:#333; border-bottom:1px solid #ddd; font-size:14px; text-align:left; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; box-sizing:border-box;}
+.ListWorkCheck s{color:#999;}
+.ListWorkCheck .Left{display:inline-block; width:50px;}
+
+.ListVoteCheck{margin:0; padding:0;}
+.ListVoteCheck *{margin:0; padding:0;}
+.ListVoteCheck li{list-style:none; text-align:left; border-bottom:1px solid #ddd; padding:14px 0;}
+.ListVoteCheck .TxtOverlap{line-height:40px; font-size:12px; color:#888; padding:0; padding-left:10px;}
+.ListVoteCheck label{padding-left:30px; color:#333; width:100%; font-size:14px;}
+.ListVoteCheck .PerArea{font-size:10px; font-weight:bold; color:#11b2e1; position:relative; width:calc(100% - 72px); height:15px;}
+.ListVoteCheck .PerBar{position:relative; left:0; top:0; height:7px; background:#11b2e1; display:inline-block;}
+.ListVoteCheck .PerNum{position:absolute; left:100%; top:-10px; text-align:left; display:inline-block; width:70px; padding-left:5px; box-sizing:border-box;}
+
+/*==============================================================
+	학원장 알람보기
+==============================================================*/
+.TbJang_AlramTop *{margin:0; padding:0; font-size:13px;}
+.TbJang_AlramTop th{width:80px; text-align:right;}
+.TbJang_AlramTop h6{font-size:20px; color:#C00;}
+.TbJang_AlramTop td{height:30px; padding:4px 0; padding-left:18px;}
+
+.BoxAlramContent{font-size:13px; line-height:1.7; text-align:justify;}
+.BoxAlramContent h6{font-size:16px; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-family:'Jeju Gothic', serif; font-weight:normal; color:#222; padding:0 2px;}
+.BoxAlramContent img{width:100%; margin:12px 0 7px 0;}
+
+.TbJang_Term .BtnMobileCheck{display:inline-block; width:150px; line-height:24px; background:#04b9c2; color:#fff; text-align:center; margin-left:6px; font-size:12px; font-weight:bold; border-radius:2px;}
+.TbJang_Term .BtnMobileCheck i{display:inline-block; margin-right:5px; font-size:15px;}
+.TbJang_Term .LinkFile i{display:inline-block; margin-left:6px; font-size:16px;}
+
+/*==============================================================
+	학원장 학생리스트
+==============================================================*/
+.ListStudent{text-align:center; overflow:hidden;}
+.ListStudent li{float:left; width:19%; height:145px; border:1px solid #ccc; background:#fff; box-sizing:border-box; border-radius:5px; margin:0 1.25% 1.25% 0; font-size:14px; vertical-align:middle;}
+.ListStudent li:nth-child(5n){margin-right:0;}
+.ListStudent li a{color:#555;}
+
+.ListStudent .Top{height:60px; border-bottom:1px solid #eee; overflow:hidden; border-radius:4px 4px 0 0; background:#f9f9f9;}
+.ListStudent .Top .Left{float:left; width:75%; text-align:left; padding:11px 0 0 10px; font-size:14px;}
+.ListStudent .Top .Right{float:right; width:24%; line-height:54px; font-size:30px; text-align:right; padding:0 11px 0 0; position:relative;}
+.ListStudent .Top .Right span{position:absolute; right:3px; top:8px; display:block; width:20px; line-height:20px; text-align:center; font-size:12px; background:rgba(4,185,194,0.95); color:#fff; border-radius:50%;}
+.ListStudent .Top .Left h6{font-family: 'Jeju Gothic', serif; color:#222; font-weight:normal; font-size:19px;}
+.ListStudent .Check{background:#ed6d00; color:#fff;}
+.ListStudent .Check .Left h6{color:#fff;}
+
+.ListStudent .Bottom{padding-top:5px;}
+
+.TbJang_Color th{text-align:right; padding:0 7px 0 0; font-weight:normal;}
+.TbJang_Color td{text-align:left; padding:2px 0 1px 7px;}
+.TbJang_Color span{display:inline-block; margin:0 3px; width:14px; height:14px; border-radius:50%; }
+.TbJang_Color .Green{background:#9ccc65;}
+.TbJang_Color .Yellow{background:#fbe300;}
+.TbJang_Color .Red{background:#C00;}
+.TbJang_Color .Active{border:2px solid #333;}
+
+@media all and (max-width:768px) {	
+.ListStudent li{float:left; width:23.5%; margin:0 2% 2% 0; font-size:14px;}
+.ListStudent li:nth-child(5n){margin-right:2%;}
+.ListStudent li:nth-child(4n){margin-right:0;}	
+}
+
+@media all and (max-width:640px) {	
+.ListStudent li{float:left; width:32%; margin:0 2% 2% 0; font-size:14px;}
+.ListStudent li:nth-child(5n){margin-right:2%;}
+.ListStudent li:nth-child(4n){margin-right:2%;}
+.ListStudent li:nth-child(3n){margin-right:0;}
+}
+
+@media all and (max-width:480px) {	
+.ListStudent li{float:left; width:48%; margin:0 4% 4% 0; font-size:14px;}
+.ListStudent li:nth-child(5n){margin-right:4%;}
+.ListStudent li:nth-child(4n){margin-right:4%;}
+.ListStudent li:nth-child(3n){margin-right:4%;}
+.ListStudent li:nth-child(2n){margin-right:0;}
+
+.ListStudent .Top .Left h6{font-size:18px;}
+.ListStudent .Top .Right{font-size:28px;}
+}
+
+/*==============================================================
+	학원장 학생정보
+==============================================================*/
+.BoxStudentTop{padding:0 75px 0 130px; background:#548aa2; color:#fff; position:relative; height:60px; font-size:13px; margin-bottom:10px;}
+.BoxStudentTop .Left, .BoxStudentTop .Right{position:absolute; line-height:1.9;}
+.BoxStudentTop .Left{left:0; top:6px; width:130px; text-align:center;}
+.BoxStudentTop .Right{right:0; top:10px; width:75px; text-align:center;}
+.BoxStudentTop .Left h5{font-family: 'Jeju Gothic', serif; font-weight:normal;}
+.BoxStudentTop .Left a{display:inline-block; margin-left:8px; color:#fff; position:relative; font-size:22px;}
+.BoxStudentTop .Left span{position:absolute; display:inline-block; width:17px; height:17px; border-radius:50%; background:rgba(0,0,0,0.8); color:#fff; text-align:center; top:-2px; right:-9px; font-size:10px; font-weight:normal;}
+
+.BoxStudentTop .Mid{line-height:60px; text-align:center;}
+.BoxStudentTop .Mid span{display:inline-block; width:16px; height:16px; border-radius:50%; margin:0 4px;}
+.BoxStudentTop .Mid .Green{background:#9ccc65;}
+.BoxStudentTop .Mid .Yellow{background:#fbe300;}
+.BoxStudentTop .Mid .Red{background:#C00;}
+.BoxStudentTop .Mid .Active{border:2px solid #fff;}
+
+.BoxStudentSummary{background:#fff; padding:20px 3%; margin-bottom:10px;}
+.TbStudentAttend *{margin:0; padding:0;}
+.TbStudentAttend{border-top:1px solid #ddd; border-left:1px solid #ddd; margin-bottom:20px;}
+.TbStudentAttend th{border-bottom:1px solid #ddd; border-right:1px solid #ddd; font-size:13px; text-align:center; background:#f9f9f9; height:36px; font-weight:normal;}
+.TbStudentAttend td{border-bottom:1px solid #ddd; border-right:1px solid #ddd; font-size:30px; text-align:center; height:48px;}
+.TbStudentAttend .Green{color:#0e91d9;}
+.TbStudentAttend .Yellow{color:#ee7711;}
+.TbStudentAttend .Red{color:#C00;}
+
+.Btn1, .Btn2, .Btn3{display:inline-block; width:92px; height:92px; border-radius:50%; text-align:center; color:#444; margin-right:8px;  box-sizing:content-box; border:2px solid #ddd;}
+.Btn3{margin-right:0;}
+.Btn1 div, .Btn2 div, .Btn3 div{line-height:60px; font-size:28px; height:46px;}
+.Btn1 h6, .Btn2 h6, .Btn3 h6{line-height:30px; height:46px; padding:0; margin:0; font-size:12.5px; font-weight:normal;}
+.Btn1{background:#fff;}
+.Btn2{background:#fff;}
+.Btn3{background:#fff;}
+
+.ListJang {margin:0; padding:0; background:#fff; border-top:1px solid #ccc;}
+.ListJang *{margin:0; padding:0;}
+.ListJang li{list-style:none; border-bottom:1px solid #ddd;}
+.ListJang li a{display:block; position:relative; line-height:48px; color:#444; font-size:13px;  padding:0 78px 0 65px;}
+.ListJang li .Left, .ListJang li .Right{position:absolute;}
+.ListJang li .Left{left:0; top:0; width:53px; text-align:center; font-size:16px; border-right:1px solid #ddd; font-family: 'Jeju Gothic', serif; font-weight:normal; color:#111;}
+.ListJang li .Right{right:0; top:0; width:68px; font-size:12px; color:#888;}
+.ListJang li .Mid{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+.ListJang li .Bg1{background:#ffeeee;}
+.ListJang li .Bg1 .Left{background:#cf383a; color:#fff; border-radius:4px;}
+.ListJang li .Bg2{background:#e5f6ff;}
+.ListJang li .Bg2 .Left{background:#0e91d9; color:#fff; border-radius:4px;}
+
+/*==============================================================
+	학원장 알림리스트
+==============================================================*/
+.WrapAlram *{margin:0; padding:0;}
+.WrapAlram{background:#fff;}
+
+.ListAlramJang li{list-style:none; border-bottom:1px solid #ddd; color:#666; font-size:13px; padding:15px 10px 15px 68px; min-height:50px; position:relative;}
+.ListAlramJang .Caption{position:absolute; left:10px; top:10px; width:44px; height:44px; line-height:44px; text-align:center; background:#eee; font-size:14px; color:#222; border-radius:50%; font-family:'Jeju Gothic', serif; font-weight:normal;}
+.ListAlramJang .Content{line-height:1.6;}
+.ListAlramJang h6{color:#333; padding-bottom:5px; font-size:14px;}
+.ListAlramJang .Margin{display:inline-block; margin-right:6px; color:#444;}
+
+.ListAlramJang .BtnRed, .ListAlramJang .BtnWhite, .ListAlramJang .BtnGreen, .ListAlramJang .BtnBlue, .ListAlramJang .BtnSea{width:48px; line-height:24px; font-size:12px; font-weight:bold;}
+
+.ListAlramJang .BgRed{background:#cf383a; color:#fff;}
+.ListAlramJang .BgYellow{background:#fbe300; color:#3b1e1e;}
+.ListAlramJang .BgGreen{background:#9ccc65; color:#fff;}
+.ListAlramJang .BgBlue{background:#11b2e1; color:#fff;}
+.ListAlramJang .BgGray{background:#555; color:#fff;}
+.ListAlramJang .BgSea{background:#11dae1; color:#fff; font-size:16px;}
+
+/*==============================================================
+	학원장 설정
+==============================================================*/
+.WrapSetJang{padding:10px 3%;}
+
+.BoxSetIntro{background:#fff; padding:15px 10px; overflow:hidden; position:relative; margin-bottom:10px;}
+.BoxSetIntro .Left{position:absolute; left:10px; top:14px;}
+.BoxSetIntro .Left img{width:100px; height:100px; border:1px solid #eee;}
+.BoxSetIntro .Right{padding-left:110px; font-size:12px; color:#555; height:100px;}
+.BoxSetIntro .Right i{display:inline-block; width:17px; text-align:center;}
+.BoxSetIntro .Right h6{padding-bottom:6px; color:#222; font-family:'Jeju Gothic', serif; font-weight:normal;}
+.BoxSetIntro .Right div{padding-bottom:1px;}
+
+.TbCurrentState{margin-top:6px; font-size:14px;}
+.TbCurrentState *{margin:0; padding:0;}
+.TbCurrentState b{color:#C00;}
+
+.BoxSetIntro .BtnIntro{padding-top:8px; padding-left:112px;}
+.BoxSetIntro .BtnIntro a{display:inline-block; width:98px; line-height:30px; border-radius:15px; background:#555; text-align:center; color:#fff; font-size:12px; font-weight:bold;}
+
+.ListManagement{margin:0; padding:10px; background:#fff; text-align:center; overflow:hidden;}
+.ListManagement *{margin:0; padding:0;}
+.ListManagement li{list-style:none; float:left; width:30%; border:1px solid #ddd; margin:1.66%; border-radius:2px; background:#f9f9f9; font-family:'Jeju Gothic', serif; box-sizing:border-box;}
+.ListManagement li div{line-height:50px; font-size:40px; color:#548aa2; padding-top:10px;}
+.ListManagement li span{display:inline-block; height:30px;}
+.ListManagement li a{color:#333; font-size:14px;}
+.ListManagement li.LogOut{background:#548aa2; border:1px solid #548aa2;}
+.ListManagement li.LogOut div{color:#fff200;}
+.ListManagement li.LogOut a{color:#fff;}
+
+/*==============================================================
+	강사관리, 학부모관리
+==============================================================*/
+.ListTeacher{background:#fff; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:12px 0;}
+.ListTeacher li{height:80px; overflow:hidden; position:relative; padding:12px 5px 5px 85px; box-sizing:border-box; border-bottom:1px solid #eee;}
+.ListTeacher li:last-child{border-bottom:0;}
+.ListTeacher .Left{position:absolute; left:10px; top:10px; text-align:center;}
+.ListTeacher .Left img{width:60px; height:60px; border-radius:50%;}
+.ListTeacher a{font-size:13px; color:#666;}
+.ListTeacher .Right{line-height:1.35;}
+.ListTeacher .Right h5{color:#333; font-size:15px; padding-bottom:4px;}
+.ListTeacher .Right h5 span{font-weight:normal; font-size:14px; color:#548aa2;}
+.ListTeacher .Right div span{display:inline-block; margin-right:15px;}
+.ListTeacher .Right div span:last-child{margin-right:0;}
+
+/*==============================================================
+	라이트 박스
+==============================================================*/
+#inline_content{padding:10px 10%; background:#fff; border-radius:4px; text-align:center;}
+#inline_content a{color:#333; line-height:50px; border-bottom:1px dashed #ccc; display:block;}
+#inline_content a:last-child{border-bottom:0;}
+
+/*==============================================================
+	버튼 모음
+==============================================================*/
+a{text-decoration:none;}
+.BtnCenter{text-align:center; padding-top:15px;}
+.BtnRight{text-align:right; padding-top:15px;}
+.BtnArea{padding:5px 0 0 0; position:absolute; right:5px; bottom:10px;}
+
+.BtnRed, .BtnBlue, .BtnGreen, .BtnGray1, .BtnGray2, .BtnGray3, .BtnGray, .BtnWhite, .BtnSea{display:inline-block; font-size:14px; border-radius:4px;}
+.BtnRed{background:#cf383a; color:#fff; text-align:center; width:110px; line-height:36px;}
+.BtnSea{background:#11dae1; color:#fff; text-align:center; width:110px; line-height:36px;}
+.BtnGreen{background:#8cc63e; color:#fff; text-align:center; width:110px; line-height:36px;}
+.BtnGray{background:#aaa; color:#fff; text-align:center; width:110px; line-height:36px;}
+.BtnBlue{background:#4fc3f7; color:#fff; text-align:center; width:110px; line-height:36px;}
+.BtnGray1{background:#333; color:#fff; text-align:center; width:110px; line-height:36px;}
+.BtnGray2{background:#999; color:#fff; text-align:center; width:110px; line-height:36px;}
+.BtnGray3{background:#eee; color:#444; text-align:center; width:58px; line-height:28px; border:1px solid #bbb; box-sizing:border-box;}
+.BtnWhite{background:#fff; color:#666; text-align:center; width:108px; line-height:34px; border:1px solid #aaa; box-sizing:border-box;}
+
+.RtnGray{background:#444; color:#fff; text-align:center; line-height:36px; text-decoration:none; display:inline-block; border-radius:4px;}
+.RtnRed{display:inline-block; background:#cf383a; color:#fff; text-align:center; border-radius:16px;}
+.RtnBlue{display:inline-block; background:#4fc3f7; color:#fff; text-align:center; border-radius:16px;}
+.RtnOff{display:inline-block; background:#ccc; color:#fff; text-align:center; border-radius:16px;}
+
+a,input,button,label{-webkit-tap-highlight-color:transparent;}
+input[type="checkbox"]{-webkit-tap-highlight-color:transparent;}

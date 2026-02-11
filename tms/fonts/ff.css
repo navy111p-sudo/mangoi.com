@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/*본고딕 웹폰트*/
+
+/*씬*/
+@font-face {
+    font-family: 'Noto Sans Korean';
+    src: url('NotoSansCJKkr-Thin.eot');
+    src: url('NotoSansCJKkr-Thin.eot?#iefix') format('embedded-opentype'),
+         url('NotoSansCJKkr-Thin.woff') format('woff'),
+         url('NotoSansCJKkr-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+/*라이트*/
+@font-face {
+    font-family: 'Noto Sans Korean';
+    src: url('NotoSansCJKkr-Light.eot');
+    src: url('NotoSansCJKkr-Light.eot?#iefix') format('embedded-opentype'),
+         url('NotoSansCJKkr-Light.woff') format('woff'),
+         url('NotoSansCJKkr-Light.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+/*데미라이트*/
+@font-face {
+    font-family: 'Noto Sans Korean';
+    src: url('NotoSansCJKkr-DemiLight.eot');
+    src: url('NotoSansCJKkr-DemiLight.eot?#iefix') format('embedded-opentype'),
+         url('NotoSansCJKkr-DemiLight.woff') format('woff'),
+         url('NotoSansCJKkr-DemiLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+/*레귤러*/
+@font-face {
+    font-family: 'Noto Sans Korean';
+    src: url('NotoSansCJKkr-Regular.eot');
+    src: url('NotoSansCJKkr-Regular.eot?#iefix') format('embedded-opentype'),
+         url('NotoSansCJKkr-Regular.woff') format('woff'),
+         url('NotoSansCJKkr-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+
+}
+/*미디움*/
+@font-face {
+    font-family: 'Noto Sans Korean';
+    src: url('NotoSansCJKkr-Medium.eot');
+    src: url('NotoSansCJKkr-Medium.eot?#iefix') format('embedded-opentype'),
+         url('NotoSansCJKkr-Medium.woff') format('woff'),
+         url('NotoSansCJKkr-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+
+}
+/*볼드*/
+@font-face {
+    font-family: 'Noto Sans Korean';
+    src: url('NotoSansCJKkr-Bold.eot');
+    src: url('NotoSansCJKkr-Bold.eot?#iefix') format('embedded-opentype'),
+         url('NotoSansCJKkr-Bold.woff') format('woff'),
+         url('NotoSansCJKkr-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+
+}
+/*블랙*/
+@font-face {
+    font-family: 'Noto Sans Korean';
+    src: url('NotoSansCJKkr-Black.eot');
+    src: url('NotoSansCJKkr-Black.eot?#iefix') format('embedded-opentype'),
+         url('NotoSansCJKkr-Black.woff') format('woff'),
+         url('NotoSansCJKkr-Black.otf') format('opentype');
+    font-weight:900;
+    font-style: normal;
+
+}
+
+
+/* 나눔바른고딕 웹폰트 */
+
+
+/* 울트라라이트 */
+
+
+
+@font-face {
+    font-family: 'Nanum Barun Gothic';
+    src: url('nanumbarungothicultralight.eot');
+    src: url('nanumbarungothicultralight.eot?#iefix') format('embedded-opentype'),
+         url('nanumbarungothicultralight.woff') format('woff'),
+         url('nanumbarungothicultralight.ttf') format('truetype'),
+         url('nanumbarungothicultralight.svg#nanum-barun-gothic-ultralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+
+
+/* 라이트 */
+
+
+
+@font-face {
+    font-family: 'Nanum Barun Gothic';
+    src: url('nanumbarungothiclight.eot');
+    src: url('nanumbarungothiclight.eot?#iefix') format('embedded-opentype'),
+         url('nanumbarungothiclight.woff') format('woff'),
+         url('nanumbarungothiclight.ttf') format('truetype'),
+         url('nanumbarungothiclight.svg#nanum-barun-gothic-light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+/*레귤러 */
+
+
+
+@font-face {
+    font-family: 'Nanum Barun Gothic';
+    src: url('nanumbarungothicregular.eot');
+    src: url('nanumbarungothicregular.eot?#iefix') format('embedded-opentype'),
+         url('nanumbarungothicregular.woff') format('woff'),
+         url('nanumbarungothicregular.ttf') format('truetype'),
+         url('nanumbarungothicregular.svg#nanum-barun-gothic-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/* 볼드*/
+
+
+
+@font-face {
+    font-family: 'Nanum Barun Gothic';
+    src: url('nanumbarungothicbold.eot');
+    src: url('nanumbarungothicbold.eot?#iefix') format('embedded-opentype'),
+         url('nanumbarungothicbold.woff') format('woff'),
+         url('nanumbarungothicbold.ttf') format('truetype'),
+         url('nanumbarungothicbold.svg#nanum-barun-gothic-bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
