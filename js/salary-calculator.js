@@ -269,20 +269,20 @@ function calculateSalary() {
   let grade = "";
 
   if (averageScore >= 4.7) {
-    rate = 160; // 최우수는 160으로 가정 (또는 우수와 같게 설정 등, 일단 높게 설정)
-    grade = "최우수";
+    rate = 160;
+    grade = "Best (최우수)";
   } else if (averageScore >= 4) {
     rate = 150;
-    grade = "우수";
+    grade = "Excellent (우수)";
   } else if (averageScore >= 3) {
     rate = 140;
-    grade = "양호";
+    grade = "Good (양호)";
   } else if (averageScore >= 2) {
     rate = 120;
-    grade = "보통";
+    grade = "Average (보통)";
   } else {
     rate = 100;
-    grade = "미달";
+    grade = "Below Average (미달)";
   }
 
   // 데이터 저장 및 순위 계산
@@ -295,10 +295,11 @@ function calculateSalary() {
 
   // 값 채우기
   document.getElementById("avgScore").innerText =
-    averageScore.toFixed(1) + "점";
+    averageScore.toFixed(1) + " Points (점)";
   document.getElementById("gradeText").innerText = grade;
-  document.getElementById("salaryRate").innerText = rate + " 페소";
-  document.getElementById("rankText").innerText = `${total}명 중 ${rank}등`;
+  document.getElementById("salaryRate").innerText = rate + " Peso (페소)";
+  document.getElementById("rankText").innerText =
+    `Ranked ${rank} out of ${total} (${total}명 중 ${rank}등)`;
 
   // 등급 색상 적용
   const gradeEl = document.getElementById("gradeText");
