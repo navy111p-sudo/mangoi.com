@@ -235,6 +235,36 @@ document.addEventListener("DOMContentLoaded", function () {
   renderTeacherList();
 });
 
+// [4] 2단계 클릭 로직 (Confirm 말풍선)
+let isConfirmMode = false; // 현재 확인 대기 상태인지
+let confirmTimer = null; // 자동 취소 타이머
+
+function handleCalculateClick() {
+  if (!isConfirmMode) {
+    // 첫 번째 클릭: 말풍선 보여주기
+    isConfirmMode = true;
+    document.getElementById("confirmTooltip").classList.remove("hidden");
+    document.getElementById("calculateBtn").innerText =
+      "Click to Confirm (확인)";
+
+    // 3초 후 자동으로 원래 상태로 돌아감
+    confirmTimer = setTimeout(function () {
+      resetConfirm();
+    }, 3000);
+  } else {
+    // 두 번째 클릭: 실제 계산 실행
+    clearTimeout(confirmTimer);
+    resetConfirm();
+    calculateSalary();
+  }
+}
+
+function resetConfirm() {
+  isConfirmMode = false;
+  document.getElementById("confirmTooltip").classList.add("hidden");
+  document.getElementById("calculateBtn").innerText = "Calculate (계산하기)";
+}
+
 function calculateSalary() {
   const teacherName = document.getElementById("teacherName").value.trim();
 

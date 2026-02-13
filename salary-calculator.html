@@ -192,9 +192,19 @@
         </div>
 
         <!-- 계산하기 버튼 -->
-        <button class="calculator__button" type="submit" id="calculateBtn">
-          계산하기 (Calculate)
-        </button>
+        <div class="calculator__button-wrapper">
+          <span class="calculator__tooltip hidden" id="confirmTooltip"
+            >Confirm?</span
+          >
+          <button
+            class="calculator__button"
+            type="button"
+            id="calculateBtn"
+            onclick="handleCalculateClick()"
+          >
+            Calculate (계산하기)
+          </button>
+        </div>
       </form>
 
       <!-- 결과 표시 영역 -->
