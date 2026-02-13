@@ -537,17 +537,66 @@
   color: #dc2626;
 }
 
-/* ---------- 반응형 (모바일) ---------- */
+/* ==============================================
+   반응형 디자인 (Responsive Design)
+   - 테블릿: 768px 이하
+   - 모바일: 480px 이하
+   - 소형 모바일: 360px 이하
+   ============================================== */
+
+/* ---------- 테블릿 (Tablet: 768px 이하) ---------- */
+@media (max-width: 768px) {
+  .calculator {
+    max-width: 420px;
+    padding: 28px 24px;
+  }
+
+  .calculator__title {
+    font-size: 1.5rem;
+  }
+
+  .calculator__title-ko {
+    font-size: 0.9rem;
+  }
+
+  .calculator__subtitle {
+    font-size: 0.8rem;
+  }
+
+  .calculator__result-value {
+    font-size: 0.95rem;
+  }
+
+  .calculator__table th,
+  .calculator__table td {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ---------- 모바일 (Mobile: 480px 이하) ---------- */
 @media (max-width: 480px) {
   .calculator {
-    padding: 24px 18px;
+    max-width: 100%;
+    padding: 24px 16px;
     border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  /* 헤더: 세로 배치 */
+  .calculator__header {
+    margin-bottom: 20px;
   }
 
   .calculator__header-top {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
+  }
+
+  /* 교사 이름 입력: 가로 꽉 */
+  .calculator__teacher {
+    width: 100%;
   }
 
   .calculator__teacher-input {
@@ -559,6 +608,132 @@
   }
 
   .calculator__title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .calculator__title-ko {
+    font-size: 0.85rem;
+  }
+
+  .calculator__subtitle {
+    font-size: 0.75rem;
+  }
+
+  .calculator__subtitle-ko {
+    font-size: 0.65rem;
+  }
+
+  /* 폼 */
+  .calculator__form {
+    gap: 12px;
+  }
+
+  .calculator__label {
+    font-size: 0.8rem;
+  }
+
+  .calculator__input {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* 버튼 */
+  .calculator__button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .calculator__button-en {
+    font-size: 0.85rem;
+  }
+
+  .calculator__button-ko {
+    font-size: 0.65rem;
+  }
+
+  /* 결과 영역 */
+  .calculator__result {
+    padding: 16px;
+  }
+
+  .calculator__result-label {
+    font-size: 0.8rem;
+  }
+
+  .calculator__result-value {
+    font-size: 0.85rem;
+  }
+
+  .calculator__result-value--salary {
+    font-size: 1.1rem;
+  }
+
+  /* 피드백 */
+  .calculator__feedback {
+    padding: 12px;
+  }
+
+  .calculator__feedback-title {
+    font-size: 0.85rem;
+  }
+
+  .calculator__feedback-list li {
+    font-size: 0.8rem;
+  }
+
+  /* 테이블 */
+  .calculator__table th,
+  .calculator__table td {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+  }
+}
+
+/* ---------- 소형 모바일 (Small Mobile: 360px 이하) ---------- */
+@media (max-width: 360px) {
+  .calculator {
+    padding: 18px 12px;
+    border-radius: 8px;
+  }
+
+  .calculator__title {
+    font-size: 1.1rem;
+  }
+
+  .calculator__title-ko {
+    font-size: 0.75rem;
+  }
+
+  .calculator__subtitle {
+    font-size: 0.7rem;
+  }
+
+  .calculator__teacher-label {
+    font-size: 0.6rem;
+  }
+
+  .calculator__label {
+    font-size: 0.75rem;
+  }
+
+  .calculator__input {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .calculator__button {
+    padding: 10px 16px;
+  }
+
+  .calculator__result-row {
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+  }
+
+  .calculator__table th,
+  .calculator__table td {
+    padding: 5px 6px;
+    font-size: 0.65rem;
   }
 }
