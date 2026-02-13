@@ -176,6 +176,22 @@
   text-align: center;
 }
 
+.calculator__title-ko {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #9ca3af;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.calculator__subtitle-ko {
+  display: block;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
 /* ---------- 폼 ---------- */
 .calculator__form {
   display: flex;
