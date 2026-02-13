@@ -243,7 +243,6 @@ function handleCalculateClick() {
   if (!isConfirmMode) {
     // 첫 번째 클릭: 말풍선 보여주기
     isConfirmMode = true;
-    document.getElementById("confirmTooltip").classList.remove("hidden");
     document.getElementById("calculateBtn").innerHTML =
       "<span class='calculator__button-en'>Click to Confirm</span><span class='calculator__button-ko'>(확인)</span>";
 
@@ -261,7 +260,6 @@ function handleCalculateClick() {
 
 function resetConfirm() {
   isConfirmMode = false;
-  document.getElementById("confirmTooltip").classList.add("hidden");
   document.getElementById("calculateBtn").innerHTML =
     "<span class='calculator__button-en'>Calculate</span><span class='calculator__button-ko'>(계산하기)</span>";
 }
