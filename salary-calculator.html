@@ -59,7 +59,7 @@
           <!-- 교사 이름 입력 (드롭다운 포함) -->
           <div class="calculator__teacher">
             <label class="calculator__teacher-label" for="teacherName"
-              >교사 이름 (Teacher Name)</label
+              >Teacher Name <span class="ko-sub">(교사 이름)</span></label
             >
             <div class="calculator__teacher-wrapper" id="teacherWrapper">
               <input
@@ -67,7 +67,7 @@
                 type="text"
                 id="teacherName"
                 name="teacherName"
-                placeholder="이름 입력 (Enter name)"
+                placeholder="Enter name"
                 autocomplete="off"
               />
               <button
@@ -110,7 +110,7 @@
         <!-- 근태 점수 -->
         <div class="calculator__field">
           <label class="calculator__label" for="attendance">
-            근태 점수 (Attendance)
+            Attendance <span class="ko-sub">(근태 점수)</span>
             <span class="calculator__label-hint">(1 ~ 5)</span>
           </label>
           <div class="input-wrapper">
@@ -131,7 +131,7 @@
         <!-- 학생 평가 -->
         <div class="calculator__field">
           <label class="calculator__label" for="student">
-            학생 평가 점수 (Student Eval)
+            Student Eval <span class="ko-sub">(학생 평가)</span>
             <span class="calculator__label-hint">(1 ~ 5)</span>
           </label>
           <div class="input-wrapper">
@@ -152,7 +152,7 @@
         <!-- 상사 평가 -->
         <div class="calculator__field">
           <label class="calculator__label" for="boss">
-            상사 평가 점수 (Boss Eval)
+            Boss Eval <span class="ko-sub">(상사 평가)</span>
             <span class="calculator__label-hint">(1 ~ 5)</span>
           </label>
           <div class="input-wrapper">
@@ -173,7 +173,7 @@
         <!-- 출석률 점수 -->
         <div class="calculator__field">
           <label class="calculator__label" for="yearly">
-            연간 출석률 점수 (Yearly Rate)
+            Yearly Rate <span class="ko-sub">(연간 출석률)</span>
             <span class="calculator__label-hint">(1 ~ 5)</span>
           </label>
           <div class="input-wrapper">
@@ -209,14 +209,16 @@
       <div class="calculator__result" id="resultArea">
         <!-- 기본 안내 문구 (계산 전) -->
         <p class="calculator__result-placeholder" id="resultPlaceholder">
-          점수를 입력하고 계산하기 버튼을 눌러주세요 (Please enter scores and
-          click Calculate)
+          Please enter scores and click Calculate
+          <span class="ko-sub"
+            >(점수를 입력하고 계산하기 버튼을 눌러주세요)</span
+          >
         </p>
         <!-- 계산 결과 (계산 후) -->
         <div class="calculator__result-content hidden" id="resultContent">
           <div class="calculator__result-row">
             <span class="calculator__result-label"
-              >평균 점수 (Average Score)</span
+              >Average Score <span class="ko-sub">(평균 점수)</span></span
             >
             <span class="calculator__result-value" id="avgScore">-</span>
           </div>
@@ -224,7 +226,9 @@
           <div class="calculator__result-divider"></div>
 
           <div class="calculator__result-row">
-            <span class="calculator__result-label">순위 (Rank)</span>
+            <span class="calculator__result-label"
+              >Rank <span class="ko-sub">(순위)</span></span
+            >
             <span
               class="calculator__result-value calculator__result-value--rank"
               id="rankText"
@@ -235,7 +239,9 @@
           <div class="calculator__result-divider"></div>
 
           <div class="calculator__result-row">
-            <span class="calculator__result-label">등급 (Grade)</span>
+            <span class="calculator__result-label"
+              >Grade <span class="ko-sub">(등급)</span></span
+            >
             <span
               class="calculator__result-value calculator__result-value--grade"
               id="gradeText"
@@ -245,7 +251,7 @@
           <div class="calculator__result-divider"></div>
           <div class="calculator__result-row calculator__result-row--highlight">
             <span class="calculator__result-label"
-              >10분당 수업료 (Rate per 10 min)</span
+              >Rate per 10 min <span class="ko-sub">(10분당 수업료)</span></span
             >
             <span
               class="calculator__result-value calculator__result-value--salary"
@@ -267,52 +273,52 @@
       <!-- 수업료 기준표 -->
       <details class="calculator__table-wrapper">
         <summary class="calculator__table-toggle">
-          수업료 기준표 보기 (View Rate Table)
+          View Rate Table <span class="ko-sub">(수업료 기준표 보기)</span>
         </summary>
         <table class="calculator__table">
           <thead>
             <tr>
-              <th>평균 점수 (Avg. Score)</th>
-              <th>등급 (Grade)</th>
-              <th>10분당 수업료 (Rate)</th>
+              <th>Avg. Score <span class="ko-sub">(평균 점수)</span></th>
+              <th>Grade <span class="ko-sub">(등급)</span></th>
+              <th>Rate <span class="ko-sub">(수업료)</span></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>4.0 이상 (4.0+)</td>
+              <td>4.0+</td>
               <td>
                 <span class="calculator__badge calculator__badge--excellent"
-                  >우수 (Excellent)</span
+                  >Excellent <span class="ko-sub">(우수)</span></span
                 >
               </td>
-              <td><strong>150 페소 (Peso)</strong></td>
+              <td><strong>150 Peso</strong></td>
             </tr>
             <tr>
               <td>3.0 ~ 3.9</td>
               <td>
                 <span class="calculator__badge calculator__badge--good"
-                  >양호 (Good)</span
+                  >Good <span class="ko-sub">(양호)</span></span
                 >
               </td>
-              <td><strong>140 페소 (Peso)</strong></td>
+              <td><strong>140 Peso</strong></td>
             </tr>
             <tr>
               <td>2.0 ~ 2.9</td>
               <td>
                 <span class="calculator__badge calculator__badge--normal"
-                  >보통 (Normal)</span
+                  >Average <span class="ko-sub">(보통)</span></span
                 >
               </td>
-              <td><strong>120 페소 (Peso)</strong></td>
+              <td><strong>120 Peso</strong></td>
             </tr>
             <tr>
-              <td>2.0 미만 (Below 2.0)</td>
+              <td>Below 2.0</td>
               <td>
                 <span class="calculator__badge calculator__badge--low"
-                  >미달 (Low)</span
+                  >Below Avg <span class="ko-sub">(미달)</span></span
                 >
               </td>
-              <td><strong>100 페소 (Peso)</strong></td>
+              <td><strong>100 Peso</strong></td>
             </tr>
           </tbody>
         </table>

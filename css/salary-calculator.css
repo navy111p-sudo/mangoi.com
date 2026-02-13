@@ -8,6 +8,13 @@
   display: none !important;
 }
 
+/* 한국어 보조 텍스트 (영어 옆에 작게) */
+.ko-sub {
+  font-size: 0.8em;
+  color: #9ca3af;
+  font-weight: 400;
+}
+
 /* ---------- 계산기 카드 (Block) ---------- */
 .calculator {
   width: 100%;
