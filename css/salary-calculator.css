@@ -295,9 +295,9 @@
 /* ---------- 버튼 ---------- */
 .calculator__button {
   margin-top: 8px;
-  padding: 12px 0;
+  padding: 14px 40px;
   border: none;
-  border-radius: 10px;
+  border-radius: 0;
   background: linear-gradient(135deg, #0c8ee6, #0070c4);
   color: #ffffff;
   font-size: 1rem;
