@@ -319,6 +319,16 @@
   box-shadow: none;
 }
 
+.calculator__button-en {
+  font-size: 0.95rem;
+}
+
+.calculator__button-ko {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-left: 4px;
+}
+
 /* ---------- 결과 영역 ---------- */
 .calculator__result {
   margin-top: 24px;

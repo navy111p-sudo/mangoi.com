@@ -244,8 +244,8 @@ function handleCalculateClick() {
     // 첫 번째 클릭: 말풍선 보여주기
     isConfirmMode = true;
     document.getElementById("confirmTooltip").classList.remove("hidden");
-    document.getElementById("calculateBtn").innerText =
-      "Click to Confirm (확인)";
+    document.getElementById("calculateBtn").innerHTML =
+      "<span class='calculator__button-en'>Click to Confirm</span><span class='calculator__button-ko'>(확인)</span>";
 
     // 3초 후 자동으로 원래 상태로 돌아감
     confirmTimer = setTimeout(function () {
@@ -262,7 +262,8 @@ function handleCalculateClick() {
 function resetConfirm() {
   isConfirmMode = false;
   document.getElementById("confirmTooltip").classList.add("hidden");
-  document.getElementById("calculateBtn").innerText = "Calculate (계산하기)";
+  document.getElementById("calculateBtn").innerHTML =
+    "<span class='calculator__button-en'>Calculate</span><span class='calculator__button-ko'>(계산하기)</span>";
 }
 
 function calculateSalary() {
