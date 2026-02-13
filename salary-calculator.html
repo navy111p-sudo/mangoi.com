@@ -108,76 +108,84 @@
         <div class="calculator__field">
           <label class="calculator__label" for="attendance">
             근태 점수 (Attendance)
-            <span class="calculator__label-hint">(0 ~ 5)</span>
+            <span class="calculator__label-hint">(1 ~ 5)</span>
           </label>
-          <input
-            class="calculator__input"
-            type="number"
-            id="attendance"
-            name="attendance"
-            min="0"
-            max="5"
-            step="0.1"
-            placeholder="0.0 ~ 5.0"
-            required
-          />
+          <div class="input-wrapper">
+            <input
+              class="calculator__input"
+              type="number"
+              id="attendance"
+              name="attendance"
+              min="1"
+              max="5"
+              step="0.1"
+              placeholder="1.0 ~ 5.0"
+              required
+            />
+          </div>
         </div>
 
         <!-- 학생 평가 -->
         <div class="calculator__field">
           <label class="calculator__label" for="student">
-            학생 평가 (Student Evaluation)
-            <span class="calculator__label-hint">(0 ~ 5)</span>
+            학생 평가 점수 (Student Eval)
+            <span class="calculator__label-hint">(1 ~ 5)</span>
           </label>
-          <input
-            class="calculator__input"
-            type="number"
-            id="student"
-            name="student"
-            min="0"
-            max="5"
-            step="0.1"
-            placeholder="0.0 ~ 5.0"
-            required
-          />
+          <div class="input-wrapper">
+            <input
+              class="calculator__input"
+              type="number"
+              id="student"
+              name="student"
+              min="1"
+              max="5"
+              step="0.1"
+              placeholder="1.0 ~ 5.0"
+              required
+            />
+          </div>
         </div>
 
         <!-- 상사 평가 -->
         <div class="calculator__field">
           <label class="calculator__label" for="boss">
-            상사 평가 (Boss Evaluation)
-            <span class="calculator__label-hint">(0 ~ 5)</span>
+            상사 평가 점수 (Boss Eval)
+            <span class="calculator__label-hint">(1 ~ 5)</span>
           </label>
-          <input
-            class="calculator__input"
-            type="number"
-            id="boss"
-            name="boss"
-            min="0"
-            max="5"
-            step="0.1"
-            placeholder="0.0 ~ 5.0"
-            required
-          />
+          <div class="input-wrapper">
+            <input
+              class="calculator__input"
+              type="number"
+              id="boss"
+              name="boss"
+              min="1"
+              max="5"
+              step="0.1"
+              placeholder="1.0 ~ 5.0"
+              required
+            />
+          </div>
         </div>
 
         <!-- 출석률 점수 -->
         <div class="calculator__field">
           <label class="calculator__label" for="yearly">
-            출석률 점수 (Yearly Attendance Rate)
-            <span class="calculator__label-hint">(0 ~ 5)</span>
+            연간 출석률 점수 (Yearly Rate)
+            <span class="calculator__label-hint">(1 ~ 5)</span>
           </label>
-          <input
-            class="calculator__input"
-            type="number"
-            id="yearly"
-            name="yearly"
-            min="0"
-            max="5"
-            step="0.1"
-            placeholder="0.0 ~ 5.0"
-            required
-          />
+          <div class="input-wrapper">
+            <input
+              class="calculator__input"
+              type="number"
+              id="yearly"
+              name="yearly"
+              min="1"
+              max="5"
+              step="0.1"
+              placeholder="1.0 ~ 5.0"
+              required
+            />
+          </div>
         </div>
 
         <!-- 계산하기 버튼 -->
@@ -201,7 +209,20 @@
             >
             <span class="calculator__result-value" id="avgScore">-</span>
           </div>
+
           <div class="calculator__result-divider"></div>
+
+          <div class="calculator__result-row">
+            <span class="calculator__result-label">순위 (Rank)</span>
+            <span
+              class="calculator__result-value calculator__result-value--rank"
+              id="rankText"
+              >-</span
+            >
+          </div>
+
+          <div class="calculator__result-divider"></div>
+
           <div class="calculator__result-row">
             <span class="calculator__result-label">등급 (Grade)</span>
             <span
@@ -220,6 +241,14 @@
               id="salaryRate"
               >-</span
             >
+          </div>
+
+          <!-- 피드백 섹션 추가 -->
+          <div class="calculator__feedback hidden" id="feedbackSection">
+            <h4 class="calculator__feedback-title">💡 Feedback</h4>
+            <ul class="calculator__feedback-list" id="feedbackList">
+              <!-- 피드백 아이템이 여기에 동적으로 추가됩니다 -->
+            </ul>
           </div>
         </div>
       </div>

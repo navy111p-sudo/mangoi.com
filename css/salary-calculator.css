@@ -327,12 +327,57 @@
   font-weight: 700;
 }
 
+.calculator__result-value--rank {
+  font-size: 1.1rem;
+  color: #4b5563;
+  font-weight: 700;
+}
+
 .calculator__result-divider {
   height: 1px;
   background: #d1e4f5;
 }
 
+/* ---------- 피드백 섹션 ---------- */
+.calculator__feedback {
+  margin-top: 16px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #fed7aa;
+  background-color: #fffaf0;
+}
+
+.calculator__feedback-title {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #9a3412;
+}
+
+.calculator__feedback-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.85rem;
+  color: #7c2d12;
+  line-height: 1.5;
+}
+
+.calculator__feedback-list li {
+  margin-bottom: 8px;
+}
+
+.ko-feedback {
+  display: block;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 2px;
+}
+
 /* ---------- 등급 색상 ---------- */
+.grade--best {
+  color: #7c3aed;
+} /* 보라 - 최우수 */
 .grade--excellent {
   color: #059669;
 } /* 초록 - 우수 */

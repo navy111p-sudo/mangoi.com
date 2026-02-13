@@ -7,159 +7,271 @@
 // 브라우저를 껐다 켜도 데이터가 유지됩니다!
 const TEACHER_STORAGE_KEY = "savedTeacherNames";
 
-// --- 저장된 교사 이름 목록 가져오기 ---
-// JSON.parse: 글자(문자열)를 배열/객체로 바꿔주는 기능이에요.
-function getTeacherNames() {
-  const saved = localStorage.getItem(TEACHER_STORAGE_KEY);
-  // 저장된 게 있으면 배열로 변환, 없으면 빈 배열 []
+// ---// [1] 교사 데이터 관리 (이름 + 점수 저장)
+const TEACHER_DATA_KEY = "teacherRecords_final";
+
+// 1. 저장된 교사 데이터 가져오기 (없으면 빈 배열)
+function getTeacherRecords() {
+  const saved = localStorage.getItem(TEACHER_DATA_KEY);
   return saved ? JSON.parse(saved) : [];
 }
 
-// --- 교사 이름 저장하기 ---
-// JSON.stringify: 배열/객체를 글자(문자열)로 바꿔주는 기능이에요.
-function saveTeacherName(name) {
-  // trim(): 앞뒤 공백 제거
+// 2. 교사 데이터 저장하기 (이름과 점수 갱신)
+function saveTeacherData(name, score) {
   const trimmedName = name.trim();
-  if (!trimmedName) return; // 빈 이름이면 저장 안 함
+  if (!trimmedName) return;
 
-  const names = getTeacherNames();
+  let records = getTeacherRecords();
+  const existingIndex = records.findIndex((r) => r.name === trimmedName);
 
-  // 이미 있는 이름이면 저장하지 않음 (중복 방지)
-  if (names.includes(trimmedName)) return;
+  if (existingIndex !== -1) {
+    // 이미 있으면 점수 업데이트
+    records[existingIndex].score = score;
+  } else {
+    // 없으면 새로 추가
+    records.push({ name: trimmedName, score: score });
+  }
 
-  // 새 이름을 배열 맨 앞에 추가
-  names.unshift(trimmedName);
-  localStorage.setItem(TEACHER_STORAGE_KEY, JSON.stringify(names));
+  // 점수 높은 순으로 정렬하여 저장 (동점일 경우 이름순)
+  records.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return a.name.localeCompare(b.name);
+  });
+
+  localStorage.setItem(TEACHER_DATA_KEY, JSON.stringify(records));
 }
 
-// --- 드롭다운 리스트 렌더링(그리기) ---
+// 3. 교사 이름 목록만 가져오기 (드롭다운용)
+function getTeacherNames() {
+  const records = getTeacherRecords();
+  return records.map((r) => r.name);
+}
+
+// [2] UI 관련 함수 (드롭다운, 초기화)
+
 function renderTeacherList() {
-  const listEl = document.getElementById("teacherList");
+  const teacherList = document.getElementById("teacherList");
   const names = getTeacherNames();
 
-  // 기존 내용 비우기
-  listEl.innerHTML = "";
+  teacherList.innerHTML = "";
 
-  // 저장된 이름이 없으면 안내 문구 표시
   if (names.length === 0) {
     const emptyItem = document.createElement("li");
     emptyItem.className = "calculator__teacher-empty";
-    emptyItem.textContent = "저장된 이름이 없습니다 (No saved names)";
-    listEl.appendChild(emptyItem);
+    emptyItem.innerText = "저장된 교사가 없습니다.";
+    teacherList.appendChild(emptyItem);
     return;
   }
 
-  // 저장된 이름들을 리스트 아이템으로 만들기
-  names.forEach(function (name) {
+  names.forEach((name) => {
     const li = document.createElement("li");
     li.className = "calculator__teacher-item";
-    li.textContent = name;
-
-    // 이름을 클릭하면 input에 자동 입력!
-    li.addEventListener("click", function () {
-      document.getElementById("teacherName").value = name;
-      closeTeacherDropdown();
-    });
-
-    listEl.appendChild(li);
+    li.innerText = name;
+    li.onclick = function () {
+      selectTeacher(name);
+    };
+    teacherList.appendChild(li);
   });
 }
 
-// --- 드롭다운 열기 ---
+function selectTeacher(name) {
+  const input = document.getElementById("teacherName");
+  input.value = name;
+  closeTeacherDropdown();
+  resetForm(); // 교사 선택 시 폼 초기화
+}
+
 function openTeacherDropdown() {
-  const listEl = document.getElementById("teacherList");
-  const toggleBtn = document.getElementById("teacherToggle");
-
-  renderTeacherList(); // 최신 목록으로 갱신
-  listEl.classList.remove("hidden"); // 리스트 보이기
-  toggleBtn.classList.add("calculator__teacher-toggle--active"); // 삼각표 회전
+  renderTeacherList();
+  document.getElementById("teacherList").classList.remove("hidden");
+  document
+    .getElementById("teacherToggle")
+    .classList.add("calculator__teacher-toggle--active");
 }
 
-// --- 드롭다운 닫기 ---
 function closeTeacherDropdown() {
-  const listEl = document.getElementById("teacherList");
-  const toggleBtn = document.getElementById("teacherToggle");
-
-  listEl.classList.add("hidden"); // 리스트 숨기기
-  toggleBtn.classList.remove("calculator__teacher-toggle--active"); // 삼각표 원래대로
+  document.getElementById("teacherList").classList.add("hidden");
+  document
+    .getElementById("teacherToggle")
+    .classList.remove("calculator__teacher-toggle--active");
 }
 
-// --- 드롭다운 열기/닫기 토글 ---
 function toggleTeacherDropdown() {
-  const listEl = document.getElementById("teacherList");
-  // hidden 클래스가 있으면 닫혀있는 상태 -> 열기
-  if (listEl.classList.contains("hidden")) {
+  const list = document.getElementById("teacherList");
+  if (list.classList.contains("hidden")) {
     openTeacherDropdown();
   } else {
     closeTeacherDropdown();
   }
 }
 
-// --- 페이지 로드 시 이벤트 연결 ---
-// DOMContentLoaded: HTML이 다 읽힌 뒤 실행되는 이벤트예요.
-document.addEventListener("DOMContentLoaded", function () {
-  // --- 샘플 교사 이름 초기 세팅 ---
-  // localStorage에 저장된 이름이 없을 때만 샘플 데이터를 넣어줘요.
-  // 이미 사용 중이라면(데이터가 있다면) 건드리지 않아요!
-  if (!localStorage.getItem(TEACHER_STORAGE_KEY)) {
-    const sampleNames = [
-      "Jane",
-      "John",
-      "Smith",
-      "Brown",
-      "Tina",
-      "Suzi",
-      "Wong",
-      "Melca",
-      "MaiMai",
-      "Bert",
-      "Lee",
-    ];
-    localStorage.setItem(TEACHER_STORAGE_KEY, JSON.stringify(sampleNames));
+// 폼 입력값 및 결과 초기화 함수
+function resetForm() {
+  // 점수 입력 필드 초기화
+  document.getElementById("attendance").value = "";
+  document.getElementById("student").value = "";
+  document.getElementById("boss").value = "";
+  document.getElementById("yearly").value = "";
+
+  // 결과창 숨기기
+  document.getElementById("resultPlaceholder").classList.remove("hidden");
+  document.getElementById("resultContent").classList.add("hidden");
+  document
+    .getElementById("resultArea")
+    .classList.remove("calculator__result--active");
+  document.getElementById("feedbackSection").classList.add("hidden"); // 피드백 섹션 숨기기
+}
+
+// [3] 핵심 계산 로직
+
+// 순위 계산 함수
+function getTeacherRank(name, currentScore) {
+  const records = getTeacherRecords();
+  // 현재 점수로 리스트에서 가상 순위 확인을 위해 임시 정렬
+  // (실제 저장은 calculateSalary 마지막에 하지만, 보여줄 때는 현재 점수 기준이어야 함)
+
+  // 현재 교사가 리스트에 있다면 점수만 갱신해서 비교, 없다면 추가해서 비교
+  const existingIndex = records.findIndex((r) => r.name === name);
+  let compareList = [...records];
+
+  if (existingIndex !== -1) {
+    compareList[existingIndex].score = currentScore;
+  } else {
+    compareList.push({ name: name, score: currentScore });
   }
 
-  // 삼각표 버튼 클릭 -> 드롭다운 토글
+  // 다시 정렬
+  compareList.sort((a, b) => b.score - a.score);
+
+  // 등수 찾기 (1등부터 시작)
+  const rank = compareList.findIndex((r) => r.name === name) + 1;
+  const total = compareList.length;
+
+  return { rank, total };
+}
+
+// 피드백 생성 함수
+function generateFeedback(scores) {
+  const feedbackList = [];
+  const { attendance, student, boss, yearly } = scores;
+  const THRESHOLD = 3.0; // 3.0 미만이면 피드백 제공
+
+  if (attendance < THRESHOLD) {
+    feedbackList.push(
+      "Your attendance score is low. Please pay more attention to punctuality.<br><span class='ko-feedback'>(근태 점수가 낮습니다. 시간 엄수에 조금 더 신경 써주세요.)</span>",
+    );
+  }
+  if (student < THRESHOLD) {
+    feedbackList.push(
+      "Your student evaluation score is low. Please put more effort into class preparation and student management.<br><span class='ko-feedback'>(학생 평가 점수가 낮습니다. 수업 준비와 학생 관리에 더 노력해주세요.)</span>",
+    );
+  }
+  if (boss < THRESHOLD) {
+    feedbackList.push(
+      "Your boss evaluation score is insufficient. Improvement in work attitude is needed.<br><span class='ko-feedback'>(상사 평가 점수가 부족합니다. 업무 태도 개선이 필요해 보입니다.)</span>",
+    );
+  }
+  if (yearly < THRESHOLD) {
+    feedbackList.push(
+      "Your yearly attendance rate is low. Consistent attendance is important.<br><span class='ko-feedback'>(연간 출석률이 저조합니다. 꾸준한 출석이 중요합니다.)</span>",
+    );
+  }
+
+  // 모두 훌륭할 때
+  if (feedbackList.length === 0) {
+    feedbackList.push(
+      "All items are excellent! Please keep up the good work! 👍<br><span class='ko-feedback'>(모든 항목이 훌륭합니다! 지금처럼 계속 화이팅해주세요!)</span>",
+    );
+  }
+
+  return feedbackList;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // [초기 데이터 세팅] 저장된 데이터 확인 및 복구
+  let savedData = localStorage.getItem(TEACHER_DATA_KEY);
+  let parsedData = [];
+
+  try {
+    parsedData = savedData ? JSON.parse(savedData) : [];
+  } catch (e) {
+    parsedData = [];
+  }
+
+  // 데이터가 없거나 비어스면 샘플 데이터 강제 주입
+  if (!Array.isArray(parsedData) || parsedData.length === 0) {
+    const sampleNames = ["John", "Jane", "Smith", "Lee", "Brown"];
+    const initialRecords = sampleNames.map((name) => ({
+      name: name,
+      score: 0,
+    }));
+    localStorage.setItem(TEACHER_DATA_KEY, JSON.stringify(initialRecords));
+    console.log("초기 샘플 데이터가 생성되었습니다.");
+  }
+
   const toggleBtn = document.getElementById("teacherToggle");
-  toggleBtn.addEventListener("click", function (e) {
-    e.stopPropagation(); // 클릭 이벤트가 바깥으로 퍼지지 않게 막기
-    toggleTeacherDropdown();
+  const teacherInput = document.getElementById("teacherName");
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      toggleTeacherDropdown();
+    });
+  }
+
+  // 교사 이름 입력 시에도 폼 초기화
+  teacherInput.addEventListener("input", function () {
+    resetForm();
   });
 
-  // 바깥 아무 곳이나 클릭하면 드롭다운 닫기
   document.addEventListener("click", function (e) {
-    const wrapper = document.getElementById("teacherWrapper");
-    // wrapper 바깥을 클릭했을 때만 닫기
+    const wrapper = document.querySelector(".calculator__teacher-wrapper");
     if (!wrapper.contains(e.target)) {
       closeTeacherDropdown();
     }
   });
+
+  // 페이지 로드 시 드롭다운 렌더링 준비
+  renderTeacherList();
 });
 
-// ============================================================
-// [2] 수업료 계산 함수
-// ============================================================
-
-// '계산하기' 버튼을 눌렀을 때 실행되는 마법의 주문(함수)이에요!
 function calculateSalary() {
-  // 0. 교사 이름을 localStorage에 저장해요!
-  const teacherName = document.getElementById("teacherName").value;
-  saveTeacherName(teacherName);
+  const teacherName = document.getElementById("teacherName").value.trim();
 
-  // 1. 화면(HTML)에서 입력한 점수들을 가져와요.
-  // parseFloat(파스 플로트): 글자로 된 숫자를 진짜 '숫자'로 바꿔주는 마법이에요.
-  const attendance = parseFloat(document.getElementById("attendance").value); // 근태 점수
-  const studentEval = parseFloat(document.getElementById("student").value); // 학생 평가
-  const bossEval = parseFloat(document.getElementById("boss").value); // 상사 평가
-  const yearlyRate = parseFloat(document.getElementById("yearly").value); // 출석률 점수
+  if (!teacherName) {
+    alert("교사 이름을 입력해주세요. (Please enter teacher's name)");
+    return;
+  }
 
-  // 2. 평균 점수를 구해요 (네 가지를 더해서 4로 나눠요!)
+  // 1. 점수 가져오기
+  const attendance = parseFloat(document.getElementById("attendance").value);
+  const studentEval = parseFloat(document.getElementById("student").value);
+  const bossEval = parseFloat(document.getElementById("boss").value);
+  const yearlyRate = parseFloat(document.getElementById("yearly").value);
+
+  // 유효성 검사 (1.0 ~ 5.0)
+  if (
+    [attendance, studentEval, bossEval, yearlyRate].some(
+      (val) => isNaN(val) || val < 1 || val > 5,
+    )
+  ) {
+    alert(
+      "모든 점수는 1.0에서 5.0 사이로 입력해주세요.\n(Please enter scores between 1.0 and 5.0)",
+    );
+    return;
+  }
+
+  // 2. 평균 점수 계산
   const averageScore = (attendance + studentEval + bossEval + yearlyRate) / 4;
 
-  // 3. 조건에 따라 10분당 수업료를 정해요.
-  let rate = 0; // 수업료를 담을 변수 (처음엔 0)
-  let grade = ""; // 등급을 담을 변수
+  // 3. 등급 및 수업료 결정
+  let rate = 0;
+  let grade = "";
 
-  if (averageScore >= 4) {
+  if (averageScore >= 4.7) {
+    rate = 160; // 최우수는 160으로 가정 (또는 우수와 같게 설정 등, 일단 높게 설정)
+    grade = "최우수";
+  } else if (averageScore >= 4) {
     rate = 150;
     grade = "우수";
   } else if (averageScore >= 3) {
@@ -173,26 +285,29 @@ function calculateSalary() {
     grade = "미달";
   }
 
-  // 4. 결과를 화면에 보여줘요!
-  // ---------- 안내 문구 숨기고, 결과 영역 보여주기 ----------
+  // 데이터 저장 및 순위 계산
+  saveTeacherData(teacherName, averageScore);
+  const { rank, total } = getTeacherRank(teacherName, averageScore);
+
+  // 4. 결과 화면 표시
   document.getElementById("resultPlaceholder").classList.add("hidden");
   document.getElementById("resultContent").classList.remove("hidden");
 
-  // ---------- 각 결과값 넣기 ----------
-  // toFixed(1) : 소수점 첫째 자리까지만 표시해주는 기능이에요.
+  // 값 채우기
   document.getElementById("avgScore").innerText =
     averageScore.toFixed(1) + "점";
   document.getElementById("gradeText").innerText = grade;
   document.getElementById("salaryRate").innerText = rate + " 페소";
+  document.getElementById("rankText").innerText = `${total}명 중 ${rank}등`;
 
-  // ---------- 등급에 따라 색상 바꾸기 ----------
+  // 등급 색상 적용
   const gradeEl = document.getElementById("gradeText");
-  // 기존 색상 클래스 모두 제거
   gradeEl.className =
     "calculator__result-value calculator__result-value--grade";
 
-  // 등급별로 다른 색상 클래스 추가
-  if (grade === "우수") {
+  if (grade === "최우수") {
+    gradeEl.classList.add("grade--best");
+  } else if (grade === "우수") {
     gradeEl.classList.add("grade--excellent");
   } else if (grade === "양호") {
     gradeEl.classList.add("grade--good");
@@ -202,7 +317,27 @@ function calculateSalary() {
     gradeEl.classList.add("grade--low");
   }
 
-  // ---------- 결과 영역에 애니메이션 효과 ----------
+  // 피드백 생성 및 표시
+  const feedbacks = generateFeedback({
+    attendance: attendance,
+    student: studentEval,
+    boss: bossEval,
+    yearly: yearlyRate,
+  });
+  const feedbackListEl = document.getElementById("feedbackList");
+  feedbackListEl.innerHTML = "";
+
+  feedbacks.forEach((msg) => {
+    const li = document.createElement("li");
+    li.innerHTML = msg; // 태그 적용을 위해 innerHTML 사용
+    feedbackListEl.appendChild(li);
+  });
+
+  document.getElementById("feedbackSection").classList.remove("hidden");
+
+  // 결과 애니메이션 효과
   const resultArea = document.getElementById("resultArea");
+  resultArea.classList.remove("calculator__result--active"); // 애니메이션 리셋을 위해 제거
+  void resultArea.offsetWidth; // 트리거 리플로우
   resultArea.classList.add("calculator__result--active");
 }
