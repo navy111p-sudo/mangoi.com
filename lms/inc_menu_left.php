@@ -151,8 +151,8 @@
 						<a onclick="InsertFavoriteMenu(1307, '<?=$출신지역관리[$LangID]?>', 'teacher_pay_type_item_list.php');" style="display: <?if ( $_LINK_ADMIN_LEVEL_ID_<9  || $_LINK_ADMIN_LEVEL_ID_>13 ){?>none<?}?>;"><img src="<?if(array_key_exists(1307, $ArrFavoriteLmsMenuSubMenuID)) { ?> images/star_clicked.png<?} else {?>images/star_click.png<?}?>" id="FvIcon_1307"></a>
 						<a href="teacher_pay_type_item_list.php"><?=$출신지역관리[$LangID]?></a></li>	
 				<li <?if ($SubMenuID==1308){?>class="act_item"<?}?>>
-					<a onclick="InsertFavoriteMenu(1308, '수업료 계산기', '../salary-calculator.html');" style="display: <?if ( $_LINK_ADMIN_LEVEL_ID_<9  || $_LINK_ADMIN_LEVEL_ID_>13 ){?>none<?}?>;"><img src="<?if(array_key_exists(1308, $ArrFavoriteLmsMenuSubMenuID)) { ?> images/star_clicked.png<?} else {?>images/star_click.png<?}?>" id="FvIcon_1308"></a>
-					<a href="../salary-calculator.html">수업료 계산기</a></li>
+				<a onclick="InsertFavoriteMenu(1308, '수업료 계산기', 'salary_calculator.php');" style="display: <?if ( $_LINK_ADMIN_LEVEL_ID_<9  || $_LINK_ADMIN_LEVEL_ID_>13 ){?>none<?}?>;"><img src="<?if(array_key_exists(1308, $ArrFavoriteLmsMenuSubMenuID)) { ?> images/star_clicked.png<?} else {?>images/star_click.png<?}?>" id="FvIcon_1308"></a>
+					<a href="salary_calculator.php">수업료 계산기</a></li>
 				</ul>
 			</li>
 
