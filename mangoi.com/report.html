@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=salary-calculator.html">
-<title>Redirect to Evaluation Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANGOI | Evaluation Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+tailwind.config={theme:{extend:{fontFamily:{sans:['Noto Sans KR','sans-serif']},colors:{primary:{50:'#f0f7ff',500:'#0c8ee6',600:'#0070c4',900:'#0b406d'}}}}};
+</script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:9pt}
+td,th{border:1px solid #ddd;padding:4px 8px;vertical-align:middle;white-space:nowrap}
+th{background:#1B2A4A;color:#fff;font-size:9pt;text-align:center;padding:6px 8px}
+.section-title{font-size:16px;font-weight:bold;color:#1B2A4A;margin:24px 0 12px;padding-bottom:6px;border-bottom:2px solid #2C5F8A}
+.btn-arrow{cursor:pointer;background:#e0edff;border:1px solid #3b82f6;border-radius:3px;font-size:11px;padding:1px 6px;margin:0 1px;color:#1B2A4A;font-weight:bold}
+.btn-arrow:hover{background:#3b82f6;color:#fff}
+.btn-confirm-classes{cursor:pointer;background:#10b981;color:#fff;border:none;border-radius:3px;font-size:10px;padding:2px 8px;margin-left:4px;display:none}
+.btn-confirm-classes.visible{display:inline-block}
+.classes-cell.modified{background:#FFF3CD !important}
+</style>
 </head>
-<body>
-<script>window.location.href='salary-calculator.html';</script>
-</body>
-</html>
+<body class="bg-gray-50 font-sans text-gray-800">
+<header class="header relative z-50">
+<div class="header__container max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="header__logo font-bold text-2xl text-primary-600 tracking-tight">
+<a href="index.html">MANGOI <span class="text-sm font-normal text-gray-500">Dashboard</span></a>
+</div>
+<nav class="header__nav">
+<ul class="flex space-x-6 text-sm font-medium text-gray-600">
+<li><a href="index.html" class="header__nav-link hover:text-primary-500 transition-colors">Home</a></li>
+<li><a href="heatmap.html" class="header__nav-link hover:text-primary-500 transition-colors">Heatmap</a></li>
+<li><a href="treemap.html" class="header__nav-link hover:text-primary-500 transition-colors">Treemap</a></li>
+<li><a href="calculator.html" class="header__nav-link hover:text-primary-500 transition-colors">Salary Calculator</a></li>
+<li><a href="report.html" class="header__nav-link header__nav-link--active text-primary-600">Evaluation Report</a></li>
+</ul></nav>
+<div class="relative ml-4 header__lang" id="langDropdownContainer">
+<button id="langSelectBtn" class="flex items-center text-gray-500 hover:text-primary-600 transition-colors focus:outline-none">
+<span id="currentLangLabel">KOR</span></button>
+<div id="langDropdownMenu" class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg hidden z-50 border border-gray-100">
+<ul class="py-1 text-sm text-gray-700">
+<li><button class="block w-full text-left px-4 py-2 hover:bg-gray-100 lang-option" data-lang="ko">한국어 (KOR)</button></li>
+<li><button class="block w-full text-left px-4 py-2 hover:bg-gray-100 lang-option" data-lang="en">English (ENG)</button></li>
+<li><button class="block w-full text-left px-4 py-2 hover:bg-gray-100 lang-option" data-lang="tl">Filipino (TAG)</button></li>
+</ul></div></div>
+</div></header>
+
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="mb-8">
+<h1 class="text-2xl font-bold text-gray-900 mb-2">Evaluation Report <span class="text-lg font-normal text-gray-500">(교사 평가 리포트)</span></h1>
+<p class="text-gray-600">교사별 평가 점수, 급여 검증, TOP 5 교사, 등급 요약을 확인할 수 있습니다.</p>
+</div>
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 overflow-x-auto">
+
+<div class="section-title">1. Score Summary (평가 점수 요약)</div>
+<table><thead><tr>
+<th style="width:30px"></th><th>교사 이름</th><th>수업 (Inst)</th><th>유지 (Ret)</th><th>출석 (Punct)</th><th>행정 (Admin)</th><th>기여도 (Contrib)</th><th>가중평균</th><th>등급</th>
+</tr></thead><tbody id="scoreSummaryBody"></tbody></table>
+
+<div class="section-title">2. Rate / 10 Min Verification (급여 검증)</div>
+<table><thead><tr>
+<th style="width:30px"></th><th>교사 이름</th><th>총 급여</th><th>총 수업수</th><th>Rate/10min (표시)</th><th>Rate/10min (계산)</th><th>차이</th>
+</tr></thead><tbody id="rateVerificationBody"></tbody></table>
+
+<div class="section-title">3. TOP 5 Office Teachers (사무실 근무 상위 5인)</div>
+<table><thead><tr>
+<th>순위</th><th>교사 이름</th><th>총 급여</th><th>가중평균</th><th>등급</th>
+</tr></thead><tbody id="top5OfficeBody"></tbody></table>
+
+<div class="section-title">4. Teacher Grade Summary (등급별 요약) <span style="font-size:11px;color:#666;font-weight:normal;margin-left:12px">▲▼ 버튼으로 수업수 조정 → ✓ 확인 → 히트맵/트리맵 급여 자동 반영</span></div>
+<table><thead><tr>
+<th>교사 이름</th><th>등급</th><th>가중평균</th><th>총 수업수</th><th>Rate/10min</th><th>총급여</th>
+</tr></thead><tbody id="gradeSummaryBody"></tbody></table>
+
+</div></main>
+
+<script src="js/data.js"></script>
+<script src="js/report.js"></script>
+<script src="js/i18n.js"></script>
+</body></html>
