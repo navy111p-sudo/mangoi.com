@@ -1,6 +1,36 @@
-# Exclude large files that exceed Cloudflare Pages 25MB limit
-ViewerJS/demo/ahsol.pptx
-  *.pptx
-  *.zip
-  *.tar.gz
-  *.rar
+# Exclude large directories to stay under 20,000 file limit
+PHPExcel-1.8/
+ViewerJS/
+amcharts/
+amcharts4/
+api/
+app_push_cron/
+app_v20/
+app_v21/
+app_v22/
+datetimepicker-master/
+db_pages/
+dms/
+editors/
+excel_sample/
+google_maps/
+includes/
+installs/
+kcp_batch_mobile/
+kcp_batch_pc/
+kendo/
+mangoi.com/
+mypage/
+name/
+popbill/
+tms/
+webook/
+ws/
+
+# Exclude large file types
+*.pptx
+*.zip
+*.tar.gz
+*.rar
+*.odp
+*.php
