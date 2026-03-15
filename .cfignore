@@ -1,0 +1,6 @@
+# Exclude large files that exceed Cloudflare Pages 25MB limit
+ViewerJS/demo/ahsol.pptx
+  *.pptx
+  *.zip
+  *.tar.gz
+  *.rar
